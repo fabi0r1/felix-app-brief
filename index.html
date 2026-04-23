@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felix — Produktbriefing & Pitchdeck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080C14;
+    --surface: #111827;
+    --surface2: #1A2438;
+    --border: #1F2D45;
+    --accent: #E8A020;
+    --accent-dim: rgba(232,160,32,0.12);
+    --accent2: #3B82F6;
+    --accent2-dim: rgba(59,130,246,0.10);
+    --green: #22C55E;
+    --red: #EF4444;
+    --text: #F0EBE0;
+    --text2: #8B97AA;
+    --text3: #4B5875;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 48px;
+    background: rgba(8,12,20,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--text2);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-badge {
+    background: var(--accent-dim);
+    border: 1px solid rgba(232,160,32,0.3);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  section { padding: 100px 0; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.3;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: -200px; left: -200px;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(232,160,32,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-glow2 {
+    position: absolute;
+    bottom: -200px; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(59,130,246,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-dim);
+    border: 1px solid rgba(232,160,32,0.25);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 4px;
+    margin-bottom: 32px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+
+  h1 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 28px;
+  }
+
+  h1 em { font-style: italic; color: var(--accent); }
+
+  .hero-sub {
+    font-size: 19px;
+    color: var(--text2);
+    max-width: 560px;
+    line-height: 1.6;
+    margin-bottom: 48px;
+    font-weight: 300;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    margin-top: 64px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+  }
+
+  .stat-num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 42px;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: var(--text3);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-eyebrow::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+
+  h2 {
+    font-family: 'Instrument Serif', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+
+  h2 em { font-style: italic; color: var(--accent); }
+
+  .section-lead {
+    font-size: 18px;
+    color: var(--text2);
+    max-width: 600px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 64px;
+  }
+
+  h3 {
+    font-family: 'Instrument Serif', serif;
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+
+  /* OPPORTUNITY SECTION */
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 64px;
+  }
+
+  .problem-card {
+    background: var(--surface);
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .problem-card:first-child { border-radius: 12px 0 0 0; }
+  .problem-card:nth-child(2) { border-radius: 0 12px 0 0; }
+  .problem-card:nth-child(3) { border-radius: 0 0 0 12px; }
+  .problem-card:last-child { border-radius: 0 0 12px 0; }
+
+  .problem-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .problem-card:hover::before { opacity: 1; }
+
+  .problem-icon {
+    width: 44px; height: 44px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .problem-card h3 {
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .problem-card p {
+    color: var(--text2);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* SOLUTION */
+  .solution-modules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .module-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .module-card:hover {
+    border-color: rgba(232,160,32,0.3);
+    transform: translateY(-2px);
+  }
+
+  .module-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text3);
+    margin-bottom: 14px;
+  }
+
+  .module-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .module-desc {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.5;
+  }
+
+  .module-badge {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .badge-core { background: var(--accent-dim); color: var(--accent); }
+  .badge-ai { background: var(--accent2-dim); color: var(--accent2); }
+  .badge-erp { background: rgba(34,197,94,0.1); color: var(--green); }
+
+  /* WIREFRAMES */
+  .wireframe-wrapper {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 64px;
+  }
+
+  .wireframe-header {
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .wireframe-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .wireframe-tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text3);
+  }
+
+  .wireframe-body { padding: 32px; }
+
+  .wf-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .wf-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 20px;
+  }
+
+  .wf-caption {
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.6;
+    max-width: 700px;
+  }
+
+  .wf-caption strong { color: var(--text); }
+
+  /* SPEC TABLE */
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 32px;
+  }
+
+  .spec-table th {
+    text-align: left;
+    padding: 12px 20px;
+    background: var(--surface2);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text3);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .spec-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(31,45,69,0.5);
+    font-size: 14px;
+    color: var(--text2);
+    vertical-align: top;
+  }
+
+  .spec-table tr:last-child td { border-bottom: none; }
+
+  .spec-table td:first-child {
+    color: var(--text);
+    font-weight: 500;
+    font-size: 13px;
+    width: 200px;
+  }
+
+  .priority-high {
+    display: inline-block;
+    background: rgba(239,68,68,0.12);
+    color: #F87171;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  .priority-med {
+    display: inline-block;
+    background: var(--accent-dim);
+    color: var(--accent);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  .priority-low {
+    display: inline-block;
+    background: var(--surface2);
+    color: var(--text3);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  /* ARCHITECTURE */
+  .arch-diagram {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px;
+    margin-top: 48px;
+  }
+
+  .arch-layer { margin-bottom: 24px; }
+
+  .arch-layer-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 12px;
+  }
+
+  .arch-boxes { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  .arch-box {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid;
+  }
+
+  .arch-box.frontend { background: rgba(59,130,246,0.08); border-color: rgba(59,130,246,0.25); color: #93C5FD; }
+  .arch-box.agent { background: rgba(232,160,32,0.08); border-color: rgba(232,160,32,0.25); color: #FCD34D; }
+  .arch-box.backend { background: rgba(34,197,94,0.08); border-color: rgba(34,197,94,0.25); color: #86EFAC; }
+  .arch-box.external { background: rgba(168,85,247,0.08); border-color: rgba(168,85,247,0.25); color: #C4B5FD; }
+  .arch-box.data { background: rgba(245,158,11,0.08); border-color: rgba(245,158,11,0.25); color: #FDE68A; }
+
+  .arch-arrow { text-align: center; color: var(--text3); font-size: 20px; margin: 4px 0; }
+
+  /* ROADMAP */
+  .roadmap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .roadmap-phase { background: var(--surface); padding: 36px; }
+  .roadmap-phase:first-child { border-radius: 12px 0 0 12px; }
+  .roadmap-phase:last-child { border-radius: 0 12px 12px 0; }
+
+  .phase-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text3); margin-bottom: 8px; }
+  .phase-name { font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 4px; }
+  .phase-timeline { font-size: 13px; color: var(--accent); margin-bottom: 28px; font-weight: 500; }
+
+  .phase-items { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .phase-items li { font-size: 13px; color: var(--text2); display: flex; align-items: flex-start; gap: 10px; line-height: 1.4; }
+  .phase-items li::before { content: '→'; color: var(--accent); font-size: 12px; flex-shrink: 0; margin-top: 1px; }
+
+  /* DECISION TREE */
+  .decision-tree { margin-top: 48px; display: flex; flex-direction: column; gap: 12px; }
+
+  .dt-category {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .dt-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    cursor: pointer;
+  }
+
+  .dt-header:hover { background: var(--surface2); }
+
+  .dt-cat-name { font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 12px; }
+
+  .dt-complexity {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+  }
+
+  .complex-simple { background: rgba(34,197,94,0.1); color: var(--green); }
+  .complex-complex { background: rgba(239,68,68,0.1); color: #F87171; }
+  .complex-both { background: var(--accent-dim); color: var(--accent); }
+
+  .dt-body { padding: 16px 24px 20px; border-top: 1px solid var(--border); display: none; }
+  .dt-body.open { display: block; }
+
+  .dt-questions { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
+  .dt-questions li { font-size: 13px; color: var(--text2); display: flex; align-items: flex-start; gap: 8px; }
+  .dt-questions li::before { content: '?'; font-family: 'Instrument Serif', serif; font-size: 16px; color: var(--accent); flex-shrink: 0; line-height: 1.2; }
+
+  .dt-compliance {
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: rgba(59,130,246,0.07);
+    border: 1px solid rgba(59,130,246,0.15);
+    border-radius: 6px;
+    font-size: 12px;
+    color: #93C5FD;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  /* RESEARCH */
+  .research-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 48px;
+  }
+
+  .research-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 28px;
+  }
+
+  .research-card h4 { font-size: 16px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+
+  .research-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+  .research-card li { font-size: 13px; color: var(--text2); display: flex; gap: 8px; align-items: flex-start; line-height: 1.5; }
+  .research-card li::before { content: '·'; color: var(--accent); font-size: 18px; flex-shrink: 0; line-height: 1.1; }
+
+  /* INTERVIEW QUESTIONS */
+  .q-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
+
+  .q-list li {
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.5;
+  }
+
+  .q-list li strong {
+    color: var(--accent);
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--border) 20%, var(--border) 80%, transparent 100%);
+    margin: 0 48px;
+  }
+
+  footer {
+    padding: 60px 48px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text3);
+    font-size: 13px;
+  }
+
+  footer strong { color: var(--text2); }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">Felix</div>
+  <ul class="nav-links">
+    <li><a href="#chance">Ausgangslage</a></li>
+    <li><a href="#loesung">Lösung</a></li>
+    <li><a href="#screens">Screens</a></li>
+    <li><a href="#spec">Features</a></li>
+    <li><a href="#architektur">Architektur</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#forschung">Forschung</a></li>
+  </ul>
+  <div class="nav-badge">Version 1.0</div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Vertrauliches Produktbriefing</div>
+    <h1>Der digitale<br>Rückenwind<br>für <em>Felix.</em></h1>
+    <p class="hero-sub">
+      Ein KI-gestütztes Projektmanagement- und Kommunikationstool, das speziell für einen selbstständigen deutschen Elektromeister entwickelt wird — damit Felix sein handwerkliches Können mit ebenso professioneller Organisation verbinden kann.
+    </p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">8–10</div>
+        <div class="stat-label">Aktive Kunden</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Job-Kategorien</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">MVP</div>
+        <div class="stat-label">8 Wochen Ziel</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">9</div>
+        <div class="stat-label">App-Module</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- AUSGANGSLAGE (ehemals "Problem") -->
+<section id="chance">
+  <div class="container">
+    <div class="section-eyebrow">Ausgangslage</div>
+    <h2>Felix hat das<br>handwerkliche Talent —<br><em>die App holt den Rest nach.</em></h2>
+    <p class="section-lead">
+      Als frisch gebackener Elektromeister mit eigenem Betrieb bringt Felix alles mit, was es für eine erfolgreiche Karriere braucht. Die Felix-App setzt genau da an, wo er noch wachsen kann: bei Struktur, Planung und Kundenkommunikation — damit sein Außenauftritt so stark ist wie seine Arbeit.
+    </p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">🗓</div>
+        <h3>Strukturierte Projektplanung</h3>
+        <p>Mit einer klaren digitalen Übersicht über alle laufenden Aufträge, Aufgaben und Deadlines kann Felix seinen Arbeitsalltag souverän steuern — nichts geht mehr verloren.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">💬</div>
+        <h3>Proaktive Kundenkommunikation</h3>
+        <p>Der KI-Agent übernimmt die Vorbereitung aller Kundennachrichten — von der Terminbestätigung bis zur Verzögerungsmeldung. Felix gibt nur noch grünes Licht.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🔩</div>
+        <h3>Materialbeschaffung im Griff</h3>
+        <p>Die App plant Bestellungen automatisch rückwärts vom Termindatum — sodass alle Teile rechtzeitig ankommen und kein Kundentermin wegen fehlenden Materials verschoben werden muss.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📊</div>
+        <h3>Rentabilität im Blick behalten</h3>
+        <p>Welche Aufträge bringen wirklich etwas? Die App zeigt Felix intern, wie profitabel jedes Projekt ist — und hilft ihm, die richtigen Prioritäten zu setzen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- LÖSUNG -->
+<section id="loesung">
+  <div class="container">
+    <div class="section-eyebrow">Die Lösung</div>
+    <h2>Felix App — sein<br><em>digitales Büro</em></h2>
+    <p class="section-lead">
+      Eine mobile App mit integriertem KI-Agenten, der Projektmanagement, Kundenkommunikation, Angebote, Rechnungen und Lagerverwaltung übernimmt — damit Felix sich vollständig auf seine eigentliche Stärke konzentrieren kann: die Elektroarbeit.
+    </p>
+
+    <div class="solution-modules">
+      <div class="module-card">
+        <div class="module-num">01</div>
+        <div class="module-title">Kunden-CRM</div>
+        <div class="module-desc">Vollständige Kundenprofile mit Kontaktdaten, Auftragshistorie, Kommunikationsprotokoll und bevorzugtem Kontaktkanal. Mini-CRM mit WhatsApp- und Gmail-Integration.</div>
+        <span class="module-badge badge-core">Kern</span>
+      </div>
+      <div class="module-card">
+        <div class="module-num">02</div>
+        <div class="module-title">Projektmanagement</div>
+        <div class="module-desc">Auftragslebenszyklus vom ersten Anruf bis zur bezahlten Rechnung. Zwei Stufen: Einfach (unter €500 / 10 Std.) und Komplex. Jeder Auftrag hat Phasen, Aufgaben, Fristen und Rückwärtsplanung.</div>
+        <span class="module-badge badge-core">Kern</span>
+      </div>
+      <div class="module-card">
+        <div class="module-num">03</div>
+        <div class="module-title">KI-Agent</div>
+        <div class="module-desc">Sprachnotizen während der Ortsbegehung werden automatisch zu Projektaufgaben. Der Agent schlägt Kundennachrichten proaktiv vor. Felix genehmigt per WhatsApp mit Ja/Nein.</div>
+        <span class="module-badge badge-ai">KI</span>
+      </div>
+      <div class="module-card">
+        <div class="module-num">04</div>
+        <div class="module-title">Intelligenter Kalender</div>
+        <div class="module-desc">Optimiert Felix' Kalender anhand aller Kundenpräferenzen und Projektfristen. Plant Materialbestellungen rückwärts vom Termindatum. Berücksichtigt Fahrtzeiten.</div>
+        <span class="module-badge badge-ai">KI</span>
+      </div>
+      <div class="module-card">
+        <div class="module-num">05</div>
+        <div class="module-title">Angebote & Rechnungen</div>
+        <div class="module-desc">Automatisch generierte Angebote mit Materialkosten, Arbeitszeit, Fahrtkosten und Verwaltungspauschale. Digitale Kundenfreigabe vor Materialbestellung. Automatische Rechnungserstellung.</div>
+        <span class="module-badge badge-core">Kern</span>
+      </div>
+      <div class="module-card">
+        <div class="module-num">06</div>
+        <div class="module-title">Rentabilitäts-Tracker</div>
+        <div class="module-desc">Interne Ansicht: tatsächliche Kosten vs. berechneter Preis. Umsatz-pro-Stunde-Kennzahl für die Priorisierung rentabler Aufträge. Materialkostenverfolgung — nur für Felix sichtbar.</div>
+        <span class="module-badge badge-core">Kern</span>
+      </div>
+      <div class="module-card">
+        <div class="module-num">07</div>
+        <div class="module-title">Lagerverwaltung</div>
+        <div class="module-desc">Schlankes ERP für gängige Elektromaterialien. Verfolgt Lager im Transporter/Keller. Zeigt Mindestbestandswarnungen. Bucht verwendete Teile auf Projekte. Schlägt Nachbestellungen vor.</div>
+        <span class="module-badge badge-erp">ERP</span>
+      </div>
+      <div class="module-card">
+        <div class="module-num">08</div>
+        <div class="module-title">Compliance-Modul</div>
+        <div class="module-desc">Deutsche VDE- und DGUV-V3-Checklisten werden automatisch nach Auftragstyp erstellt. Dokumentenspeicherung. E-Check-Verfolgung. Erinnerungen an Prüfintervalle je Kundenobjekt.</div>
+        <span class="module-badge badge-core">Kern</span>
+      </div>
+      <div class="module-card">
+        <div class="module-num">09</div>
+        <div class="module-title">Kommunikations-Hub</div>
+        <div class="module-desc">WhatsApp Business + Gmail-Integration. Jede Nachricht wird dem Projekt zugeordnet. Der Agent entwirft Nachrichten für jede Phase. Felix genehmigt oder sendet mit einem Tippen.</div>
+        <span class="module-badge badge-ai">KI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SCREENS / WIREFRAMES -->
+<section id="screens">
+  <div class="container">
+    <div class="section-eyebrow">Schlüssel-Screens</div>
+    <h2>Wireframes &<br><em>Interface-Design</em></h2>
+    <p class="section-lead">
+      Sechs zentrale Screens, die den vollständigen Tagesablauf abbilden — von der morgendlichen Übersicht bis zum Rechnungsversand.
+    </p>
+
+    <!-- SCREEN 1: DASHBOARD -->
+    <div class="wireframe-wrapper">
+      <div class="wireframe-header">
+        <div class="wireframe-title">Screen 01 — Tages-Dashboard</div>
+        <div class="wireframe-tag">Startseite</div>
+      </div>
+      <div class="wireframe-body">
+        <div class="wf-grid">
+          <div>
+            <div class="wf-label">Wireframe</div>
+            <svg viewBox="0 0 340 600" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid #1F2D45;">
+              <rect width="340" height="600" fill="#080C14"/>
+              <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
+              <text x="300" y="24" fill="#4B5875" font-size="10" font-family="monospace">●●●</text>
+              <text x="20" y="56" fill="#F0EBE0" font-size="18" font-family="Georgia" font-weight="bold">Guten Morgen, Felix.</text>
+              <text x="20" y="74" fill="#8B97AA" font-size="11">Donnerstag, 24. April</text>
+              <rect x="20" y="88" width="300" height="44" rx="10" fill="#1A2438" stroke="#E8A020" stroke-width="1"/>
+              <circle cx="36" cy="110" r="6" fill="#E8A020"/>
+              <text x="50" y="107" fill="#E8A020" font-size="10" font-weight="bold">AGENT</text>
+              <text x="50" y="120" fill="#F0EBE0" font-size="11">Material für Müller-Auftrag bis morgen bestellen ⚡</text>
+              <text x="20" y="152" fill="#4B5875" font-size="10" font-family="monospace" letter-spacing="1">HEUTIGE TERMINE</text>
+              <rect x="20" y="160" width="300" height="68" rx="10" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <rect x="20" y="160" width="4" height="68" rx="2" fill="#22C55E"/>
+              <text x="34" y="178" fill="#F0EBE0" font-size="13" font-weight="600">Frau Schneider</text>
+              <text x="34" y="194" fill="#8B97AA" font-size="11">Steckdose defekt — Küche</text>
+              <text x="34" y="210" fill="#4B5875" font-size="10">📍 Köln Lindenthal · 22 Min. Fahrtzeit</text>
+              <text x="260" y="180" fill="#22C55E" font-size="11" font-weight="bold">09:00</text>
+              <text x="262" y="196" fill="#4B5875" font-size="10">Einfach</text>
+              <rect x="20" y="236" width="300" height="68" rx="10" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <rect x="20" y="236" width="4" height="68" rx="2" fill="#E8A020"/>
+              <text x="34" y="254" fill="#F0EBE0" font-size="13" font-weight="600">Herr Müller</text>
+              <text x="34" y="270" fill="#8B97AA" font-size="11">Smart Home Einrichtung — Phase 2</text>
+              <text x="34" y="286" fill="#4B5875" font-size="10">📍 Köln Ehrenfeld · 14 Min. Fahrtzeit</text>
+              <text x="252" y="256" fill="#E8A020" font-size="11" font-weight="bold">13:30</text>
+              <text x="252" y="272" fill="#4B5875" font-size="10">Komplex</text>
+              <text x="20" y="322" fill="#4B5875" font-size="10" font-family="monospace" letter-spacing="1">OFFENE AUFGABEN</text>
+              <rect x="20" y="330" width="300" height="38" rx="8" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <rect x="20" y="330" width="3" height="38" rx="2" fill="#EF4444"/>
+              <text x="34" y="344" fill="#F87171" font-size="10" font-weight="bold">ÜBERFÄLLIG</text>
+              <text x="34" y="358" fill="#F0EBE0" font-size="12">Rechnung senden · Weber Badezimmer</text>
+              <rect x="20" y="374" width="300" height="38" rx="8" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <rect x="20" y="374" width="3" height="38" rx="2" fill="#E8A020"/>
+              <text x="34" y="388" fill="#FCD34D" font-size="10" font-weight="bold">HEUTE</text>
+              <text x="34" y="402" fill="#F0EBE0" font-size="12">WAGO-Klemmen bestellen · Müller</text>
+              <rect x="20" y="418" width="300" height="38" rx="8" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <rect x="20" y="418" width="3" height="38" rx="2" fill="#3B82F6"/>
+              <text x="34" y="432" fill="#93C5FD" font-size="10" font-weight="bold">MORGEN</text>
+              <text x="34" y="446" fill="#F0EBE0" font-size="12">Termin bestätigen · Familie Braun</text>
+              <text x="20" y="474" fill="#4B5875" font-size="10" font-family="monospace" letter-spacing="1">DIESE WOCHE</text>
+              <rect x="20" y="482" width="90" height="64" rx="8" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="36" y="506" fill="#E8A020" font-size="20" font-family="Georgia" font-weight="bold">€840</text>
+              <text x="30" y="520" fill="#4B5875" font-size="10">Fakturiert</text>
+              <rect x="125" y="482" width="90" height="64" rx="8" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="140" y="506" fill="#22C55E" font-size="20" font-family="Georgia" font-weight="bold">3</text>
+              <text x="128" y="520" fill="#4B5875" font-size="10">Aufträge done</text>
+              <rect x="230" y="482" width="90" height="64" rx="8" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="247" y="506" fill="#F87171" font-size="20" font-family="Georgia" font-weight="bold">2</text>
+              <text x="238" y="520" fill="#4B5875" font-size="10">Überfällig</text>
+              <rect x="0" y="556" width="340" height="44" fill="#111827"/>
+              <line x1="0" y1="556" x2="340" y2="556" stroke="#1F2D45" stroke-width="1"/>
+              <text x="27" y="578" fill="#E8A020" font-size="18">🏠</text>
+              <text x="95" y="578" fill="#4B5875" font-size="18">📋</text>
+              <text x="163" y="578" fill="#4B5875" font-size="18">👥</text>
+              <text x="231" y="578" fill="#4B5875" font-size="18">📦</text>
+              <text x="299" y="578" fill="#4B5875" font-size="18">💬</text>
+            </svg>
+          </div>
+          <div>
+            <div class="wf-label">Wichtigste Design-Entscheidungen</div>
+            <p class="wf-caption">
+              <strong>Agent-Hinweis ganz oben.</strong> Die wichtigste Aktion des Tages wird sofort vom Agenten angezeigt — Felix muss nicht suchen.<br><br>
+              <strong>Farbcodierte Dringlichkeit.</strong> Rot = überfällig, Amber = heute fällig, Blau = morgen, Grün = im Plan. Status ist sofort erkennbar, ohne Text zu lesen.<br><br>
+              <strong>Heutiger Terminplan im Mittelpunkt.</strong> Zwei Aufträge mit Google-Maps-Fahrzeiten in Echtzeit — Felix weiß sofort, wie sein Tag aussieht.<br><br>
+              <strong>Wochenkennzahlen auf einen Blick.</strong> Fakturiert, abgeschlossen, überfällig — die drei wichtigsten Zahlen für einen Einzelunternehmer jeden Morgen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCREEN 2: NEUE KUNDENAUFNAHME -->
+    <div class="wireframe-wrapper">
+      <div class="wireframe-header">
+        <div class="wireframe-title">Screen 02 — Neue Kundenanlage + Auftragserfassung</div>
+        <div class="wireframe-tag">CRM · Aufnahme</div>
+      </div>
+      <div class="wireframe-body">
+        <div class="wf-grid">
+          <div>
+            <div class="wf-label">Wireframe</div>
+            <svg viewBox="0 0 340 620" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid #1F2D45;">
+              <rect width="340" height="620" fill="#080C14"/>
+              <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
+              <text x="20" y="55" fill="#8B97AA" font-size="12">← Kunden</text>
+              <text x="20" y="80" fill="#F0EBE0" font-size="19" font-family="Georgia" font-weight="bold">Neuer Kunde</text>
+              <rect x="20" y="96" width="70" height="4" rx="2" fill="#E8A020"/>
+              <rect x="96" y="96" width="70" height="4" rx="2" fill="#E8A020"/>
+              <rect x="172" y="96" width="70" height="4" rx="2" fill="#1F2D45"/>
+              <rect x="248" y="96" width="70" height="4" rx="2" fill="#1F2D45"/>
+              <text x="20" y="114" fill="#E8A020" font-size="10" font-weight="bold">SCHRITT 2 VON 4 · AUFTRAGSDETAILS</text>
+              <text x="20" y="138" fill="#4B5875" font-size="11" letter-spacing="1">NAME</text>
+              <rect x="20" y="144" width="300" height="40" rx="8" fill="#111827" stroke="#E8A020" stroke-width="1.5"/>
+              <text x="34" y="169" fill="#F0EBE0" font-size="14">Anna Hoffmann</text>
+              <text x="20" y="200" fill="#4B5875" font-size="11" letter-spacing="1">MOBILNUMMER (WHATSAPP)</text>
+              <rect x="20" y="206" width="300" height="40" rx="8" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="34" y="231" fill="#F0EBE0" font-size="14">+49 151 2345 6789</text>
+              <text x="290" y="231" fill="#22C55E" font-size="16">✓</text>
+              <text x="20" y="262" fill="#4B5875" font-size="11" letter-spacing="1">E-MAIL</text>
+              <rect x="20" y="268" width="300" height="40" rx="8" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="34" y="293" fill="#8B97AA" font-size="13">anna.hoffmann@gmail.com</text>
+              <text x="20" y="324" fill="#4B5875" font-size="11" letter-spacing="1">ADRESSE</text>
+              <rect x="20" y="330" width="300" height="40" rx="8" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="34" y="355" fill="#F0EBE0" font-size="13">Aachener Str. 45, 50674 Köln</text>
+              <rect x="20" y="376" width="138" height="26" rx="5" fill="#1A2438" stroke="#3B82F6" stroke-width="1"/>
+              <text x="30" y="393" fill="#93C5FD" font-size="11">📍 22 Min. von Felix</text>
+              <text x="20" y="420" fill="#4B5875" font-size="11" letter-spacing="1">BEVORZUGTER KONTAKTWEG</text>
+              <rect x="20" y="428" width="88" height="32" rx="6" fill="#1A2438" stroke="#E8A020" stroke-width="1.5"/>
+              <text x="32" y="449" fill="#E8A020" font-size="12" font-weight="bold">WhatsApp</text>
+              <rect x="116" y="428" width="64" height="32" rx="6" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="130" y="449" fill="#4B5875" font-size="12">E-Mail</text>
+              <rect x="188" y="428" width="64" height="32" rx="6" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="202" y="449" fill="#4B5875" font-size="12">Anruf</text>
+              <text x="20" y="478" fill="#4B5875" font-size="11" letter-spacing="1">BESTE ERREICHBARKEIT</text>
+              <rect x="20" y="486" width="300" height="34" rx="8" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="34" y="507" fill="#F0EBE0" font-size="13">Wochentags vormittags, vor 12 Uhr</text>
+              <text x="20" y="538" fill="#4B5875" font-size="11" letter-spacing="1">ZWEITER ANSPRECHPARTNER (OPTIONAL)</text>
+              <rect x="20" y="546" width="300" height="34" rx="8" fill="#111827" stroke="#1F2D45" stroke-width="1" stroke-dasharray="4 3"/>
+              <text x="34" y="567" fill="#4B5875" font-size="13">+ Weiteren Kontakt hinzufügen</text>
+              <rect x="20" y="586" width="300" height="22" rx="6" fill="#E8A020"/>
+              <text x="120" y="601" fill="#080C14" font-size="13" font-weight="bold">Weiter →</text>
+            </svg>
+          </div>
+          <div>
+            <div class="wf-label">Wichtigste Design-Entscheidungen</div>
+            <p class="wf-caption">
+              <strong>4-Schritt-Assistent.</strong> Die Aufnahme ist in Schritte unterteilt (Kundendaten → Auftragsdetails → Kategorisierung → Terminplanung). Übersichtlich, kein Overload.<br><br>
+              <strong>WhatsApp-Validierung in Echtzeit.</strong> Sobald Felix eine Nummer eingibt, prüft die App ob ein WhatsApp-Konto existiert — grüner Haken bestätigt sofort.<br><br>
+              <strong>Google-Maps-Chip erscheint automatisch.</strong> Nach Adresseingabe wird Fahrtzeit und -distanz direkt angezeigt — ohne zusätzliche Eingabe.<br><br>
+              <strong>Bevorzugter Kontaktweg ist Pflichtfeld.</strong> Dieses Feld steuert die gesamte Kommunikationsautomatisierung — es kann nicht übersprungen werden.<br><br>
+              <strong>Zweiter Ansprechpartner als sanfter Hinweis.</strong> Gestrichelter Rahmen mit Plus-Symbol signalisiert: freiwillig, aber nützlich.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCREEN 3: PROJEKTKARTE -->
+    <div class="wireframe-wrapper">
+      <div class="wireframe-header">
+        <div class="wireframe-title">Screen 03 — Projektkarte (Komplexer Auftrag)</div>
+        <div class="wireframe-tag">Projektmanagement</div>
+      </div>
+      <div class="wireframe-body">
+        <div class="wf-grid">
+          <div>
+            <div class="wf-label">Wireframe</div>
+            <svg viewBox="0 0 340 700" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid #1F2D45;">
+              <rect width="340" height="700" fill="#080C14"/>
+              <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
+              <text x="20" y="55" fill="#8B97AA" font-size="12">← Projekte</text>
+              <rect x="20" y="64" width="186" height="24" rx="4" fill="#1A2438"/>
+              <text x="30" y="80" fill="#E8A020" font-size="11" font-weight="bold">KOMPLEX · SMART HOME</text>
+              <text x="20" y="108" fill="#F0EBE0" font-size="18" font-family="Georgia" font-weight="bold">Müller Smart Home</text>
+              <text x="20" y="126" fill="#8B97AA" font-size="12">Herr Müller · Ehrenfeld · Beginn 12. Apr.</text>
+              <text x="20" y="152" fill="#4B5875" font-size="10" letter-spacing="1">FORTSCHRITT</text>
+              <rect x="20" y="160" width="300" height="6" rx="3" fill="#1F2D45"/>
+              <rect x="20" y="160" width="175" height="6" rx="3" fill="#E8A020"/>
+              <text x="20" y="180" fill="#22C55E" font-size="10">✓ Besichtigung</text>
+              <text x="90" y="180" fill="#22C55E" font-size="10">✓ Angebot</text>
+              <text x="145" y="180" fill="#22C55E" font-size="10">✓ Freigabe</text>
+              <text x="205" y="180" fill="#E8A020" font-size="10" font-weight="bold">▶ Bestellt</text>
+              <text x="265" y="180" fill="#4B5875" font-size="10">Ausführung</text>
+              <rect x="20" y="192" width="140" height="60" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="214" fill="#4B5875" font-size="10">ANGEBOT</text>
+              <text x="34" y="234" fill="#E8A020" font-size="20" font-family="Georgia">€1.240</text>
+              <text x="34" y="248" fill="#4B5875" font-size="10">inkl. Material + Arbeit</text>
+              <rect x="170" y="192" width="150" height="60" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="184" y="214" fill="#4B5875" font-size="10">BISHERIGE KOSTEN</text>
+              <text x="184" y="234" fill="#22C55E" font-size="20" font-family="Georgia">€480</text>
+              <text x="184" y="248" fill="#22C55E" font-size="10">Marge: ~61% ↑</text>
+              <text x="20" y="272" fill="#4B5875" font-size="10" letter-spacing="1">AUFGABEN</text>
+              <rect x="20" y="280" width="300" height="36" rx="7" fill="#111827" stroke="#1F2D45"/>
+              <rect x="30" y="294" width="16" height="16" rx="4" fill="#22C55E"/>
+              <text x="54" y="306" fill="#8B97AA" font-size="12" text-decoration="line-through">Ortsbegehung abgeschlossen</text>
+              <text x="270" y="306" fill="#4B5875" font-size="10">12. Apr.</text>
+              <rect x="20" y="322" width="300" height="36" rx="7" fill="#111827" stroke="#1F2D45"/>
+              <rect x="30" y="336" width="16" height="16" rx="4" fill="#22C55E"/>
+              <text x="54" y="348" fill="#8B97AA" font-size="12" text-decoration="line-through">Angebot versandt und genehmigt</text>
+              <text x="270" y="348" fill="#4B5875" font-size="10">14. Apr.</text>
+              <rect x="20" y="364" width="300" height="36" rx="7" fill="#1A2438" stroke="#E8A020" stroke-width="1.5"/>
+              <rect x="30" y="378" width="16" height="16" rx="4" fill="none" stroke="#E8A020" stroke-width="2"/>
+              <text x="54" y="390" fill="#F0EBE0" font-size="12" font-weight="600">WAGO 221 Klemmen (×20) bestellen</text>
+              <text x="254" y="378" fill="#F87171" font-size="10" font-weight="bold">ÜBERFÄLLIG</text>
+              <rect x="20" y="406" width="300" height="36" rx="7" fill="#111827" stroke="#1F2D45"/>
+              <rect x="30" y="420" width="16" height="16" rx="4" fill="none" stroke="#1F2D45" stroke-width="2"/>
+              <text x="54" y="432" fill="#8B97AA" font-size="12">Lieferung bestätigen · Kunden informieren</text>
+              <text x="265" y="432" fill="#4B5875" font-size="10">26. Apr.</text>
+              <rect x="20" y="448" width="300" height="36" rx="7" fill="#111827" stroke="#1F2D45"/>
+              <rect x="30" y="462" width="16" height="16" rx="4" fill="none" stroke="#1F2D45" stroke-width="2"/>
+              <text x="54" y="474" fill="#8B97AA" font-size="12">Installation abschließen — Phase 2</text>
+              <text x="265" y="474" fill="#4B5875" font-size="10">28. Apr.</text>
+              <rect x="20" y="494" width="300" height="60" rx="10" fill="#0D1828" stroke="rgba(232,160,32,0.3)" stroke-width="1"/>
+              <circle cx="34" cy="514" r="5" fill="#E8A020"/>
+              <text x="46" y="511" fill="#E8A020" font-size="10" font-weight="bold">AGENT-VORSCHLAG</text>
+              <text x="46" y="526" fill="#F0EBE0" font-size="12">Teile kommen am 26. Apr. — soll ich Herrn</text>
+              <text x="46" y="540" fill="#F0EBE0" font-size="12">Müller den Termin am 28. bestätigen?</text>
+              <rect x="200" y="530" width="52" height="22" rx="5" fill="#22C55E"/>
+              <text x="216" y="545" fill="#080C14" font-size="11" font-weight="bold">Ja</text>
+              <rect x="258" y="530" width="52" height="22" rx="5" fill="#1F2D45"/>
+              <text x="268" y="545" fill="#8B97AA" font-size="11">Später</text>
+              <text x="20" y="572" fill="#4B5875" font-size="10" letter-spacing="1">MATERIAL (AUFTRAGSSPEZIFISCH)</text>
+              <rect x="20" y="580" width="300" height="34" rx="7" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="595" fill="#F0EBE0" font-size="12">WAGO 221-413 (×20)</text>
+              <text x="34" y="609" fill="#4B5875" font-size="10">Sonepar · bestellt · Lieferung 26. Apr.</text>
+              <text x="268" y="599" fill="#E8A020" font-size="11" font-weight="bold">€18,40</text>
+              <rect x="20" y="624" width="140" height="32" rx="7" fill="#111827" stroke="#1F2D45"/>
+              <text x="42" y="644" fill="#8B97AA" font-size="12">🎤 Sprachnotiz</text>
+              <rect x="170" y="624" width="150" height="32" rx="7" fill="#111827" stroke="#1F2D45"/>
+              <text x="195" y="644" fill="#8B97AA" font-size="12">📸 Foto hinzufügen</text>
+              <rect x="20" y="664" width="300" height="26" rx="6" fill="#0D1828" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+              <text x="34" y="681" fill="#93C5FD" font-size="11">⚖ VDE-0100-Abnahme vor Abschluss erforderlich</text>
+            </svg>
+          </div>
+          <div>
+            <div class="wf-label">Wichtigste Design-Entscheidungen</div>
+            <p class="wf-caption">
+              <strong>Fortschrittsbalken zeigt die Phase im Lebenszyklus.</strong> Felix sieht immer sofort, wo ein Auftrag steht und was als Nächstes kommt.<br><br>
+              <strong>Finanzkarte zeigt interne Marge in Echtzeit.</strong> Die interne Ansicht (nur für Felix) zeigt die Rentabilität, während die Kosten gebucht werden.<br><br>
+              <strong>Aufgaben werden automatisch aus dem Auftragstyp generiert.</strong> Bei einem Komplex/Smart-Home-Auftrag werden Standardaufgaben vorausgefüllt. Felix hakt nur ab.<br><br>
+              <strong>Agent-Vorschlag erscheint im Kontext.</strong> Statt einem separaten Screen sitzt die Agent-Karte direkt im Projekt — gebunden an den nächsten konkreten Schritt.<br><br>
+              <strong>Compliance-Badge unten immer sichtbar.</strong> Für Aufträge mit VDE-Abnahmepflicht ist das Symbol permanent sichtbar, damit es vor Projektabschluss nicht vergessen wird.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCREEN 4: ANGEBOT -->
+    <div class="wireframe-wrapper">
+      <div class="wireframe-header">
+        <div class="wireframe-title">Screen 04 — Angebotserstellung</div>
+        <div class="wireframe-tag">Angebot · Finanzen</div>
+      </div>
+      <div class="wireframe-body">
+        <div class="wf-grid">
+          <div>
+            <div class="wf-label">Wireframe</div>
+            <svg viewBox="0 0 340 680" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid #1F2D45;">
+              <rect width="340" height="680" fill="#080C14"/>
+              <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
+              <text x="20" y="55" fill="#8B97AA" font-size="12">← Müller Smart Home</text>
+              <text x="20" y="80" fill="#F0EBE0" font-size="19" font-family="Georgia" font-weight="bold">Angebot erstellen</text>
+              <text x="20" y="98" fill="#8B97AA" font-size="12">Herr Müller · Smart Home Phase 2</text>
+              <text x="20" y="124" fill="#4B5875" font-size="10" letter-spacing="1">ARBEITSZEIT</text>
+              <rect x="20" y="132" width="300" height="44" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="150" fill="#F0EBE0" font-size="13">Smart-Home-Installation</text>
+              <text x="34" y="166" fill="#4B5875" font-size="11">6 Std. × €75/Std.</text>
+              <text x="262" y="158" fill="#E8A020" font-size="14" font-weight="bold">€450</text>
+              <rect x="20" y="182" width="300" height="44" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="200" fill="#F0EBE0" font-size="13">Fahrtkosten (Ehrenfeld, 14 Min.)</text>
+              <text x="34" y="216" fill="#4B5875" font-size="11">€30 Pauschale + €0,85/km × 9 km</text>
+              <text x="268" y="208" fill="#E8A020" font-size="14" font-weight="bold">€38</text>
+              <rect x="20" y="232" width="300" height="44" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="250" fill="#F0EBE0" font-size="13">Verwaltungspauschale (10%)</text>
+              <text x="34" y="266" fill="#4B5875" font-size="11">Automatisch berechnet</text>
+              <text x="268" y="258" fill="#E8A020" font-size="14" font-weight="bold">€49</text>
+              <text x="20" y="294" fill="#4B5875" font-size="10" letter-spacing="1">MATERIAL</text>
+              <rect x="20" y="302" width="300" height="38" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="318" fill="#F0EBE0" font-size="13">Philips Hue Starter Kit</text>
+              <text x="34" y="332" fill="#4B5875" font-size="11">Einkauf €180 · Aufschlag 25%</text>
+              <text x="260" y="324" fill="#E8A020" font-size="14" font-weight="bold">€225</text>
+              <rect x="20" y="346" width="300" height="38" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="362" fill="#F0EBE0" font-size="13">WAGO 221-413 ×20</text>
+              <text x="34" y="376" fill="#4B5875" font-size="11">Einkauf €18 · Aufschlag 25%</text>
+              <text x="268" y="368" fill="#E8A020" font-size="14" font-weight="bold">€23</text>
+              <rect x="20" y="390" width="300" height="32" rx="8" fill="#0D1828" stroke="#1F2D45" stroke-dasharray="4 3"/>
+              <text x="122" y="410" fill="#4B5875" font-size="12">+ Material hinzufügen</text>
+              <line x1="20" y1="432" x2="320" y2="432" stroke="#1F2D45" stroke-width="1"/>
+              <text x="20" y="454" fill="#8B97AA" font-size="13">Nettobetrag</text>
+              <text x="244" y="454" fill="#F0EBE0" font-size="13">€785</text>
+              <text x="20" y="476" fill="#8B97AA" font-size="13">MwSt. 19%</text>
+              <text x="244" y="476" fill="#F0EBE0" font-size="13">€149</text>
+              <line x1="20" y1="490" x2="320" y2="490" stroke="#1F2D45" stroke-width="1"/>
+              <text x="20" y="514" fill="#F0EBE0" font-size="16" font-weight="bold">Gesamtbetrag</text>
+              <text x="228" y="514" fill="#E8A020" font-size="20" font-family="Georgia" font-weight="bold">€934</text>
+              <rect x="20" y="526" width="300" height="36" rx="8" fill="#0D1828" stroke="rgba(34,197,94,0.2)"/>
+              <text x="34" y="541" fill="#4B5875" font-size="10" font-weight="bold">NUR INTERN (NICHT FÜR KUNDEN SICHTBAR)</text>
+              <text x="34" y="557" fill="#22C55E" font-size="12">Tatsächl. Kosten: €360 → Marge: €574 (61%)</text>
+              <rect x="20" y="572" width="300" height="40" rx="8" fill="#1A2438" stroke="rgba(59,130,246,0.2)"/>
+              <text x="34" y="588" fill="#93C5FD" font-size="11">ℹ Material wird erst bestellt, wenn der</text>
+              <text x="34" y="603" fill="#93C5FD" font-size="11">Kunde das Angebot digital freigegeben hat.</text>
+              <rect x="20" y="622" width="144" height="38" rx="8" fill="#1F2D45"/>
+              <text x="40" y="645" fill="#8B97AA" font-size="12">Entwurf speichern</text>
+              <rect x="172" y="622" width="148" height="38" rx="8" fill="#E8A020"/>
+              <text x="186" y="645" fill="#080C14" font-size="12" font-weight="bold">An Kunden senden →</text>
+            </svg>
+          </div>
+          <div>
+            <div class="wf-label">Wichtigste Design-Entscheidungen</div>
+            <p class="wf-caption">
+              <strong>Arbeitszeit, Fahrt und Verwaltung werden vorausgefüllt.</strong> Basierend auf Auftragstyp und Google-Maps-Daten entsteht das Angebot von selbst. Felix prüft nur noch.<br><br>
+              <strong>Fahrtkosten werden automatisch berechnet.</strong> Distanz × Fahrzeugkosten (ADAC-Basis) + Fahrzeit × reduziertem Stundensatz. Entspricht §312a BGB — keine manuelle Eingabe nötig.<br><br>
+              <strong>Material inkl. Aufschlag.</strong> Felix gibt den Einkaufspreis ein; die App wendet seinen Standard-Aufschlag an und zeigt den kundengerechten Preis. Marge wird intern verfolgt.<br><br>
+              <strong>Interne Marge klar abgetrennt.</strong> Grüner Rahmen und expliziter Hinweis „NUR INTERN" — Felix sieht die Wahrheit. Der Kunde nicht.<br><br>
+              <strong>Freigabe-Sperre fest im Workflow verankert.</strong> Der blaue Hinweis erinnert dauerhaft: Material wird nicht bestellt, bis der Kunde digital zugestimmt hat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCREEN 5: KOMMUNIKATIONS-HUB -->
+    <div class="wireframe-wrapper">
+      <div class="wireframe-header">
+        <div class="wireframe-title">Screen 05 — KI-Kommunikations-Hub</div>
+        <div class="wireframe-tag">KI-Agent · WhatsApp</div>
+      </div>
+      <div class="wireframe-body">
+        <div class="wf-grid">
+          <div>
+            <div class="wf-label">Wireframe</div>
+            <svg viewBox="0 0 340 660" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid #1F2D45;">
+              <rect width="340" height="660" fill="#080C14"/>
+              <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
+              <text x="20" y="55" fill="#8B97AA" font-size="12">← Zurück</text>
+              <text x="20" y="80" fill="#F0EBE0" font-size="19" font-family="Georgia" font-weight="bold">Kommunikation</text>
+              <rect x="20" y="92" width="300" height="34" rx="8" fill="#111827"/>
+              <rect x="22" y="94" width="95" height="30" rx="7" fill="#1A2438"/>
+              <text x="43" y="114" fill="#E8A020" font-size="12" font-weight="bold">Agent</text>
+              <text x="144" y="114" fill="#4B5875" font-size="12">Nachrichten</text>
+              <text x="242" y="114" fill="#4B5875" font-size="12">Verlauf</text>
+              <text x="20" y="146" fill="#4B5875" font-size="10" letter-spacing="1">3 VORSCHLÄGE WARTEN</text>
+              <rect x="20" y="154" width="300" height="86" rx="10" fill="#111827" stroke="rgba(232,160,32,0.25)"/>
+              <rect x="20" y="154" width="4" height="86" rx="2" fill="#E8A020"/>
+              <text x="34" y="172" fill="#FCD34D" font-size="10" font-weight="bold">TERMINERINNERUNG</text>
+              <text x="34" y="188" fill="#F0EBE0" font-size="12">Frau Schneider an morgigen Termin erinnern</text>
+              <text x="34" y="203" fill="#8B97AA" font-size="11">"Guten Tag Frau Schneider, ich möchte Sie</text>
+              <text x="34" y="216" fill="#8B97AA" font-size="11">daran erinnern, dass ich morgen um 9:00..."</text>
+              <rect x="34" y="228" width="64" height="24" rx="5" fill="#22C55E"/>
+              <text x="46" y="244" fill="#080C14" font-size="11" font-weight="bold">Senden ✓</text>
+              <rect x="106" y="228" width="72" height="24" rx="5" fill="#1F2D45"/>
+              <text x="114" y="244" fill="#8B97AA" font-size="11">Erst bearbeiten</text>
+              <rect x="186" y="228" width="52" height="24" rx="5" fill="#1F2D45"/>
+              <text x="200" y="244" fill="#8B97AA" font-size="11">Überspringen</text>
+              <rect x="20" y="248" width="300" height="86" rx="10" fill="#111827" stroke="rgba(59,130,246,0.2)"/>
+              <rect x="20" y="248" width="4" height="86" rx="2" fill="#3B82F6"/>
+              <text x="34" y="266" fill="#93C5FD" font-size="10" font-weight="bold">ANGEBOTS-NACHFASS · 4 TAGE</text>
+              <text x="34" y="282" fill="#F0EBE0" font-size="12">Herr Weber hat das Angebot noch nicht freigegeben</text>
+              <text x="34" y="297" fill="#8B97AA" font-size="11">"Guten Tag Herr Weber, haben Sie die</text>
+              <text x="34" y="310" fill="#8B97AA" font-size="11">Möglichkeit gehabt, das Angebot zu..."</text>
+              <rect x="34" y="322" width="64" height="24" rx="5" fill="#22C55E"/>
+              <text x="46" y="338" fill="#080C14" font-size="11" font-weight="bold">Senden ✓</text>
+              <rect x="106" y="322" width="72" height="24" rx="5" fill="#1F2D45"/>
+              <text x="114" y="338" fill="#8B97AA" font-size="11">Erst bearbeiten</text>
+              <rect x="186" y="322" width="52" height="24" rx="5" fill="#1F2D45"/>
+              <text x="200" y="338" fill="#8B97AA" font-size="11">Überspringen</text>
+              <rect x="20" y="342" width="300" height="86" rx="10" fill="#111827" stroke="rgba(239,68,68,0.2)"/>
+              <rect x="20" y="342" width="4" height="86" rx="2" fill="#EF4444"/>
+              <text x="34" y="360" fill="#F87171" font-size="10" font-weight="bold">LIEFERVERZÖGERUNG</text>
+              <text x="34" y="376" fill="#F0EBE0" font-size="12">Müller-Lieferung verzögert auf 28. Apr.</text>
+              <text x="34" y="391" fill="#8B97AA" font-size="11">"Herr Müller, leider hat sich die Lieferung</text>
+              <text x="34" y="404" fill="#8B97AA" font-size="11">verschoben. Der neue Termin ist..."</text>
+              <rect x="34" y="416" width="64" height="24" rx="5" fill="#22C55E"/>
+              <text x="46" y="432" fill="#080C14" font-size="11" font-weight="bold">Senden ✓</text>
+              <rect x="106" y="416" width="72" height="24" rx="5" fill="#1F2D45"/>
+              <text x="114" y="432" fill="#8B97AA" font-size="11">Erst bearbeiten</text>
+              <rect x="186" y="416" width="52" height="24" rx="5" fill="#1F2D45"/>
+              <text x="200" y="432" fill="#8B97AA" font-size="11">Überspringen</text>
+              <text x="20" y="454" fill="#4B5875" font-size="10" letter-spacing="1">LETZTER KOMMUNIKATIONSVERLAUF</text>
+              <rect x="20" y="462" width="300" height="42" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="479" fill="#F0EBE0" font-size="12">Frau Schneider · WhatsApp</text>
+              <text x="34" y="493" fill="#4B5875" font-size="11">"Super, bis morgen!" · 23. Apr. · 11:42</text>
+              <text x="264" y="481" fill="#22C55E" font-size="10">eingehend</text>
+              <rect x="20" y="510" width="300" height="42" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="527" fill="#F0EBE0" font-size="12">Herr Weber · E-Mail</text>
+              <text x="34" y="541" fill="#4B5875" font-size="11">Angebot gesendet: €340 netto · 19. Apr.</text>
+              <text x="260" y="529" fill="#3B82F6" font-size="10">ausgehend</text>
+              <rect x="20" y="558" width="300" height="42" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="575" fill="#F0EBE0" font-size="12">Herr Müller · WhatsApp</text>
+              <text x="34" y="589" fill="#4B5875" font-size="11">Termin bestätigt 28. Apr. · 22. Apr.</text>
+              <text x="260" y="577" fill="#3B82F6" font-size="10">ausgehend</text>
+              <rect x="20" y="614" width="264" height="38" rx="10" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="637" fill="#4B5875" font-size="13">Nachricht schreiben oder diktieren...</text>
+              <rect x="292" y="614" width="28" height="38" rx="8" fill="#E8A020"/>
+              <text x="299" y="637" fill="#080C14" font-size="16">🎤</text>
+            </svg>
+          </div>
+          <div>
+            <div class="wf-label">Wichtigste Design-Entscheidungen</div>
+            <p class="wf-caption">
+              <strong>Agent-Vorschläge sind die Hauptansicht.</strong> Felix öffnet die Kommunikation und sieht sofort, was rausgehen muss — kein Suchen, kein Nachdenken. Der Agent hat das bereits erledigt.<br><br>
+              <strong>Drei-Tasten-Entscheidung pro Vorschlag.</strong> Sofort senden, erst bearbeiten oder überspringen. Maximal 2 Sekunden pro Aktion. Das ist die zentrale UX-Innovation der App.<br><br>
+              <strong>Nachrichten werden vom Agenten auf Deutsch verfasst.</strong> Professionell, kundenfreundlich, passend zum Anlass — Felix muss sich keine Formulierungen mehr überlegen.<br><br>
+              <strong>Farbkodierung nach Dringlichkeit.</strong> Amber = geplant/routinemäßig, Blau = Nachfass erforderlich, Rot = dringende Verzögerung. Die Stimmung ist auf einen Blick erkennbar.<br><br>
+              <strong>Verlauf-Tab zeigt den kompletten Kommunikationshistorie.</strong> Alle ein- und ausgehenden Nachrichten, zeitgestempelt, dem Kunden und Projekt zugeordnet. Das ist Felix' Gedächtnis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCREEN 6: LAGER -->
+    <div class="wireframe-wrapper">
+      <div class="wireframe-header">
+        <div class="wireframe-title">Screen 06 — Lager & Material</div>
+        <div class="wireframe-tag">Lagerverwaltung · ERP</div>
+      </div>
+      <div class="wireframe-body">
+        <div class="wf-grid">
+          <div>
+            <div class="wf-label">Wireframe</div>
+            <svg viewBox="0 0 340 620" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid #1F2D45;">
+              <rect width="340" height="620" fill="#080C14"/>
+              <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
+              <text x="20" y="60" fill="#F0EBE0" font-size="19" font-family="Georgia" font-weight="bold">Lager</text>
+              <rect x="20" y="72" width="300" height="38" rx="8" fill="#1A0C0C" stroke="rgba(239,68,68,0.3)"/>
+              <text x="34" y="88" fill="#F87171" font-size="11" font-weight="bold">⚠ 3 Artikel unter Mindestbestand</text>
+              <text x="34" y="102" fill="#F87171" font-size="10">WAGO-Klemmen · FI-Schalter · NYM-J 3×2,5mm²</text>
+              <rect x="20" y="118" width="220" height="34" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="36" y="139" fill="#4B5875" font-size="13">🔍  Material suchen...</text>
+              <rect x="248" y="118" width="72" height="34" rx="8" fill="#1A2438" stroke="#E8A020" stroke-width="1"/>
+              <text x="258" y="138" fill="#E8A020" font-size="12">+ Hinzufügen</text>
+              <rect x="20" y="160" width="300" height="28" rx="6" fill="#111827"/>
+              <rect x="22" y="162" width="72" height="24" rx="5" fill="#1A2438"/>
+              <text x="36" y="178" fill="#E8A020" font-size="11" font-weight="bold">Alle (80)</text>
+              <text x="111" y="178" fill="#4B5875" font-size="11">Niedrig (3)</text>
+              <text x="178" y="178" fill="#4B5875" font-size="11">Bestellt</text>
+              <text x="248" y="178" fill="#4B5875" font-size="11">Werkzeug</text>
+              <rect x="20" y="196" width="300" height="54" rx="8" fill="#111827" stroke="rgba(239,68,68,0.3)"/>
+              <rect x="20" y="196" width="4" height="54" rx="2" fill="#EF4444"/>
+              <text x="34" y="214" fill="#F0EBE0" font-size="13" font-weight="500">WAGO 221-413 (3-polig)</text>
+              <text x="34" y="230" fill="#4B5875" font-size="11">Verbindungsklemmen · Sonepar</text>
+              <text x="34" y="244" fill="#F87171" font-size="11">Bestand: 4 · Minimum: 10</text>
+              <text x="238" y="218" fill="#F0EBE0" font-size="12">€0,92/Stk.</text>
+              <rect x="238" y="228" width="74" height="22" rx="5" fill="#EF4444"/>
+              <text x="248" y="243" fill="white" font-size="11" font-weight="bold">Nachbestellen</text>
+              <rect x="20" y="256" width="300" height="54" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <rect x="20" y="256" width="4" height="54" rx="2" fill="#22C55E"/>
+              <text x="34" y="274" fill="#F0EBE0" font-size="13" font-weight="500">NYM-J 3×1,5mm² (50m)</text>
+              <text x="34" y="290" fill="#4B5875" font-size="11">Installationskabel · Rexel Deutschland</text>
+              <text x="34" y="304" fill="#22C55E" font-size="11">Bestand: 3 Rollen · Minimum: 2</text>
+              <text x="238" y="278" fill="#F0EBE0" font-size="12">€38/Rolle</text>
+              <text x="252" y="298" fill="#22C55E" font-size="11">OK ✓</text>
+              <rect x="20" y="316" width="300" height="54" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <rect x="20" y="316" width="4" height="54" rx="2" fill="#3B82F6"/>
+              <text x="34" y="334" fill="#F0EBE0" font-size="13" font-weight="500">Schuko-Steckdose (weiß)</text>
+              <text x="34" y="350" fill="#4B5875" font-size="11">Unterputz · Sonepar</text>
+              <text x="34" y="364" fill="#93C5FD" font-size="11">Bestellt ×20 · Lieferung 26. Apr.</text>
+              <text x="244" y="338" fill="#F0EBE0" font-size="12">€3,20/Stk.</text>
+              <text x="246" y="358" fill="#3B82F6" font-size="11">Unterwegs</text>
+              <rect x="20" y="376" width="300" height="54" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <rect x="20" y="376" width="4" height="54" rx="2" fill="#22C55E"/>
+              <text x="34" y="394" fill="#F0EBE0" font-size="13" font-weight="500">LS-Schalter B16A</text>
+              <text x="34" y="410" fill="#4B5875" font-size="11">Leitungsschutzschalter · Würth Elektro</text>
+              <text x="34" y="424" fill="#22C55E" font-size="11">Bestand: 8 · Minimum: 4</text>
+              <text x="244" y="398" fill="#F0EBE0" font-size="12">€8,40/Stk.</text>
+              <text x="252" y="418" fill="#22C55E" font-size="11">OK ✓</text>
+              <text x="20" y="448" fill="#4B5875" font-size="10" letter-spacing="1">NACHBESTELLLISTE</text>
+              <rect x="20" y="456" width="300" height="52" rx="8" fill="#0D1420" stroke="rgba(232,160,32,0.2)"/>
+              <text x="34" y="474" fill="#F0EBE0" font-size="12">3 Artikel bereit zur Bestellung bei Sonepar</text>
+              <text x="34" y="490" fill="#4B5875" font-size="11">Gesamt ca. €84,50 · Lieferzeit: 1–2 Tage</text>
+              <rect x="194" y="462" width="116" height="28" rx="6" fill="#E8A020"/>
+              <text x="208" y="480" fill="#080C14" font-size="12" font-weight="bold">Alle bestellen</text>
+              <rect x="20" y="518" width="140" height="52" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="538" fill="#4B5875" font-size="10">GESAMTLAGERWERT</text>
+              <text x="34" y="558" fill="#E8A020" font-size="20" font-family="Georgia">€1.240</text>
+              <rect x="175" y="518" width="145" height="52" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="190" y="538" fill="#4B5875" font-size="10">ERFASSTE ARTIKEL</text>
+              <text x="190" y="558" fill="#E8A020" font-size="20" font-family="Georgia">80 SKUs</text>
+              <rect x="20" y="580" width="300" height="32" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="36" y="600" fill="#4B5875" font-size="12">🎤  „Ich habe 4 WAGO-Klemmen für Müller verwendet"</text>
+            </svg>
+          </div>
+          <div>
+            <div class="wf-label">Wichtigste Design-Entscheidungen</div>
+            <p class="wf-caption">
+              <strong>Roter Warn-Banner ist sofort sichtbar.</strong> Ist der Bestand niedrig, sieht Felix es beim Öffnen der Lagerverwaltung — bevor er zu einem Kunden fährt und feststellt, dass Material fehlt.<br><br>
+              <strong>Farbiger Linksrand zeigt den Status.</strong> Rot = unter Mindestbestand, Blau = bestellt/unterwegs, Grün = ausreichend bevorratet. Ein Blick reicht.<br><br>
+              <strong>Nachbestellliste bündelt Bestellungen.</strong> Statt mehrere Lieferanten einzeln zu kontaktieren, gruppiert die App Artikel nach Lieferant und erstellt eine gemeinsame Bestellung.<br><br>
+              <strong>Spracherfassung für verwendetes Material.</strong> Felix sagt „Ich habe 4 WAGO-Klemmen für Müller verwendet" — die App bucht sie vom Lager ab und dem Projekt gut.<br><br>
+              <strong>Lager ist mit Rentabilität verknüpft.</strong> Sobald Material verbucht wird, fließt der Einkaufspreis automatisch in die Projektkostenrechnung ein.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FEATURE SPEC -->
+<section id="spec">
+  <div class="container">
+    <div class="section-eyebrow">Produktspezifikation</div>
+    <h2>Vollständige <em>Feature-Übersicht</em></h2>
+    <p class="section-lead">Detaillierte Auflistung aller Features, Prioritäten und funktionalen Anforderungen je Modul.</p>
+
+    <div style="display:flex;gap:16px;margin-bottom:40px;flex-wrap:wrap;">
+      <span class="priority-high">P0 — MVP Kritisch</span>
+      <span class="priority-med">P1 — Launch Essentiell</span>
+      <span class="priority-low">P2 — Nach dem Launch</span>
+    </div>
+
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>Modul / Feature</th>
+          <th>Beschreibung</th>
+          <th>Priorität</th>
+          <th>Hinweise</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td colspan="4" style="background:var(--surface2);color:var(--text);font-weight:700;font-size:12px;letter-spacing:0.08em;">01 — KUNDEN-CRM</td></tr>
+        <tr><td>Kundenanlage</td><td>Name, Mobil, E-Mail, Adresse, Firma (optional), Notizen, zweiter Ansprechpartner</td><td><span class="priority-high">P0</span></td><td>Mobil löst WhatsApp-Check aus</td></tr>
+        <tr><td>Google-Maps-Integration</td><td>Automatische Berechnung von Distanz und Fahrtzeit von Felix' Standort zu jedem Kunden</td><td><span class="priority-high">P0</span></td><td>Verkehrsdaten tageszeit-abhängig</td></tr>
+        <tr><td>Auftragshistorie</td><td>Alle vergangenen Projekte, Angebote, Rechnungen und Kommunikation je Kunde</td><td><span class="priority-high">P0</span></td><td>Suchbar und filterbar</td></tr>
+        <tr><td>Bevorzugter Kontaktweg</td><td>WhatsApp / E-Mail / Anruf — steuert das gesamte Kommunikations-Routing</td><td><span class="priority-high">P0</span></td><td>Pflichtfeld, nicht überspringbar</td></tr>
+        <tr><td>Erreichbarkeit</td><td>Beste Tage/Zeiten für den Kunden — vom Kalender für Terminvorschläge genutzt</td><td><span class="priority-med">P1</span></td><td>Kundenspezifisch gespeichert</td></tr>
+        <tr><td>E-Check-Tracking</td><td>Letztes Prüfdatum je Objekt protokollieren, Fälligkeit anzeigen</td><td><span class="priority-med">P1</span></td><td>Upsell-Auslöser für Felix</td></tr>
+
+        <tr><td colspan="4" style="background:var(--surface2);color:var(--text);font-weight:700;font-size:12px;letter-spacing:0.08em;">02 — PROJEKTMANAGEMENT</td></tr>
+        <tr><td>Auftrags-Assistent</td><td>4-Schritt-Aufnahme: Kunde → Auftragstyp/Kategorie → Umfang → Terminplanung</td><td><span class="priority-high">P0</span></td><td>Alle 4 Schritte müssen abgeschlossen werden</td></tr>
+        <tr><td>Einfach/Komplex-Klassifizierung</td><td>Automatisch vorgeschlagen (unter/über €500 und 10 Std.). Manuell anpassbar.</td><td><span class="priority-high">P0</span></td><td>—</td></tr>
+        <tr><td>Auftragskategorie + Entscheidungsbaum</td><td>7 Hauptkategorien; Auswahl generiert kategoriespezifische Rückfragen automatisch</td><td><span class="priority-high">P0</span></td><td>Siehe Kategorienabschnitt</td></tr>
+        <tr><td>Pipeline-Phasenverfolgung</td><td>Lead → Besichtigung → Angebot → Freigabe → Bestellt → Termin → Abgeschlossen → Rechnung → Bezahlt</td><td><span class="priority-high">P0</span></td><td>Visueller Fortschrittsbalken</td></tr>
+        <tr><td>Automatische Aufgabenliste</td><td>Basierend auf Kategorie und Komplexität: Standardaufgaben mit Fälligkeitsdaten generieren</td><td><span class="priority-high">P0</span></td><td>Rückwärts geplant vom Termindatum</td></tr>
+        <tr><td>Deadline-Rückwärtsplanung</td><td>Termin am 28. Apr., Lieferzeit 3 Tage → Aufgabe „Material bestellen" automatisch auf 25. Apr.</td><td><span class="priority-high">P0</span></td><td>Kernlogik der Planung</td></tr>
+        <tr><td>Sprachnotiz-Eingabe</td><td>Vor Ort aufnehmen; Agent transkribiert und extrahiert Aufgaben, Material und Notizen</td><td><span class="priority-high">P0</span></td><td>OpenAI Whisper oder vergleichbar</td></tr>
+        <tr><td>Foto-Anhänge</td><td>Vorher/Nachher-Fotos je Projekt als Dokumentation</td><td><span class="priority-med">P1</span></td><td>Auch für VDE-Dokumentation nutzbar</td></tr>
+        <tr><td>Compliance-Checklisten</td><td>VDE- und DGUV-V3-Checklisten automatisch nach Auftragstyp beigefügt. Vor Abschluss erforderlich.</td><td><span class="priority-med">P1</span></td><td>Siehe Compliance-Abschnitt</td></tr>
+
+        <tr><td colspan="4" style="background:var(--surface2);color:var(--text);font-weight:700;font-size:12px;letter-spacing:0.08em;">03 — KALENDER & PLANUNG</td></tr>
+        <tr><td>Felix' Kalenderansicht</td><td>Tages-/Wochenansicht mit allen Terminen inkl. Fahrzeitblöcken dazwischen</td><td><span class="priority-high">P0</span></td><td>—</td></tr>
+        <tr><td>Kundenpräferenz-Planung</td><td>Beim Buchen schlägt der Agent Slots vor, die den bevorzugten Tagen/Zeiten des Kunden entsprechen</td><td><span class="priority-med">P1</span></td><td>KI-Abgleich über alle Kunden</td></tr>
+        <tr><td>Fahrzeitblockierung</td><td>Fahrtzeit vor und nach jedem Termin automatisch im Kalender reservieren</td><td><span class="priority-med">P1</span></td><td>Google-Maps-Daten tageszeit-abhängig</td></tr>
+        <tr><td>Umplanungs-Flow</td><td>Beim Notfall schlägt der Agent vor, welche Aufträge verschoben werden können, und entwirft Kundenbenachrichtigungen</td><td><span class="priority-med">P1</span></td><td>Erfordert Kundenpräferenzdaten</td></tr>
+
+        <tr><td colspan="4" style="background:var(--surface2);color:var(--text);font-weight:700;font-size:12px;letter-spacing:0.08em;">04 — ANGEBOT & RECHNUNG</td></tr>
+        <tr><td>Automatische Angebotserstellung</td><td>Angebot aus Auftragsdaten: Arbeitsstunden × Satz + Fahrtkosten + Material + Verwaltungspauschale</td><td><span class="priority-high">P0</span></td><td>Alle Positionen für Kunden sichtbar</td></tr>
+        <tr><td>Fahrtkostenberechnung</td><td>Distanz × Fahrzeugkosten (ADAC-Basis) + Fahrzeit × reduziertem Stundensatz. §312a BGB zwingend erforderlich.</td><td><span class="priority-high">P0</span></td><td>Kein Versand ohne diese Position</td></tr>
+        <tr><td>Materialaufschlag</td><td>Felix gibt den Einkaufspreis ein; App wendet seinen Aufschlag an und zeigt den Kundenpreis</td><td><span class="priority-high">P0</span></td><td>Standard-Aufschlag konfigurierbar</td></tr>
+        <tr><td>MwSt.-Berechnung</td><td>19% USt. automatisch auf alle Positionen angewendet</td><td><span class="priority-high">P0</span></td><td>Gesetzlich erforderlich</td></tr>
+        <tr><td>Digitale Kundenfreigabe</td><td>Angebot per E-Mail/WhatsApp mit Freigabe-Link. Material wird erst nach Freigabe bestellt.</td><td><span class="priority-high">P0</span></td><td>Harte Sperre im Workflow</td></tr>
+        <tr><td>Interne Margenansicht</td><td>Tatsächliche Kosten vs. berechneter Preis. Umsatz-pro-Stunde-Kennzahl. Nie für Kunden sichtbar.</td><td><span class="priority-high">P0</span></td><td>Kernfunktion für Rentabilität</td></tr>
+        <tr><td>Rechnungsgenerierung</td><td>Nach Auftragsabschluss Rechnung aus freigegebenem Angebot + Ist-Werten erstellen. Per bevorzugtem Kanal senden.</td><td><span class="priority-high">P0</span></td><td>Professionelle Vorlage erforderlich</td></tr>
+        <tr><td>Zahlungsverfolgung</td><td>Als bezahlt markieren (Überweisung oder Bar). Überfällige Rechnungen im Dashboard anzeigen.</td><td><span class="priority-med">P1</span></td><td>Kein Zahlungsprocessing im MVP</td></tr>
+
+        <tr><td colspan="4" style="background:var(--surface2);color:var(--text);font-weight:700;font-size:12px;letter-spacing:0.08em;">05 — KOMMUNIKATIONS-HUB</td></tr>
+        <tr><td>WhatsApp-Business-Integration</td><td>Nachrichten senden/empfangen via WhatsApp Business API. Alle Nachrichten je Projekt protokollieren.</td><td><span class="priority-high">P0</span></td><td>Meta WhatsApp Business API</td></tr>
+        <tr><td>Gmail-Integration</td><td>E-Mails über Felix' Gmail versenden. Eingehende Antworten erfassen. Mit Kundenprofil verknüpfen.</td><td><span class="priority-high">P0</span></td><td>Gmail OAuth</td></tr>
+        <tr><td>Agent-Nachrichtenentwurf</td><td>Agent erstellt kontextbezogene deutsche Nachrichten für jede Workflow-Phase. Felix genehmigt.</td><td><span class="priority-high">P0</span></td><td>Anthropic API (Claude Sonnet)</td></tr>
+        <tr><td>Proaktive Vorschläge</td><td>Agent zeigt täglich Vorschläge: fällige Erinnerungen, Angebots-Nachfass, Nachfass nach Auftragsabschluss</td><td><span class="priority-high">P0</span></td><td>Regelbasiert + KI</td></tr>
+        <tr><td>Kommunikations-Timeline</td><td>Vollständiges Protokoll aller Interaktionen, zeitgestempelt, durchsuchbar, je Kunde und Projekt</td><td><span class="priority-med">P1</span></td><td>Nachweis-Protokoll</td></tr>
+        <tr><td>Reaktionszeitverfolgung</td><td>Wie lange braucht ein Kunde zur Antwort? Markierung wenn nach X Tagen keine Rückmeldung.</td><td><span class="priority-med">P1</span></td><td>Steuert Nachfass-Vorschläge</td></tr>
+
+        <tr><td colspan="4" style="background:var(--surface2);color:var(--text);font-weight:700;font-size:12px;letter-spacing:0.08em;">06 — LAGERVERWALTUNG</td></tr>
+        <tr><td>Stammartikel (80 SKUs)</td><td>Vorbespielte Liste gängiger deutscher Elektromaterialien mit Kategorien, Preisen und Mindestbeständen</td><td><span class="priority-med">P1</span></td><td>Starter-Liste aus Forschung</td></tr>
+        <tr><td>Mindestbestand-Warnungen</td><td>Dashboard-Hinweis und tägliche Zusammenfassung wenn Artikel unter Mindestbestand fällt</td><td><span class="priority-med">P1</span></td><td>—</td></tr>
+        <tr><td>Auftragsgebundene Materialabgabe</td><td>Bei Materialeinsatz (Sprache oder manuell): Lager abbuchen, Auftragskosten erhöhen</td><td><span class="priority-med">P1</span></td><td>—</td></tr>
+        <tr><td>Bestelllisten-Bündelung</td><td>Unterschreitung je Lieferant bündeln und Bestellvorschlag erstellen</td><td><span class="priority-low">P2</span></td><td>MVP: manuell; später: automatisch</td></tr>
+        <tr><td>Lieferzeitendatenbank</td><td>Geschätzte Lieferzeiten je Lieferant für Rückwärtsplanung</td><td><span class="priority-med">P1</span></td><td>Start manuell, Ziel API-Anbindung</td></tr>
+
+        <tr><td colspan="4" style="background:var(--surface2);color:var(--text);font-weight:700;font-size:12px;letter-spacing:0.08em;">07 — COMPLIANCE</td></tr>
+        <tr><td>VDE-Checkliste nach Auftragstyp</td><td>Relevante DIN-VDE-Checkliste automatisch beifügen. Muss vor Auftragsabschluss abgehakt sein.</td><td><span class="priority-med">P1</span></td><td>DIN VDE 0100 für Installationen</td></tr>
+        <tr><td>DGUV-V3-Prüfverfolgung</td><td>Prüfdaten, Ergebnisse und nächsten Fälligkeitstermin je Kundenobjekt protokollieren</td><td><span class="priority-med">P1</span></td><td>E-Check-Nachweise</td></tr>
+        <tr><td>Dokumentenspeicherung</td><td>Foto + Checkliste je abgeschlossenem Auftrag als Nachweisakte</td><td><span class="priority-med">P1</span></td><td>Für Versicherungskonformität</td></tr>
+        <tr><td>Prüfintervall-Erinnerungen</td><td>Felix benachrichtigen wenn ein Kundenobjekt sich dem nächsten DGUV-V3-Prüfdatum nähert</td><td><span class="priority-low">P2</span></td><td>Upsell-Möglichkeit</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ENTSCHEIDUNGSBAUM -->
+<section id="kategorien">
+  <div class="container">
+    <div class="section-eyebrow">Entscheidungsbaum</div>
+    <h2>Auftragskategorien &<br><em>Aufnahmefragen</em></h2>
+    <p class="section-lead">Wählt Felix eine Auftragskategorie, passt sich das Aufnahmeformular an. Kategoriespezifische Rückfragen stellen sicher, dass die richtigen Daten erfasst werden — und lösen die korrekte Compliance-Prüfung aus.</p>
+
+    <div class="decision-tree">
+      <div class="dt-category">
+        <div class="dt-header" onclick="this.nextElementSibling.classList.toggle('open')">
+          <div class="dt-cat-name">⚡ Fehlersuche & Reparatur <span class="dt-complexity complex-simple">Einfach</span></div>
+          <span style="color:var(--text3)">▾</span>
+        </div>
+        <div class="dt-body open">
+          <ul class="dt-questions">
+            <li>Welcher Raum oder Bereich ist betroffen?</li>
+            <li>Handelt es sich um einen Totalausfall oder teilweisen Stromverlust?</li>
+            <li>Wurde kurz vor dem Fehler etwas am elektrischen System gearbeitet?</li>
+            <li>Ist der Fehler dauerhaft oder tritt er sporadisch auf?</li>
+            <li>Wie alt ist die elektrische Anlage des Gebäudes (ungefähr)?</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dt-category">
+        <div class="dt-header" onclick="this.nextElementSibling.classList.toggle('open')">
+          <div class="dt-cat-name">🔌 Installation (Wohngebäude) <span class="dt-complexity complex-both">Beides möglich</span></div>
+          <span style="color:var(--text3)">▾</span>
+        </div>
+        <div class="dt-body">
+          <ul class="dt-questions">
+            <li>Neuinstallation oder Erneuerung einer bestehenden Anlage?</li>
+            <li>Was soll installiert werden? (Steckdose / Beleuchtung / Einzelstromkreis / Zählerschrank / Rauchmelder)</li>
+            <li>Neubau oder Bestandsgebäude? (beeinflusst Kabelführungs-Aufwand)</li>
+            <li>Ist die Kabelführung zugänglich oder hinter Putz?</li>
+            <li>Ein Raum oder mehrere Räume?</li>
+          </ul>
+          <div class="dt-compliance">ℹ DIN VDE 0100-600 Erstprüfung erforderlich bei neuen Stromkreisen und Zählerschrankarbeiten.</div>
+        </div>
+      </div>
+
+      <div class="dt-category">
+        <div class="dt-header" onclick="this.nextElementSibling.classList.toggle('open')">
+          <div class="dt-cat-name">🏠 Smart Home & Gebäudeautomation <span class="dt-complexity complex-complex">Komplex</span></div>
+          <span style="color:var(--text3)">▾</span>
+        </div>
+        <div class="dt-body">
+          <ul class="dt-questions">
+            <li>Welches Ökosystem? (Philips Hue / Apple HomeKit / KNX / Google / Amazon / Sonstige)</li>
+            <li>Bereits vorhandene Smart-Home-Geräte im Einsatz?</li>
+            <li>Wie viele Räume / Geräte sollen integriert werden?</li>
+            <li>Ist die WLAN/Netzabdeckung in der ganzen Wohnung ausreichend?</li>
+            <li>Nur Beleuchtung oder auch Heizung / Sicherheit / Jalousien?</li>
+            <li>App-Steuerung oder physische Schalter gewünscht?</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="dt-category">
+        <div class="dt-header" onclick="this.nextElementSibling.classList.toggle('open')">
+          <div class="dt-cat-name">🚗 E-Mobilität / Wallbox <span class="dt-complexity complex-complex">Komplex</span></div>
+          <span style="color:var(--text3)">▾</span>
+        </div>
+        <div class="dt-body">
+          <ul class="dt-questions">
+            <li>Einphasig (230V) oder dreiphasig (400V)?</li>
+            <li>Gewünschte Wallbox-Marke / -Modell?</li>
+            <li>Smart-Charging erforderlich? (App-Steuerung, Lastmanagement)</li>
+            <li>Leitungslänge vom Zählerschrank zum Stellplatz?</li>
+            <li>Garage, Carport oder Freistellplatz?</li>
+            <li>Anmeldung beim Netzbetreiber erforderlich?</li>
+          </ul>
+          <div class="dt-compliance">ℹ Wallbox-Installation erfordert ggf. Anmeldung beim Netzbetreiber. VDE 0100-722 anwendbar.</div>
+        </div>
+      </div>
+
+      <div class="dt-category">
+        <div class="dt-header" onclick="this.nextElementSibling.classList.toggle('open')">
+          <div class="dt-cat-name">☀️ Photovoltaik / Solar-Integration <span class="dt-complexity complex-complex">Komplex</span></div>
+          <span style="color:var(--text3)">▾</span>
+        </div>
+        <div class="dt-body">
+          <ul class="dt-questions">
+            <li>Neuinstallation oder Fehlersuche an bestehender Anlage?</li>
+            <li>Welcher Wechselrichter (Marke/Modell)?</li>
+            <li>Batteriespeicher inklusive?</li>
+            <li>Netzgekoppelt oder Inselanlage?</li>
+            <li>Einspeiseantrag / Netzanmeldung erforderlich?</li>
+          </ul>
+          <div class="dt-compliance">ℹ Netzgekoppelte PV-Anlagen müssen beim Netzbetreiber angemeldet werden. VDE-AR-N 4105 gilt.</div>
+        </div>
+      </div>
+
+      <div class="dt-category">
+        <div class="dt-header" onclick="this.nextElementSibling.classList.toggle('open')">
+          <div class="dt-cat-name">🏗 Neubau / Mehrfamilienhaus <span class="dt-complexity complex-complex">Komplex</span></div>
+          <span style="color:var(--text3)">▾</span>
+        </div>
+        <div class="dt-body">
+          <ul class="dt-questions">
+            <li>Anzahl Stockwerke und Wohneinheiten?</li>
+            <li>Elektropläne / Architektenpläne vorhanden?</li>
+            <li>Bauphase? (Rohbau / Ausbau / Fertigstellung)</li>
+            <li>Dreiphasige Einspeisung für das Gebäude erforderlich?</li>
+            <li>Gemeinschaftsflächen eingeschlossen? (Flure, Keller, Aufzug)</li>
+            <li>Baugenehmigung liegt vor?</li>
+          </ul>
+          <div class="dt-compliance">ℹ Vollständige DIN-VDE-0100-Dokumentation erforderlich. DGUV-V3-Erstprüfung bei Inbetriebnahme Pflicht.</div>
+        </div>
+      </div>
+
+      <div class="dt-category">
+        <div class="dt-header" onclick="this.nextElementSibling.classList.toggle('open')">
+          <div class="dt-cat-name">🔍 DGUV V3 / E-Check-Prüfung <span class="dt-complexity complex-simple">Einfach</span></div>
+          <span style="color:var(--text3)">▾</span>
+        </div>
+        <div class="dt-body">
+          <ul class="dt-questions">
+            <li>Wohn-, Gewerbe- oder Industrieobjekt?</li>
+            <li>Datum der letzten Prüfung (falls bekannt)?</li>
+            <li>Nur ortsfeste Anlage oder auch Betriebsmittel?</li>
+            <li>Bekannte Mängel oder Auffälligkeiten?</li>
+            <li>Prüfung für Versicherungsnachweis oder Routinewartung?</li>
+          </ul>
+          <div class="dt-compliance">ℹ Prüfergebnisse müssen mit kalibriertem Messgerät dokumentiert werden. Kunde erhält E-Check-Zertifikat.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ARCHITEKTUR -->
+<section id="architektur">
+  <div class="container">
+    <div class="section-eyebrow">Technische Architektur</div>
+    <h2>System-<em>Architektur</em></h2>
+    <p class="section-lead">Moderner, Mobile-First-Stack für Skalierbarkeit. Die KI-Agenten-Schicht sitzt zwischen der Benutzeroberfläche und den externen Integrationen und orchestriert alle Automatisierungen.</p>
+
+    <div class="arch-diagram">
+      <div class="arch-layer">
+        <div class="arch-layer-label">Frontend — Mobile App (iOS / Android)</div>
+        <div class="arch-boxes">
+          <div class="arch-box frontend">React Native</div>
+          <div class="arch-box frontend">Expo SDK</div>
+          <div class="arch-box frontend">React Navigation</div>
+          <div class="arch-box frontend">Zustand (State)</div>
+          <div class="arch-box frontend">Spracheingabe (Expo AV)</div>
+        </div>
+      </div>
+      <div class="arch-arrow">↕</div>
+      <div class="arch-layer">
+        <div class="arch-layer-label">KI-Agenten-Schicht</div>
+        <div class="arch-boxes">
+          <div class="arch-box agent">Claude Sonnet (Anthropic API)</div>
+          <div class="arch-box agent">Whisper v3 (Sprache → Text)</div>
+          <div class="arch-box agent">Agent-Orchestrator (Node.js)</div>
+          <div class="arch-box agent">Prompt-Templates je Workflow-Phase</div>
+          <div class="arch-box agent">Regelmaschine (Erinnerungs-Trigger)</div>
+        </div>
+      </div>
+      <div class="arch-arrow">↕</div>
+      <div class="arch-layer">
+        <div class="arch-layer-label">Backend API</div>
+        <div class="arch-boxes">
+          <div class="arch-box backend">Node.js + Express (oder Fastify)</div>
+          <div class="arch-box backend">REST API</div>
+          <div class="arch-box backend">Auth (Clerk oder Supabase Auth)</div>
+          <div class="arch-box backend">Push-Benachrichtigungen (Expo)</div>
+          <div class="arch-box backend">Dateispeicher (S3)</div>
+        </div>
+      </div>
+      <div class="arch-arrow">↕</div>
+      <div class="arch-layer">
+        <div class="arch-layer-label">Datenschicht</div>
+        <div class="arch-boxes">
+          <div class="arch-box data">PostgreSQL (Supabase)</div>
+          <div class="arch-box data">Redis (Job-Queue / Caching)</div>
+          <div class="arch-box data">Vektor-DB (zukünftig: semantische Suche)</div>
+        </div>
+      </div>
+      <div class="arch-arrow">↕</div>
+      <div class="arch-layer">
+        <div class="arch-layer-label">Externe Integrationen</div>
+        <div class="arch-boxes">
+          <div class="arch-box external">WhatsApp Business API (Meta)</div>
+          <div class="arch-box external">Gmail API (Google OAuth)</div>
+          <div class="arch-box external">Google Maps / Distance Matrix</div>
+          <div class="arch-box external">Sonepar / Rexel (Lieferanten-APIs — zu prüfen)</div>
+          <div class="arch-box external">Stripe (zukünftig: Zahlungen)</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:48px;">
+      <h3 style="margin-bottom:24px;">Wichtigste Architekturentscheidungen</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="research-card">
+          <h4>📱 React Native (plattformübergreifend)</h4>
+          <ul>
+            <li>Eine Codebasis für iOS und Android — spart erheblich Entwicklungszeit für ein kleines Team</li>
+            <li>Expo SDK vereinfacht Gerätezugriff (Kamera, Audio, Push-Notifications)</li>
+            <li>Großes Ökosystem für Karten, Formulare und Animationen</li>
+          </ul>
+        </div>
+        <div class="research-card">
+          <h4>🤖 Claude als Agent-Gehirn</h4>
+          <ul>
+            <li>Claude Sonnet übernimmt Nachrichtenentwurf, Sprachnotiz-Analyse und proaktive Vorschläge</li>
+            <li>Deutschsprachige Fähigkeit von Haus aus — keine separate Lokalisierungsschicht nötig</li>
+            <li>Prompt-Templates je Workflow-Phase sorgen für konsistente, markenkonforme Kommunikation</li>
+          </ul>
+        </div>
+        <div class="research-card">
+          <h4>🗄 Supabase als Backend</h4>
+          <ul>
+            <li>Managed PostgreSQL mit Echtzeit-Abonnements direkt integriert</li>
+            <li>Eingebaute Authentifizierung, Speicher und Edge Functions reduzieren Infrastruktur-Overhead</li>
+            <li>Einfache Migration auf dedizierten Postgres bei steigendem Bedarf</li>
+          </ul>
+        </div>
+        <div class="research-card">
+          <h4>💬 WhatsApp Business API (Meta)</h4>
+          <ul>
+            <li>Erfordert Meta-Geschäftskonto und genehmigte Nachrichten-Templates für ausgehende Nachrichten</li>
+            <li>Kundenseitig initiierte Gespräche (eingehend) können 24 Stunden lang frei beantwortet werden</li>
+            <li>Twilio oder 360dialog als WhatsApp-API-Gateway empfehlenswert</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="container">
+    <div class="section-eyebrow">Entwicklungs-Roadmap</div>
+    <h2>Von <em>null zum Produkt</em><br>in drei Phasen</h2>
+    <p class="section-lead">Erst MVP — Felix zum Nutzen bringen. Dann Intelligenz ausbauen. Dann skalieren.</p>
+
+    <div class="roadmap">
+      <div class="roadmap-phase">
+        <div class="phase-label">Phase 01</div>
+        <div class="phase-name">MVP</div>
+        <div class="phase-timeline">Wochen 1–8</div>
+        <ul class="phase-items">
+          <li>Kunden-CRM mit vollständigen Profilen und Auftragshistorie</li>
+          <li>Auftrags-Assistent (4-Schritt-Aufnahme)</li>
+          <li>Einfach/Komplex-Klassifizierung mit Auftragskategorien</li>
+          <li>Pipeline-Verfolgung mit automatischer Aufgabengenerierung</li>
+          <li>Angebotserstellung mit Fahrtkosten, Materialaufschlag, MwSt.</li>
+          <li>Digitale Kundenfreigabe für Angebote</li>
+          <li>Automatische Rechnungserstellung und Versand</li>
+          <li>Interne Margenansicht</li>
+          <li>WhatsApp-Business-API-Integration (ausgehend)</li>
+          <li>Gmail-Integration (ausgehend)</li>
+          <li>Grundlegende Agent-Nachrichtenentwürfe (Erinnerungen, Terminbestätigungen)</li>
+          <li>Dashboard mit Tagesterminplan und überfälligen Aufgaben</li>
+          <li>Google-Maps-Distanz und Fahrtzeit</li>
+          <li>Einfache Lagerliste (manuelle Bestandspflege)</li>
+        </ul>
+      </div>
+      <div class="roadmap-phase">
+        <div class="phase-label">Phase 02</div>
+        <div class="phase-name">Intelligenz</div>
+        <div class="phase-timeline">Wochen 9–16</div>
+        <ul class="phase-items">
+          <li>Sprachnotiz bei Ortsbegehungen → Agent-gestützte Projekterstellung</li>
+          <li>Proaktive Agent-Vorschlagsmaschine (tägliche Zusammenfassung)</li>
+          <li>Intelligenter Kalender mit Kundenpräferenz-Abgleich</li>
+          <li>Rückwärtsplanung vom Termindatum (Materialbestellfristen)</li>
+          <li>Vollständige Kommunikations-Timeline je Kunde und Projekt</li>
+          <li>Eingehende WhatsApp-Nachrichten lesen und protokollieren</li>
+          <li>Mindestbestand-Warnungen und Nachbestellliste</li>
+          <li>Materialabgang per Sprache oder manuell</li>
+          <li>Lieferzeitendatenbank für Lieferanten</li>
+          <li>VDE/DGUV-V3-Compliance-Checklisten nach Auftragstyp</li>
+          <li>Foto-Dokumentation je Auftrag</li>
+          <li>Reaktionszeitverfolgung und Nachfass-Auslöser</li>
+        </ul>
+      </div>
+      <div class="roadmap-phase">
+        <div class="phase-label">Phase 03</div>
+        <div class="phase-name">Skalierung</div>
+        <div class="phase-timeline">Ab Woche 17</div>
+        <ul class="phase-items">
+          <li>Tap-to-Pay für Aufträge unter €500 (Stripe Terminal)</li>
+          <li>Lieferanten-API-Integration (Sonepar, Rexel) für automatische Nachbestellungen</li>
+          <li>Erweiterte Rentabilitätsanalysen (Trend nach Auftragstyp, Saison, Kunde)</li>
+          <li>Kundenportal (Auftragsstatus einsehen, Angebot freigeben, Rechnung bezahlen)</li>
+          <li>Mehrere Mitarbeiter unterstützen (wenn Felix wächst)</li>
+          <li>Jährliche Prüfungserinnerungs-Kampagnen</li>
+          <li>Automatische Bewertungsanfragen nach Auftragsabschluss</li>
+          <li>Buchführungsexport (DATEV-/ELSTER-kompatibel)</li>
+          <li>Prädiktive Wochenplanung (KI schlägt optimalen Wochenplan vor)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FORSCHUNG -->
+<section id="forschung">
+  <div class="container">
+    <div class="section-eyebrow">Forschungsgrundlage</div>
+    <h2>Was wir<br><em>herausgefunden haben</em></h2>
+    <p class="section-lead">Sechs umfassende Recherchen vor dem Bau. Alles in diesem Briefing basiert auf Wettbewerbsanalyse, deutschem Handwerksrecht und Branchenstandards.</p>
+
+    <div class="research-grid">
+      <div class="research-card">
+        <h4>🔎 Wettbewerbsanalyse</h4>
+        <ul>
+          <li>Jobber und Housecall Pro sind die Marktführer für Einzelunternehmer, fehlen aber: WhatsApp-Integration, deutsche Compliance und KI-Agent-Fähigkeiten</li>
+          <li>Powered Now und ToolTime existieren im deutschen Markt, sind aber einfach gehalten — keine KI, keine proaktiven Vorschläge</li>
+          <li>ServiceTitan ist für einen Einzelunternehmer zu komplex und zu teuer</li>
+          <li>Felix App differenziert sich durch: Deutschland-first, WhatsApp-nativ, KI-Agent als Kern-UX und eingebaute Compliance</li>
+        </ul>
+      </div>
+      <div class="research-card">
+        <h4>⚖️ Deutsche Compliance (VDE / DGUV V3)</h4>
+        <ul>
+          <li>DIN VDE 0100 ist die rechtsverbindliche Norm für alle Niederspannungsanlagen in Deutschland</li>
+          <li>DGUV Vorschrift 3 schreibt regelmäßige Prüfungen vor — ortsfeste Anlagen alle 4 Jahre, Elektrowerkzeuge alle 3 Monate</li>
+          <li>Alle Prüfungen müssen mit kalibriertem Messgerät dokumentiert werden — Nachweise für Versicherungsgültigkeit erforderlich</li>
+          <li>§312a BGB verpflichtet zur Angabe der Fahrtkosten im Angebot vor Auftragsausführung — App erzwingt dies automatisch</li>
+        </ul>
+      </div>
+      <div class="research-card">
+        <h4>🚗 Fahrkostenabrechnung (Deutschland)</h4>
+        <ul>
+          <li>Üblicher Stundensatz Elektromeister: €65–90/Std. (Raum Köln eher oberes Ende)</li>
+          <li>Fahrzeit ist abrechenbare Arbeitszeit (EuGH-Urteil 2015)</li>
+          <li>Fahrzeugkosten: ~€0,75–0,90/km laut ADAC-Kostenübersicht für Transporter</li>
+          <li>Fahrzeitstundensatz: 50–70% des Regelstundensatzes — Branchenstandard</li>
+          <li>Pauschale für erste 10–20 km: typischerweise €20–50; darüber €0,30–0,70/km</li>
+        </ul>
+      </div>
+      <div class="research-card">
+        <h4>📦 Lagerhaltung Best Practices</h4>
+        <ul>
+          <li>Elektriker halten 80–120 SKUs als tägliche Basics im Transporter vor</li>
+          <li>Kernkategorien: Kabel/Leitungen, Schutzorgane, Steckdosen/Schalter, Rohre/Dosen, Klemmen/Befestigung, Beleuchtung</li>
+          <li>Min/Max-Bestandssystem: Schwellenwert festlegen, App meldet Unterschreitung</li>
+          <li>Sonepar und Rexel sind führende deutsche Elektrogroßhändler — Sonepar hat digitales Bestellportal, API-Prüfung lohnt sich</li>
+          <li>Lieferzeiten: 1–3 Tage Lagerartikel, 1–3 Wochen Sonderbestellung</li>
+        </ul>
+      </div>
+      <div class="research-card">
+        <h4>💬 CRM Best Practices</h4>
+        <ul>
+          <li>Reaktionsgeschwindigkeit ist der wichtigste einzelne Differenzierungsfaktor für Dienstleistungsunternehmen</li>
+          <li>Automatische Terminerinnerungen reduzieren Nichterscheinen um über 50%</li>
+          <li>Angebots-Nachfass nach 3–4 Tagen ohne Rückmeldung ist der optimale Auslöser</li>
+          <li>Nachfass 48 Stunden nach Auftragsabschluss fördert Bewertungen und Folgeaufträge</li>
+          <li>Alle Interaktionen müssen zeitgestempelt protokolliert werden — das Protokoll wird zum Beziehungsgedächtnis</li>
+        </ul>
+      </div>
+      <div class="research-card">
+        <h4>❓ Offene Fragen für Felix-Interview</h4>
+        <ul>
+          <li>Welche Lieferanten nutzt er aktuell? Hat er ein Handelskonto?</li>
+          <li>Bietet er DGUV-V3-Prüfungen bereits als Dienstleistung an?</li>
+          <li>Wie ist sein aktueller Stundensatz? Rechnet er Fahrtzeit separat ab?</li>
+          <li>Welches Material fehlt ihm am häufigsten vor Ort?</li>
+          <li>Hat er schon mal eine Planungs- oder Abrechnungs-App ausprobiert?</li>
+          <li>Hat er ein WhatsApp-Business-Konto oder nur privates WhatsApp?</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- INTERVIEWFRAGEN -->
+    <div style="margin-top:64px;">
+      <div class="section-eyebrow">Nächster Schritt</div>
+      <h2>Fragen für das<br><em>Felix-Interview</em></h2>
+      <p style="color:var(--text2);font-size:16px;margin-bottom:0;max-width:620px;">Vor dem Entwicklungsstart sollte dieses Gespräch mit Felix stattfinden. Jede Antwort beeinflusst eine wesentliche Produktentscheidung.</p>
+
+      <ul class="q-list">
+        <li><strong>Lieferanten</strong>Von welchen Elektrogroßhändlern bestellst du aktuell — Sonepar, Rexel, Würth oder andere? Hast du bei einem davon ein Handelskonto? Nutzt du bereits ein Online-Bestellportal?</li>
+        <li><strong>Leistungsangebot</strong>Was sind deine drei häufigsten Auftragstypen? Bietest du bereits DGUV-V3-Prüfungen / E-Checks als Dienstleistung an oder nicht?</li>
+        <li><strong>Preisgestaltung</strong>Was ist dein aktueller Stundensatz? Rechnest du Fahrtzeit separat ab oder ist sie im Stundensatz enthalten? Schlägst du auf das Material auf oder gibst du es zum Einkaufspreis weiter?</li>
+        <li><strong>Angebotsablauf</strong>Wie gibst du Kunden aktuell einen Preis — mündlich, per WhatsApp-Nachricht oder schriftlich? Hat ein Kunde je einen Preis angefochten, weil nichts schriftlich vorlag?</li>
+        <li><strong>Lager & Material</strong>Welches Material fehlt dir am häufigsten, wenn du bei einem Kunden bist? Hast du Vorrat zuhause/im Transporter oder bestellst du alles auftragsbezogen?</li>
+        <li><strong>Tools & Erfahrungen</strong>Hast du schon mal eine Planungs-, Abrechnungs- oder Projektmanagement-App ausprobiert, auch nur kurz? Was hat dir gefallen oder gefehlt?</li>
+        <li><strong>Kommunikation</strong>Hast du ein WhatsApp-Business-Konto oder nutzt du nur privates WhatsApp? Wie kommunizieren deine Kunden am liebsten mit dir?</li>
+        <li><strong>Verlorene Kunden</strong>Hast du schon mal einen Kunden verloren oder eine Beschwerde erhalten, die konkret mit Kommunikation oder Zuverlässigkeit zu tun hatte? Was ist passiert — und was hätte es verhindern können?</li>
+        <li><strong>Erfolgreichste Aufträge</strong>Was war bisher dein rentabelster Auftrag? Lag es am hohen Materialwert, vielen Arbeitsstunden oder etwas anderem? Was macht einen guten Auftrag für dich aus?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<footer>
+  <div style="font-family:'Instrument Serif',serif;font-size:32px;color:var(--accent);margin-bottom:16px;">Felix</div>
+  <p>Produktbriefing v1.0 — Vertraulich</p>
+  <p style="margin-top:8px;color:var(--text3);">Erstellt mit Claude · April 2026 · Nur für internen Gebrauch</p>
+  <p style="margin-top:4px;"><strong>Parallele Projekte:</strong> Bayer Kinder-App · Immobilienverwaltungs-App · Felix Elektriker App</p>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  document.querySelector('.dt-body')?.classList.add('open');
+</script>
+
+</body>
+</html>
