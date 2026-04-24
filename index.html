@@ -1156,7 +1156,7 @@
       <div class="wireframe-body">
         <div class="wf-grid">
           <div>
-            <div class="wf-label">Wireframe</div>
+            <div class="wf-label">Wireframe — Aktueller Stand</div>
             <svg viewBox="0 0 340 660" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid #1F2D45;">
               <rect width="340" height="660" fill="#080C14"/>
               <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
@@ -1224,16 +1224,236 @@
             </svg>
           </div>
           <div>
-            <div class="wf-label">Wichtigste Design-Entscheidungen</div>
+            <div class="wf-label">Bestehende Design-Entscheidungen</div>
             <p class="wf-caption">
-              <strong>Agent-Vorschläge sind die Hauptansicht.</strong> Felix öffnet die Kommunikation und sieht sofort, was rausgehen muss — kein Suchen, kein Nachdenken. Der Agent hat das bereits erledigt.<br><br>
-              <strong>Drei-Tasten-Entscheidung pro Vorschlag.</strong> Sofort senden, erst bearbeiten oder überspringen. Maximal 2 Sekunden pro Aktion. Das ist die zentrale UX-Innovation der App.<br><br>
-              <strong>Nachrichten werden vom Agenten auf Deutsch verfasst.</strong> Professionell, kundenfreundlich, passend zum Anlass — Felix muss sich keine Formulierungen mehr überlegen.<br><br>
-              <strong>Farbkodierung nach Dringlichkeit.</strong> Amber = geplant/routinemäßig, Blau = Nachfass erforderlich, Rot = dringende Verzögerung. Die Stimmung ist auf einen Blick erkennbar.<br><br>
-              <strong>Verlauf-Tab zeigt den kompletten Kommunikationshistorie.</strong> Alle ein- und ausgehenden Nachrichten, zeitgestempelt, dem Kunden und Projekt zugeordnet. Das ist Felix' Gedächtnis.
+              <strong>Agent-Vorschläge als Hauptansicht.</strong> Felix öffnet die Kommunikation und sieht sofort, was rausgehen muss — kein Suchen, kein Nachdenken. Der Agent hat das bereits erledigt.<br><br>
+              <strong>Drei-Tasten-Entscheidung pro Vorschlag.</strong> Sofort senden, erst bearbeiten oder überspringen. Maximal 2 Sekunden pro Aktion — das ist die zentrale UX-Innovation.<br><br>
+              <strong>Nachrichten auf Deutsch vom Agenten verfasst.</strong> Professionell, kundenfreundlich, passend zum Anlass.<br><br>
+              <strong>Farbkodierung nach Dringlichkeit.</strong> Amber = geplant, Blau = Nachfass, Rot = dringende Verzögerung.<br><br>
+              <strong>Verlauf-Tab zeigt Kommunikationshistorie.</strong> Alle Nachrichten zeitgestempelt, dem Projekt zugeordnet.
             </p>
           </div>
         </div>
+
+        <!-- OPTIMISATION SECTION -->
+        <div style="margin-top:48px;padding-top:48px;border-top:1px solid var(--border);">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:flex;align-items:center;gap:10px;"><span style="width:24px;height:1px;background:var(--accent);display:inline-block;"></span>Optimierungsvorschläge · Screen 05</div>
+          <h3 style="font-size:26px;margin-bottom:8px;">Was wir am<br><em style="font-style:italic;color:var(--accent);">KI-Kommunikations-Hub verbessern</em></h3>
+          <p style="color:var(--text2);font-size:14px;margin-bottom:36px;max-width:700px;">Sieben konkrete Verbesserungen, die den Unterschied zwischen einem nützlichen Tool und einem täglichen Ritual machen — basierend auf Kommunikationspsychologie, WhatsApp-UX-Mustern und Felix' realem Arbeitsalltag.</p>
+
+          <div style="display:flex;flex-direction:column;gap:20px;">
+
+            <!-- OPT 1 -->
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+              <div style="display:flex;align-items:flex-start;gap:0;">
+                <div style="background:var(--accent);color:#080C14;font-weight:800;font-size:13px;padding:16px 18px;flex-shrink:0;align-self:stretch;display:flex;align-items:center;">01</div>
+                <div style="padding:20px 24px;">
+                  <div style="font-weight:700;font-size:15px;margin-bottom:6px;color:var(--text);">WhatsApp-Vorschau direkt im Vorschlags-Card</div>
+                  <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:12px;">Aktuell sieht Felix nur einen abgeschnittenen Textanfang ("Guten Tag Frau Schneider, ich möchte Sie daran erinnern..."). Das zwingt ihn zum mentalen Ausfüllen — er muss sich vorstellen, wie die Nachricht weitergeht. Stattdessen sollte die vollständige Nachricht in einem WhatsApp-ähnlichen Bubble-Design direkt im Card angezeigt werden, genau so wie sie beim Kunden ankommen würde — mit grünem Hintergrund, Zeitstempel und Lesebestätigung-Indikator.</p>
+                  <div style="background:var(--surface2);border-radius:8px;padding:12px 16px;border-left:3px solid var(--accent);">
+                    <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;margin-bottom:6px;">KONKRETE UMSETZUNG</div>
+                    <p style="font-size:12px;color:var(--text2);line-height:1.5;">WhatsApp Bubble-Komponente mit grünem Hintergrund (#25D366), gerundeten Ecken (asymmetrisch), Zeitstempel unten rechts, doppelter Haken-Indikator. Felix sieht exakt was der Kunde sieht — kein Überraschungsmoment nach dem Senden.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- OPT 2 -->
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+              <div style="display:flex;align-items:flex-start;gap:0;">
+                <div style="background:var(--accent);color:#080C14;font-weight:800;font-size:13px;padding:16px 18px;flex-shrink:0;align-self:stretch;display:flex;align-items:center;">02</div>
+                <div style="padding:20px 24px;">
+                  <div style="font-weight:700;font-size:15px;margin-bottom:6px;color:var(--text);">Ton-Anpassung pro Kunde (formell / locker)</div>
+                  <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:12px;">Felix hat Kunden, die er duzt (Familie, Freunde) und andere die "Sie" erwarten (ältere Kunden, Geschäftskunden). Aktuell generiert der Agent immer dieselbe förmliche Ansprache. Im Kundenprofil sollte eine Einstellung "Anredeform" hinterlegt werden — der Agent schreibt dann automatisch "Hey Anna, kurze Info..." oder "Sehr geehrte Frau Hoffmann..." je nach Kundenpräferenz.</p>
+                  <div style="background:var(--surface2);border-radius:8px;padding:12px 16px;border-left:3px solid var(--accent);">
+                    <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;margin-bottom:6px;">KONKRETE UMSETZUNG</div>
+                    <p style="font-size:12px;color:var(--text2);line-height:1.5;">Pflichtfeld im Kundenprofil: Anredeform (Du / Sie), Wunschname ("Anna" / "Frau Hoffmann"). Kleines Icon auf jedem Vorschlags-Card zeigt aktuelle Einstellung. Tap auf Icon ermöglicht Schnellwechsel ohne Profil öffnen zu müssen.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- OPT 3 -->
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+              <div style="display:flex;align-items:flex-start;gap:0;">
+                <div style="background:var(--accent);color:#080C14;font-weight:800;font-size:13px;padding:16px 18px;flex-shrink:0;align-self:stretch;display:flex;align-items:center;">03</div>
+                <div style="padding:20px 24px;">
+                  <div style="font-weight:700;font-size:15px;margin-bottom:6px;color:var(--text);">Inline-Bearbeitung direkt im Card — kein separater Screen</div>
+                  <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:12px;">Die Schaltfläche "Erst bearbeiten" öffnet aktuell vermutlich einen neuen Screen oder eine Texteingabe-Modale. Das unterbricht den Flow. Besser: Tap auf "Erst bearbeiten" klappt die WhatsApp-Bubble direkt im Card in ein editierbares Textfeld auf — Felix ändert einzelne Wörter, tippt auf "Senden" und ist fertig. Kein Screen-Wechsel, kein Kontext-Verlust.</p>
+                  <div style="background:var(--surface2);border-radius:8px;padding:12px 16px;border-left:3px solid var(--accent);">
+                    <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;margin-bottom:6px;">KONKRETE UMSETZUNG</div>
+                    <p style="font-size:12px;color:var(--text2);line-height:1.5;">Card expandiert vertikal, Bubble wird zu einem editierbaren TextArea mit Cursor. "Senden"-Button wird grün und aktiv sobald Text verändert wurde. "Zurücksetzen"-Link stellt Original wieder her. Card kollabiert nach dem Senden automatisch mit grünem Häkchen-Feedback.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- OPT 4 -->
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+              <div style="display:flex;align-items:flex-start;gap:0;">
+                <div style="background:var(--accent);color:#080C14;font-weight:800;font-size:13px;padding:16px 18px;flex-shrink:0;align-self:stretch;display:flex;align-items:center;">04</div>
+                <div style="padding:20px 24px;">
+                  <div style="font-weight:700;font-size:15px;margin-bottom:6px;color:var(--text);">"Alle senden"-Batch-Aktion für routinemäßige Erinnerungen</div>
+                  <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:12px;">An manchen Tagen liegen 5 oder 6 Terminerinnerungen an — alle mit grünem Häkchen, alle unproblematisch. Felix muss trotzdem jeden einzeln bestätigen. Ein "Alle routinemäßigen Vorschläge senden"-Button oben im Screen (nur für Vorschläge mit Amber-Typ, also geplante/routine Aktionen) würde den kompletten täglichen Kommunikations-Stack in einem Tap erledigen.</p>
+                  <div style="background:var(--surface2);border-radius:8px;padding:12px 16px;border-left:3px solid var(--accent);">
+                    <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;margin-bottom:6px;">KONKRETE UMSETZUNG</div>
+                    <p style="font-size:12px;color:var(--text2);line-height:1.5;">Nur sichtbar wenn ≥ 2 Amber-Vorschläge vorhanden. Erscheint als schmales Banner: "3 Routine-Erinnerungen — alle auf einmal senden?" mit Confirmation-Dialog der alle drei Nachrichten kurz auflistet. Rote (dringende) und Blaue (Nachfass) Vorschläge werden nie gebündelt — die brauchen individuelle Aufmerksamkeit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- OPT 5 -->
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+              <div style="display:flex;align-items:flex-start;gap:0;">
+                <div style="background:var(--accent);color:#080C14;font-weight:800;font-size:13px;padding:16px 18px;flex-shrink:0;align-self:stretch;display:flex;align-items:center;">05</div>
+                <div style="padding:20px 24px;">
+                  <div style="font-weight:700;font-size:15px;margin-bottom:6px;color:var(--text);">Eingehende Antworten direkt im Kontext anzeigen</div>
+                  <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:12px;">Wenn Frau Schneider auf die Terminerinnerung antwortet ("Ja, passt gut!"), sollte diese Antwort nicht irgendwo im Verlauf-Tab verschwinden, sondern direkt unter dem ursprünglichen Vorschlag erscheinen — als Kontext-Thread. Felix sieht sofort: Vorschlag gesendet → Kundenreaktion → nächste empfohlene Aktion. Das macht den Agent-Vorschlag-Bereich zu einem echten Kommunikations-Loop statt einem One-Way-Posteingang.</p>
+                  <div style="background:var(--surface2);border-radius:8px;padding:12px 16px;border-left:3px solid var(--accent);">
+                    <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;margin-bottom:6px;">KONKRETE UMSETZUNG</div>
+                    <p style="font-size:12px;color:var(--text2);line-height:1.5;">Gesendete Vorschläge bleiben als "geschlossene" Mini-Threads erhalten, die eingeklappt werden können. Neue eingehende Nachricht vom gleichen Kunden öffnet den Thread automatisch. Agent analysiert die Antwort und schlägt ggf. eine Folgeaktion vor ("Frau Schneider hat bestätigt — Termin als 'Confirmed' markieren?").</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- OPT 6 -->
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+              <div style="display:flex;align-items:flex-start;gap:0;">
+                <div style="background:var(--accent);color:#080C14;font-weight:800;font-size:13px;padding:16px 18px;flex-shrink:0;align-self:stretch;display:flex;align-items:center;">06</div>
+                <div style="padding:20px 24px;">
+                  <div style="font-weight:700;font-size:15px;margin-bottom:6px;color:var(--text);">Sendezeit-Optimierung durch Kundenpräferenz</div>
+                  <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:12px;">Felix schaut vielleicht abends um 21 Uhr auf seine App und will schnell Nachrichten abarbeiten. Aber Frau Schneider hat im Profil "Erreichbarkeit: Wochentags bis 18 Uhr" hinterlegt. Die App sollte in diesem Fall vorschlagen: "Jetzt sofort senden" oder "Morgen früh um 8:00 versenden (bevorzugte Zeit von Frau Schneider)". Das verhindert unprofessionelle Spät-Nachrichten und zeigt gleichzeitig dass Felix die Kundenpräferenzen respektiert.</p>
+                  <div style="background:var(--surface2);border-radius:8px;padding:12px 16px;border-left:3px solid var(--accent);">
+                    <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;margin-bottom:6px;">KONKRETE UMSETZUNG</div>
+                    <p style="font-size:12px;color:var(--text2);line-height:1.5;">Statt einfachem "Senden ✓" wird bei Außerhalb-Zeiten ein geteilter Button: linke Hälfte "Jetzt", rechte Hälfte "⏰ 08:00". Geplante Nachrichten erscheinen als "ausstehend" mit Countdown im Verlauf-Tab. Manuell stornierbar bis 5 Minuten vor Versand.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- OPT 7 -->
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+              <div style="display:flex;align-items:flex-start;gap:0;">
+                <div style="background:var(--accent);color:#080C14;font-weight:800;font-size:13px;padding:16px 18px;flex-shrink:0;align-self:stretch;display:flex;align-items:center;">07</div>
+                <div style="padding:20px 24px;">
+                  <div style="font-weight:700;font-size:15px;margin-bottom:6px;color:var(--text);">Agent lernt aus Felix' Bearbeitungen — Feedback-Loop</div>
+                  <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:12px;">Wenn Felix einen Nachrichtenentwurf jedes Mal ähnlich abändert ("ich ersetze immer 'Guten Tag' mit 'Hallo'", oder "ich füge immer 'Viele Grüße, Felix' am Ende ein"), sollte der Agent das nach 3–4 Wiederholungen erkennen und automatisch anpassen. Das Gleiche gilt für Ablehnungen — wenn Felix bestimmte Nachrichten-Typen regelmäßig überspringt, senkt der Agent deren Priorität. So wird der Hub mit der Zeit persönlicher und effizienter.</p>
+                  <div style="background:var(--surface2);border-radius:8px;padding:12px 16px;border-left:3px solid var(--accent);">
+                    <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;margin-bottom:6px;">KONKRETE UMSETZUNG</div>
+                    <p style="font-size:12px;color:var(--text2);line-height:1.5;">Diff-Tracking zwischen Agent-Entwurf und tatsächlich gesendeter Version. Nach 3 ähnlichen Änderungen: Toast-Notification "Felix, soll ich 'Hallo' statt 'Guten Tag' ab jetzt immer verwenden?" → Bestätigung → Prompt-Anpassung im Backend. Überspringungs-Muster werden als Konfidenz-Score pro Vorschlagstyp gespeichert. In den Einstellungen: "Kommunikationsstil bearbeiten" zeigt alle gelernten Präferenzen.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- V2 WIREFRAME -->
+          <div style="margin-top:48px;">
+            <div class="wf-label">Wireframe v2 — Mit allen Optimierungen</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;">
+              <svg viewBox="0 0 340 740" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid rgba(232,160,32,0.4);">
+                <rect width="340" height="740" fill="#080C14"/>
+                <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
+                <text x="20" y="55" fill="#8B97AA" font-size="12">← Zurück</text>
+                <text x="20" y="80" fill="#F0EBE0" font-size="19" font-family="Georgia" font-weight="bold">Kommunikation</text>
+                <!-- Tabs -->
+                <rect x="20" y="92" width="300" height="34" rx="8" fill="#111827"/>
+                <rect x="22" y="94" width="95" height="30" rx="7" fill="#1A2438"/>
+                <text x="43" y="114" fill="#E8A020" font-size="12" font-weight="bold">Agent</text>
+                <text x="144" y="114" fill="#4B5875" font-size="12">Nachrichten</text>
+                <text x="242" y="114" fill="#4B5875" font-size="12">Verlauf</text>
+                <!-- Batch send banner (OPT 4) -->
+                <rect x="20" y="136" width="300" height="32" rx="7" fill="#0D1A0D" stroke="rgba(34,197,94,0.3)"/>
+                <text x="34" y="148" fill="#22C55E" font-size="10" font-weight="bold">2 ROUTINE-ERINNERUNGEN</text>
+                <text x="34" y="160" fill="#4B5875" font-size="10">Beide auf einmal senden?</text>
+                <rect x="246" y="140" width="66" height="22" rx="5" fill="#22C55E"/>
+                <text x="258" y="155" fill="#080C14" font-size="10" font-weight="bold">Alle senden</text>
+                <!-- Card 1 with WhatsApp bubble (OPT 1) + tone badge (OPT 2) -->
+                <rect x="20" y="178" width="300" height="110" rx="10" fill="#111827" stroke="rgba(232,160,32,0.3)"/>
+                <rect x="20" y="178" width="4" height="110" rx="2" fill="#E8A020"/>
+                <text x="34" y="196" fill="#FCD34D" font-size="10" font-weight="bold">TERMINERINNERUNG</text>
+                <!-- Tone badge (OPT 2) -->
+                <rect x="216" y="186" width="94" height="18" rx="4" fill="#1A2438"/>
+                <text x="224" y="199" fill="#8B97AA" font-size="9">Sie-Form · Formal</text>
+                <!-- WhatsApp bubble preview (OPT 1) -->
+                <rect x="34" y="204" width="220" height="46" rx="8" fill="#1A4731"/>
+                <text x="44" y="220" fill="#E2FFE0" font-size="10">Guten Tag Frau Schneider, ich möchte</text>
+                <text x="44" y="232" fill="#E2FFE0" font-size="10">Sie daran erinnern, dass ich morgen</text>
+                <text x="44" y="244" fill="#E2FFE0" font-size="10">um 9:00 Uhr bei Ihnen bin.</text>
+                <text x="214" y="248" fill="#86EFAC" font-size="9">✓✓ 09:35</text>
+                <!-- Buttons with schedule option (OPT 6) -->
+                <rect x="34" y="258" width="64" height="24" rx="5" fill="#22C55E"/>
+                <text x="50" y="274" fill="#080C14" font-size="11" font-weight="bold">Jetzt</text>
+                <rect x="106" y="258" width="64" height="24" rx="5" fill="#1A2438" stroke="rgba(34,197,94,0.3)"/>
+                <text x="114" y="271" fill="#22C55E" font-size="10">⏰ 08:00</text>
+                <rect x="178" y="258" width="72" height="24" rx="5" fill="#1F2D45"/>
+                <text x="186" y="271" fill="#8B97AA" font-size="10">Bearbeiten</text>
+                <rect x="258" y="258" width="52" height="24" rx="5" fill="#1F2D45"/>
+                <text x="270" y="271" fill="#8B97AA" font-size="10">Skip</text>
+                <!-- Card 2 with inline edit expanded (OPT 3) -->
+                <rect x="20" y="298" width="300" height="120" rx="10" fill="#111827" stroke="rgba(59,130,246,0.3)"/>
+                <rect x="20" y="298" width="4" height="120" rx="2" fill="#3B82F6"/>
+                <text x="34" y="316" fill="#93C5FD" font-size="10" font-weight="bold">ANGEBOTS-NACHFASS · 4 TAGE · INLINE-BEARBEITUNG</text>
+                <!-- Inline edit field (OPT 3) -->
+                <rect x="34" y="324" width="264" height="56" rx="6" fill="#0D1828" stroke="#3B82F6" stroke-width="1.5"/>
+                <text x="42" y="340" fill="#F0EBE0" font-size="10">Hallo Herr Weber, haben Sie bereits</text>
+                <text x="42" y="354" fill="#F0EBE0" font-size="10">Gelegenheit gehabt, das Angebot zu</text>
+                <text x="42" y="368" fill="#F0EBE0" font-size="10">prüfen? Bei Fragen melde ich mich gern.|</text>
+                <rect x="34" y="388" width="64" height="24" rx="5" fill="#3B82F6"/>
+                <text x="50" y="404" fill="white" font-size="11" font-weight="bold">Senden</text>
+                <rect x="106" y="388" width="80" height="24" rx="5" fill="#1F2D45"/>
+                <text x="114" y="401" fill="#4B5875" font-size="10">↩ Original</text>
+                <!-- Card 3: Thread with response (OPT 5) -->
+                <rect x="20" y="428" width="300" height="100" rx="10" fill="#111827" stroke="rgba(34,197,94,0.2)"/>
+                <rect x="20" y="428" width="4" height="100" rx="2" fill="#22C55E"/>
+                <text x="34" y="446" fill="#22C55E" font-size="10" font-weight="bold">GESENDET — ANTWORT ERHALTEN</text>
+                <text x="34" y="462" fill="#8B97AA" font-size="11">Felix: "...ich morgen um 9:00 Uhr..."</text>
+                <!-- Customer reply bubble (OPT 5) -->
+                <rect x="120" y="468" width="174" height="28" rx="6" fill="#1F2D45"/>
+                <text x="130" y="481" fill="#F0EBE0" font-size="10">Frau Schneider: "Super, bis</text>
+                <text x="130" y="493" fill="#F0EBE0" font-size="10">morgen!" · eingehend 11:42</text>
+                <!-- Agent follow-up prompt -->
+                <rect x="34" y="502" width="278" height="20" rx="5" fill="#0D1828" stroke="rgba(232,160,32,0.2)"/>
+                <text x="44" y="516" fill="#FCD34D" font-size="10">Agent: Termin als 'Bestätigt' markieren?  ✓ Ja  — Nein</text>
+                <!-- Learning toast (OPT 7) -->
+                <rect x="20" y="540" width="300" height="44" rx="8" fill="#1A1208" stroke="rgba(232,160,32,0.2)"/>
+                <text x="34" y="558" fill="#FCD34D" font-size="10" font-weight="bold">🤖 AGENT LERNT</text>
+                <text x="34" y="572" fill="#8B97AA" font-size="10">'Hallo' statt 'Guten Tag' ab jetzt immer?  ✓ Ja  — Nicht immer</text>
+                <!-- Log -->
+                <text x="20" y="600" fill="#4B5875" font-size="10" letter-spacing="1">LETZTER VERLAUF</text>
+                <rect x="20" y="608" width="300" height="36" rx="7" fill="#111827" stroke="#1F2D45"/>
+                <text x="34" y="622" fill="#F0EBE0" font-size="11">Frau Schneider · WhatsApp · eingehend</text>
+                <text x="34" y="636" fill="#4B5875" font-size="10">"Super, bis morgen!" · 23. Apr. · 11:42</text>
+                <rect x="20" y="650" width="300" height="36" rx="7" fill="#111827" stroke="#1F2D45"/>
+                <text x="34" y="664" fill="#F0EBE0" font-size="11">Herr Weber · E-Mail · ⏰ geplant 08:00</text>
+                <text x="34" y="678" fill="#4B5875" font-size="10">Nachfass · wird morgen früh gesendet</text>
+                <!-- Input -->
+                <rect x="20" y="696" width="264" height="36" rx="9" fill="#111827" stroke="#1F2D45"/>
+                <text x="34" y="718" fill="#4B5875" font-size="12">Nachricht oder Sprachbefehl...</text>
+                <rect x="292" y="696" width="28" height="36" rx="7" fill="#E8A020"/>
+                <text x="299" y="718" fill="#080C14" font-size="15">🎤</text>
+              </svg>
+              <div>
+                <div style="font-size:13px;color:var(--text2);line-height:1.7;">
+                  <p style="margin-bottom:16px;">Das v2-Wireframe zeigt alle sieben Optimierungen in einem gemeinsamen Kontext:</p>
+                  <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+                    <li style="display:flex;gap:10px;align-items:flex-start;"><span style="background:var(--accent);color:#080C14;font-size:10px;font-weight:800;padding:2px 7px;border-radius:3px;flex-shrink:0;margin-top:2px;">01</span><span>WhatsApp-Bubble-Vorschau in Echtfarbe (#1A4731) — Felix sieht genau was der Kunde sieht</span></li>
+                    <li style="display:flex;gap:10px;align-items:flex-start;"><span style="background:var(--accent);color:#080C14;font-size:10px;font-weight:800;padding:2px 7px;border-radius:3px;flex-shrink:0;margin-top:2px;">02</span><span>Ton-Badge "Sie-Form · Formal" oben rechts auf jedem Card — ein Tap öffnet Schnellwechsel</span></li>
+                    <li style="display:flex;gap:10px;align-items:flex-start;"><span style="background:var(--accent);color:#080C14;font-size:10px;font-weight:800;padding:2px 7px;border-radius:3px;flex-shrink:0;margin-top:2px;">03</span><span>Inline-Edit: Card 2 zeigt aufgeklapptes TextArea mit blauem Fokus-Rand — kein Screen-Wechsel</span></li>
+                    <li style="display:flex;gap:10px;align-items:flex-start;"><span style="background:var(--accent);color:#080C14;font-size:10px;font-weight:800;padding:2px 7px;border-radius:3px;flex-shrink:0;margin-top:2px;">04</span><span>Batch-Banner oben: "2 Routine-Erinnerungen — Alle senden" nur für Amber-Typen</span></li>
+                    <li style="display:flex;gap:10px;align-items:flex-start;"><span style="background:var(--accent);color:#080C14;font-size:10px;font-weight:800;padding:2px 7px;border-radius:3px;flex-shrink:0;margin-top:2px;">05</span><span>Thread-Ansicht in Card 3: Kundeantwort + Agent-Folgevorschlag direkt im selben Card</span></li>
+                    <li style="display:flex;gap:10px;align-items:flex-start;"><span style="background:var(--accent);color:#080C14;font-size:10px;font-weight:800;padding:2px 7px;border-radius:3px;flex-shrink:0;margin-top:2px;">06</span><span>Geteilter Sende-Button: "Jetzt" + "⏰ 08:00" — respektiert Kunden-Erreichbarkeitszeiten</span></li>
+                    <li style="display:flex;gap:10px;align-items:flex-start;"><span style="background:var(--accent);color:#080C14;font-size:10px;font-weight:800;padding:2px 7px;border-radius:3px;flex-shrink:0;margin-top:2px;">07</span><span>Agent-Lern-Toast: "Hallo statt Guten Tag ab jetzt?" — subtil, zustimmbar in einem Tap</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -1935,7 +2155,7 @@
 
     <!-- TOP 5 COMPETITOR DEEP DIVES -->
     <h3 style="margin-bottom:8px;font-size:28px;">Die wichtigsten<br>Konkurrenten im Detail</h3>
-    <p style="color:var(--text2);font-size:15px;margin-bottom:48px;max-width:600px;">Die fünf relevantesten Tools für einen Solo-Elektriker — was sie können, was fehlt, und wie Felix sich abhebt.</p>
+    <p style="color:var(--text2);font-size:15px;margin-bottom:48px;max-width:600px;">Die fünf relevantesten Tools für einen Solo-Elektriker — Interface-Stil, was sie können, was fehlt, und wie Felix sich abhebt.</p>
 
     <div style="display:flex;flex-direction:column;gap:24px;">
 
@@ -1952,9 +2172,39 @@
           <div style="display:flex;gap:8px;align-items:center;">
             <span style="background:rgba(34,197,94,0.12);color:#22C55E;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:600;">Sehr gut für Solo</span>
             <a href="https://www.joist.com/trades/electrical-estimating-and-invoicing-app/" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">Website ↗</a>
+            <a href="https://apps.apple.com/us/app/joist-estimate-invoice-maker/id592163563" target="_blank" style="background:var(--surface2);color:var(--text2);border:1px solid var(--border);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">App Store ↗</a>
           </div>
         </div>
-        <div style="padding:24px 28px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
+        <div style="padding:24px 28px;display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:24px;align-items:start;">
+          <!-- UI illustration -->
+          <div>
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Interface-Stil</div>
+            <svg viewBox="0 0 180 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;border:1px solid var(--border);">
+              <rect width="180" height="280" fill="#F8F9FA"/>
+              <rect width="180" height="44" fill="#2563EB"/>
+              <text x="12" y="20" fill="white" font-size="9" font-family="sans-serif" font-weight="bold">Joist</text>
+              <text x="12" y="34" fill="rgba(255,255,255,0.7)" font-size="8" font-family="sans-serif">Estimates &amp; Invoices</text>
+              <rect x="10" y="54" width="160" height="32" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+              <text x="18" y="65" fill="#374151" font-size="8" font-family="sans-serif" font-weight="600">New Estimate</text>
+              <text x="18" y="77" fill="#6B7280" font-size="7" font-family="sans-serif">Johnson Kitchen Remodel</text>
+              <rect x="10" y="92" width="160" height="32" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+              <text x="18" y="103" fill="#374151" font-size="8" font-family="sans-serif" font-weight="600">Invoice #1042</text>
+              <text x="18" y="115" fill="#6B7280" font-size="7" font-family="sans-serif">$840.00 · Pending</text>
+              <rect x="10" y="130" width="160" height="32" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+              <text x="18" y="141" fill="#374151" font-size="8" font-family="sans-serif" font-weight="600">Invoice #1041</text>
+              <text x="18" y="153" fill="#16A34A" font-size="7" font-family="sans-serif">$320.00 · Paid ✓</text>
+              <rect x="10" y="172" width="78" height="44" rx="6" fill="#2563EB"/>
+              <text x="29" y="192" fill="white" font-size="8" font-family="sans-serif" font-weight="bold">+ Estimate</text>
+              <rect x="96" y="172" width="74" height="44" rx="6" fill="#16A34A"/>
+              <text x="109" y="192" fill="white" font-size="8" font-family="sans-serif" font-weight="bold">+ Invoice</text>
+              <rect x="0" y="248" width="180" height="32" fill="white" stroke="#E5E7EB" stroke-width="0.5"/>
+              <text x="20" y="268" fill="#2563EB" font-size="14">📋</text>
+              <text x="60" y="268" fill="#9CA3AF" font-size="14">👥</text>
+              <text x="100" y="268" fill="#9CA3AF" font-size="14">💳</text>
+              <text x="140" y="268" fill="#9CA3AF" font-size="14">⚙️</text>
+            </svg>
+            <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.4;">Helles, cleanes UI. Sehr einfach. Fokus auf Angebote und Rechnungen — kein Schnickschnack.</p>
+          </div>
           <div>
             <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Kernfunktionen</div>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
@@ -2002,9 +2252,43 @@
           <div style="display:flex;gap:8px;align-items:center;">
             <span style="background:rgba(34,197,94,0.12);color:#22C55E;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:600;">Sehr gut für Solo</span>
             <a href="https://www.fergus.com" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">Website ↗</a>
+            <a href="https://apps.apple.com/app/fergus-job-management/id990207528" target="_blank" style="background:var(--surface2);color:var(--text2);border:1px solid var(--border);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">App Store ↗</a>
           </div>
         </div>
-        <div style="padding:24px 28px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
+        <div style="padding:24px 28px;display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:24px;align-items:start;">
+          <div>
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Interface-Stil</div>
+            <svg viewBox="0 0 180 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;border:1px solid var(--border);">
+              <rect width="180" height="280" fill="#F0F4F8"/>
+              <rect width="180" height="48" fill="#1A1A2E"/>
+              <text x="12" y="22" fill="white" font-size="10" font-family="sans-serif" font-weight="bold">Fergus</text>
+              <text x="12" y="36" fill="rgba(255,255,255,0.6)" font-size="8" font-family="sans-serif">Job Management</text>
+              <text x="10" y="66" fill="#374151" font-size="9" font-family="sans-serif" font-weight="700">Active Jobs</text>
+              <rect x="10" y="72" width="160" height="36" rx="6" fill="white" stroke="#D1D5DB" stroke-width="1"/>
+              <rect x="10" y="72" width="4" height="36" rx="2" fill="#F59E0B"/>
+              <text x="20" y="85" fill="#111827" font-size="8" font-family="sans-serif" font-weight="600">Smith Bathroom Reno</text>
+              <text x="20" y="97" fill="#6B7280" font-size="7" font-family="sans-serif">Quote sent · $1,240</text>
+              <text x="138" y="85" fill="#F59E0B" font-size="7" font-family="sans-serif" font-weight="700">OPEN</text>
+              <rect x="10" y="114" width="160" height="36" rx="6" fill="white" stroke="#D1D5DB" stroke-width="1"/>
+              <rect x="10" y="114" width="4" height="36" rx="2" fill="#10B981"/>
+              <text x="20" y="127" fill="#111827" font-size="8" font-family="sans-serif" font-weight="600">Jones Switchboard</text>
+              <text x="20" y="139" fill="#6B7280" font-size="7" font-family="sans-serif">In progress · $580</text>
+              <text x="126" y="127" fill="#10B981" font-size="7" font-family="sans-serif" font-weight="700">ACTIVE</text>
+              <text x="10" y="166" fill="#374151" font-size="9" font-family="sans-serif" font-weight="700">Profitability</text>
+              <rect x="10" y="172" width="75" height="50" rx="6" fill="white" stroke="#D1D5DB" stroke-width="1"/>
+              <text x="22" y="194" fill="#111827" font-size="14" font-family="sans-serif" font-weight="800">68%</text>
+              <text x="18" y="208" fill="#6B7280" font-size="7" font-family="sans-serif">Margin this month</text>
+              <rect x="95" y="172" width="75" height="50" rx="6" fill="white" stroke="#D1D5DB" stroke-width="1"/>
+              <text x="102" y="194" fill="#111827" font-size="12" font-family="sans-serif" font-weight="800">$3.2k</text>
+              <text x="102" y="208" fill="#6B7280" font-size="7" font-family="sans-serif">Revenue (week)</text>
+              <rect x="0" y="248" width="180" height="32" fill="white" stroke="#D1D5DB" stroke-width="0.5"/>
+              <text x="16" y="268" fill="#1A1A2E" font-size="13">🏠</text>
+              <text x="56" y="268" fill="#9CA3AF" font-size="13">📋</text>
+              <text x="96" y="268" fill="#9CA3AF" font-size="13">👥</text>
+              <text x="136" y="268" fill="#9CA3AF" font-size="13">📊</text>
+            </svg>
+            <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.4;">Dunkles Nav, helles Content-Bereich. Stärkerer Fokus auf Job-Status und Profitabilität sichtbar.</p>
+          </div>
           <div>
             <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Kernfunktionen</div>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
@@ -2051,9 +2335,40 @@
           <div style="display:flex;gap:8px;align-items:center;">
             <span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:600;">Gut für Solo</span>
             <a href="https://www.tradifyhq.com" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">Website ↗</a>
+            <a href="https://apps.apple.com/app/tradify-job-management-app/id983257200" target="_blank" style="background:var(--surface2);color:var(--text2);border:1px solid var(--border);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">App Store ↗</a>
           </div>
         </div>
-        <div style="padding:24px 28px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
+        <div style="padding:24px 28px;display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:24px;align-items:start;">
+          <div>
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Interface-Stil</div>
+            <svg viewBox="0 0 180 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;border:1px solid var(--border);">
+              <rect width="180" height="280" fill="#FFFFFF"/>
+              <rect width="180" height="48" fill="#0EA5E9"/>
+              <text x="12" y="22" fill="white" font-size="10" font-family="sans-serif" font-weight="bold">Tradify</text>
+              <text x="12" y="36" fill="rgba(255,255,255,0.8)" font-size="8" font-family="sans-serif">Dashboard</text>
+              <text x="10" y="66" fill="#374151" font-size="9" font-family="sans-serif" font-weight="700">Today</text>
+              <rect x="10" y="72" width="160" height="30" rx="5" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
+              <text x="18" y="83" fill="#0C4A6E" font-size="8" font-family="sans-serif" font-weight="600">Davis — Rewire job</text>
+              <text x="18" y="93" fill="#0EA5E9" font-size="7" font-family="sans-serif">9:00 AM · In progress</text>
+              <rect x="10" y="108" width="160" height="30" rx="5" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+              <text x="18" y="119" fill="#14532D" font-size="8" font-family="sans-serif" font-weight="600">Brown — New circuit</text>
+              <text x="18" y="129" fill="#16A34A" font-size="7" font-family="sans-serif">2:00 PM · Scheduled</text>
+              <text x="10" y="154" fill="#374151" font-size="9" font-family="sans-serif" font-weight="700">Timesheets</text>
+              <rect x="10" y="160" width="160" height="44" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+              <text x="18" y="176" fill="#374151" font-size="8" font-family="sans-serif">Today: 4h 32m</text>
+              <rect x="18" y="182" width="100" height="6" rx="3" fill="#0EA5E9"/>
+              <rect x="118" y="182" width="44" height="6" rx="3" fill="#E2E8F0"/>
+              <text x="18" y="198" fill="#6B7280" font-size="7" font-family="sans-serif">GPS tracked · 3 locations</text>
+              <rect x="10" y="212" width="160" height="28" rx="5" fill="#0EA5E9"/>
+              <text x="56" y="230" fill="white" font-size="9" font-family="sans-serif" font-weight="bold">+ New Job</text>
+              <rect x="0" y="248" width="180" height="32" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
+              <text x="16" y="268" fill="#0EA5E9" font-size="13">📅</text>
+              <text x="56" y="268" fill="#9CA3AF" font-size="13">📋</text>
+              <text x="96" y="268" fill="#9CA3AF" font-size="13">⏱️</text>
+              <text x="136" y="268" fill="#9CA3AF" font-size="13">💬</text>
+            </svg>
+            <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.4;">Helles, freundliches UI in Sky-Blau. Sehr aufgeräumt. Kalender und GPS-Zeiterfassung im Vordergrund.</p>
+          </div>
           <div>
             <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Kernfunktionen</div>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
@@ -2099,9 +2414,48 @@
           <div style="display:flex;gap:8px;align-items:center;">
             <span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:600;">Gut für Solo</span>
             <a href="https://www.getjobber.com" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">Website ↗</a>
+            <a href="https://apps.apple.com/app/jobber-field-service-software/id506610314" target="_blank" style="background:var(--surface2);color:var(--text2);border:1px solid var(--border);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">App Store ↗</a>
           </div>
         </div>
-        <div style="padding:24px 28px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
+        <div style="padding:24px 28px;display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:24px;align-items:start;">
+          <div>
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Interface-Stil</div>
+            <svg viewBox="0 0 180 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;border:1px solid var(--border);">
+              <rect width="180" height="280" fill="#F9FAFB"/>
+              <rect width="180" height="48" fill="#0F172A"/>
+              <text x="12" y="22" fill="white" font-size="10" font-family="sans-serif" font-weight="bold">Jobber</text>
+              <text x="12" y="36" fill="rgba(255,255,255,0.6)" font-size="8" font-family="sans-serif">Work requests</text>
+              <!-- Pipeline view -->
+              <text x="10" y="66" fill="#374151" font-size="8" font-family="sans-serif" font-weight="700">Pipeline</text>
+              <rect x="10" y="70" width="46" height="76" rx="5" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+              <text x="16" y="82" fill="#1D4ED8" font-size="7" font-family="sans-serif" font-weight="700">LEADS</text>
+              <rect x="14" y="86" width="38" height="18" rx="3" fill="white" stroke="#BFDBFE" stroke-width="0.5"/>
+              <text x="18" y="99" fill="#374151" font-size="6" font-family="sans-serif">Anderson</text>
+              <rect x="14" y="108" width="38" height="18" rx="3" fill="white" stroke="#BFDBFE" stroke-width="0.5"/>
+              <text x="18" y="121" fill="#374151" font-size="6" font-family="sans-serif">Williams</text>
+              <rect x="64" y="70" width="46" height="76" rx="5" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+              <text x="68" y="82" fill="#15803D" font-size="7" font-family="sans-serif" font-weight="700">ACTIVE</text>
+              <rect x="68" y="86" width="38" height="18" rx="3" fill="white" stroke="#BBF7D0" stroke-width="0.5"/>
+              <text x="72" y="99" fill="#374151" font-size="6" font-family="sans-serif">Davis job</text>
+              <rect x="118" y="70" width="52" height="76" rx="5" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/>
+              <text x="122" y="82" fill="#C2410C" font-size="7" font-family="sans-serif" font-weight="700">INVOICE</text>
+              <rect x="122" y="86" width="44" height="18" rx="3" fill="white" stroke="#FED7AA" stroke-width="0.5"/>
+              <text x="126" y="99" fill="#374151" font-size="6" font-family="sans-serif">$840 due</text>
+              <!-- Schedule snippet -->
+              <text x="10" y="160" fill="#374151" font-size="8" font-family="sans-serif" font-weight="700">Today's Route</text>
+              <rect x="10" y="165" width="160" height="28" rx="5" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+              <text x="18" y="176" fill="#111827" font-size="7" font-family="sans-serif">9:00 · Davis — 4.2km away</text>
+              <text x="18" y="186" fill="#6B7280" font-size="7" font-family="sans-serif">Est. drive: 12 min · Optimized ✓</text>
+              <rect x="10" y="200" width="160" height="24" rx="5" fill="#0F172A"/>
+              <text x="44" y="216" fill="white" font-size="8" font-family="sans-serif" font-weight="bold">Start route</text>
+              <rect x="0" y="248" width="180" height="32" fill="white" stroke="#E5E7EB" stroke-width="0.5"/>
+              <text x="16" y="268" fill="#0F172A" font-size="13">🏠</text>
+              <text x="56" y="268" fill="#9CA3AF" font-size="13">📍</text>
+              <text x="96" y="268" fill="#9CA3AF" font-size="13">💰</text>
+              <text x="136" y="268" fill="#9CA3AF" font-size="13">👥</text>
+            </svg>
+            <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.4;">Dunkle Navigation, heller Content. Starke Pipeline-Ansicht und Routenoptimierung als Kernfeatures.</p>
+          </div>
           <div>
             <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Kernfunktionen</div>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
@@ -2149,9 +2503,44 @@
           <div style="display:flex;gap:8px;align-items:center;">
             <span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:600;">Gut für Solo</span>
             <a href="https://www.servicem8.com" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">Website ↗</a>
+            <a href="https://apps.apple.com/app/servicem8-field-service-app/id635518025" target="_blank" style="background:var(--surface2);color:var(--text2);border:1px solid var(--border);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">App Store ↗</a>
           </div>
         </div>
-        <div style="padding:24px 28px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
+        <div style="padding:24px 28px;display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:24px;align-items:start;">
+          <div>
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Interface-Stil</div>
+            <svg viewBox="0 0 180 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;border:1px solid var(--border);">
+              <rect width="180" height="280" fill="#F5F5F5"/>
+              <rect width="180" height="48" fill="#FF6B35"/>
+              <text x="12" y="22" fill="white" font-size="10" font-family="sans-serif" font-weight="bold">ServiceM8</text>
+              <text x="12" y="36" fill="rgba(255,255,255,0.85)" font-size="8" font-family="sans-serif">Job Board</text>
+              <!-- Job cards -->
+              <text x="10" y="66" fill="#374151" font-size="8" font-family="sans-serif" font-weight="700">Dispatch Board</text>
+              <rect x="10" y="72" width="160" height="40" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+              <rect x="10" y="72" width="5" height="40" rx="2" fill="#FF6B35"/>
+              <text x="22" y="85" fill="#111827" font-size="8" font-family="sans-serif" font-weight="600">Miller — Smoke Detectors</text>
+              <text x="22" y="95" fill="#6B7280" font-size="7" font-family="sans-serif">10:00 AM · Assigned to Felix</text>
+              <text x="22" y="105" fill="#FF6B35" font-size="7" font-family="sans-serif">Tap to navigate ↗</text>
+              <rect x="10" y="118" width="160" height="40" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+              <rect x="10" y="118" width="5" height="40" rx="2" fill="#10B981"/>
+              <text x="22" y="131" fill="#111827" font-size="8" font-family="sans-serif" font-weight="600">Johnson — New sockets</text>
+              <text x="22" y="141" fill="#6B7280" font-size="7" font-family="sans-serif">2:30 PM · Quote approved ✓</text>
+              <text x="22" y="151" fill="#10B981" font-size="7" font-family="sans-serif">Certificate ready</text>
+              <!-- Compliance cert section -->
+              <rect x="10" y="168" width="160" height="52" rx="6" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+              <text x="18" y="182" fill="#1D4ED8" font-size="8" font-family="sans-serif" font-weight="700">Safety Certificate</text>
+              <text x="18" y="194" fill="#374151" font-size="7" font-family="sans-serif">Test results logged</text>
+              <rect x="18" y="200" width="120" height="5" rx="2" fill="#BFDBFE"/>
+              <rect x="18" y="200" width="96" height="5" rx="2" fill="#1D4ED8"/>
+              <text x="18" y="214" fill="#6B7280" font-size="7" font-family="sans-serif">8/10 checks complete</text>
+              <rect x="0" y="248" width="180" height="32" fill="white" stroke="#E5E7EB" stroke-width="0.5"/>
+              <text x="16" y="268" fill="#FF6B35" font-size="13">📋</text>
+              <text x="56" y="268" fill="#9CA3AF" font-size="13">🗺️</text>
+              <text x="96" y="268" fill="#9CA3AF" font-size="13">💰</text>
+              <text x="136" y="268" fill="#9CA3AF" font-size="13">⚙️</text>
+            </svg>
+            <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.4;">Orange Brand, kartenbasiertes Dispatch-Board. Einziger Konkurrent mit integrierten Compliance-Zertifikaten.</p>
+          </div>
           <div>
             <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Kernfunktionen</div>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
@@ -2363,7 +2752,7 @@
   <div style="font-family:'Instrument Serif',serif;font-size:32px;color:var(--accent);margin-bottom:16px;">Felix</div>
   <p>Produktbriefing v1.0 — Vertraulich</p>
   <p style="margin-top:8px;color:var(--text3);">Erstellt mit Claude · April 2026 · Nur für internen Gebrauch</p>
-  <p style="margin-top:4px;"><strong>Parallele Projekte:</strong> Bayer Kinder-App · Immobilienverwaltungs-App · Felix Elektriker App</p>
+
 </footer>
 
 <script>
