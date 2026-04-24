@@ -1083,7 +1083,7 @@
         <div class="wf-grid">
           <div>
             <div class="wf-label">Wireframe</div>
-            <svg viewBox="0 0 340 680" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid #1F2D45;">
+            <svg viewBox="0 0 340 700" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid #1F2D45;">
               <rect width="340" height="680" fill="#080C14"/>
               <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
               <text x="20" y="55" fill="#8B97AA" font-size="12">← Müller Smart Home</text>
@@ -1124,13 +1124,15 @@
               <rect x="20" y="526" width="300" height="36" rx="8" fill="#0D1828" stroke="rgba(34,197,94,0.2)"/>
               <text x="34" y="541" fill="#4B5875" font-size="10" font-weight="bold">NUR INTERN (NICHT FÜR KUNDEN SICHTBAR)</text>
               <text x="34" y="557" fill="#22C55E" font-size="12">Tatsächl. Kosten: €360 → Marge: €574 (61%)</text>
-              <rect x="20" y="572" width="300" height="40" rx="8" fill="#1A2438" stroke="rgba(59,130,246,0.2)"/>
-              <text x="34" y="588" fill="#93C5FD" font-size="11">ℹ Material wird erst bestellt, wenn der</text>
-              <text x="34" y="603" fill="#93C5FD" font-size="11">Kunde das Angebot digital freigegeben hat.</text>
-              <rect x="20" y="622" width="144" height="38" rx="8" fill="#1F2D45"/>
-              <text x="40" y="645" fill="#8B97AA" font-size="12">Entwurf speichern</text>
-              <rect x="172" y="622" width="148" height="38" rx="8" fill="#E8A020"/>
-              <text x="186" y="645" fill="#080C14" font-size="12" font-weight="bold">An Kunden senden →</text>
+              <rect x="20" y="572" width="300" height="66" rx="8" fill="#1A2438" stroke="rgba(59,130,246,0.2)"/>
+              <text x="34" y="588" fill="#93C5FD" font-size="11" font-weight="bold">⚠ MATERIALWERT: €243 → SCHWELLE: €300</text>
+              <text x="34" y="603" fill="#93C5FD" font-size="11">Unter Schwelle → nur digitale Freigabe</text>
+              <text x="34" y="618" fill="#4B5875" font-size="10">€300–1.000: 50% Anzahlung · Über €1.000: 70% Anzahlung</text>
+              <text x="34" y="630" fill="#4B5875" font-size="10">Material wird erst nach Zahlung bestellt.</text>
+              <rect x="20" y="648" width="144" height="38" rx="8" fill="#1F2D45"/>
+              <text x="40" y="671" fill="#8B97AA" font-size="12">Entwurf speichern</text>
+              <rect x="172" y="648" width="148" height="38" rx="8" fill="#E8A020"/>
+              <text x="186" y="671" fill="#080C14" font-size="12" font-weight="bold">An Kunden senden →</text>
             </svg>
           </div>
           <div>
@@ -1140,9 +1142,72 @@
               <strong>Fahrtkosten werden automatisch berechnet.</strong> Distanz × Fahrzeugkosten (ADAC-Basis) + Fahrzeit × reduziertem Stundensatz. Entspricht §312a BGB — keine manuelle Eingabe nötig.<br><br>
               <strong>Material inkl. Aufschlag.</strong> Felix gibt den Einkaufspreis ein; die App wendet seinen Standard-Aufschlag an und zeigt den kundengerechten Preis. Marge wird intern verfolgt.<br><br>
               <strong>Interne Marge klar abgetrennt.</strong> Grüner Rahmen und expliziter Hinweis „NUR INTERN" — Felix sieht die Wahrheit. Der Kunde nicht.<br><br>
-              <strong>Freigabe-Sperre fest im Workflow verankert.</strong> Der blaue Hinweis erinnert dauerhaft: Material wird nicht bestellt, bis der Kunde digital zugestimmt hat.
+              <strong>Freigabe-Sperre fest im Workflow verankert.</strong> Der blaue Hinweis erinnert dauerhaft: Material wird nicht bestellt, bis der Kunde digital zugestimmt hat.<br><br>
+              <strong>Materialwert-Schwelle bestimmt den Prepayment-Typ.</strong> Unter €50 → direkte Bestellung. €50–€300 → nur digitale Freigabe nötig. €300–€1.000 → 50% Anzahlung vor Bestellung. Über €1.000 → 70% Anzahlung. Felix trägt kein Materialrisiko bei Großaufträgen.<br><br>
+              <strong>Anzahlungsrechnung automatisch generiert.</strong> Sobald der Materialwert die Schwelle überschreitet, erstellt Voltio automatisch eine Anzahlungsrechnung und sendet sie an den Kunden — bevor irgendein Material bestellt wird.
             </p>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREPAYMENT LOGIC -->
+    <div class="wireframe-wrapper">
+      <div class="wireframe-header">
+        <div class="wireframe-title">Logik — Materialbestellung & Prepayment-Schwellen</div>
+        <div class="wireframe-tag">Business-Regel · Finanzschutz</div>
+      </div>
+      <div class="wireframe-body">
+        <p style="color:var(--text2);font-size:14px;margin-bottom:32px;max-width:700px;">Felix trägt kein finanzielles Risiko bei der Materialbeschaffung. Voltio prüft automatisch den Materialwert im Angebot und entscheidet welcher Freigabe-Typ gilt — bevor eine einzige Bestellung ausgelöst wird.</p>
+
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:32px;">
+          <!-- Tier 1 -->
+          <div style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:12px 0 0 12px;padding:24px 20px;">
+            <div style="font-size:22px;font-family:'Instrument Serif',serif;color:#22C55E;margin-bottom:4px;">unter €50</div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:#22C55E;margin-bottom:16px;">KLEINSTMATERIAL</div>
+            <div style="font-size:13px;color:var(--text2);line-height:1.6;">Direkte Bestellung ohne Vorauszahlung. Für Kleinkram aus dem Lager — WAGO-Klemmen, Schrauben, Kleinteile. Felix trägt das Risiko selbst, da es vernachlässigbar ist.</div>
+            <div style="margin-top:16px;padding:10px 12px;background:rgba(34,197,94,0.1);border-radius:6px;font-size:12px;color:#22C55E;font-weight:600;">✓ Sofort bestellen</div>
+          </div>
+          <!-- Tier 2 -->
+          <div style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);border-top:1px solid rgba(59,130,246,0.2);padding:24px 20px;">
+            <div style="font-size:22px;font-family:'Instrument Serif',serif;color:#93C5FD;margin-bottom:4px;">€50–€300</div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:#93C5FD;margin-bottom:16px;">STANDARD-MATERIAL</div>
+            <div style="font-size:13px;color:var(--text2);line-height:1.6;">Digitale Angebotsfreigabe durch den Kunden reicht aus. Kunde klickt auf Freigabe-Link, bestätigt das Angebot — dann wird bestellt. Kein Geld vorab nötig.</div>
+            <div style="margin-top:16px;padding:10px 12px;background:rgba(59,130,246,0.1);border-radius:6px;font-size:12px;color:#93C5FD;font-weight:600;">✓ Nach digitaler Freigabe</div>
+          </div>
+          <!-- Tier 3 -->
+          <div style="background:rgba(232,160,32,0.08);border:1px solid rgba(232,160,32,0.2);padding:24px 20px;">
+            <div style="font-size:22px;font-family:'Instrument Serif',serif;color:var(--accent);margin-bottom:4px;">€300–€1.000</div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--accent);margin-bottom:16px;">GROSSMATERIAL</div>
+            <div style="font-size:13px;color:var(--text2);line-height:1.6;">50% Anzahlung des Materialwerts vor Bestellung. Voltio generiert automatisch eine Anzahlungsrechnung. Nach Zahlungseingang wird bestellt, Rest bei Fertigstellung.</div>
+            <div style="margin-top:16px;padding:10px 12px;background:rgba(232,160,32,0.1);border-radius:6px;font-size:12px;color:var(--accent);font-weight:600;">⚠ 50% Anzahlung vor Bestellung</div>
+          </div>
+          <!-- Tier 4 -->
+          <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:0 12px 12px 0;padding:24px 20px;">
+            <div style="font-size:22px;font-family:'Instrument Serif',serif;color:#F87171;margin-bottom:4px;">über €1.000</div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:#F87171;margin-bottom:16px;">GROSSAUFTRAG</div>
+            <div style="font-size:13px;color:var(--text2);line-height:1.6;">70% Anzahlung vor Bestellung. Voltio generiert die Anzahlungsrechnung automatisch. Material wird erst nach bestätigtem Zahlungseingang bestellt — kein Risiko für Felix.</div>
+            <div style="margin-top:16px;padding:10px 12px;background:rgba(239,68,68,0.1);border-radius:6px;font-size:12px;color:#F87171;font-weight:600;">🔒 70% Anzahlung vor Bestellung</div>
+          </div>
+        </div>
+
+        <!-- Flow diagram -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:28px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:20px;">Automatischer Workflow — Angebot → Bestellung</div>
+          <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap;gap:8px;">
+            <div style="padding:10px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;font-size:12px;color:var(--text2);text-align:center;">Angebot<br>erstellt</div>
+            <div style="color:var(--accent);font-size:16px;">→</div>
+            <div style="padding:10px 16px;background:var(--accent-dim);border:1px solid rgba(232,160,32,0.3);border-radius:8px;font-size:12px;color:var(--accent);text-align:center;font-weight:600;">Materialwert<br>prüfen</div>
+            <div style="color:var(--accent);font-size:16px;">→</div>
+            <div style="padding:10px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;font-size:12px;color:var(--text2);text-align:center;">Schwelle<br>ermitteln</div>
+            <div style="color:var(--accent);font-size:16px;">→</div>
+            <div style="padding:10px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;font-size:12px;color:var(--text2);text-align:center;">Freigabe /<br>Anzahlungsrechnung</div>
+            <div style="color:var(--accent);font-size:16px;">→</div>
+            <div style="padding:10px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;font-size:12px;color:var(--text2);text-align:center;">Zahlung<br>eingegangen ✓</div>
+            <div style="color:var(--accent);font-size:16px;">→</div>
+            <div style="padding:10px 16px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:8px;font-size:12px;color:#22C55E;text-align:center;font-weight:600;">Material<br>bestellen 🚚</div>
+          </div>
+          <p style="font-size:12px;color:var(--text3);margin-top:16px;">Alle Schwellenwerte sind in den Einstellungen anpassbar. Felix kann pro Kunde oder pro Auftrag eine Ausnahme definieren (z.B. für Stammkunden mit Vertrauensverhältnis).</p>
         </div>
       </div>
     </div>
@@ -1599,7 +1664,8 @@
         <tr><td colspan="4" style="background:var(--surface2);color:var(--text);font-weight:700;font-size:12px;letter-spacing:0.08em;">04 — ANGEBOT & RECHNUNG</td></tr>
         <tr><td>Automatische Angebotserstellung</td><td>Angebot aus Auftragsdaten: Arbeitsstunden × Satz + Fahrtkosten + Material + Verwaltungspauschale</td><td><span class="priority-high">P0</span></td><td>Alle Positionen für Kunden sichtbar</td></tr>
         <tr><td>Fahrtkostenberechnung</td><td>Distanz × Fahrzeugkosten (ADAC-Basis) + Fahrzeit × reduziertem Stundensatz. §312a BGB zwingend erforderlich.</td><td><span class="priority-high">P0</span></td><td>Kein Versand ohne diese Position</td></tr>
-        <tr><td>Materialaufschlag</td><td>Felix gibt den Einkaufspreis ein; App wendet seinen Aufschlag an und zeigt den Kundenpreis</td><td><span class="priority-high">P0</span></td><td>Standard-Aufschlag konfigurierbar</td></tr>
+        <tr><td>Materialprepayment-Logik</td><td>Unter €50: direkte Bestellung ohne Vorauszahlung. €50–€300: digitale Freigabe reicht. €300–€1.000: 50% Anzahlung vor Bestellung. Über €1.000: 70% Anzahlung vor Bestellung. Alle Schwellenwerte in den Einstellungen anpassbar.</td><td><span class="priority-high">P0</span></td><td>Schützt Felix vor Materialrisiko bei Großaufträgen</td></tr>
+        <tr><td>Anzahlungs-Flow</td><td>Bei Angeboten über €300 Materialwert: Rechnung für Anzahlung automatisch generiert und an Kunden gesendet. Material wird erst bestellt wenn Zahlung als eingegangen markiert.</td><td><span class="priority-high">P0</span></td><td>Manuelles "Zahlung eingegangen" im MVP, automatisch später</td></tr>
         <tr><td>MwSt.-Berechnung</td><td>19% USt. automatisch auf alle Positionen angewendet</td><td><span class="priority-high">P0</span></td><td>Gesetzlich erforderlich</td></tr>
         <tr><td>Digitale Kundenfreigabe</td><td>Angebot per E-Mail/WhatsApp mit Freigabe-Link. Material wird erst nach Freigabe bestellt.</td><td><span class="priority-high">P0</span></td><td>Harte Sperre im Workflow</td></tr>
         <tr><td>Interne Margenansicht</td><td>Tatsächliche Kosten vs. berechneter Preis. Umsatz-pro-Stunde-Kennzahl. Nie für Kunden sichtbar.</td><td><span class="priority-high">P0</span></td><td>Kernfunktion für Rentabilität</td></tr>
