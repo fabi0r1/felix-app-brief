@@ -1685,6 +1685,7 @@
         <tr><td>Mindestbestand-Warnungen</td><td>Dashboard-Hinweis und tägliche Zusammenfassung wenn Artikel unter Mindestbestand fällt</td><td><span class="priority-med">P1</span></td><td>—</td></tr>
         <tr><td>Auftragsgebundene Materialabgabe</td><td>Bei Materialeinsatz (Sprache oder manuell): Lager abbuchen, Auftragskosten erhöhen</td><td><span class="priority-med">P1</span></td><td>—</td></tr>
         <tr><td>Bestelllisten-Bündelung</td><td>Unterschreitung je Lieferant bündeln und Bestellvorschlag erstellen</td><td><span class="priority-low">P2</span></td><td>MVP: manuell; später: automatisch</td></tr>
+        <tr><td>IDS-Connect Schnittstelle</td><td>Direkter Zugriff auf Großhändler-Shops (Sonepar, Rexel, Uni-Elektro, weitere) per XML-basierter Industrie-Standard-API. Warenkorbübernahme, Echtzeitpreise, automatischer Login.</td><td><span class="priority-high">P0</span></td><td>Pflicht für deutschen Markt — nicht verhandelbar</td></tr>
         <tr><td>Lieferzeitendatenbank</td><td>Geschätzte Lieferzeiten je Lieferant für Rückwärtsplanung</td><td><span class="priority-med">P1</span></td><td>Start manuell, Ziel API-Anbindung</td></tr>
 
         <tr><td colspan="4" style="background:var(--surface2);color:var(--text);font-weight:700;font-size:12px;letter-spacing:0.08em;">07 — COMPLIANCE</td></tr>
@@ -2641,6 +2642,368 @@
       </div>
     </div>
 
+      <!-- BOSCH OFFICEON - SPECIAL DEEP DIVE -->
+      <div style="margin-top:64px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:flex;align-items:center;gap:10px;"><span style="width:24px;height:1px;background:var(--accent);display:inline-block;"></span>Direkter Marktbegleiter · Bereits von Felix genutzt</div>
+        <h3 style="font-size:30px;margin-bottom:8px;">Bosch <em style="font-style:italic;color:var(--accent);">OfficeOn</em></h3>
+        <p style="color:var(--text2);font-size:15px;margin-bottom:32px;max-width:680px;">Felix nutzt OfficeOn aktuell — wir müssen also genau verstehen, was es kann, was fehlt, und warum Voltio trotzdem die richtige Lösung für ihn ist. Eine ehrliche, tiefe Analyse.</p>
+
+        <div style="background:var(--surface);border:1px solid rgba(232,160,32,0.3);border-radius:14px;overflow:hidden;">
+          <!-- Header with Bosch branding -->
+          <div style="background:linear-gradient(135deg, #ED1C24 0%, #C8102E 100%);padding:32px 32px 28px;position:relative;overflow:hidden;">
+            <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;">
+              <div>
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.2em;color:rgba(255,255,255,0.7);margin-bottom:6px;">BOSCH POWER TOOLS · CLOUD SOFTWARE</div>
+                <div style="font-size:32px;font-weight:800;color:white;letter-spacing:-0.02em;margin-bottom:4px;">OfficeOn</div>
+                <div style="font-size:13px;color:rgba(255,255,255,0.85);">Handwerkersoftware für Büro und Baustelle · seit September 2023</div>
+              </div>
+              <div style="display:flex;gap:8px;flex-direction:column;">
+                <a href="https://bosch-officeon.com/de/de/branchen/elektriker/" target="_blank" style="background:white;color:#C8102E;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;">Elektriker-Seite ↗</a>
+                <a href="https://bosch-officeon.com/de/de/funktionen/schnittstellen/ids/" target="_blank" style="background:rgba(255,255,255,0.15);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,0.3);">IDS-Funktion ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Body grid -->
+          <div style="padding:32px;display:grid;grid-template-columns:240px 1fr;gap:32px;align-items:start;">
+            <!-- UI Mock -->
+            <div>
+              <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Interface-Stil</div>
+              <svg viewBox="0 0 220 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:14px;border:1px solid var(--border);">
+                <rect width="220" height="320" fill="#F4F5F7"/>
+                <rect width="220" height="50" fill="white" stroke="#E5E7EB" stroke-width="0.5"/>
+                <rect x="14" y="14" width="22" height="22" rx="4" fill="#ED1C24"/>
+                <text x="20" y="30" fill="white" font-size="10" font-family="sans-serif" font-weight="800">B</text>
+                <text x="44" y="22" fill="#1A1A1A" font-size="11" font-family="sans-serif" font-weight="700">OfficeOn</text>
+                <text x="44" y="36" fill="#6B7280" font-size="8" font-family="sans-serif">Dashboard</text>
+                <text x="186" y="30" fill="#9CA3AF" font-size="14">⚙</text>
+                <!-- Stats row -->
+                <text x="14" y="68" fill="#374151" font-size="9" font-family="sans-serif" font-weight="700">Heute</text>
+                <rect x="14" y="74" width="60" height="40" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+                <text x="22" y="92" fill="#ED1C24" font-size="14" font-family="sans-serif" font-weight="800">3</text>
+                <text x="20" y="106" fill="#6B7280" font-size="7" font-family="sans-serif">Termine</text>
+                <rect x="80" y="74" width="60" height="40" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+                <text x="86" y="92" fill="#ED1C24" font-size="13" font-family="sans-serif" font-weight="800">€840</text>
+                <text x="84" y="106" fill="#6B7280" font-size="7" font-family="sans-serif">Offen</text>
+                <rect x="146" y="74" width="60" height="40" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+                <text x="156" y="92" fill="#16A34A" font-size="14" font-family="sans-serif" font-weight="800">5</text>
+                <text x="156" y="106" fill="#6B7280" font-size="7" font-family="sans-serif">Aufträge</text>
+                <!-- List -->
+                <text x="14" y="132" fill="#374151" font-size="9" font-family="sans-serif" font-weight="700">Termine heute</text>
+                <rect x="14" y="138" width="192" height="34" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+                <text x="22" y="151" fill="#1A1A1A" font-size="8" font-family="sans-serif" font-weight="600">Schmidt — Steckdosen</text>
+                <text x="22" y="163" fill="#6B7280" font-size="7" font-family="sans-serif">09:00 · Lindenthal</text>
+                <text x="184" y="156" fill="#ED1C24" font-size="8" font-family="sans-serif" font-weight="700">→</text>
+                <rect x="14" y="178" width="192" height="34" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+                <text x="22" y="191" fill="#1A1A1A" font-size="8" font-family="sans-serif" font-weight="600">Becker — Smart Home</text>
+                <text x="22" y="203" fill="#6B7280" font-size="7" font-family="sans-serif">13:30 · Ehrenfeld</text>
+                <text x="184" y="196" fill="#ED1C24" font-size="8" font-family="sans-serif" font-weight="700">→</text>
+                <!-- IDS button highlight -->
+                <rect x="14" y="222" width="192" height="36" rx="6" fill="#FEF3F2" stroke="#ED1C24" stroke-width="1"/>
+                <text x="22" y="237" fill="#ED1C24" font-size="9" font-family="sans-serif" font-weight="700">⚡ IDS-Schnittstelle</text>
+                <text x="22" y="249" fill="#374151" font-size="7" font-family="sans-serif">Großhändler-Shop öffnen</text>
+                <!-- Bottom nav -->
+                <rect x="0" y="278" width="220" height="42" fill="white" stroke="#E5E7EB" stroke-width="0.5"/>
+                <text x="22" y="304" fill="#ED1C24" font-size="14">🏠</text>
+                <text x="62" y="304" fill="#9CA3AF" font-size="14">📅</text>
+                <text x="102" y="304" fill="#9CA3AF" font-size="14">📋</text>
+                <text x="142" y="304" fill="#9CA3AF" font-size="14">💰</text>
+                <text x="182" y="304" fill="#9CA3AF" font-size="14">⚙️</text>
+              </svg>
+              <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.4;">Bosch-rote Akzente, klassisches Enterprise-Design. Funktional, eher konservativ. Stark auf das Bosch-Ökosystem ausgerichtet (SingleKey ID Login).</p>
+              <div style="margin-top:14px;padding:12px;background:var(--surface2);border-radius:8px;">
+                <div style="font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.08em;margin-bottom:6px;">PREISMODELL</div>
+                <div style="font-size:11px;color:var(--text2);line-height:1.5;">Büro-Lizenz + Mobil-Lizenz separat. Vertragslaufzeit 6/12/24 Monate, Vorauszahlung pro Periode. Trusted.de-Bewertung: 1,4 (sehr gut).</div>
+              </div>
+            </div>
+
+            <!-- Detail content -->
+            <div>
+              <!-- Was es kann -->
+              <div style="margin-bottom:28px;">
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#22C55E;margin-bottom:14px;">✓ Was OfficeOn richtig gut macht</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
+                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Cloud-basiert, Web + Mobile</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Echtzeit-Synchronisation zwischen Büro und Baustelle. Keine Installation, automatische Updates.</div>
+                  </div>
+                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
+                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">IDS-Connect & GAEB-Schnittstellen</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Direkter Zugriff auf Großhändler-Shops aus der Software. Die zentrale Stärke für Elektriker.</div>
+                  </div>
+                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
+                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Rechtskonforme Rechnungen</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">ZUGFeRD und XRechnung-Format integriert. E-Rechnungspflicht ab 2025 abgedeckt.</div>
+                  </div>
+                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
+                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">DATEV & lexoffice Integration</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Direkte Anbindung an gängige Buchhaltungssysteme — wichtig für Steuerberater.</div>
+                  </div>
+                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
+                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Diktierfunktion für Berichte</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Arbeitsberichte können per Sprache erfasst werden — der einzige KI-ähnliche Touch.</div>
+                  </div>
+                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
+                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Bosch-Vertrauen & Support</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Etablierte Marke, Datensicherheit, Chat- und E-Mail-Support inklusive.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Was es nicht kann -->
+              <div style="margin-bottom:28px;">
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#F87171;margin-bottom:14px;">✗ Wo OfficeOn an Grenzen stößt — und Voltio glänzt</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #F87171;border-radius:0 8px 8px 0;">
+                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Kein KI-Agent</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Reines Verwaltungstool — keine proaktiven Vorschläge, keine Automatisierung von Kundenkommunikation.</div>
+                  </div>
+                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #F87171;border-radius:0 8px 8px 0;">
+                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Keine WhatsApp-Integration</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Kunden müssen weiterhin separat per WhatsApp kontaktiert werden — kein zentrales Logbuch.</div>
+                  </div>
+                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #F87171;border-radius:0 8px 8px 0;">
+                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Keine Rückwärtsplanung</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Felix muss selbst rechnen wann Material bestellt werden muss. Voltio plant rückwärts vom Termin.</div>
+                  </div>
+                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #F87171;border-radius:0 8px 8px 0;">
+                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Keine Prepayment-Logik</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Felix trägt das Materialrisiko selbst — kein automatisches Anzahlungs-System nach Schwellenwert.</div>
+                  </div>
+                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #F87171;border-radius:0 8px 8px 0;">
+                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Keine VDE/DGUV-Workflows</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Generische Handwerker-Software, nicht elektriker-spezifisch. Compliance-Checklisten fehlen.</div>
+                  </div>
+                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #F87171;border-radius:0 8px 8px 0;">
+                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Keine Sprachnotiz → Auftrag</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Diktierfunktion existiert nur für Arbeitsberichte. Voltio strukturiert Sprachnotizen direkt in Aufgaben.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Strategic conclusion -->
+              <div style="padding:20px 24px;background:linear-gradient(135deg, rgba(232,160,32,0.08) 0%, rgba(232,160,32,0.03) 100%);border:1px solid rgba(232,160,32,0.25);border-radius:10px;">
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Strategische Schlussfolgerung</div>
+                <p style="font-size:14px;color:var(--text);line-height:1.6;margin-bottom:10px;"><strong>OfficeOn ist ein solides Verwaltungs-Werkzeug — Voltio ist ein Co-Pilot.</strong></p>
+                <p style="font-size:13px;color:var(--text2);line-height:1.6;">Felix bekommt mit OfficeOn das Büro digital, aber muss alle Entscheidungen selbst treffen: Wann bestellen, wann anrufen, wann erinnern, wer hat was zugesagt. Voltio nimmt ihm diese Last ab durch den KI-Agenten — und integriert OfficeOns größte Stärke (IDS-Connect für Großhändler) als Pflicht-Feature von Tag eins. Das macht Voltio nicht zu einem OfficeOn-Konkurrenten im klassischen Sinn, sondern zu einer neuen Kategorie: dem ersten KI-gestützten Assistenten für deutsche Elektromeister.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IDS-CONNECT TECHNICAL DEEP DIVE -->
+      <div style="margin-top:80px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:flex;align-items:center;gap:10px;"><span style="width:24px;height:1px;background:var(--accent);display:inline-block;"></span>Technische Integration · Pflicht-Feature</div>
+        <h3 style="font-size:30px;margin-bottom:8px;">IDS-Connect <em style="font-style:italic;color:var(--accent);">Schnittstelle</em></h3>
+        <p style="color:var(--text2);font-size:15px;margin-bottom:32px;max-width:680px;">Die zentrale digitale Brücke zwischen Handwerkersoftware und Elektrogroßhandel in Deutschland. Ohne IDS-Connect ist Voltio im DACH-Raum nicht ernstzunehmen — mit IDS-Connect ist Voltio im Spiel.</p>
+
+        <!-- IDS Overview -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;margin-bottom:24px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:32px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Was ist IDS-Connect?</div>
+              <p style="font-size:14px;color:var(--text);line-height:1.7;margin-bottom:14px;">IDS steht für <strong style="color:var(--accent);">Integrierte Datenschnittstelle</strong>. Es ist der etablierte XML-basierte Branchenstandard, der Handwerkersoftware mit den Online-Shops von Elektrogroßhändlern verbindet.</p>
+              <p style="font-size:13px;color:var(--text2);line-height:1.7;">Die Spezifikation wurde gemeinsam von BVBS (Bundesverband Bausoftware), DG-Haustechnik und ZVSHK entwickelt und wird von der ITEK GmbH gepflegt. Aktuelle Version: <strong style="color:var(--text);">2.5</strong> (November 2020).</p>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Warum ist es Pflicht?</div>
+              <p style="font-size:14px;color:var(--text);line-height:1.7;margin-bottom:14px;">In Deutschland, Österreich und der Schweiz ist IDS-Connect der <strong style="color:var(--accent);">de-facto-Standard</strong>. Ohne diese Schnittstelle muss Felix Artikel manuell von Großhändler-Webseiten in Voltio abtippen.</p>
+              <p style="font-size:13px;color:var(--text2);line-height:1.7;">Praktisch alle relevanten Großhändler unterstützen IDS: Sonepar, Rexel, Uni-Elektro, Eldis, Würth, Elektro-Online (Moster), EGU, Hoffmann Group, GC-Gruppe, Pietsch und viele mehr.</p>
+            </div>
+          </div>
+
+          <!-- Functions table -->
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:14px;">Funktionsumfang IDS-Connect 2.5</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
+            <div style="padding:16px;background:var(--surface2);border-radius:8px;border-top:2px solid var(--accent);">
+              <div style="font-size:10px;font-weight:700;color:var(--accent);letter-spacing:0.08em;margin-bottom:6px;">AKTIONSCODE: WK</div>
+              <div style="font-size:13px;color:var(--text);font-weight:600;margin-bottom:4px;">Warenkorb empfangen</div>
+              <div style="font-size:12px;color:var(--text2);line-height:1.5;">Artikel aus dem Großhändler-Shop in Voltio übertragen — Preise, Mengen, Verfügbarkeit.</div>
+            </div>
+            <div style="padding:16px;background:var(--surface2);border-radius:8px;border-top:2px solid var(--accent2);">
+              <div style="font-size:10px;font-weight:700;color:var(--accent2);letter-spacing:0.08em;margin-bottom:6px;">AKTIONSCODE: WS</div>
+              <div style="font-size:13px;color:var(--text);font-weight:600;margin-bottom:4px;">Warenkorb senden</div>
+              <div style="font-size:12px;color:var(--text2);line-height:1.5;">Artikelliste aus Voltio direkt in den Warenkorb des Großhändlers übertragen — Bestellung möglich.</div>
+            </div>
+            <div style="padding:16px;background:var(--surface2);border-radius:8px;border-top:2px solid #22C55E;">
+              <div style="font-size:10px;font-weight:700;color:#22C55E;letter-spacing:0.08em;margin-bottom:6px;">AKTIONSCODE: AD</div>
+              <div style="font-size:13px;color:var(--text);font-weight:600;margin-bottom:4px;">Artikel-Deep-Link</div>
+              <div style="font-size:12px;color:var(--text2);line-height:1.5;">Direktabruf von Detailinfos zu einem Artikel über die Artikelnummer.</div>
+            </div>
+            <div style="padding:16px;background:var(--surface2);border-radius:8px;border-top:2px solid #A855F7;">
+              <div style="font-size:10px;font-weight:700;color:#C4B5FD;letter-spacing:0.08em;margin-bottom:6px;">AKTIONSCODES: LI, SV</div>
+              <div style="font-size:13px;color:var(--text);font-weight:600;margin-bottom:4px;">Login & Versionsabfrage</div>
+              <div style="font-size:12px;color:var(--text2);line-height:1.5;">Authentifizierung und Prüfung welche IDS-Versionen vom Shop unterstützt werden.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Implementation -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;margin-bottom:24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:18px;">Technische Implementierung — Kann Voltio das?</div>
+          <h4 style="font-size:22px;margin-bottom:8px;font-family:'Instrument Serif',serif;">Klare Antwort: <em style="font-style:italic;color:#22C55E;">Ja, mit moderatem Aufwand.</em></h4>
+          <p style="font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:24px;max-width:760px;">IDS-Connect ist ein offener, dokumentierter Standard. Die Implementierung erfordert keine Lizenzgebühren an ITEK, lediglich konforme Umsetzung der XML-Spezifikation und Registrierung bei den Großhändlern als IDS-fähige Software.</p>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+            <!-- Tech specs -->
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Technische Spezifikationen</div>
+              <div style="font-family:'DM Mono',monospace;font-size:12px;background:#0A0F1C;border:1px solid var(--border);border-radius:8px;padding:18px;line-height:1.7;color:var(--text2);">
+                <div><span style="color:#FCD34D;">Protokoll:</span> HTTPS (HTTP optional)</div>
+                <div><span style="color:#FCD34D;">Methode:</span> POST mit multipart/form-data</div>
+                <div><span style="color:#FCD34D;">Datenformat:</span> XML (UTF-8)</div>
+                <div><span style="color:#FCD34D;">Datenstruktur:</span> Anlehnung an GAEB XML 3.1</div>
+                <div><span style="color:#FCD34D;">Authentifizierung:</span> Kundennummer + Benutzername + Passwort</div>
+                <div><span style="color:#FCD34D;">Rückkanal:</span> HOOK-URL als Parameter</div>
+                <div><span style="color:#FCD34D;">Versionen:</span> 1.3 / 2.0 / 2.1 / 2.2 / 2.3 / 2.5</div>
+                <div><span style="color:#FCD34D;">Moderne Variante:</span> RESTful JSON via Adapter (z.B. PunchCommerce)</div>
+              </div>
+            </div>
+            <!-- Effort estimate -->
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Aufwandsschätzung Voltio</div>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <div style="padding:12px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 6px 6px 0;">
+                  <div style="font-size:13px;font-weight:600;color:var(--text);">XML-Parser & Generator</div>
+                  <div style="font-size:11px;color:var(--text3);">~3–5 Tage Entwicklung · Standardbibliotheken verfügbar</div>
+                </div>
+                <div style="padding:12px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 6px 6px 0;">
+                  <div style="font-size:13px;font-weight:600;color:var(--text);">HTTP-POST mit Hook-Handler</div>
+                  <div style="font-size:11px;color:var(--text3);">~2 Tage · einfache Webserver-Logik</div>
+                </div>
+                <div style="padding:12px 16px;background:var(--surface2);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;">
+                  <div style="font-size:13px;font-weight:600;color:var(--text);">UI-Integration in Voltio</div>
+                  <div style="font-size:11px;color:var(--text3);">~5–8 Tage · Browser-Aufruf + Warenkorb-Übergabe</div>
+                </div>
+                <div style="padding:12px 16px;background:var(--surface2);border-left:3px solid #F59E0B;border-radius:0 6px 6px 0;">
+                  <div style="font-size:13px;font-weight:600;color:var(--text);">Großhändler-Registrierung & Tests</div>
+                  <div style="font-size:11px;color:var(--text3);">~1–2 Wochen je Händler · ITEK-Verzeichnis, Setup-Calls</div>
+                </div>
+                <div style="padding:14px 16px;background:linear-gradient(135deg, rgba(34,197,94,0.08), rgba(34,197,94,0.03));border:1px solid rgba(34,197,94,0.25);border-radius:8px;margin-top:6px;">
+                  <div style="font-size:13px;font-weight:700;color:#22C55E;">Gesamt MVP: ~3–4 Wochen</div>
+                  <div style="font-size:11px;color:var(--text2);">für 3 wichtigste Großhändler (Sonepar, Rexel, Uni-Elektro)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workflow with Voltio -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;margin-bottom:24px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:14px;">So funktioniert IDS-Connect in Voltio</div>
+          <h4 style="font-size:22px;margin-bottom:24px;font-family:'Instrument Serif',serif;">Vom Auftrag zur Bestellung — <em style="font-style:italic;color:var(--accent);">in 4 Schritten.</em></h4>
+
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+            <div style="padding:24px 20px;background:var(--surface2);border-radius:10px;position:relative;">
+              <div style="font-family:'Instrument Serif',serif;font-size:36px;color:var(--accent);line-height:1;margin-bottom:12px;">1</div>
+              <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px;">Felix erstellt Angebot in Voltio</div>
+              <p style="font-size:12px;color:var(--text2);line-height:1.5;">Voltio prüft welche Materialien benötigt werden und schlägt einen Großhändler vor — Felix wählt z.B. Sonepar.</p>
+            </div>
+            <div style="padding:24px 20px;background:var(--surface2);border-radius:10px;position:relative;">
+              <div style="font-family:'Instrument Serif',serif;font-size:36px;color:var(--accent);line-height:1;margin-bottom:12px;">2</div>
+              <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px;">IDS-Connect öffnet Shop</div>
+              <p style="font-size:12px;color:var(--text2);line-height:1.5;">Per Klick öffnet sich der Sonepar-Shop direkt in Voltio — automatisch eingeloggt mit Felix' Kundennummer.</p>
+            </div>
+            <div style="padding:24px 20px;background:var(--surface2);border-radius:10px;position:relative;">
+              <div style="font-family:'Instrument Serif',serif;font-size:36px;color:var(--accent);line-height:1;margin-bottom:12px;">3</div>
+              <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px;">Warenkorb übertragen</div>
+              <p style="font-size:12px;color:var(--text2);line-height:1.5;">Felix legt Artikel in den Sonepar-Warenkorb und überträgt ihn mit einem Klick zurück nach Voltio — inkl. Echtzeit-Preisen.</p>
+            </div>
+            <div style="padding:24px 20px;background:linear-gradient(135deg, rgba(232,160,32,0.1), rgba(232,160,32,0.02));border:1px solid rgba(232,160,32,0.25);border-radius:10px;position:relative;">
+              <div style="font-family:'Instrument Serif',serif;font-size:36px;color:var(--accent);line-height:1;margin-bottom:12px;">4</div>
+              <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px;">Voltio kalkuliert automatisch</div>
+              <p style="font-size:12px;color:var(--text2);line-height:1.5;">Aufschlag wird angewendet, Angebot fertiggestellt, Prepayment-Logik greift bei Materialwert &gt; €300.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Major retailers -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:14px;">IDS-fähige Großhändler · Priorität für Voltio</div>
+          <h4 style="font-size:22px;margin-bottom:8px;font-family:'Instrument Serif',serif;">Mit welchen Händlern <em style="font-style:italic;color:var(--accent);">starten wir?</em></h4>
+          <p style="font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:24px;">Für den MVP integrieren wir die drei größten deutschen Elektrogroßhändler. Weitere folgen je nach Felix' Lieferantenprofil und Kundenwachstum.</p>
+
+          <!-- Tier 1 -->
+          <div style="margin-bottom:20px;">
+            <div style="font-size:11px;font-weight:700;color:#22C55E;letter-spacing:0.1em;margin-bottom:10px;">▶ MVP-PHASE 1 · DREI KERNHÄNDLER</div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+              <div style="padding:18px;background:var(--surface2);border:1px solid rgba(34,197,94,0.25);border-radius:10px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+                  <div style="font-size:15px;font-weight:700;color:var(--text);">Sonepar</div>
+                  <a href="https://www.sonepar.de" target="_blank" style="font-size:11px;color:var(--accent);text-decoration:none;">↗</a>
+                </div>
+                <div style="font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:8px;">Marktführer DACH. Über 110 Standorte in Deutschland. Vollständige IDS-Connect-Unterstützung.</div>
+                <div style="font-size:11px;color:var(--text3);">Felix' Hauptlieferant?</div>
+              </div>
+              <div style="padding:18px;background:var(--surface2);border:1px solid rgba(34,197,94,0.25);border-radius:10px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+                  <div style="font-size:15px;font-weight:700;color:var(--text);">Rexel Germany</div>
+                  <a href="https://www.rexel.de" target="_blank" style="font-size:11px;color:var(--accent);text-decoration:none;">↗</a>
+                </div>
+                <div style="font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:8px;">Französische Gruppe, starker Digitalfokus. Über 80 Niederlassungen in Deutschland. IDS-Connect Standard.</div>
+                <div style="font-size:11px;color:var(--text3);">Häufig zweite Wahl nach Sonepar</div>
+              </div>
+              <div style="padding:18px;background:var(--surface2);border:1px solid rgba(34,197,94,0.25);border-radius:10px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+                  <div style="font-size:15px;font-weight:700;color:var(--text);">Uni-Elektro</div>
+                  <a href="https://www.uni-elektro.de" target="_blank" style="font-size:11px;color:var(--accent);text-decoration:none;">↗</a>
+                </div>
+                <div style="font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:8px;">Inhabergeführt, sehr beliebt bei Mittelstand. 40+ Standorte. Spezifisch von Felix erwähnt.</div>
+                <div style="font-size:11px;color:var(--text3);">Strong fit für regionale Elektriker</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 2 -->
+          <div>
+            <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.1em;margin-bottom:10px;">▶ PHASE 2 · WEITERE WICHTIGE HÄNDLER</div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;">
+              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
+                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Eldis</div>
+                <div style="font-size:11px;color:var(--text3);">Online-Spezialist · IDS-fähig</div>
+              </div>
+              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
+                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">EGU</div>
+                <div style="font-size:11px;color:var(--text3);">37 Standorte · Rhein-Ruhr</div>
+              </div>
+              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
+                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Würth Elektro</div>
+                <div style="font-size:11px;color:var(--text3);">Kleinmaterial-Spezialist</div>
+              </div>
+              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
+                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Moster (Elektro-Online)</div>
+                <div style="font-size:11px;color:var(--text3);">IDS + UGL Schnittstellen</div>
+              </div>
+              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
+                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Hoffmann Group</div>
+                <div style="font-size:11px;color:var(--text3);">100k+ Artikel · IDS</div>
+              </div>
+              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
+                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">GC-Gruppe</div>
+                <div style="font-size:11px;color:var(--text3);">SHK + Elektro</div>
+              </div>
+              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
+                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Pietsch</div>
+                <div style="font-size:11px;color:var(--text3);">Süddeutschland</div>
+              </div>
+              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
+                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Zajadacz</div>
+                <div style="font-size:11px;color:var(--text3);">Norddeutschland</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strategic conclusion IDS -->
+        <div style="margin-top:24px;padding:24px 28px;background:linear-gradient(135deg, rgba(232,160,32,0.08) 0%, rgba(232,160,32,0.03) 100%);border:1px solid rgba(232,160,32,0.25);border-radius:12px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Fazit IDS-Connect Integration</div>
+          <p style="font-size:15px;color:var(--text);line-height:1.6;margin-bottom:8px;"><strong>IDS-Connect ist nicht "nice-to-have", sondern eine Pflicht-Funktion ab MVP.</strong></p>
+          <p style="font-size:13px;color:var(--text2);line-height:1.6;">Ohne IDS-Connect kann Voltio mit OfficeOn, HERO, STREIT oder Hottgenroth nicht konkurrieren — egal wie gut der KI-Agent ist. Die gute Nachricht: Die Implementierung ist mit ~3–4 Wochen für drei Kernhändler überschaubar, der Standard ist offen, kostenlos und gut dokumentiert. Voltios Architektur sollte IDS-Connect von Anfang an als zentralen Materialbeschaffungs-Layer mitdenken — kombiniert mit Rückwärtsplanung und Prepayment-Logik wird daraus etwas, das kein anderer Anbieter so eng integriert hat.</p>
+        </div>
+      </div>
+    </div>
+
     <!-- FEATURE MATRIX -->
     <div style="margin-top:64px;">
       <h3 style="margin-bottom:8px;font-size:28px;">Feature-Matrix:<br><em style="font-style:italic;color:var(--accent);">Felix vs. Wettbewerb</em></h3>
@@ -2758,6 +3121,15 @@
               <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
               <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
               <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
+              <td style="padding:12px 16px;color:var(--text);font-weight:500;">IDS-Connect Großhändler-API</td>
+              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
             </tr>
             <tr style="background:rgba(17,24,39,0.3);">
               <td style="padding:12px 16px;color:var(--text);font-weight:500;">Lagerverwaltung</td>
