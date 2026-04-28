@@ -680,6 +680,7 @@
     <li><a href="#screens">Screens</a></li>
     <li><a href="#spec">Features</a></li>
     <li><a href="#architektur">Architektur</a></li>
+    <li><a href="#integrationen">APIs & Kosten</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#forschung">Forschung</a></li>
     <li><a href="#wettbewerb">Wettbewerb</a></li>
@@ -2510,6 +2511,361 @@
             <li>Twilio oder 360dialog als WhatsApp-API-Gateway empfehlenswert</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INTEGRATIONEN & KOSTEN -->
+<section id="integrationen">
+  <div class="container">
+    <div class="section-eyebrow">APIs & Integrationen</div>
+    <h2>Was wir brauchen —<br><em>und was es kostet</em></h2>
+    <p class="section-lead">Jede kritische Schnittstelle analysiert: Verfügbarkeit, Kosten, Komplexität und Empfehlung für MVP vs. später. Keine Überraschungen in der Entwicklung.</p>
+
+    <!-- THREE CRITICAL INTEGRATIONS -->
+    <div style="display:flex;flex-direction:column;gap:24px;margin-bottom:64px;">
+
+      <!-- IDS-CONNECT -->
+      <div style="background:var(--surface);border:1px solid rgba(59,130,246,0.3);border-radius:14px;overflow:hidden;">
+        <div style="background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(59,130,246,0.05));padding:24px 28px;border-bottom:1px solid rgba(59,130,246,0.2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:44px;height:44px;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">🏭</div>
+            <div>
+              <div style="font-size:17px;font-weight:700;color:var(--text);">IDS-Connect 2.5</div>
+              <div style="font-size:12px;color:var(--text3);">Integrierte Datenschnittstelle · ITEK GmbH · BVBS-Standard</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+            <span style="background:rgba(34,197,94,0.12);color:#22C55E;padding:5px 14px;border-radius:4px;font-size:12px;font-weight:700;">✓ Kostenlos</span>
+            <span style="background:rgba(232,160,32,0.12);color:var(--accent);padding:5px 14px;border-radius:4px;font-size:12px;font-weight:700;">⚡ Pflicht MVP</span>
+          </div>
+        </div>
+        <div style="padding:28px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:12px;">Wie es funktioniert</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+              <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:var(--accent2);flex-shrink:0;">→</span>Offener XML-Standard, HTTPS POST mit multipart/form-data</li>
+              <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:var(--accent2);flex-shrink:0;">→</span>Warenkorb-XML aus Voltio an Händler-Shop senden (WS-Aktion)</li>
+              <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:var(--accent2);flex-shrink:0;">→</span>Echtzeitpreise & Verfügbarkeit zurück per HOOK-URL</li>
+              <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:var(--accent2);flex-shrink:0;">→</span>Felix' Handelskonto-Nummer wird automatisch übergeben</li>
+              <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:var(--accent2);flex-shrink:0;">→</span>Moderner Weg: RESTful JSON via Adapter (z.B. PunchCommerce)</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:12px;">Kosten & Aufwand</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="padding:10px 14px;background:rgba(34,197,94,0.08);border-left:3px solid #22C55E;border-radius:0 6px 6px 0;">
+                <div style="font-size:12px;font-weight:700;color:#22C55E;">Standard-Lizenz: €0</div>
+                <div style="font-size:11px;color:var(--text2);margin-top:2px;">ITEK lizenziert den Standard nicht</div>
+              </div>
+              <div style="padding:10px 14px;background:var(--surface2);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;">
+                <div style="font-size:12px;font-weight:700;color:var(--accent);">Entwicklung: ~3–4 Wochen</div>
+                <div style="font-size:11px;color:var(--text2);margin-top:2px;">Für 3 Kernhändler (Sonepar, Rexel, Uni-Elektro)</div>
+              </div>
+              <div style="padding:10px 14px;background:var(--surface2);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;">
+                <div style="font-size:12px;font-weight:700;color:var(--accent);">Onboarding je Händler: 1–2 Wo.</div>
+                <div style="font-size:11px;color:var(--text2);margin-top:2px;">Setup-Calls, Testumgebung, Zertifizierung</div>
+              </div>
+              <div style="padding:10px 14px;background:rgba(34,197,94,0.08);border-left:3px solid #22C55E;border-radius:0 6px 6px 0;">
+                <div style="font-size:12px;font-weight:700;color:#22C55E;">Laufende API-Kosten: €0</div>
+                <div style="font-size:11px;color:var(--text2);margin-top:2px;">Felix braucht nur Handelskonten bei den Händlern</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:12px;">Nächste Schritte</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text2);">
+                <strong style="color:var(--text);">1.</strong> Felix' bestehende Handelskonten prüfen (Sonepar, Rexel, Uni-Elektro)
+              </div>
+              <div style="padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text2);">
+                <strong style="color:var(--text);">2.</strong> Bei Sonepar als IDS-fähige Softwarefirma registrieren
+              </div>
+              <div style="padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text2);">
+                <strong style="color:var(--text);">3.</strong> IDS-Testumgebung von jedem Händler anfordern
+              </div>
+              <div style="padding:10px 14px;background:var(--surface2);border-radius:6px;font-size:12px;color:var(--text2);">
+                <strong style="color:var(--text);">4.</strong> XML-Parser & HOOK-Handler entwickeln (~1 Woche Basis)
+              </div>
+              <div style="padding:10px 14px;background:rgba(239,68,68,0.08);border-left:2px solid #F87171;border-radius:0 6px 6px 0;font-size:12px;color:var(--text2);">
+                <strong style="color:#F87171;">⚠ Risiko:</strong> Händler-Onboarding kann bürokratisch sein — früh starten
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DATEV -->
+      <div style="background:var(--surface);border:1px solid rgba(34,197,94,0.3);border-radius:14px;overflow:hidden;">
+        <div style="background:linear-gradient(135deg,rgba(34,197,94,0.12),rgba(34,197,94,0.04));padding:24px 28px;border-bottom:1px solid rgba(34,197,94,0.2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:44px;height:44px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">📊</div>
+            <div>
+              <div style="font-size:17px;font-weight:700;color:var(--text);">DATEV-Integration</div>
+              <div style="font-size:12px;color:var(--text3);">DATEV eG · ZUGFeRD · XRechnung · lexoffice</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+            <span style="background:rgba(34,197,94,0.12);color:#22C55E;padding:5px 14px;border-radius:4px;font-size:12px;font-weight:700;">✓ MVP: Kostenlos (ZUGFeRD)</span>
+            <span style="background:rgba(232,160,32,0.12);color:var(--accent);padding:5px 14px;border-radius:4px;font-size:12px;font-weight:700;">⚡ Pflicht MVP</span>
+          </div>
+        </div>
+        <div style="padding:28px;">
+          <!-- Three paths -->
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:16px;">Drei Integrationswege — Empfehlung: gestufter Ansatz</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;">
+            <!-- Weg A -->
+            <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(34,197,94,0.3);">
+              <div style="background:rgba(34,197,94,0.1);padding:14px 16px;border-bottom:1px solid rgba(34,197,94,0.2);">
+                <div style="font-size:11px;font-weight:700;color:#22C55E;letter-spacing:0.08em;">WEG A · MVP · SOFORT</div>
+                <div style="font-size:14px;font-weight:700;color:var(--text);margin-top:4px;">ZUGFeRD + XRechnung</div>
+              </div>
+              <div style="padding:16px;">
+                <div style="font-size:22px;font-weight:800;color:#22C55E;margin-bottom:6px;">€0</div>
+                <div style="font-size:11px;color:var(--text3);margin-bottom:12px;">Offener Standard, keine Lizenz</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+                  <li style="font-size:12px;color:var(--text2);display:flex;gap:6px;"><span style="color:#22C55E;">✓</span>Gesetzlich ab 2025 Pflicht (B2B)</li>
+                  <li style="font-size:12px;color:var(--text2);display:flex;gap:6px;"><span style="color:#22C55E;">✓</span>Fertige Open-Source-Libraries</li>
+                  <li style="font-size:12px;color:var(--text2);display:flex;gap:6px;"><span style="color:#22C55E;">✓</span>~1 Woche Entwicklung</li>
+                  <li style="font-size:12px;color:var(--text2);display:flex;gap:6px;"><span style="color:var(--accent);">○</span>Steuerberater importiert Datei manuell in DATEV</li>
+                </ul>
+                <div style="margin-top:12px;padding:8px 10px;background:rgba(34,197,94,0.08);border-radius:5px;font-size:11px;color:#22C55E;font-weight:600;">→ Empfehlung für V1</div>
+              </div>
+            </div>
+            <!-- Weg B -->
+            <div style="border-radius:10px;overflow:hidden;border:1px solid rgba(232,160,32,0.3);">
+              <div style="background:rgba(232,160,32,0.08);padding:14px 16px;border-bottom:1px solid rgba(232,160,32,0.2);">
+                <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;">WEG B · PHASE 2 · HYBRID</div>
+                <div style="font-size:14px;font-weight:700;color:var(--text);margin-top:4px;">lexoffice / sevDesk Brücke</div>
+              </div>
+              <div style="padding:16px;">
+                <div style="font-size:22px;font-weight:800;color:var(--accent);margin-bottom:6px;">€18–28</div>
+                <div style="font-size:11px;color:var(--text3);margin-bottom:12px;">pro Monat für Felix (lexoffice-Abo)</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+                  <li style="font-size:12px;color:var(--text2);display:flex;gap:6px;"><span style="color:#22C55E;">✓</span>Native DATEV-Schnittstelle vorhanden</li>
+                  <li style="font-size:12px;color:var(--text2);display:flex;gap:6px;"><span style="color:#22C55E;">✓</span>Voltio → lexoffice API → DATEV auto-sync</li>
+                  <li style="font-size:12px;color:var(--text2);display:flex;gap:6px;"><span style="color:#22C55E;">✓</span>Kein DATEV-Zulassungsaufwand für uns</li>
+                  <li style="font-size:12px;color:var(--text2);display:flex;gap:6px;"><span style="color:var(--accent);">○</span>Dritte Abhängigkeit, laufende Kosten</li>
+                </ul>
+                <div style="margin-top:12px;padding:8px 10px;background:rgba(232,160,32,0.08);border-radius:5px;font-size:11px;color:var(--accent);font-weight:600;">→ Schnellste DATEV-Sync-Option</div>
+              </div>
+            </div>
+            <!-- Weg C -->
+            <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);">
+              <div style="background:var(--surface2);padding:14px 16px;border-bottom:1px solid var(--border);">
+                <div style="font-size:11px;font-weight:700;color:var(--text3);letter-spacing:0.08em;">WEG C · PHASE 3 · VOLLSTÄNDIG</div>
+                <div style="font-size:14px;font-weight:700;color:var(--text);margin-top:4px;">DATEV Softwarehaus-Zulassung</div>
+              </div>
+              <div style="padding:16px;">
+                <div style="font-size:22px;font-weight:800;color:var(--text2);margin-bottom:6px;">€1.000–3.000+</div>
+                <div style="font-size:11px;color:var(--text3);margin-bottom:12px;">jährliche Zulassungsgebühren (geschätzt)</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+                  <li style="font-size:12px;color:var(--text2);display:flex;gap:6px;"><span style="color:#22C55E;">✓</span>Tiefste Integration — Steuerberater direkt</li>
+                  <li style="font-size:12px;color:var(--text2);display:flex;gap:6px;"><span style="color:#22C55E;">✓</span>Vollständig automatisierte Übergabe</li>
+                  <li style="font-size:12px;color:var(--text2);display:flex;gap:6px;"><span style="color:#F87171;">✗</span>Aufwendiger Bewerbungsprozess bei DATEV eG</li>
+                  <li style="font-size:12px;color:var(--text2);display:flex;gap:6px;"><span style="color:#F87171;">✗</span>Zu früh für MVP</li>
+                </ul>
+                <div style="margin-top:12px;padding:8px 10px;background:var(--surface2);border-radius:5px;font-size:11px;color:var(--text3);font-weight:600;">→ Langfristiges Ziel</div>
+              </div>
+            </div>
+          </div>
+          <div style="padding:14px 18px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.15);border-radius:8px;font-size:13px;color:var(--text2);">
+            <strong style="color:var(--text);">Gestufter Plan:</strong> MVP mit ZUGFeRD (kostenlos, 1 Woche Aufwand, gesetzlich compliant) → Phase 2 lexoffice-Brücke für automatischen DATEV-Sync → Phase 3 eigene Zulassung wenn Voltio skaliert.
+          </div>
+        </div>
+      </div>
+
+      <!-- WHATSAPP BUSINESS API -->
+      <div style="background:var(--surface);border:1px solid rgba(37,211,102,0.3);border-radius:14px;overflow:hidden;">
+        <div style="background:linear-gradient(135deg,rgba(37,211,102,0.1),rgba(37,211,102,0.03));padding:24px 28px;border-bottom:1px solid rgba(37,211,102,0.2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:44px;height:44px;background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;">💬</div>
+            <div>
+              <div style="font-size:17px;font-weight:700;color:var(--text);">WhatsApp Business API</div>
+              <div style="font-size:12px;color:var(--text3);">Meta · via Twilio oder 360dialog · ~€50–60/Monat</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span style="background:rgba(232,160,32,0.12);color:var(--accent);padding:5px 14px;border-radius:4px;font-size:12px;font-weight:700;">💰 Günstig</span>
+            <span style="background:rgba(232,160,32,0.12);color:var(--accent);padding:5px 14px;border-radius:4px;font-size:12px;font-weight:700;">⚡ Pflicht MVP</span>
+          </div>
+        </div>
+        <div style="padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:12px;">Kostenstruktur</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="padding:12px 16px;background:var(--surface2);border-radius:8px;">
+                <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:4px;">Meta Konversationsgebühren</div>
+                <div style="font-size:13px;color:var(--text2);">~€0,07–0,11 pro 24h-Konversation</div>
+                <div style="font-size:11px;color:var(--text3);margin-top:4px;">Felix ~60 Gespräche/Monat = <strong style="color:#22C55E;">~€5–7/Monat</strong></div>
+              </div>
+              <div style="padding:12px 16px;background:var(--surface2);border-radius:8px;">
+                <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:4px;">Twilio Gateway (Empfehlung MVP)</div>
+                <div style="font-size:13px;color:var(--text2);">Pay-per-use, kein Monatsminimum</div>
+                <div style="font-size:11px;color:var(--text3);margin-top:4px;">~€0,0049/ausgehende Nachricht · beste Docs</div>
+              </div>
+              <div style="padding:12px 16px;background:var(--surface2);border-radius:8px;">
+                <div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:4px;">360dialog (Alternative)</div>
+                <div style="font-size:13px;color:var(--text2);">€49/Monat Grundgebühr + Nachrichten</div>
+                <div style="font-size:11px;color:var(--text3);margin-top:4px;">Besser für hohes Volumen · DE-basiert</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:12px;">Wichtige Regeln (Meta)</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+              <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:#22C55E;flex-shrink:0;">✓</span>Ausgehende Nachrichten müssen als Template von Meta vorab genehmigt sein</li>
+              <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:#22C55E;flex-shrink:0;">✓</span>Wenn Kunde zuerst schreibt: 24h freies Antwortfenster ohne Template</li>
+              <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:var(--accent);flex-shrink:0;">→</span>Felix braucht ein WhatsApp Business Profil (verifiziert)</li>
+              <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:var(--accent);flex-shrink:0;">→</span>Alle Voltio-Nachrichtentypen als Templates einreichen (Erinnerung, Angebot, Verzögerung...)</li>
+              <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:#F87171;flex-shrink:0;">⚠</span>Template-Genehmigung dauert 1–5 Tage — früh einreichen</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FULL API COST TABLE -->
+    <h3 style="font-size:26px;margin-bottom:8px;">Alle APIs auf einen Blick</h3>
+    <p style="color:var(--text2);font-size:14px;margin-bottom:28px;max-width:680px;">Vollständige Übersicht aller benötigten Schnittstellen — mit realistischen Kosten für Felix als Solo-Elektriker mit ~60–80 Aufträgen/Monat.</p>
+
+    <div style="overflow-x:auto;margin-bottom:48px;">
+      <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:800px;">
+        <thead>
+          <tr style="background:var(--surface2);">
+            <th style="padding:12px 16px;text-align:left;color:var(--text3);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Integration</th>
+            <th style="padding:12px 16px;text-align:left;color:var(--text3);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Zweck</th>
+            <th style="padding:12px 16px;text-align:center;color:var(--text3);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Kosten (Felix/Monat)</th>
+            <th style="padding:12px 16px;text-align:center;color:var(--text3);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Komplexität</th>
+            <th style="padding:12px 16px;text-align:center;color:var(--text3);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Phase</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
+            <td style="padding:13px 16px;color:var(--text);font-weight:600;">IDS-Connect (Sonepar, Rexel, Uni-Elektro)</td>
+            <td style="padding:13px 16px;color:var(--text2);">Materialbestellung direkt aus Voltio heraus</td>
+            <td style="padding:13px 16px;text-align:center;"><span style="color:#22C55E;font-weight:700;">€0</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(239,68,68,0.1);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">HOCH</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">MVP</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.3);">
+            <td style="padding:13px 16px;color:var(--text);font-weight:600;">ZUGFeRD / XRechnung Export</td>
+            <td style="padding:13px 16px;color:var(--text2);">DATEV-kompatible Rechnungen, E-Rechnungspflicht 2025</td>
+            <td style="padding:13px 16px;text-align:center;"><span style="color:#22C55E;font-weight:700;">€0</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(34,197,94,0.1);color:#22C55E;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">NIEDRIG</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">MVP</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
+            <td style="padding:13px 16px;color:var(--text);font-weight:600;">WhatsApp Business (Twilio)</td>
+            <td style="padding:13px 16px;color:var(--text2);">Kundenkommunikation, Agent-Nachrichten, Genehmigungen</td>
+            <td style="padding:13px 16px;text-align:center;"><span style="color:var(--accent);font-weight:700;">~€5–10</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(232,160,32,0.1);color:var(--accent);padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">MITTEL</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">MVP</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.3);">
+            <td style="padding:13px 16px;color:var(--text);font-weight:600;">Google Maps / Distance Matrix</td>
+            <td style="padding:13px 16px;color:var(--text2);">Fahrtzeit-Berechnung, VNB-Erkennung via PLZ, Routenoptimierung</td>
+            <td style="padding:13px 16px;text-align:center;"><span style="color:#22C55E;font-weight:700;">€0*</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(34,197,94,0.1);color:#22C55E;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">NIEDRIG</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">MVP</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
+            <td style="padding:13px 16px;color:var(--text);font-weight:600;">Claude Sonnet (Anthropic API)</td>
+            <td style="padding:13px 16px;color:var(--text2);">KI-Agent: Nachrichtenentwürfe, Sprachnotiz-Parsing, Vorschläge</td>
+            <td style="padding:13px 16px;text-align:center;"><span style="color:var(--accent);font-weight:700;">~€15–30</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(34,197,94,0.1);color:#22C55E;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">NIEDRIG</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">MVP</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.3);">
+            <td style="padding:13px 16px;color:var(--text);font-weight:600;">Whisper v3 (OpenAI)</td>
+            <td style="padding:13px 16px;color:var(--text2);">Sprachnotizen auf Baustelle → Text → Aufgaben</td>
+            <td style="padding:13px 16px;text-align:center;"><span style="color:#22C55E;font-weight:700;">~€3–5</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(34,197,94,0.1);color:#22C55E;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">NIEDRIG</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">MVP</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
+            <td style="padding:13px 16px;color:var(--text);font-weight:600;">Gmail OAuth</td>
+            <td style="padding:13px 16px;color:var(--text2);">E-Mail-Integration: Rechnungen, Angebote, Kundenkommunikation</td>
+            <td style="padding:13px 16px;text-align:center;"><span style="color:#22C55E;font-weight:700;">€0</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(34,197,94,0.1);color:#22C55E;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">NIEDRIG</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">MVP</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.3);">
+            <td style="padding:13px 16px;color:var(--text);font-weight:600;">Supabase (Backend + DB)</td>
+            <td style="padding:13px 16px;color:var(--text2);">PostgreSQL, Auth, Echtzeit-Sync, Dateispeicher</td>
+            <td style="padding:13px 16px;text-align:center;"><span style="color:#22C55E;font-weight:700;">€0–25</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(34,197,94,0.1);color:#22C55E;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">NIEDRIG</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(239,68,68,0.12);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">MVP</span></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
+            <td style="padding:13px 16px;color:var(--text);font-weight:600;">lexoffice API</td>
+            <td style="padding:13px 16px;color:var(--text2);">Automatischer DATEV-Sync ohne eigene DATEV-Zulassung</td>
+            <td style="padding:13px 16px;text-align:center;"><span style="color:var(--accent);font-weight:700;">€18–28</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(34,197,94,0.1);color:#22C55E;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">NIEDRIG</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(232,160,32,0.12);color:var(--accent);padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">PHASE 2</span></td>
+          </tr>
+          <tr style="background:rgba(17,24,39,0.3);">
+            <td style="padding:13px 16px;color:var(--text);font-weight:600;">DATEV Softwarehaus-Zulassung</td>
+            <td style="padding:13px 16px;color:var(--text2);">Vollständige native DATEV-Integration, Steuerberater-Direktzugang</td>
+            <td style="padding:13px 16px;text-align:center;"><span style="color:var(--text3);font-weight:700;">€83–250+</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:rgba(239,68,68,0.1);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">SEHR HOCH</span></td>
+            <td style="padding:13px 16px;text-align:center;"><span style="background:var(--surface2);color:var(--text3);padding:2px 8px;border-radius:3px;font-size:11px;font-weight:700;">PHASE 3</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:11px;color:var(--text3);margin-top:10px;">* Google Maps: $200/Monat kostenloses Guthaben. Bei ~200 API-Aufrufen/Monat: ~$1 Verbrauch → dauerhaft im Freikontingent.</p>
+    </div>
+
+    <!-- Monthly cost summary -->
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:18px;">Betriebskosten Voltio — Monatliche Zusammenfassung</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:24px;">
+
+        <div style="padding:20px;background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:10px;">
+          <div style="font-size:11px;font-weight:700;color:#22C55E;letter-spacing:0.08em;margin-bottom:10px;">MVP · V1</div>
+          <div style="font-size:36px;font-weight:800;font-family:'Instrument Serif',serif;color:#22C55E;margin-bottom:4px;">€23–45</div>
+          <div style="font-size:12px;color:var(--text3);margin-bottom:14px;">Infrastruktur-Betriebskosten / Monat</div>
+          <div style="font-size:11px;color:var(--text2);line-height:1.8;">
+            WhatsApp: ~€7<br>
+            Claude API: ~€20<br>
+            Whisper: ~€4<br>
+            Supabase: €0–14<br>
+            Maps: €0<br>
+            IDS + ZUGFeRD: €0
+          </div>
+        </div>
+
+        <div style="padding:20px;background:rgba(232,160,32,0.06);border:1px solid rgba(232,160,32,0.2);border-radius:10px;">
+          <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;margin-bottom:10px;">PHASE 2 · + lexoffice</div>
+          <div style="font-size:36px;font-weight:800;font-family:'Instrument Serif',serif;color:var(--accent);margin-bottom:4px;">€45–75</div>
+          <div style="font-size:12px;color:var(--text3);margin-bottom:14px;">inkl. automatischer DATEV-Sync</div>
+          <div style="font-size:11px;color:var(--text2);line-height:1.8;">
+            + lexoffice: €18–28<br>
+            Mehr WhatsApp-Volumen: ~€15<br>
+            Mehr Claude: ~€30<br>
+            Supabase Pro: €25
+          </div>
+        </div>
+
+        <div style="padding:20px;background:var(--surface2);border:1px solid var(--border);border-radius:10px;">
+          <div style="font-size:11px;font-weight:700;color:var(--text3);letter-spacing:0.08em;margin-bottom:10px;">FELIX ZAHLT (VORSCHLAG)</div>
+          <div style="font-size:36px;font-weight:800;font-family:'Instrument Serif',serif;color:var(--text2);margin-bottom:4px;">€49–79</div>
+          <div style="font-size:12px;color:var(--text3);margin-bottom:14px;">monatliches Abo-Modell</div>
+          <div style="font-size:11px;color:var(--text2);line-height:1.8;">
+            Vergleich OfficeOn: ~€60–120/Monat<br>
+            Vergleich Jobber: ~€39–119/Monat<br>
+            <br>
+            <strong style="color:#22C55E;">Marge bei €79 Abo: ~€30–55</strong>
+          </div>
+        </div>
+      </div>
+
+      <div style="padding:16px 20px;background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.15);border-radius:8px;font-size:13px;color:var(--text2);line-height:1.6;">
+        <strong style="color:var(--text);">Wichtig für die Kalkulation:</strong> Die größten Kostenblöcke (Claude API, WhatsApp) skalieren mit der Nutzung — nicht mit der Nutzeranzahl. Bei mehr Aufträgen pro Monat steigen die Kosten leicht, aber der Wert für Felix steigt proportional stärker. Das Modell ist gesund.
       </div>
     </div>
   </div>
