@@ -1664,6 +1664,7 @@
         <tr><td colspan="4" style="background:var(--surface2);color:var(--text);font-weight:700;font-size:12px;letter-spacing:0.08em;">04 — ANGEBOT & RECHNUNG</td></tr>
         <tr><td>Automatische Angebotserstellung</td><td>Angebot aus Auftragsdaten: Arbeitsstunden × Satz + Fahrtkosten + Material + Verwaltungspauschale</td><td><span class="priority-high">P0</span></td><td>Alle Positionen für Kunden sichtbar</td></tr>
         <tr><td>Fahrtkostenberechnung</td><td>Distanz × Fahrzeugkosten (ADAC-Basis) + Fahrzeit × reduziertem Stundensatz. §312a BGB zwingend erforderlich.</td><td><span class="priority-high">P0</span></td><td>Kein Versand ohne diese Position</td></tr>
+        <tr><td>DATEV-Export</td><td>Rechnungen und Belege in DATEV-Format exportieren — direkt für den Steuerberater. Pflicht laut Felix-Feedback: ohne DATEV ist Voltio ein Rückschritt gegenüber OfficeOn.</td><td><span class="priority-high">P0</span></td><td>DATEV LODAS / Kanzlei-Rechnungswesen. Bosch OfficeOn hat das bereits — Voltio muss gleichziehen.</td></tr>
         <tr><td>Materialprepayment-Logik</td><td>Unter €50: direkte Bestellung ohne Vorauszahlung. €50–€300: digitale Freigabe reicht. €300–€1.000: 50% Anzahlung vor Bestellung. Über €1.000: 70% Anzahlung vor Bestellung. Alle Schwellenwerte in den Einstellungen anpassbar.</td><td><span class="priority-high">P0</span></td><td>Schützt Felix vor Materialrisiko bei Großaufträgen</td></tr>
         <tr><td>Anzahlungs-Flow</td><td>Bei Angeboten über €300 Materialwert: Rechnung für Anzahlung automatisch generiert und an Kunden gesendet. Material wird erst bestellt wenn Zahlung als eingegangen markiert.</td><td><span class="priority-high">P0</span></td><td>Manuelles "Zahlung eingegangen" im MVP, automatisch später</td></tr>
         <tr><td>MwSt.-Berechnung</td><td>19% USt. automatisch auf alle Positionen angewendet</td><td><span class="priority-high">P0</span></td><td>Gesetzlich erforderlich</td></tr>
@@ -1951,16 +1952,19 @@
         <div class="phase-timeline">Wochen 1–8</div>
         <ul class="phase-items">
           <li>Kunden-CRM mit vollständigen Profilen und Auftragshistorie</li>
-          <li>Auftrags-Assistent (4-Schritt-Aufnahme)</li>
+          <li>Auftrags-Assistent (4-Schritt-Aufnahme) mit geführtem ZPlan-Modell</li>
           <li>Einfach/Komplex-Klassifizierung mit Auftragskategorien</li>
           <li>Pipeline-Verfolgung mit automatischer Aufgabengenerierung</li>
           <li>Angebotserstellung mit Fahrtkosten, Materialaufschlag, MwSt.</li>
+          <li>Prepayment-Logik nach Schwellenwert (€50 / €300 / €1.000)</li>
           <li>Digitale Kundenfreigabe für Angebote</li>
           <li>Automatische Rechnungserstellung und Versand</li>
           <li>Interne Margenansicht</li>
+          <li><strong style="color:var(--accent);">⚡ IDS-Connect (Sonepar, Rexel, Uni-Elektro) — Pflicht</strong></li>
+          <li><strong style="color:var(--accent);">⚡ DATEV-Export — Pflicht laut Felix</strong></li>
           <li>WhatsApp-Business-API-Integration (ausgehend)</li>
           <li>Gmail-Integration (ausgehend)</li>
-          <li>Grundlegende Agent-Nachrichtenentwürfe (Erinnerungen, Terminbestätigungen)</li>
+          <li>Grundlegende Agent-Nachrichtenentwürfe</li>
           <li>Dashboard mit Tagesterminplan und überfälligen Aufgaben</li>
           <li>Google-Maps-Distanz und Fahrtzeit</li>
           <li>Einfache Lagerliste (manuelle Bestandspflege)</li>
@@ -1991,13 +1995,13 @@
         <div class="phase-timeline">Ab Woche 17</div>
         <ul class="phase-items">
           <li>Tap-to-Pay für Aufträge unter €500 (Stripe Terminal)</li>
-          <li>Lieferanten-API-Integration (Sonepar, Rexel) für automatische Nachbestellungen</li>
+          <li>Lieferanten-API-Integration (weitere Händler) für automatische Nachbestellungen</li>
           <li>Erweiterte Rentabilitätsanalysen (Trend nach Auftragstyp, Saison, Kunde)</li>
           <li>Kundenportal (Auftragsstatus einsehen, Angebot freigeben, Rechnung bezahlen)</li>
           <li>Mehrere Mitarbeiter unterstützen (wenn Felix wächst)</li>
           <li>Jährliche Prüfungserinnerungs-Kampagnen</li>
           <li>Automatische Bewertungsanfragen nach Auftragsabschluss</li>
-          <li>Buchführungsexport (DATEV-/ELSTER-kompatibel)</li>
+          <li>ELSTER-kompatibles Steuerreporting</li>
           <li>Prädiktive Wochenplanung (KI schlägt optimalen Wochenplan vor)</li>
         </ul>
       </div>
@@ -2073,6 +2077,373 @@
           <li>Hat er schon mal eine Planungs- oder Abrechnungs-App ausprobiert?</li>
           <li>Hat er ein WhatsApp-Business-Konto oder nur privates WhatsApp?</li>
         </ul>
+      </div>
+    </div>
+
+    <!-- HAGER ZPLAN INSPIRATION -->
+    <div style="margin-top:64px;">
+      <div class="section-eyebrow">Inspiration · Geführter Workflow</div>
+      <h2>Hager ZPlan —<br><em>das richtige Modell</em></h2>
+      <p style="color:var(--text2);font-size:16px;line-height:1.6;margin-bottom:32px;max-width:680px;">Felix nutzt Hager ZPlan bereits für die Planung von Zähler- und Wandleranlagen. Das Tool macht etwas genial richtig: <strong style="color:var(--text);">es führt den Nutzer Schritt für Schritt durch eine komplexe Planung</strong> und übernimmt die Denkarbeit. Genau dieses Prinzip übernehmen wir für Voltio — sowohl für das Felix-Interview, als auch für die App selbst.</p>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:32px;">
+        <div style="background:linear-gradient(135deg, #003366 0%, #0055A4 100%);padding:24px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.2em;color:rgba(255,255,255,0.7);margin-bottom:4px;">HAGER GROUP · KONFIGURATOR</div>
+            <div style="font-size:26px;font-weight:800;color:white;letter-spacing:-0.01em;">ZPlan</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);margin-top:2px;">Zählerplatz-Konfigurator für normgerechte Anlagenplanung</div>
+          </div>
+          <a href="https://hagerzplan.de/" target="_blank" style="background:white;color:#003366;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;">hagerzplan.de ↗</a>
+        </div>
+
+        <div style="padding:32px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">So funktioniert ZPlan</div>
+          <p style="font-size:14px;color:var(--text);line-height:1.7;margin-bottom:24px;max-width:720px;">Der Nutzer gibt nur die Postleitzahl ein. ZPlan erkennt automatisch den passenden Versorgungsnetzbetreiber (VNB), prüft die regionalen technischen Anschlussbedingungen (TAB), und führt durch die Anwendungs-Spezifikation. Am Ende steht eine fertige Stückliste mit Aufbauplan, normgerecht nach DIN VDE 0603-2-2 — als PDF oder Excel.</p>
+
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:32px;">
+            <div style="padding:18px 14px;background:var(--surface2);border-radius:8px;text-align:center;">
+              <div style="font-family:'Instrument Serif',serif;font-size:24px;color:#0055A4;margin-bottom:8px;">1</div>
+              <div style="font-size:12px;font-weight:600;color:var(--text);margin-bottom:4px;">PLZ eingeben</div>
+              <div style="font-size:11px;color:var(--text2);line-height:1.4;">VNB wird automatisch erkannt</div>
+            </div>
+            <div style="padding:18px 14px;background:var(--surface2);border-radius:8px;text-align:center;">
+              <div style="font-family:'Instrument Serif',serif;font-size:24px;color:#0055A4;margin-bottom:8px;">2</div>
+              <div style="font-size:12px;font-weight:600;color:var(--text);margin-bottom:4px;">Anwendung wählen</div>
+              <div style="font-size:11px;color:var(--text2);line-height:1.4;">PV, Wallbox, Wärmepumpe</div>
+            </div>
+            <div style="padding:18px 14px;background:var(--surface2);border-radius:8px;text-align:center;">
+              <div style="font-family:'Instrument Serif',serif;font-size:24px;color:#0055A4;margin-bottom:8px;">3</div>
+              <div style="font-size:12px;font-weight:600;color:var(--text);margin-bottom:4px;">Komponenten</div>
+              <div style="font-size:11px;color:var(--text2);line-height:1.4;">System schlägt Schränke vor</div>
+            </div>
+            <div style="padding:18px 14px;background:var(--surface2);border-radius:8px;text-align:center;">
+              <div style="font-family:'Instrument Serif',serif;font-size:24px;color:#0055A4;margin-bottom:8px;">4</div>
+              <div style="font-size:12px;font-weight:600;color:var(--text);margin-bottom:4px;">Live-Visualisierung</div>
+              <div style="font-size:11px;color:var(--text2);line-height:1.4;">Aufbauplan in Echtzeit</div>
+            </div>
+            <div style="padding:18px 14px;background:linear-gradient(135deg, rgba(232,160,32,0.1), rgba(232,160,32,0.02));border:1px solid rgba(232,160,32,0.25);border-radius:8px;text-align:center;">
+              <div style="font-family:'Instrument Serif',serif;font-size:24px;color:var(--accent);margin-bottom:8px;">5</div>
+              <div style="font-size:12px;font-weight:600;color:var(--text);margin-bottom:4px;">Stückliste & PDF</div>
+              <div style="font-size:11px;color:var(--text2);line-height:1.4;">Bestellbereit beim Großhandel</div>
+            </div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+            <div style="padding:20px 24px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
+              <div style="font-size:11px;font-weight:700;color:#22C55E;letter-spacing:0.08em;margin-bottom:10px;">WAS ZPLAN GENIAL MACHT</div>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+                <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:#22C55E;flex-shrink:0;">✓</span>Felix muss nicht wissen, welcher VNB zuständig ist — wird automatisch erkannt</li>
+                <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:#22C55E;flex-shrink:0;">✓</span>Felix muss keine Norm-Tabellen wälzen — TAB-Vorgaben sind eingebaut</li>
+                <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:#22C55E;flex-shrink:0;">✓</span>Komplette Stückliste auf Knopfdruck — kein manuelles Abtippen</li>
+                <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:#22C55E;flex-shrink:0;">✓</span>Zur Bestellung beim Großhändler vorqualifiziert</li>
+                <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:#22C55E;flex-shrink:0;">✓</span>Live-Visualisierung — Felix sieht sofort was passiert</li>
+              </ul>
+            </div>
+            <div style="padding:20px 24px;background:var(--surface2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;">
+              <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.08em;margin-bottom:10px;">DAS ÜBERNEHMEN WIR FÜR VOLTIO</div>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+                <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:var(--accent);flex-shrink:0;">→</span>Geführter 5-Schritt-Flow für jeden Auftragstyp (statt langes Formular)</li>
+                <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:var(--accent);flex-shrink:0;">→</span>System fragt nur das Nötige — nächste Frage hängt von vorheriger Antwort ab</li>
+                <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:var(--accent);flex-shrink:0;">→</span>Komplette Materialliste automatisch erstellt — Felix prüft, statt zu suchen</li>
+                <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:var(--accent);flex-shrink:0;">→</span>IDS-Connect-Integration: Stückliste direkt zum Großhandel-Warenkorb</li>
+                <li style="font-size:13px;color:var(--text2);line-height:1.5;display:flex;gap:8px;"><span style="color:var(--accent);flex-shrink:0;">→</span>VDE-Compliance automatisch im Hintergrund — Felix muss nicht recherchieren</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voltio Guided Flow Mockup for PV -->
+      <div style="background:var(--surface);border:1px solid rgba(232,160,32,0.3);border-radius:14px;padding:32px;margin-bottom:32px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">Übertragung auf Voltio</div>
+        <h3 style="font-size:26px;margin-bottom:8px;">Geführter Auftragsflow —<br><em style="font-style:italic;color:var(--accent);">PV-Anlage als Beispiel</em></h3>
+        <p style="color:var(--text2);font-size:14px;margin-bottom:32px;max-width:680px;">So sieht der Voltio-Workflow für einen Photovoltaik-Auftrag aus, wenn wir das ZPlan-Prinzip übernehmen. Der Agent stellt nur Fragen die wirklich nötig sind und schließt mit einer vollständigen Auftragskarte ab.</p>
+
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;">
+          <div style="background:var(--surface2);border-radius:10px;overflow:hidden;border:1px solid var(--border);">
+            <div style="background:rgba(232,160,32,0.1);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);font-weight:700;">SCHRITT 1</div>
+              <div style="font-size:10px;color:var(--text3);">~10 Sek.</div>
+            </div>
+            <div style="padding:18px 16px;">
+              <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px;">Adresse & VNB</div>
+              <div style="background:#0A0F1C;border:1px solid var(--border);border-radius:6px;padding:10px;margin-bottom:12px;">
+                <div style="font-size:10px;color:var(--text3);margin-bottom:4px;">PLZ</div>
+                <div style="font-size:13px;color:var(--text);font-family:'DM Mono',monospace;">50674 Köln</div>
+              </div>
+              <div style="background:rgba(34,197,94,0.08);border-left:2px solid #22C55E;padding:8px 10px;border-radius:0 4px 4px 0;">
+                <div style="font-size:10px;color:#22C55E;font-weight:700;margin-bottom:2px;">AUTO ERKANNT</div>
+                <div style="font-size:11px;color:var(--text2);">VNB: RheinEnergie</div>
+                <div style="font-size:11px;color:var(--text2);">TAB: 2024-Stand</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:var(--surface2);border-radius:10px;overflow:hidden;border:1px solid var(--border);">
+            <div style="background:rgba(232,160,32,0.1);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);font-weight:700;">SCHRITT 2</div>
+              <div style="font-size:10px;color:var(--text3);">~30 Sek.</div>
+            </div>
+            <div style="padding:18px 16px;">
+              <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px;">Anlagenart</div>
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <div style="padding:8px 10px;background:rgba(232,160,32,0.1);border:1px solid var(--accent);border-radius:5px;font-size:11px;color:var(--accent);font-weight:600;">☀ PV mit Speicher</div>
+                <div style="padding:8px 10px;background:#0A0F1C;border:1px solid var(--border);border-radius:5px;font-size:11px;color:var(--text3);">○ PV ohne Speicher</div>
+                <div style="padding:8px 10px;background:#0A0F1C;border:1px solid var(--border);border-radius:5px;font-size:11px;color:var(--text3);">○ Hybrid + Wallbox</div>
+              </div>
+              <div style="margin-top:10px;font-size:10px;color:var(--text3);">+ Wechselrichter-Marke</div>
+            </div>
+          </div>
+
+          <div style="background:var(--surface2);border-radius:10px;overflow:hidden;border:1px solid var(--border);">
+            <div style="background:rgba(232,160,32,0.1);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);font-weight:700;">SCHRITT 3</div>
+              <div style="font-size:10px;color:var(--text3);">~45 Sek.</div>
+            </div>
+            <div style="padding:18px 16px;">
+              <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px;">Bedingungen</div>
+              <div style="background:#0A0F1C;border:1px solid var(--border);border-radius:6px;padding:10px;margin-bottom:8px;">
+                <div style="font-size:10px;color:var(--text3);margin-bottom:2px;">Anschluss</div>
+                <div style="font-size:11px;color:var(--text);">3-phasig ✓</div>
+              </div>
+              <div style="background:#0A0F1C;border:1px solid var(--border);border-radius:6px;padding:10px;margin-bottom:8px;">
+                <div style="font-size:10px;color:var(--text3);margin-bottom:2px;">Zählerschrank</div>
+                <div style="font-size:11px;color:var(--text);">Tausch nötig</div>
+              </div>
+              <div style="font-size:10px;color:var(--text3);">+ 3 Foto-Uploads</div>
+            </div>
+          </div>
+
+          <div style="background:var(--surface2);border-radius:10px;overflow:hidden;border:1px solid var(--border);">
+            <div style="background:rgba(232,160,32,0.1);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);font-weight:700;">SCHRITT 4</div>
+              <div style="font-size:10px;color:var(--text3);">Auto</div>
+            </div>
+            <div style="padding:18px 16px;">
+              <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px;">Stückliste</div>
+              <div style="display:flex;flex-direction:column;gap:5px;">
+                <div style="padding:6px 8px;background:#0A0F1C;border-radius:4px;font-size:10px;color:var(--text2);">▸ Wechselrichter SE10K</div>
+                <div style="padding:6px 8px;background:#0A0F1C;border-radius:4px;font-size:10px;color:var(--text2);">▸ Hager Zählerschrank</div>
+                <div style="padding:6px 8px;background:#0A0F1C;border-radius:4px;font-size:10px;color:var(--text2);">▸ DC-Trenner 1100V</div>
+                <div style="padding:6px 8px;background:#0A0F1C;border-radius:4px;font-size:10px;color:var(--text2);">▸ AC-Trenner 3p</div>
+                <div style="padding:6px 8px;background:#0A0F1C;border-radius:4px;font-size:10px;color:var(--text2);">▸ Solarkabel 4mm² 50m</div>
+                <div style="padding:6px 8px;background:#0A0F1C;border-radius:4px;font-size:10px;color:var(--text3);font-style:italic;">+ 8 weitere Pos.</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:linear-gradient(135deg, rgba(232,160,32,0.12), rgba(232,160,32,0.04));border:1px solid rgba(232,160,32,0.3);border-radius:10px;overflow:hidden;">
+            <div style="background:rgba(232,160,32,0.2);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-family:'DM Mono',monospace;font-size:11px;color:var(--accent);font-weight:700;">SCHRITT 5</div>
+              <div style="font-size:10px;color:var(--text3);">Fertig ✓</div>
+            </div>
+            <div style="padding:18px 16px;">
+              <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px;">Auftragskarte</div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div style="padding:8px 10px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:4px;">
+                  <div style="font-size:10px;color:#22C55E;font-weight:600;">✓ Material → IDS</div>
+                </div>
+                <div style="padding:8px 10px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:4px;">
+                  <div style="font-size:10px;color:#22C55E;font-weight:600;">✓ Angebot mit MwSt.</div>
+                </div>
+                <div style="padding:8px 10px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:4px;">
+                  <div style="font-size:10px;color:#22C55E;font-weight:600;">✓ VDE-AR-N 4105</div>
+                </div>
+                <div style="padding:8px 10px;background:rgba(232,160,32,0.15);border:1px solid var(--accent);border-radius:4px;">
+                  <div style="font-size:10px;color:var(--accent);font-weight:700;">⚠ 70% Anzahlung €4.200</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding:16px 20px;background:rgba(232,160,32,0.06);border:1px solid rgba(232,160,32,0.15);border-radius:8px;">
+          <div style="font-size:13px;color:var(--text);line-height:1.6;"><strong>Gesamtzeit für Felix:</strong> ~90 Sekunden für ein vollständig vorbereitetes PV-Angebot mit Materialliste, VDE-Konformität, IDS-Connect-Bestellvorbereitung und Anzahlungs-Logik. Statt 30+ Minuten manueller Arbeit in OfficeOn oder Excel.</div>
+        </div>
+      </div>
+
+      <!-- Application across project types -->
+      <div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Anwendung</div>
+        <h3 style="font-size:24px;margin-bottom:8px;">Geführte Flows für <em style="font-style:italic;color:var(--accent);">alle Auftragstypen</em></h3>
+        <p style="color:var(--text2);font-size:14px;margin-bottom:24px;max-width:680px;">Das ZPlan-Modell wird auf alle 7 Voltio-Auftragskategorien übertragen. Jeder Auftragstyp bekommt seinen eigenen geführten Flow mit kategoriespezifischen Fragen.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div style="padding:18px;background:var(--surface);border:1px solid var(--border);border-radius:10px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+              <div style="font-size:14px;font-weight:600;color:var(--text);">⚡ Reparatur & Fehlersuche</div>
+              <div style="font-size:11px;color:var(--text3);">3 Schritte</div>
+            </div>
+            <p style="font-size:12px;color:var(--text2);line-height:1.5;">Standort → Symptom-Beschreibung → Fotos. Agent erkennt häufige Fehlerbilder und schlägt typische Ersatzteile vor.</p>
+          </div>
+          <div style="padding:18px;background:var(--surface);border:1px solid var(--border);border-radius:10px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+              <div style="font-size:14px;font-weight:600;color:var(--text);">🔌 Installation Wohngebäude</div>
+              <div style="font-size:11px;color:var(--text3);">4 Schritte</div>
+            </div>
+            <p style="font-size:12px;color:var(--text2);line-height:1.5;">Adresse → Bauphase → Geräte/Stromkreise → Materialliste. Berücksichtigt DIN VDE 0100-600 automatisch.</p>
+          </div>
+          <div style="padding:18px;background:var(--surface);border:1px solid var(--border);border-radius:10px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+              <div style="font-size:14px;font-weight:600;color:var(--text);">🏠 Smart Home & Automation</div>
+              <div style="font-size:11px;color:var(--text3);">5 Schritte</div>
+            </div>
+            <p style="font-size:12px;color:var(--text2);line-height:1.5;">Ökosystem (KNX/Hue/HomeKit) → Räume → Geräte-Zähler → Netzwerk-Check → Stückliste mit App-Lizenzen.</p>
+          </div>
+          <div style="padding:18px;background:var(--surface);border:1px solid var(--border);border-radius:10px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+              <div style="font-size:14px;font-weight:600;color:var(--text);">🚗 E-Mobilität / Wallbox</div>
+              <div style="font-size:11px;color:var(--text3);">5 Schritte</div>
+            </div>
+            <p style="font-size:12px;color:var(--text2);line-height:1.5;">PLZ → Anschluss-Phasen → Wallbox-Modell → Leitungsweg → VNB-Anmeldung. Inkl. KfW-Förderprüfung.</p>
+          </div>
+          <div style="padding:18px;background:var(--surface);border:1px solid rgba(232,160,32,0.4);border-radius:10px;position:relative;">
+            <div style="position:absolute;top:14px;right:14px;background:var(--accent-dim);color:var(--accent);font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;letter-spacing:0.05em;">VOLLBEISPIEL</div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;padding-right:80px;">
+              <div style="font-size:14px;font-weight:600;color:var(--text);">☀ Photovoltaik / Solar</div>
+              <div style="font-size:11px;color:var(--text3);">5 Schritte</div>
+            </div>
+            <p style="font-size:12px;color:var(--text2);line-height:1.5;">PLZ + VNB → Anlagenart → Vor-Ort-Bedingungen → Stückliste → Auftragskarte mit VDE-AR-N 4105 + Anzahlung.</p>
+          </div>
+          <div style="padding:18px;background:var(--surface);border:1px solid var(--border);border-radius:10px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+              <div style="font-size:14px;font-weight:600;color:var(--text);">🏗 Neubau / Mehrfamilienhaus</div>
+              <div style="font-size:11px;color:var(--text3);">6 Schritte</div>
+            </div>
+            <p style="font-size:12px;color:var(--text2);line-height:1.5;">Gebäudetyp → Stockwerke/Einheiten → Bauphase → Architektenpläne → Gewerke-Koordination → Etappenplan.</p>
+          </div>
+          <div style="padding:18px;background:var(--surface);border:1px solid var(--border);border-radius:10px;grid-column:span 2;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+              <div style="font-size:14px;font-weight:600;color:var(--text);">🔍 DGUV V3 / E-Check Prüfung</div>
+              <div style="font-size:11px;color:var(--text3);">3 Schritte · Kürzester Flow</div>
+            </div>
+            <p style="font-size:12px;color:var(--text2);line-height:1.5;">Objekttyp → letzte Prüfung → Geräteanzahl. Voltio generiert Prüfprotokoll-Vorlage und plant nächste Fälligkeit automatisch.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GIRA HOME ASSISTANT -->
+    <div style="margin-top:64px;">
+      <div class="section-eyebrow">Weitere Inspiration · Kundenorientierter Flow</div>
+      <h2>Gira Home Assistant —<br><em>kundenfreundliche Führung</em></h2>
+      <p style="color:var(--text2);font-size:16px;line-height:1.6;margin-bottom:32px;max-width:680px;">Wo ZPlan den Elektriker führt, führt der Gira Home Assistant den <strong style="color:var(--text);">Kunden</strong>. In unter 10 Minuten erstellt der Konfigurator eine individuelle Smart-Home-Konfiguration — und vermittelt den passenden Elektrofachbetrieb. Für Voltio inspiriert das die Kundenseite: Was wenn Felix seinen Kunden einen geführten Flow schickt?</p>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:32px;">
+        <div style="background:linear-gradient(135deg, #CC0000 0%, #990000 100%);padding:24px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.2em;color:rgba(255,255,255,0.7);margin-bottom:4px;">GIRA GIERSIEPEN · ONLINE-KONFIGURATOR</div>
+            <div style="font-size:26px;font-weight:800;color:white;letter-spacing:-0.01em;">Home Assistant</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.85);margin-top:2px;">Smart-Home-Planung in 10 Minuten · für Bauherren & Renovierer</div>
+          </div>
+          <a href="https://www.gira.de/home-assistent" target="_blank" style="background:white;color:#990000;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;">gira.de/home-assistent ↗</a>
+        </div>
+
+        <div style="padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">Was macht es so gut?</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;">
+              <li style="font-size:13px;color:var(--text2);display:flex;gap:10px;line-height:1.5;"><span style="color:#22C55E;flex-shrink:0;">✓</span>Kunde wählt Räume, Funktionen und Ausstattungslevel — ohne technisches Vorwissen</li>
+              <li style="font-size:13px;color:var(--text2);display:flex;gap:10px;line-height:1.5;"><span style="color:#22C55E;flex-shrink:0;">✓</span>System schlägt automatisch passende Pakete mit Preisindikation vor</li>
+              <li style="font-size:13px;color:var(--text2);display:flex;gap:10px;line-height:1.5;"><span style="color:#22C55E;flex-shrink:0;">✓</span>Kunde kann Konfiguration direkt an <strong style="color:var(--text);">seinen Elektiker schicken</strong> — als vorqualifizierter Lead</li>
+              <li style="font-size:13px;color:var(--text2);display:flex;gap:10px;line-height:1.5;"><span style="color:#22C55E;flex-shrink:0;">✓</span>Gira vermittelt dabei Fachpartner aus der Region — Leadgenerierung inklusive</li>
+              <li style="font-size:13px;color:var(--text2);display:flex;gap:10px;line-height:1.5;"><span style="color:#22C55E;flex-shrink:0;">✓</span>Kunde fühlt sich ernstgenommen und gut beraten — noch bevor Felix den ersten Anruf macht</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">Was wir für Voltio übernehmen</div>
+            <div style="padding:16px 20px;background:var(--surface2);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;margin-bottom:12px;">
+              <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px;">Idee: Voltio Kunden-Konfigurator</div>
+              <p style="font-size:12px;color:var(--text2);line-height:1.5;">Felix schickt seinem neuen Kunden einen Link zu einem geführten Voltio-Flow. Der Kunde gibt Bedürfnisse ein — Räume, gewünschte Funktionen, Budget. Voltio erstellt daraus automatisch einen Projektvorschlag für Felix — und der Kunde fühlt sich schon beim ersten Kontakt professionell betreut.</p>
+            </div>
+            <div style="padding:16px 20px;background:var(--surface2);border-left:3px solid #3B82F6;border-radius:0 8px 8px 0;">
+              <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:6px;">Phase 3 Feature — Kundenportal</div>
+              <p style="font-size:12px;color:var(--text2);line-height:1.5;">In der Skalierungsphase könnte Felix Kunden einen Link schicken, über den sie selbst ihren Smart-Home-Auftrag vorkonfigurieren — als eigener Voltio Mini-Konfigurator. Das spart Felix Zeit bei der Erstkommunikation und qualifiziert Leads vorab.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison table -->
+      <div style="overflow-x:auto;margin-bottom:32px;">
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:var(--surface2);">
+              <th style="padding:12px 16px;text-align:left;color:var(--text3);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Dimension</th>
+              <th style="padding:12px 16px;text-align:center;color:#0055A4;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Hager ZPlan</th>
+              <th style="padding:12px 16px;text-align:center;color:#CC0000;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Gira Home Assistant</th>
+              <th style="padding:12px 16px;text-align:center;color:var(--accent);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Voltio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
+              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Primäre Zielgruppe</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text2);">Elektriker / Planer</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text2);">Bauherr / Endkunde</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--accent);font-weight:600;">Elektriker (+ Kunde P3)</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
+              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Output</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text2);">Stückliste + Aufbauplan PDF</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text2);">Paketvorschlag + Preisindikation</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--accent);font-weight:600;">Vollständige Auftragskarte</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
+              <td style="padding:12px 16px;color:var(--text);font-weight:500;">IDS-Connect</td>
+              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
+              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
+              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Automatische Materialliste</td>
+              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
+              <td style="padding:12px 16px;text-align:center;font-size:14px;color:var(--text2);">~</td>
+              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
+              <td style="padding:12px 16px;color:var(--text);font-weight:500;">KI-Agent & Kommunikation</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
+              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
+              <td style="padding:12px 16px;color:var(--text);font-weight:500;">DATEV-Export</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
+              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
+            </tr>
+            <tr>
+              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Projektmanagement & Rechnungen</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
+              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
+              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- FELIX FEEDBACK -->
+    <div style="margin-top:48px;padding:28px 32px;background:linear-gradient(135deg, rgba(34,197,94,0.06) 0%, rgba(34,197,94,0.02) 100%);border:1px solid rgba(34,197,94,0.25);border-radius:14px;">
+      <div style="display:flex;align-items:flex-start;gap:20px;">
+        <div style="width:48px;height:48px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;">💬</div>
+        <div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#22C55E;margin-bottom:8px;">Felix — Direktes WhatsApp-Feedback zur Roadmap</div>
+          <div style="background:rgba(0,0,0,0.2);border-radius:12px;border-radius:0 12px 12px 12px;padding:16px 20px;max-width:600px;margin-bottom:12px;">
+            <p style="font-size:14px;color:var(--text);line-height:1.7;font-style:italic;">"Heyho, hab mir gerade nochmal deine roadmap angeschaut was ich wichtig fände, was aufjedenfall zum nutzen essenziell ist: datev Kompatibilität, und die ids Integration bei den groshändlern, ansonsten wäre es ein step zurück von der Software die ich jetzt nutze."</p>
+            <div style="font-size:11px;color:var(--text3);margin-top:8px;text-align:right;">21:51 ✓✓</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:600px;">
+            <div style="padding:12px 16px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;">
+              <div style="font-size:12px;font-weight:700;color:#22C55E;margin-bottom:4px;">✓ Eingebaut: DATEV → P0 MVP</div>
+              <div style="font-size:12px;color:var(--text2);">Nicht mehr Phase 3 — gehört in Version 1</div>
+            </div>
+            <div style="padding:12px 16px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:8px;">
+              <div style="font-size:12px;font-weight:700;color:#22C55E;margin-bottom:4px;">✓ Eingebaut: IDS-Connect → P0 MVP</div>
+              <div style="font-size:12px;color:var(--text2);">Sonepar, Rexel, Uni-Elektro ab Tag 1</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -2737,7 +3108,7 @@
                   </div>
                   <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
                     <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">DATEV & lexoffice Integration</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Direkte Anbindung an gängige Buchhaltungssysteme — wichtig für Steuerberater.</div>
+                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Direkte Anbindung an gängige Buchhaltungssysteme — wichtig für Steuerberater. <strong style="color:var(--accent);">Voltio muss das ab V1 haben — bestätigt von Felix.</strong></div>
                   </div>
                   <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
                     <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Diktierfunktion für Berichte</div>
