@@ -760,66 +760,181 @@
 <!-- LÖSUNG -->
 <section id="loesung">
   <div class="container">
-    <div class="section-eyebrow">Die Lösung</div>
-    <h2>Voltio — sein<br><em>digitales Büro</em></h2>
+    <div class="section-eyebrow">Das Produktkonzept</div>
+    <h2>Voltio ist kein<br>Projektmanagement-Tool.<br><em>Es ist ein Workflow-Motor.</em></h2>
     <p class="section-lead">
-      Eine mobile App mit integriertem KI-Agenten, der Projektmanagement, Kundenkommunikation, Angebote, Rechnungen und Lagerverwaltung übernimmt — damit Felix sich vollständig auf seine eigentliche Stärke konzentrieren kann: die Elektroarbeit.
+      Drei verbundene Flows bilden das Rückgrat von Voltio — vom ersten Kundenkontakt bis zum DATEV-Export. Alles andere (KI-Agent, Kalender, CRM, Lagerverwaltung) unterstützt und beschleunigt diese drei Kernprozesse.
     </p>
 
+    <!-- THREE CORE FLOWS -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:64px;">
+
+      <!-- Flow 1: Client Interview -->
+      <div style="background:var(--surface);border-radius:12px 0 0 12px;padding:36px 32px;border:1px solid rgba(232,160,32,0.3);border-right:none;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),rgba(232,160,32,0.2));"></div>
+        <div style="font-family:'Instrument Serif',serif;font-size:64px;color:rgba(232,160,32,0.08);position:absolute;right:20px;top:10px;line-height:1;">1</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;">FLOW 01</div>
+        <h3 style="font-size:22px;margin-bottom:12px;line-height:1.2;">Geführtes<br>Kundeninterview</h3>
+        <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:20px;">Wenn Felix einen Anruf bekommt, startet Voltio einen kategoriespezifischen Entscheidungsflow — wie Hager ZPlan, aber für jeden Auftragstyp. Nicht ein generisches Formular, sondern eine strukturierte Befragung die automatisch Scope, Materialbedarf und VDE-Anforderungen ableitet.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;"></span>Auftragstyp → kategoriespezifische Fragen</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;"></span>PLZ → VNB automatisch erkannt (wie ZPlan)</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;"></span>Fotos & Sprachnotizen vor Ort</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;"></span>Auto-Stückliste + VDE-Compliance</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:var(--accent);border-radius:50%;flex-shrink:0;"></span>Kunde kann Bedürfnisse selbst eingeben (Gira-Modell)</div>
+        </div>
+        <div style="margin-top:20px;padding:10px 14px;background:var(--accent-dim);border-radius:6px;font-size:11px;color:var(--accent);font-weight:600;">Inspiriert von: Hager ZPlan + Gira Home Assistant</div>
+      </div>
+
+      <!-- Flow 2: IDS Ordering -->
+      <div style="background:var(--surface);padding:36px 32px;border:1px solid rgba(59,130,246,0.3);border-right:none;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#3B82F6,rgba(59,130,246,0.2));"></div>
+        <div style="font-family:'Instrument Serif',serif;font-size:64px;color:rgba(59,130,246,0.08);position:absolute;right:20px;top:10px;line-height:1;">2</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent2);margin-bottom:14px;">FLOW 02</div>
+        <h3 style="font-size:22px;margin-bottom:12px;line-height:1.2;">IDS-Bestellstrecke<br>& Materialfreigabe</h3>
+        <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:20px;">Aus dem Interview entsteht automatisch eine Stückliste. Voltio prüft den Materialwert, definiert ob Anzahlung nötig ist, und verbindet sich per IDS-Connect direkt mit dem Großhändler-Shop. Ein Klick — Warenkorb übertragen, Bestellung aufgegeben. Kein manuelles Abtippen.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:var(--accent2);border-radius:50%;flex-shrink:0;"></span>Stückliste aus Interview auto-generiert</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:var(--accent2);border-radius:50%;flex-shrink:0;"></span>Prepayment-Check: €50 / €300 / €1.000 Schwellen</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:var(--accent2);border-radius:50%;flex-shrink:0;"></span>Kundenfreigabe digital → Anzahlung einfordern</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:var(--accent2);border-radius:50%;flex-shrink:0;"></span>IDS-Connect → Sonepar, Rexel, Uni-Elektro direkt</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:var(--accent2);border-radius:50%;flex-shrink:0;"></span>Rückwärtsplanung: Lieferzeit → Aufgaben-Deadline</div>
+        </div>
+        <div style="margin-top:20px;padding:10px 14px;background:var(--accent2-dim);border-radius:6px;font-size:11px;color:var(--accent2);font-weight:600;">Standard: IDS-Connect 2.5 · XML · HTTPS POST</div>
+      </div>
+
+      <!-- Flow 3: DATEV -->
+      <div style="background:var(--surface);border-radius:0 12px 12px 0;padding:36px 32px;border:1px solid rgba(34,197,94,0.3);position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#22C55E,rgba(34,197,94,0.2));"></div>
+        <div style="font-family:'Instrument Serif',serif;font-size:64px;color:rgba(34,197,94,0.08);position:absolute;right:20px;top:10px;line-height:1;">3</div>
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#22C55E;margin-bottom:14px;">FLOW 03</div>
+        <h3 style="font-size:22px;margin-bottom:12px;line-height:1.2;">DATEV-Export<br>& Buchhaltung</h3>
+        <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:20px;">Jede Rechnung, jede Anzahlung, jeder Beleg — alles landet automatisch DATEV-konform im System. Felix schickt am Monatsende einen Export an seinen Steuerberater. Keine Excel-Tabellen, keine manuellen Übertragungen, kein Papierchaos.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:#22C55E;border-radius:50%;flex-shrink:0;"></span>ZUGFeRD & XRechnung (E-Rechnungspflicht 2025)</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:#22C55E;border-radius:50%;flex-shrink:0;"></span>DATEV LODAS / Kanzlei-Rechnungswesen kompatibel</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:#22C55E;border-radius:50%;flex-shrink:0;"></span>Automatische Belegzuordnung pro Projekt</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:#22C55E;border-radius:50%;flex-shrink:0;"></span>Monats-Export mit einem Klick</div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);"><span style="width:6px;height:6px;background:#22C55E;border-radius:50%;flex-shrink:0;"></span>lexoffice-Integration als Alternative</div>
+        </div>
+        <div style="margin-top:20px;padding:10px 14px;background:rgba(34,197,94,0.1);border-radius:6px;font-size:11px;color:#22C55E;font-weight:600;">Pflicht ab V1 — bestätigt von Felix direkt</div>
+      </div>
+    </div>
+
+    <!-- FULL WORKFLOW SPINE -->
+    <div style="margin-bottom:64px;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--text3);margin-bottom:20px;text-align:center;">Der vollständige Voltio-Workflow — von Anruf bis DATEV</div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px;overflow-x:auto;">
+        <div style="display:flex;align-items:flex-start;gap:0;min-width:900px;">
+
+          <!-- Stage 1 -->
+          <div style="flex:1;text-align:center;padding:0 8px;">
+            <div style="width:40px;height:40px;background:var(--accent-dim);border:2px solid var(--accent);border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:16px;">📞</div>
+            <div style="font-size:11px;font-weight:700;color:var(--accent);">ANRUF</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:4px;line-height:1.4;">Kunde meldet sich bei Felix</div>
+          </div>
+          <div style="font-size:18px;color:var(--accent);padding-top:8px;">→</div>
+
+          <!-- Stage 2 -->
+          <div style="flex:1.5;text-align:center;padding:0 8px;background:rgba(232,160,32,0.05);border-radius:8px;border:1px solid rgba(232,160,32,0.15);">
+            <div style="width:40px;height:40px;background:var(--accent-dim);border:2px solid var(--accent);border-radius:50%;margin:8px auto 10px;display:flex;align-items:center;justify-content:center;font-size:16px;">🎯</div>
+            <div style="font-size:11px;font-weight:700;color:var(--accent);">FLOW 1: INTERVIEW</div>
+            <div style="font-size:10px;color:var(--text2);margin-top:4px;line-height:1.5;">Auftragstyp wählen → Entscheidungsbaum → Fotos & Sprache → Auto-Stückliste</div>
+            <div style="font-size:9px;color:var(--text3);margin-top:6px;">~90 Sek.</div>
+          </div>
+          <div style="font-size:18px;color:var(--accent);padding-top:8px;">→</div>
+
+          <!-- Stage 3 -->
+          <div style="flex:1;text-align:center;padding:0 8px;">
+            <div style="width:40px;height:40px;background:var(--accent-dim);border:2px solid var(--accent);border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:16px;">📋</div>
+            <div style="font-size:11px;font-weight:700;color:var(--accent);">ANGEBOT</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:4px;line-height:1.4;">Auto-generiert mit Fahrtkosten, MwSt., Aufschlag</div>
+          </div>
+          <div style="font-size:18px;color:var(--accent);padding-top:8px;">→</div>
+
+          <!-- Stage 4 -->
+          <div style="flex:1;text-align:center;padding:0 8px;">
+            <div style="width:40px;height:40px;background:rgba(59,130,246,0.1);border:2px solid var(--accent2);border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:16px;">✅</div>
+            <div style="font-size:11px;font-weight:700;color:var(--accent2);">FREIGABE</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:4px;line-height:1.4;">Kunde bestätigt digital + Anzahlung bei &gt;€300</div>
+          </div>
+          <div style="font-size:18px;color:var(--accent2);padding-top:8px;">→</div>
+
+          <!-- Stage 5 -->
+          <div style="flex:1.5;text-align:center;padding:0 8px;background:rgba(59,130,246,0.05);border-radius:8px;border:1px solid rgba(59,130,246,0.15);">
+            <div style="width:40px;height:40px;background:rgba(59,130,246,0.1);border:2px solid var(--accent2);border-radius:50%;margin:8px auto 10px;display:flex;align-items:center;justify-content:center;font-size:16px;">🏭</div>
+            <div style="font-size:11px;font-weight:700;color:var(--accent2);">FLOW 2: IDS-BESTELLUNG</div>
+            <div style="font-size:10px;color:var(--text2);margin-top:4px;line-height:1.5;">Stückliste → IDS-Connect → Sonepar/Rexel → Warenkorb → Bestellt</div>
+            <div style="font-size:9px;color:var(--text3);margin-top:6px;">1 Klick</div>
+          </div>
+          <div style="font-size:18px;color:var(--accent2);padding-top:8px;">→</div>
+
+          <!-- Stage 6 -->
+          <div style="flex:1;text-align:center;padding:0 8px;">
+            <div style="width:40px;height:40px;background:rgba(34,197,94,0.1);border:2px solid #22C55E;border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:16px;">⚡</div>
+            <div style="font-size:11px;font-weight:700;color:#22C55E;">AUSFÜHRUNG</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:4px;line-height:1.4;">Termin, Anfahrt, VDE-Checkliste</div>
+          </div>
+          <div style="font-size:18px;color:#22C55E;padding-top:8px;">→</div>
+
+          <!-- Stage 7 -->
+          <div style="flex:1;text-align:center;padding:0 8px;">
+            <div style="width:40px;height:40px;background:rgba(34,197,94,0.1);border:2px solid #22C55E;border-radius:50%;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-size:16px;">💶</div>
+            <div style="font-size:11px;font-weight:700;color:#22C55E;">RECHNUNG</div>
+            <div style="font-size:10px;color:var(--text3);margin-top:4px;line-height:1.4;">Auto-generiert, per WhatsApp/E-Mail gesendet</div>
+          </div>
+          <div style="font-size:18px;color:#22C55E;padding-top:8px;">→</div>
+
+          <!-- Stage 8 -->
+          <div style="flex:1.5;text-align:center;padding:0 8px;background:rgba(34,197,94,0.05);border-radius:8px;border:1px solid rgba(34,197,94,0.15);">
+            <div style="width:40px;height:40px;background:rgba(34,197,94,0.1);border:2px solid #22C55E;border-radius:50%;margin:8px auto 10px;display:flex;align-items:center;justify-content:center;font-size:16px;">📊</div>
+            <div style="font-size:11px;font-weight:700;color:#22C55E;">FLOW 3: DATEV</div>
+            <div style="font-size:10px;color:var(--text2);margin-top:4px;line-height:1.5;">Belege auto-sortiert → DATEV-Export → Steuerberater</div>
+            <div style="font-size:9px;color:var(--text3);margin-top:6px;">1 Klick / Monat</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- SUPPORTING MODULES -->
+    <div style="font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--text3);margin-bottom:20px;">Unterstützende Module — die drei Flows ermöglichen und beschleunigen</div>
     <div class="solution-modules">
       <div class="module-card">
-        <div class="module-num">01</div>
+        <div class="module-num">A</div>
         <div class="module-title">Kunden-CRM</div>
-        <div class="module-desc">Vollständige Kundenprofile mit Kontaktdaten, Auftragshistorie, Kommunikationsprotokoll und bevorzugtem Kontaktkanal. Mini-CRM mit WhatsApp- und Gmail-Integration.</div>
+        <div class="module-desc">Vollständige Kundenprofile mit Kontaktdaten, Auftragshistorie, Anredeform (Du/Sie), Erreichbarkeit und bevorzugtem Kanal. Jeder Flow greift auf diese Daten zurück.</div>
         <span class="module-badge badge-core">Kern</span>
       </div>
       <div class="module-card">
-        <div class="module-num">02</div>
-        <div class="module-title">Projektmanagement</div>
-        <div class="module-desc">Auftragslebenszyklus vom ersten Anruf bis zur bezahlten Rechnung. Zwei Stufen: Einfach (unter €500 / 10 Std.) und Komplex. Jeder Auftrag hat Phasen, Aufgaben, Fristen und Rückwärtsplanung.</div>
-        <span class="module-badge badge-core">Kern</span>
-      </div>
-      <div class="module-card">
-        <div class="module-num">03</div>
-        <div class="module-title">KI-Agent</div>
-        <div class="module-desc">Sprachnotizen während der Ortsbegehung werden automatisch zu Projektaufgaben. Der Agent schlägt Kundennachrichten proaktiv vor. Felix genehmigt per WhatsApp mit Ja/Nein.</div>
+        <div class="module-num">B</div>
+        <div class="module-title">KI-Agent & Kommunikation</div>
+        <div class="module-desc">Proaktive Nachrichtenvorschläge zu jedem Flow-Schritt. Felix genehmigt per WhatsApp. Agent lernt aus Bearbeitungen. WhatsApp Business + Gmail integriert.</div>
         <span class="module-badge badge-ai">KI</span>
       </div>
       <div class="module-card">
-        <div class="module-num">04</div>
+        <div class="module-num">C</div>
         <div class="module-title">Intelligenter Kalender</div>
-        <div class="module-desc">Optimiert Felix' Kalender anhand aller Kundenpräferenzen und Projektfristen. Plant Materialbestellungen rückwärts vom Termindatum. Berücksichtigt Fahrtzeiten.</div>
+        <div class="module-desc">Rückwärtsplanung vom Termindatum. IDS-Lieferzeiten fließen automatisch ein. Kundenpräferenzen für Terminslots werden berücksichtigt. Fahrtzeit via Google Maps.</div>
         <span class="module-badge badge-ai">KI</span>
       </div>
       <div class="module-card">
-        <div class="module-num">05</div>
-        <div class="module-title">Angebote & Rechnungen</div>
-        <div class="module-desc">Automatisch generierte Angebote mit Materialkosten, Arbeitszeit, Fahrtkosten und Verwaltungspauschale. Digitale Kundenfreigabe vor Materialbestellung. Automatische Rechnungserstellung.</div>
-        <span class="module-badge badge-core">Kern</span>
-      </div>
-      <div class="module-card">
-        <div class="module-num">06</div>
-        <div class="module-title">Rentabilitäts-Tracker</div>
-        <div class="module-desc">Interne Ansicht: tatsächliche Kosten vs. berechneter Preis. Umsatz-pro-Stunde-Kennzahl für die Priorisierung rentabler Aufträge. Materialkostenverfolgung — nur für Felix sichtbar.</div>
-        <span class="module-badge badge-core">Kern</span>
-      </div>
-      <div class="module-card">
-        <div class="module-num">07</div>
-        <div class="module-title">Lagerverwaltung</div>
-        <div class="module-desc">Schlankes ERP für gängige Elektromaterialien. Verfolgt Lager im Transporter/Keller. Zeigt Mindestbestandswarnungen. Bucht verwendete Teile auf Projekte. Schlägt Nachbestellungen vor.</div>
+        <div class="module-num">D</div>
+        <div class="module-title">Lager & Inventory</div>
+        <div class="module-desc">Stückliste aus Flow 1 wird mit Lagerbestand abgeglichen. Nur fehlende Teile gehen an IDS. Verwendete Teile werden automatisch abgebucht und dem Projekt gutgeschrieben.</div>
         <span class="module-badge badge-erp">ERP</span>
       </div>
       <div class="module-card">
-        <div class="module-num">08</div>
-        <div class="module-title">Compliance-Modul</div>
-        <div class="module-desc">Deutsche VDE- und DGUV-V3-Checklisten werden automatisch nach Auftragstyp erstellt. Dokumentenspeicherung. E-Check-Verfolgung. Erinnerungen an Prüfintervalle je Kundenobjekt.</div>
+        <div class="module-num">E</div>
+        <div class="module-title">Rentabilität & Controlling</div>
+        <div class="module-desc">Interner Margenblick: Einkauf vs. Verkauf, €/Stunde je Auftrag. Feeds aus allen drei Flows. Welche Auftragstypen sind am profitabelsten?</div>
         <span class="module-badge badge-core">Kern</span>
       </div>
       <div class="module-card">
-        <div class="module-num">09</div>
-        <div class="module-title">Kommunikations-Hub</div>
-        <div class="module-desc">WhatsApp Business + Gmail-Integration. Jede Nachricht wird dem Projekt zugeordnet. Der Agent entwirft Nachrichten für jede Phase. Felix genehmigt oder sendet mit einem Tippen.</div>
-        <span class="module-badge badge-ai">KI</span>
+        <div class="module-num">F</div>
+        <div class="module-title">VDE & Compliance</div>
+        <div class="module-desc">Flow 1 erkennt automatisch welche VDE-Normen gelten. Checklisten werden mit dem Projekt verknüpft. DGUV V3 Prüfintervalle werden je Kundenobjekt überwacht.</div>
+        <span class="module-badge badge-core">Kern</span>
       </div>
     </div>
   </div>
@@ -831,12 +946,476 @@
 <section id="screens">
   <div class="container">
     <div class="section-eyebrow">Schlüssel-Screens</div>
-    <h2>Wireframes &<br><em>Interface-Design</em></h2>
+    <h2>Die drei Flows<br><em>im Detail</em></h2>
     <p class="section-lead">
-      Sechs zentrale Screens, die den vollständigen Tagesablauf abbilden — von der morgendlichen Übersicht bis zum Rechnungsversand.
+      Jeder der drei Kernflows hat eigene Wireframes — von der geführten Kundenaufnahme über die IDS-Bestellstrecke bis zum DATEV-Export. Danach folgen die unterstützenden Screens.
     </p>
 
-    <!-- SCREEN 1: DASHBOARD -->
+    <!-- ═══════════════════════════════ -->
+    <!-- FLOW 1: GUIDED CLIENT INTERVIEW -->
+    <!-- ═══════════════════════════════ -->
+    <div style="margin-bottom:16px;padding:16px 24px;background:var(--accent-dim);border:1px solid rgba(232,160,32,0.3);border-radius:8px;display:flex;align-items:center;gap:12px;">
+      <div style="font-family:'Instrument Serif',serif;font-size:22px;color:var(--accent);">Flow 01</div>
+      <div style="width:1px;height:24px;background:rgba(232,160,32,0.3);"></div>
+      <div style="font-size:14px;font-weight:600;color:var(--text);">Geführtes Kundeninterview — ZPlan-Modell für jeden Auftragstyp</div>
+    </div>
+
+    <!-- INTERVIEW SCREEN A: Auftragstyp Auswahl -->
+    <div class="wireframe-wrapper">
+      <div class="wireframe-header">
+        <div class="wireframe-title">Flow 01 · Screen A — Auftragstyp & Entscheidungseinstieg</div>
+        <div class="wireframe-tag">Interview · Schritt 1</div>
+      </div>
+      <div class="wireframe-body">
+        <div class="wf-grid">
+          <div>
+            <div class="wf-label">Wireframe</div>
+            <svg viewBox="0 0 340 680" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid #1F2D45;">
+              <rect width="340" height="680" fill="#080C14"/>
+              <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
+              <text x="20" y="55" fill="#8B97AA" font-size="12">← Neuer Auftrag</text>
+              <text x="20" y="80" fill="#F0EBE0" font-size="19" font-family="Georgia" font-weight="bold">Was braucht der Kunde?</text>
+              <text x="20" y="98" fill="#8B97AA" font-size="12">Frau Hoffmann · Aachener Str. 45, Köln</text>
+              <!-- Progress bar -->
+              <rect x="20" y="110" width="300" height="4" rx="2" fill="#1F2D45"/>
+              <rect x="20" y="110" width="50" height="4" rx="2" fill="#E8A020"/>
+              <text x="20" y="128" fill="#E8A020" font-size="10" font-weight="bold">SCHRITT 1 VON 5 · AUFTRAGSTYP</text>
+              <!-- Category cards -->
+              <text x="20" y="152" fill="#4B5875" font-size="10" letter-spacing="1">KATEGORIE WÄHLEN</text>
+              <!-- Card 1 - selected -->
+              <rect x="20" y="160" width="300" height="56" rx="10" fill="#1A2438" stroke="#E8A020" stroke-width="1.5"/>
+              <text x="38" y="183" fill="#F0EBE0" font-size="15">⚡</text>
+              <text x="58" y="182" fill="#F0EBE0" font-size="13" font-weight="700">Reparatur & Fehlersuche</text>
+              <text x="58" y="197" fill="#8B97AA" font-size="11">Ausfall, defekte Steckdose, Kurzschluss</text>
+              <text x="58" y="209" fill="#4B5875" font-size="10">→ 3 Schritte · ~2 Min.</text>
+              <text x="298" y="188" fill="#E8A020" font-size="14">●</text>
+              <!-- Card 2 -->
+              <rect x="20" y="222" width="300" height="56" rx="10" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="38" y="245" fill="#F0EBE0" font-size="15">🔌</text>
+              <text x="58" y="244" fill="#F0EBE0" font-size="13" font-weight="600">Installation Wohngebäude</text>
+              <text x="58" y="259" fill="#8B97AA" font-size="11">Steckdosen, Beleuchtung, Zählerschrank</text>
+              <text x="58" y="271" fill="#4B5875" font-size="10">→ 4 Schritte · ~3 Min.</text>
+              <!-- Card 3 -->
+              <rect x="20" y="284" width="300" height="56" rx="10" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="38" y="307" fill="#F0EBE0" font-size="15">🏠</text>
+              <text x="58" y="306" fill="#F0EBE0" font-size="13" font-weight="600">Smart Home & Automation</text>
+              <text x="58" y="321" fill="#8B97AA" font-size="11">KNX, Hue, HomeKit, Jalousien</text>
+              <text x="58" y="333" fill="#4B5875" font-size="10">→ 5 Schritte · ~4 Min.</text>
+              <!-- Card 4 -->
+              <rect x="20" y="346" width="300" height="56" rx="10" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="38" y="369" fill="#F0EBE0" font-size="15">🚗</text>
+              <text x="58" y="368" fill="#F0EBE0" font-size="13" font-weight="600">E-Mobilität / Wallbox</text>
+              <text x="58" y="383" fill="#8B97AA" font-size="11">Ladepunkt Installation, Lastmanagement</text>
+              <text x="58" y="395" fill="#4B5875" font-size="10">→ 5 Schritte · ~4 Min.</text>
+              <!-- Card 5 -->
+              <rect x="20" y="408" width="300" height="56" rx="10" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="38" y="431" fill="#F0EBE0" font-size="15">☀️</text>
+              <text x="58" y="430" fill="#F0EBE0" font-size="13" font-weight="600">Photovoltaik / Solar</text>
+              <text x="58" y="445" fill="#8B97AA" font-size="11">PV-Anlage, Speicher, Wechselrichter</text>
+              <text x="58" y="457" fill="#4B5875" font-size="10">→ 5 Schritte · ~5 Min.</text>
+              <!-- Card 6 -->
+              <rect x="20" y="470" width="144" height="56" rx="10" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="38" y="493" fill="#F0EBE0" font-size="14">🏗</text>
+              <text x="58" y="492" fill="#F0EBE0" font-size="12" font-weight="600">Neubau</text>
+              <text x="38" y="510" fill="#8B97AA" font-size="10">Mehrfamilienhaus</text>
+              <rect x="176" y="470" width="144" height="56" rx="10" fill="#111827" stroke="#1F2D45" stroke-width="1"/>
+              <text x="194" y="493" fill="#F0EBE0" font-size="14">🔍</text>
+              <text x="214" y="492" fill="#F0EBE0" font-size="12" font-weight="600">E-Check</text>
+              <text x="194" y="510" fill="#8B97AA" font-size="10">DGUV V3</text>
+              <!-- Info box -->
+              <rect x="20" y="540" width="300" height="38" rx="8" fill="#0D1828" stroke="rgba(59,130,246,0.2)"/>
+              <text x="34" y="556" fill="#93C5FD" font-size="11">📍 PLZ 50674 erkannt → VNB: RheinEnergie</text>
+              <text x="34" y="570" fill="#4B5875" font-size="10">TAB 2024 · Relevante Normen werden automatisch geladen</text>
+              <!-- CTA -->
+              <rect x="20" y="592" width="300" height="42" rx="10" fill="#E8A020"/>
+              <text x="112" y="617" fill="#080C14" font-size="14" font-weight="bold">Weiter: Reparatur →</text>
+              <!-- Alt voice -->
+              <text x="120" y="648" fill="#4B5875" font-size="11" text-anchor="middle">oder</text>
+              <rect x="80" y="656" width="180" height="30" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="115" y="675" fill="#8B97AA" font-size="12">🎤 Situation beschreiben</text>
+            </svg>
+          </div>
+          <div>
+            <div class="wf-label">Design-Prinzip: ZPlan-Modell auf Voltio übertragen</div>
+            <p class="wf-caption">
+              <strong>Kein Formular — ein Gespräch.</strong> Felix wählt nicht aus Feldern, sondern aus verständlichen Kategorien. Jede Kategorie zeigt wie viele Schritte folgen und wie lang es dauert — Transparenz vom ersten Tap.<br><br>
+              <strong>PLZ-Logik wie Hager ZPlan.</strong> Sobald die Kundenadresse bekannt ist, erkennt Voltio automatisch den zuständigen Versorgungsnetzbetreiber und lädt die regionalen technischen Anschlussbedingungen (TAB). Felix muss das nie nachschlagen.<br><br>
+              <strong>Sprache als Alternative.</strong> Felix kann auch einfach sagen "Kunde hat Kurzschluss im Keller" — der Agent ordnet das automatisch der richtigen Kategorie zu und startet den passenden Flow.<br><br>
+              <strong>Die Kategorie treibt alles.</strong> Wahl hier bestimmt: welche Fragen folgen, welche Materialkategorien relevant sind, welche VDE-Normen gelten, welche Compliance-Checkliste erstellt wird.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERVIEW SCREEN B: Kategorie-spezifische Fragen (PV Beispiel) -->
+    <div class="wireframe-wrapper">
+      <div class="wireframe-header">
+        <div class="wireframe-title">Flow 01 · Screen B — Geführte Fragen (Beispiel: Photovoltaik)</div>
+        <div class="wireframe-tag">Interview · Schritte 2–4</div>
+      </div>
+      <div class="wireframe-body">
+        <div class="wf-grid">
+          <div>
+            <div class="wf-label">Wireframe</div>
+            <svg viewBox="0 0 340 700" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid #1F2D45;">
+              <rect width="340" height="700" fill="#080C14"/>
+              <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
+              <text x="20" y="55" fill="#8B97AA" font-size="12">← Auftragstyp</text>
+              <text x="20" y="79" fill="#F0EBE0" font-size="18" font-family="Georgia" font-weight="bold">☀ PV-Anlage · Hoffmann</text>
+              <!-- Progress -->
+              <rect x="20" y="90" width="300" height="4" rx="2" fill="#1F2D45"/>
+              <rect x="20" y="90" width="180" height="4" rx="2" fill="#E8A020"/>
+              <text x="20" y="108" fill="#E8A020" font-size="10" font-weight="bold">SCHRITT 3 VON 5 · VOR-ORT-BEDINGUNGEN</text>
+              <!-- Q1: Anschluss -->
+              <rect x="20" y="118" width="300" height="80" rx="10" fill="#111827" stroke="rgba(232,160,32,0.3)"/>
+              <text x="34" y="136" fill="#FCD34D" font-size="10" font-weight="bold">FRAGE 1</text>
+              <text x="34" y="152" fill="#F0EBE0" font-size="13" font-weight="600">Welcher Stromanschluss liegt an?</text>
+              <rect x="34" y="160" width="78" height="28" rx="6" fill="#1A2438" stroke="#E8A020" stroke-width="1.5"/>
+              <text x="50" y="178" fill="#E8A020" font-size="12" font-weight="bold">3-phasig</text>
+              <rect x="120" y="160" width="78" height="28" rx="6" fill="#111827" stroke="#1F2D45"/>
+              <text x="134" y="178" fill="#4B5875" font-size="12">1-phasig</text>
+              <rect x="206" y="160" width="98" height="28" rx="6" fill="#111827" stroke="#1F2D45"/>
+              <text x="218" y="178" fill="#4B5875" font-size="12">Unklar / prüfen</text>
+              <!-- Q2: Zählerschrank -->
+              <rect x="20" y="206" width="300" height="80" rx="10" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="224" fill="#FCD34D" font-size="10" font-weight="bold">FRAGE 2</text>
+              <text x="34" y="240" fill="#F0EBE0" font-size="13" font-weight="600">Zählerschrank — Zustand?</text>
+              <rect x="34" y="248" width="90" height="28" rx="6" fill="#111827" stroke="#1F2D45" stroke-dasharray="3 2"/>
+              <text x="43" y="266" fill="#4B5875" font-size="12">Neuwertig</text>
+              <rect x="132" y="248" width="90" height="28" rx="6" fill="#1A2438" stroke="#E8A020" stroke-width="1.5"/>
+              <text x="145" y="266" fill="#E8A020" font-size="12" font-weight="bold">Tausch nötig</text>
+              <rect x="230" y="248" width="74" height="28" rx="6" fill="#111827" stroke="#1F2D45"/>
+              <text x="244" y="266" fill="#4B5875" font-size="12">Prüfen</text>
+              <!-- Compliance auto-detected -->
+              <rect x="20" y="294" width="300" height="36" rx="8" fill="#0D1828" stroke="rgba(59,130,246,0.2)"/>
+              <text x="34" y="308" fill="#93C5FD" font-size="10" font-weight="bold">AUTO: VDE-AR-N 4105 + DIN VDE 0100-712 werden angewendet</text>
+              <text x="34" y="322" fill="#4B5875" font-size="10">Netzanmeldung bei RheinEnergie erforderlich · Voltio erstellt Antrag-Vorlage</text>
+              <!-- Q3: Wechselrichter -->
+              <rect x="20" y="338" width="300" height="80" rx="10" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="356" fill="#FCD34D" font-size="10" font-weight="bold">FRAGE 3</text>
+              <text x="34" y="372" fill="#F0EBE0" font-size="13" font-weight="600">Welcher Wechselrichter bevorzugt?</text>
+              <rect x="34" y="380" width="56" height="28" rx="6" fill="#1A2438" stroke="#E8A020" stroke-width="1.5"/>
+              <text x="44" y="398" fill="#E8A020" font-size="12" font-weight="bold">SMA</text>
+              <rect x="98" y="380" width="66" height="28" rx="6" fill="#111827" stroke="#1F2D45"/>
+              <text x="108" y="398" fill="#4B5875" font-size="12">Fronius</text>
+              <rect x="172" y="380" width="66" height="28" rx="6" fill="#111827" stroke="#1F2D45"/>
+              <text x="180" y="398" fill="#4B5875" font-size="12">Huawei</text>
+              <rect x="246" y="380" width="68" height="28" rx="6" fill="#111827" stroke="#1F2D45"/>
+              <text x="254" y="398" fill="#4B5875" font-size="12">Egal</text>
+              <!-- Photo upload -->
+              <rect x="20" y="426" width="300" height="60" rx="10" fill="#111827" stroke="#1F2D45" stroke-dasharray="4 3"/>
+              <text x="34" y="448" fill="#4B5875" font-size="13">📸 Foto Zählerschrank hinzufügen</text>
+              <text x="34" y="464" fill="#4B5875" font-size="11">Empfohlen für genaue Materialplanung</text>
+              <text x="34" y="478" fill="#4B5875" font-size="10">oder 🎤 Lage beschreiben</text>
+              <!-- Auto-generated materials preview -->
+              <rect x="20" y="496" width="300" height="100" rx="10" fill="#0A1520" stroke="rgba(232,160,32,0.2)"/>
+              <text x="34" y="514" fill="#E8A020" font-size="10" font-weight="bold">⚡ VOLTIO GENERIERT IN ECHTZEIT</text>
+              <text x="34" y="530" fill="#F0EBE0" font-size="12">Stückliste (vorläufig · wird mit jedem Schritt präziser)</text>
+              <text x="34" y="548" fill="#8B97AA" font-size="11">▸ SMA Sunny Boy 10.0 (basierend auf Auswahl)</text>
+              <text x="34" y="562" fill="#8B97AA" font-size="11">▸ Hager Zählerschrank VZ126 (Tausch erkannt)</text>
+              <text x="34" y="576" fill="#8B97AA" font-size="11">▸ DC/AC-Trenner, Solarkabel — 8 weitere...</text>
+              <!-- CTA -->
+              <rect x="20" y="610" width="300" height="42" rx="10" fill="#E8A020"/>
+              <text x="88" y="635" fill="#080C14" font-size="14" font-weight="bold">Weiter: Speicher & Netz →</text>
+              <!-- Back link -->
+              <text x="140" y="668" fill="#4B5875" font-size="11">← Schritt zurück</text>
+            </svg>
+          </div>
+          <div>
+            <div class="wf-label">Design-Prinzip: Adaptive Fragen, Echtzeit-Feedback</div>
+            <p class="wf-caption">
+              <strong>Entscheidungen treiben die nächste Frage.</strong> Wählt Felix "Tausch nötig" beim Zählerschrank, fügt Voltio automatisch einen Hager-VZ-Schrank zur vorläufigen Stückliste hinzu. Die Fragen adaptieren sich — unnötige werden übersprungen.<br><br>
+              <strong>VDE-Compliance im Hintergrund, nie im Vordergrund.</strong> Felix sieht einen blauen Info-Banner, keine Norm-Tabellen. Voltio erkennt automatisch welche Normen gelten und erstellt die nötigen Dokumente ohne Eingabe.<br><br>
+              <strong>Stückliste baut sich live auf.</strong> Unten im Screen sieht Felix permanent die wachsende Materialliste — motivierend und transparent. Am Ende des Flows ist sie vollständig.<br><br>
+              <strong>Foto oder Sprache.</strong> An Punkten wo visuelle Information hilft (Zählerschrank-Zustand), schlägt Voltio ein Foto vor. Nie erzwungen — Felix kann immer auch sprechen oder tippen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERVIEW SCREEN C: Result - Auftragskarte -->
+    <div class="wireframe-wrapper">
+      <div class="wireframe-header">
+        <div class="wireframe-title">Flow 01 · Screen C — Interview-Ergebnis: vollständige Auftragskarte</div>
+        <div class="wireframe-tag">Interview · Schritt 5 — Abschluss</div>
+      </div>
+      <div class="wireframe-body">
+        <div class="wf-grid">
+          <div>
+            <div class="wf-label">Wireframe</div>
+            <svg viewBox="0 0 340 720" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid rgba(34,197,94,0.4);">
+              <rect width="340" height="720" fill="#080C14"/>
+              <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
+              <!-- Success header -->
+              <rect x="0" y="35" width="340" height="70" fill="rgba(34,197,94,0.08)"/>
+              <text x="20" y="60" fill="#22C55E" font-size="11" font-weight="bold" letter-spacing="1">✓ INTERVIEW ABGESCHLOSSEN · 4 MIN 32 SEK</text>
+              <text x="20" y="80" fill="#F0EBE0" font-size="17" font-family="Georgia" font-weight="bold">PV-Anlage · Hoffmann</text>
+              <text x="20" y="96" fill="#8B97AA" font-size="11">Aachener Str. 45 · PLZ 50674 · RheinEnergie</text>
+              <!-- Stückliste -->
+              <text x="20" y="124" fill="#4B5875" font-size="10" letter-spacing="1">AUTO-STÜCKLISTE · 13 POSITIONEN</text>
+              <rect x="20" y="132" width="300" height="170" rx="10" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="150" fill="#F0EBE0" font-size="12" font-weight="600">SMA Sunny Boy 10.0-3 SP</text>
+              <text x="220" y="150" fill="#E8A020" font-size="12" font-weight="bold">€1.840</text>
+              <text x="34" y="164" fill="#4B5875" font-size="10">Wechselrichter · Sonepar · 3–5 Tage</text>
+              <line x1="34" y1="172" x2="306" y2="172" stroke="#1F2D45" stroke-width="0.5"/>
+              <text x="34" y="188" fill="#F0EBE0" font-size="12" font-weight="600">Hager VZ126N Zählerschrank</text>
+              <text x="228" y="188" fill="#E8A020" font-size="12" font-weight="bold">€640</text>
+              <text x="34" y="202" fill="#4B5875" font-size="10">Zähleranl. · Rexel · 1–2 Tage</text>
+              <line x1="34" y1="210" x2="306" y2="210" stroke="#1F2D45" stroke-width="0.5"/>
+              <text x="34" y="226" fill="#F0EBE0" font-size="12" font-weight="600">DC-Trenner 1100V, AC-Trenner 3p</text>
+              <text x="248" y="226" fill="#E8A020" font-size="12" font-weight="bold">€140</text>
+              <text x="34" y="240" fill="#4B5875" font-size="10">Schutzorgane · Sonepar · 1 Tag</text>
+              <line x1="34" y1="248" x2="306" y2="248" stroke="#1F2D45" stroke-width="0.5"/>
+              <text x="34" y="264" fill="#F0EBE0" font-size="12" font-weight="600">Solarkabel 4mm² schwarz/rot, 50m</text>
+              <text x="260" y="264" fill="#E8A020" font-size="12" font-weight="bold">€68</text>
+              <text x="34" y="278" fill="#4B5875" font-size="10">Kabel · Uni-Elektro · 2 Tage</text>
+              <text x="34" y="296" fill="#4B5875" font-size="10">+ 9 weitere Positionen · Gesamt-Material</text>
+              <text x="220" y="296" fill="#22C55E" font-size="12" font-weight="bold">€2.890</text>
+              <!-- Angebot preview -->
+              <text x="20" y="322" fill="#4B5875" font-size="10" letter-spacing="1">ANGEBOTS-VORSCHAU</text>
+              <rect x="20" y="330" width="300" height="88" rx="10" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="348" fill="#8B97AA" font-size="12">Material (inkl. 25% Aufschlag)</text>
+              <text x="248" y="348" fill="#F0EBE0" font-size="12">€3.613</text>
+              <text x="34" y="366" fill="#8B97AA" font-size="12">Arbeitszeit (18 Std. × €75)</text>
+              <text x="248" y="366" fill="#F0EBE0" font-size="12">€1.350</text>
+              <text x="34" y="384" fill="#8B97AA" font-size="12">Fahrtkosten (22km, €38 Pausch.)</text>
+              <text x="264" y="384" fill="#F0EBE0" font-size="12">€38</text>
+              <line x1="34" y1="394" x2="306" y2="394" stroke="#1F2D45" stroke-width="0.5"/>
+              <text x="34" y="410" fill="#F0EBE0" font-size="13" font-weight="bold">Gesamt (brutto inkl. MwSt.)</text>
+              <text x="228" y="410" fill="#E8A020" font-size="14" font-weight="bold">€5.959</text>
+              <!-- Prepayment flag -->
+              <rect x="20" y="428" width="300" height="36" rx="8" fill="#1A0808" stroke="rgba(239,68,68,0.3)"/>
+              <text x="34" y="444" fill="#F87171" font-size="11" font-weight="bold">⚠ MATERIAL €2.890 → SCHWELLE &gt;€1.000</text>
+              <text x="34" y="458" fill="#F87171" font-size="10">70% Anzahlung erforderlich: €2.023 vor Bestellung</text>
+              <!-- Compliance -->
+              <rect x="20" y="472" width="300" height="52" rx="8" fill="#0D1828" stroke="rgba(59,130,246,0.2)"/>
+              <text x="34" y="488" fill="#93C5FD" font-size="10" font-weight="bold">COMPLIANCE AUTO-ERKANNT</text>
+              <text x="34" y="502" fill="#8B97AA" font-size="11">✓ VDE-AR-N 4105 · ✓ DIN VDE 0100-712</text>
+              <text x="34" y="516" fill="#8B97AA" font-size="11">✓ Netzanmeldung RheinEnergie · Vorlage erstellt</text>
+              <!-- Actions -->
+              <rect x="20" y="538" width="144" height="42" rx="8" fill="#E8A020"/>
+              <text x="46" y="563" fill="#080C14" font-size="13" font-weight="bold">Angebot senden</text>
+              <rect x="176" y="538" width="144" height="42" rx="8" fill="#111827" stroke="rgba(59,130,246,0.3)"/>
+              <text x="190" y="563" fill="#93C5FD" font-size="13" font-weight="600">IDS Bestellen →</text>
+              <!-- IDS preview -->
+              <rect x="20" y="592" width="300" height="44" rx="8" fill="#0D1420" stroke="rgba(59,130,246,0.15)"/>
+              <text x="34" y="610" fill="#93C5FD" font-size="10" font-weight="bold">NACH ANZAHLUNG → IDS-BESTELLUNG</text>
+              <text x="34" y="624" fill="#4B5875" font-size="10">Sonepar (WR + Trenner) · Rexel (Schrank) · Uni-Elektro (Kabel)</text>
+              <text x="34" y="636" fill="#4B5875" font-size="10">Optimaler Split nach Preis · 1 Klick für alle 3 Bestellungen</text>
+              <!-- DATEV note -->
+              <rect x="20" y="648" width="300" height="32" rx="8" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.15)"/>
+              <text x="34" y="664" fill="#22C55E" font-size="10">📊 Alle Belege werden automatisch DATEV-konform gespeichert</text>
+              <text x="34" y="676" fill="#4B5875" font-size="9">Anzahlung, Bestellbelege, Schlussrechnung → ein Export</text>
+            </svg>
+          </div>
+          <div>
+            <div class="wf-label">Design-Prinzip: Vollständig in unter 5 Minuten</div>
+            <p class="wf-caption">
+              <strong>Das Interview-Ergebnis ist keine Zusammenfassung — es ist die fertige Auftragskarte.</strong> Was früher 30+ Minuten manuelle Arbeit war (Material recherchieren, Angebot kalkulieren, Compliance prüfen) entsteht in unter 5 Minuten durch den geführten Flow.<br><br>
+              <strong>Drei Ökosysteme sofort sichtbar.</strong> Unten im Screen sind alle drei Kernflows präsent: Angebot-Button (Flow 1 abgeschlossen), IDS-Button (Flow 2 bereit), DATEV-Note (Flow 3 läuft automatisch).<br><br>
+              <strong>Prepayment-Logik ist sichtbar und klar.</strong> Felix sieht sofort: "70% Anzahlung nötig = €2.023". Keine Überraschung, kein Vergessen. Der Workflow blockiert die IDS-Bestellung bis die Anzahlung eingegangen ist.<br><br>
+              <strong>IDS-Split-Optimierung.</strong> Voltio teilt die Bestellung automatisch auf die günstigsten Lieferanten auf — Wechselrichter bei Sonepar, Schrank bei Rexel, Kabel bei Uni-Elektro. Felix bestätigt mit einem Tap.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════ -->
+    <!-- FLOW 2: IDS ORDERING SCREEN -->
+    <!-- ═══════════════════════════ -->
+    <div style="margin-bottom:16px;margin-top:48px;padding:16px 24px;background:var(--accent2-dim);border:1px solid rgba(59,130,246,0.3);border-radius:8px;display:flex;align-items:center;gap:12px;">
+      <div style="font-family:'Instrument Serif',serif;font-size:22px;color:var(--accent2);">Flow 02</div>
+      <div style="width:1px;height:24px;background:rgba(59,130,246,0.3);"></div>
+      <div style="font-size:14px;font-weight:600;color:var(--text);">IDS-Connect Bestellstrecke — Von der Stückliste zur Großhändler-Bestellung</div>
+    </div>
+
+    <div class="wireframe-wrapper">
+      <div class="wireframe-header">
+        <div class="wireframe-title">Flow 02 — IDS-Connect Bestellscreen</div>
+        <div class="wireframe-tag">IDS-Connect · Materialbestellung</div>
+      </div>
+      <div class="wireframe-body">
+        <div class="wf-grid">
+          <div>
+            <div class="wf-label">Wireframe</div>
+            <svg viewBox="0 0 340 720" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid rgba(59,130,246,0.4);">
+              <rect width="340" height="720" fill="#080C14"/>
+              <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
+              <text x="20" y="55" fill="#8B97AA" font-size="12">← Hoffmann PV-Anlage</text>
+              <text x="20" y="80" fill="#F0EBE0" font-size="18" font-family="Georgia" font-weight="bold">Material bestellen</text>
+              <!-- Status -->
+              <rect x="20" y="90" width="300" height="30" rx="6" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.2)"/>
+              <text x="34" y="109" fill="#22C55E" font-size="11" font-weight="bold">✓ Anzahlung €2.023 eingegangen · Bestellung freigegeben</text>
+              <!-- IDS Split view -->
+              <text x="20" y="138" fill="#4B5875" font-size="10" letter-spacing="1">IDS-BESTELLUNGEN · 3 LIEFERANTEN · OPTIMALER SPLIT</text>
+              <!-- Supplier 1: Sonepar -->
+              <rect x="20" y="146" width="300" height="110" rx="10" fill="#111827" stroke="rgba(59,130,246,0.3)"/>
+              <rect x="20" y="146" width="300" height="32" rx="10" fill="#0D1828"/>
+              <rect x="20" y="160" width="300" height="18" rx="0" fill="#0D1828"/>
+              <text x="34" y="164" fill="#93C5FD" font-size="11" font-weight="bold">Sonepar</text>
+              <text x="220" y="164" fill="#4B5875" font-size="10">Lieferung: 3–5 Tage</text>
+              <text x="34" y="182" fill="#F0EBE0" font-size="11">SMA Sunny Boy 10.0-3 SP</text>
+              <text x="256" y="182" fill="#E8A020" font-size="11" font-weight="bold">€1.840</text>
+              <text x="34" y="197" fill="#F0EBE0" font-size="11">DC-Trenner 1100V · AC-Trenner 3p</text>
+              <text x="264" y="197" fill="#E8A020" font-size="11" font-weight="bold">€140</text>
+              <text x="34" y="212" fill="#F0EBE0" font-size="11">WAGO 221-413 ×20</text>
+              <text x="272" y="212" fill="#E8A020" font-size="11" font-weight="bold">€18</text>
+              <rect x="200" y="222" width="110" height="26" rx="6" fill="#3B82F6"/>
+              <text x="210" y="239" fill="white" font-size="11" font-weight="bold">→ IDS Sonepar</text>
+              <!-- Supplier 2: Rexel -->
+              <rect x="20" y="264" width="300" height="82" rx="10" fill="#111827" stroke="rgba(59,130,246,0.3)"/>
+              <rect x="20" y="264" width="300" height="32" rx="10" fill="#0D1828"/>
+              <rect x="20" y="278" width="300" height="18" rx="0" fill="#0D1828"/>
+              <text x="34" y="282" fill="#93C5FD" font-size="11" font-weight="bold">Rexel Germany</text>
+              <text x="220" y="282" fill="#4B5875" font-size="10">Lieferung: 1–2 Tage</text>
+              <text x="34" y="300" fill="#F0EBE0" font-size="11">Hager VZ126N Zählerschrank</text>
+              <text x="256" y="300" fill="#E8A020" font-size="11" font-weight="bold">€640</text>
+              <text x="34" y="315" fill="#F0EBE0" font-size="11">Schaltschrank-Zubehör Set</text>
+              <text x="264" y="315" fill="#E8A020" font-size="11" font-weight="bold">€85</text>
+              <rect x="200" y="332" width="110" height="26" rx="6" fill="#3B82F6"/>
+              <text x="213" y="349" fill="white" font-size="11" font-weight="bold">→ IDS Rexel</text>
+              <!-- Supplier 3: Uni-Elektro -->
+              <rect x="20" y="354" width="300" height="66" rx="10" fill="#111827" stroke="rgba(59,130,246,0.3)"/>
+              <rect x="20" y="354" width="300" height="32" rx="10" fill="#0D1828"/>
+              <rect x="20" y="368" width="300" height="18" rx="0" fill="#0D1828"/>
+              <text x="34" y="372" fill="#93C5FD" font-size="11" font-weight="bold">Uni-Elektro</text>
+              <text x="220" y="372" fill="#4B5875" font-size="10">Lieferung: 2 Tage</text>
+              <text x="34" y="390" fill="#F0EBE0" font-size="11">Solarkabel 4mm² sw/rt 50m</text>
+              <text x="264" y="390" fill="#E8A020" font-size="11" font-weight="bold">€68</text>
+              <rect x="200" y="406" width="110" height="26" rx="6" fill="#3B82F6"/>
+              <text x="208" y="423" fill="white" font-size="11" font-weight="bold">→ IDS Uni-Elektro</text>
+              <!-- Total + batch order -->
+              <rect x="20" y="432" width="300" height="52" rx="10" fill="#0D1828" stroke="rgba(59,130,246,0.3)"/>
+              <text x="34" y="450" fill="#4B5875" font-size="12">Gesamtbestellung Material:</text>
+              <text x="220" y="450" fill="#E8A020" font-size="14" font-weight="bold">€2.791</text>
+              <text x="34" y="468" fill="#4B5875" font-size="11">Anzahlung abgezogen: €2.023 · Restbetrag: €768</text>
+              <!-- Alle auf einmal -->
+              <rect x="20" y="496" width="300" height="44" rx="10" fill="#3B82F6"/>
+              <text x="60" y="514" fill="white" font-size="14" font-weight="bold">Alle 3 Bestellungen aufgeben</text>
+              <text x="86" y="530" fill="rgba(255,255,255,0.7)" font-size="10">IDS-Connect · 3 Händler gleichzeitig</text>
+              <!-- What IDS does -->
+              <rect x="20" y="552" width="300" height="64" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="568" fill="#4B5875" font-size="10" font-weight="bold" letter-spacing="0.5">WAS IDS-CONNECT IM HINTERGRUND MACHT</text>
+              <text x="34" y="582" fill="#8B97AA" font-size="11">1. Felix' Kundennummer wird automatisch übergeben</text>
+              <text x="34" y="596" fill="#8B97AA" font-size="11">2. Warenkorb-XML wird an Händler-Shop gesendet</text>
+              <text x="34" y="610" fill="#8B97AA" font-size="11">3. Echtzeitpreise & Verfügbarkeit werden geprüft</text>
+              <!-- Delivery tracking note -->
+              <rect x="20" y="628" width="300" height="36" rx="8" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.15)"/>
+              <text x="34" y="644" fill="#22C55E" font-size="10" font-weight="bold">NACH BESTELLUNG: Liefertracking aktiv</text>
+              <text x="34" y="658" fill="#4B5875" font-size="10">Voltio erinnert Felix 1 Tag vor Lieferung · Termin wird rückwärts geplant</text>
+              <!-- DATEV -->
+              <rect x="20" y="676" width="300" height="26" rx="6" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.1)"/>
+              <text x="34" y="692" fill="#22C55E" font-size="10">📊 Alle Bestellbelege → automatisch DATEV-konform archiviert</text>
+            </svg>
+          </div>
+          <div>
+            <div class="wf-label">Design-Prinzip: IDS als nahtlose Verlängerung des Interviews</div>
+            <p class="wf-caption">
+              <strong>Aus dem Interview direkt zur Bestellung.</strong> Die Stückliste aus Flow 1 ist direkt der Input für Flow 2. Felix muss keinen einzigen Artikel nochmals eintippen. Der übergang ist nahtlos.<br><br>
+              <strong>Automatischer Lieferanten-Split.</strong> Voltio optimiert selbständig — Wechselrichter dort günstigster Preis, Schrank mit kürzester Lieferzeit, Kabel beim Stammlieferanten. Felix bestätigt den Split oder passt ihn an.<br><br>
+              <strong>"Alle 3 Bestellungen aufgeben" — ein Tap.</strong> Das ist der Kernmoment. Was früher 3 separate Browser-Sessions, manuelle Warenkörbe und telefonische Bestellungen war, passiert mit einem Tap über IDS-Connect.<br><br>
+              <strong>Liefertracking fließt automatisch in den Kalender.</strong> Sobald bestellt, weiß Voltio wann Teile ankommen und blockt den Ausführungstermin entsprechend. Die Rückwärtsplanung aktualisiert sich automatisch.<br><br>
+              <strong>Jeder Beleg direkt DATEV-archiviert.</strong> Die Bestellbestätigungen von Sonepar, Rexel und Uni-Elektro werden automatisch dem Projekt zugeordnet und DATEV-konform gespeichert.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════ -->
+    <!-- FLOW 3: DATEV SCREEN -->
+    <!-- ═══════════════════ -->
+    <div style="margin-bottom:16px;margin-top:48px;padding:16px 24px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.25);border-radius:8px;display:flex;align-items:center;gap:12px;">
+      <div style="font-family:'Instrument Serif',serif;font-size:22px;color:#22C55E;">Flow 03</div>
+      <div style="width:1px;height:24px;background:rgba(34,197,94,0.3);"></div>
+      <div style="font-size:14px;font-weight:600;color:var(--text);">DATEV-Export — Buchhaltung ohne Mehraufwand</div>
+    </div>
+
+    <div class="wireframe-wrapper">
+      <div class="wireframe-header">
+        <div class="wireframe-title">Flow 03 — DATEV Export & Buchhaltung</div>
+        <div class="wireframe-tag">DATEV · Steuerberater</div>
+      </div>
+      <div class="wireframe-body">
+        <div class="wf-grid">
+          <div>
+            <div class="wf-label">Wireframe</div>
+            <svg viewBox="0 0 340 680" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:340px;border-radius:20px;border:2px solid rgba(34,197,94,0.4);">
+              <rect width="340" height="680" fill="#080C14"/>
+              <text x="20" y="24" fill="#4B5875" font-size="10" font-family="monospace">9:41</text>
+              <text x="20" y="55" fill="#8B97AA" font-size="12">← Einstellungen</text>
+              <text x="20" y="80" fill="#F0EBE0" font-size="18" font-family="Georgia" font-weight="bold">Buchhaltung & DATEV</text>
+              <!-- Monthly summary -->
+              <text x="20" y="108" fill="#4B5875" font-size="10" letter-spacing="1">APRIL 2026 · MONATSÜBERSICHT</text>
+              <rect x="20" y="116" width="300" height="80" rx="10" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="138" fill="#4B5875" font-size="11">Einnahmen</text>
+              <text x="34" y="156" fill="#22C55E" font-size="22" font-family="Georgia" font-weight="bold">€14.840</text>
+              <text x="34" y="172" fill="#4B5875" font-size="10">8 Rechnungen · 3 Anzahlungen · 1 Schlussrechnung</text>
+              <text x="210" y="138" fill="#4B5875" font-size="11">Ausgaben (Material)</text>
+              <text x="210" y="156" fill="#F87171" font-size="22" font-family="Georgia" font-weight="bold">€6.230</text>
+              <text x="210" y="172" fill="#4B5875" font-size="10">14 Bestellungen · 3 Lieferanten</text>
+              <!-- Belege liste -->
+              <text x="20" y="214" fill="#4B5875" font-size="10" letter-spacing="1">BELEGE · ALLE AUTO-ERFASST</text>
+              <rect x="20" y="222" width="300" height="36" rx="7" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="236" fill="#F0EBE0" font-size="11">RE-2026-041 · Hoffmann PV-Anlage</text>
+              <text x="256" y="236" fill="#22C55E" font-size="11" font-weight="bold">€5.959</text>
+              <text x="34" y="250" fill="#4B5875" font-size="10">Schlussrechnung · 28. Apr. · ZUGFeRD ✓</text>
+              <rect x="20" y="264" width="300" height="36" rx="7" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="278" fill="#F0EBE0" font-size="11">AN-2026-038 · Hoffmann Anzahlung</text>
+              <text x="256" y="278" fill="#22C55E" font-size="11" font-weight="bold">€2.023</text>
+              <text x="34" y="292" fill="#4B5875" font-size="10">Anzahlung · 14. Apr. · ZUGFeRD ✓</text>
+              <rect x="20" y="306" width="300" height="36" rx="7" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="320" fill="#F0EBE0" font-size="11">EK-2026-029 · Sonepar Bestellung</text>
+              <text x="254" y="320" fill="#F87171" font-size="11" font-weight="bold">-€1.998</text>
+              <text x="34" y="334" fill="#4B5875" font-size="10">Eingangsbeleg · 16. Apr. · auto-archiviert</text>
+              <rect x="20" y="348" width="300" height="36" rx="7" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="362" fill="#F0EBE0" font-size="11">RE-2026-039 · Müller Smart Home</text>
+              <text x="256" y="362" fill="#22C55E" font-size="11" font-weight="bold">€1.240</text>
+              <text x="34" y="376" fill="#4B5875" font-size="10">Schlussrechnung · 22. Apr. · ZUGFeRD ✓</text>
+              <text x="34" y="396" fill="#4B5875" font-size="10">+ 11 weitere Belege (alle auto-erfasst)</text>
+              <!-- Export section -->
+              <text x="20" y="422" fill="#4B5875" font-size="10" letter-spacing="1">DATEV-EXPORT</text>
+              <rect x="20" y="430" width="300" height="76" rx="10" fill="#0A1C0A" stroke="rgba(34,197,94,0.25)"/>
+              <text x="34" y="448" fill="#22C55E" font-size="11" font-weight="bold">Export bereit · April 2026</text>
+              <text x="34" y="464" fill="#8B97AA" font-size="11">23 Belege · ZUGFeRD-XML + PDF · DATEV LODAS</text>
+              <text x="34" y="480" fill="#8B97AA" font-size="11">Steuerberater: stb-schmidt@kanzlei.de</text>
+              <rect x="176" y="490" width="132" height="28" rx="7" fill="#22C55E"/>
+              <text x="190" y="508" fill="#080C14" font-size="12" font-weight="bold">Export senden 📤</text>
+              <!-- E-Rechnung note -->
+              <rect x="20" y="518" width="300" height="52" rx="8" fill="#0D1828" stroke="rgba(59,130,246,0.15)"/>
+              <text x="34" y="534" fill="#93C5FD" font-size="10" font-weight="bold">E-RECHNUNGSPFLICHT AB 2025 · AUTOMATISCH ERFÜLLT</text>
+              <text x="34" y="549" fill="#8B97AA" font-size="11">Alle Rechnungen werden als ZUGFeRD 2.3 und</text>
+              <text x="34" y="562" fill="#8B97AA" font-size="11">XRechnung erstellt — gesetzlich konform.</text>
+              <!-- Steuerberater view -->
+              <rect x="20" y="582" width="300" height="60" rx="8" fill="#111827" stroke="#1F2D45"/>
+              <text x="34" y="598" fill="#4B5875" font-size="10" font-weight="bold">STEUERBERATER-ZUGANG (PHASE 2)</text>
+              <text x="34" y="614" fill="#8B97AA" font-size="11">Steuerberater erhält Read-Only Zugang zu Voltio.</text>
+              <text x="34" y="628" fill="#8B97AA" font-size="11">Kann Belege direkt in DATEV importieren.</text>
+              <text x="34" y="642" fill="#4B5875" font-size="10">Kein E-Mail-Anhang, keine manuelle Übertragung.</text>
+            </svg>
+          </div>
+          <div>
+            <div class="wf-label">Design-Prinzip: DATEV läuft still im Hintergrund</div>
+            <p class="wf-caption">
+              <strong>Felix macht nichts extra.</strong> DATEV ist kein Workflow den Felix anstoßen muss — es läuft automatisch. Jede Rechnung, jede Anzahlung, jede Bestellbestätigung wird sofort ZUGFeRD-konform archiviert.<br><br>
+              <strong>Am Monatsende: ein Klick.</strong> Felix tippt auf "Export senden" und der Steuerberater bekommt alle 23 Belege des Monats, korrekt sortiert, in DATEV LODAS-Format — fertig.<br><br>
+              <strong>E-Rechnungspflicht ab 2025 automatisch erfüllt.</strong> Alle Rechnungen werden als ZUGFeRD 2.3 und XRechnung erstellt. Das ist gesetzlich ab 2025 Pflicht für B2B-Rechnungen in Deutschland. Voltio erfüllt das ohne Mehraufwand.<br><br>
+              <strong>Steuerberater-Zugang in Phase 2.</strong> Statt E-Mail-Anhängen bekommt der Steuerberater Read-Only Zugang zu Voltio und importiert direkt aus der App in DATEV. Kein Medienbruch, kein manuelles Abtippen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider before existing screens -->
+    <div style="margin:48px 0 16px;padding:16px 24px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;gap:12px;">
+      <div style="font-size:14px;font-weight:600;color:var(--text2);">Unterstützende Screens — Dashboard, Kunden-CRM, Angebote, Kommunikation, Lager</div>
+    </div>
+
+
     <div class="wireframe-wrapper">
       <div class="wireframe-header">
         <div class="wireframe-title">Screen 01 — Tages-Dashboard</div>
