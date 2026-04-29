@@ -677,14 +677,14 @@
   <ul class="nav-links">
     <li><a href="#chance">Ausgangslage</a></li>
     <li><a href="#loesung">Lösung</a></li>
+    <li><a href="#strategie">Strategie</a></li>
     <li><a href="#screens">Screens</a></li>
     <li><a href="#spec">Features</a></li>
     <li><a href="#architektur">Architektur</a></li>
     <li><a href="#integrationen">APIs & Kosten</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#forschung">Forschung</a></li>
-    <li><a href="#strategie">Strategie</a></li>
     <li><a href="#wettbewerb">Wettbewerb</a></li>
+    <li><a href="#forschung">Anhang</a></li>
   </ul>
   <div class="nav-badge">Version 1.0</div>
 </nav>
@@ -3609,1092 +3609,667 @@
   </div>
 </section>
 
+
 <div class="divider"></div>
 
 <!-- WETTBEWERBSANALYSE -->
 <section id="wettbewerb">
   <div class="container">
     <div class="section-eyebrow">Wettbewerbsanalyse</div>
-    <h2>Was der Markt<br><em>bereits bietet</em></h2>
-    <p class="section-lead">12 Tools analysiert. Keines trifft den Kern: KI-Agent, WhatsApp-nativ, deutsches Compliance, Rückwärtsplanung. Voltio füllt diese Lücke.</p>
+    <h2>23 Tools analysiert —<br><em>Deutsch & International</em></h2>
+    <p class="section-lead">Vollständige Marktübersicht, April 2026. Deutsche Handwerkersoftware (primärer Wettbewerb) und internationale Field-Service-Tools (Referenz). Bosch OfficeOn als Felix' aktuelles Tool steht an erster Stelle.</p>
 
-    <!-- PRICING TABLE -->
-    <div style="overflow-x:auto;margin-bottom:64px;">
-      <table style="width:100%;border-collapse:collapse;font-size:13px;">
+    <!-- GROUP HEADER: GERMAN -->
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text);background:var(--accent-dim);border:1px solid rgba(232,160,32,0.3);padding:6px 16px;border-radius:6px;">🇩🇪 Deutsche Handwerkersoftware — Primärer Wettbewerb</div>
+    </div>
+
+    <!-- GERMAN PRICING TABLE -->
+    <div style="overflow-x:auto;margin-bottom:16px;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;min-width:900px;">
         <thead>
           <tr style="background:var(--surface2);">
-            <th style="padding:12px 16px;text-align:left;color:var(--text3);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Software</th>
-            <th style="padding:12px 16px;text-align:left;color:var(--text3);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Einstiegspreis / Monat</th>
-            <th style="padding:12px 16px;text-align:left;color:var(--text3);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Empfohlene Stufe</th>
-            <th style="padding:12px 16px;text-align:left;color:var(--text3);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Für Einzelkämpfer</th>
-            <th style="padding:12px 16px;text-align:left;color:var(--text3);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Versteckte Kosten</th>
-            <th style="padding:12px 16px;text-align:left;color:var(--text3);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Link</th>
+            <th style="padding:10px 14px;text-align:left;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">#</th>
+            <th style="padding:10px 14px;text-align:left;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Software</th>
+            <th style="padding:10px 14px;text-align:left;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Solo-Preis / Monat</th>
+            <th style="padding:10px 14px;text-align:center;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">IDS</th>
+            <th style="padding:10px 14px;text-align:center;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">DATEV</th>
+            <th style="padding:10px 14px;text-align:center;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">E-Rech.</th>
+            <th style="padding:10px 14px;text-align:center;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">KI</th>
+            <th style="padding:10px 14px;text-align:center;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">WhatsApp</th>
+            <th style="padding:10px 14px;text-align:center;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Mobile</th>
+            <th style="padding:10px 14px;text-align:left;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Stärke</th>
+            <th style="padding:10px 14px;text-align:left;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Link</th>
           </tr>
         </thead>
         <tbody>
+          <!-- Bosch OfficeOn - Felix's current tool -->
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(204,0,0,0.04);">
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;font-weight:700;">★</td>
+            <td style="padding:11px 14px;">
+              <div style="font-weight:700;color:var(--text);font-size:13px;">Bosch OfficeOn</div>
+              <div style="font-size:10px;color:#CC0000;font-weight:600;">Felix nutzt das aktuell</div>
+            </td>
+            <td style="padding:11px 14px;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">€50–65</span><div style="font-size:10px;color:var(--text3);margin-top:3px;">Büro + Mobil separat</div></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">Bosch-Marke, flat pricing, keine Module</td>
+            <td style="padding:11px 14px;"><a href="https://bosch-officeon.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <!-- HERO -->
           <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
-            <td style="padding:14px 16px;color:var(--text);font-weight:600;">Joist</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(34,197,94,0.15);color:#22C55E;font-weight:700;padding:3px 10px;border-radius:4px;font-size:12px;">$8–15</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">$14–32/mo (Pro/Elite)</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">Sehr gut</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">Keine</td>
-            <td style="padding:14px 16px;"><a href="https://www.joist.com" target="_blank" style="color:var(--accent);text-decoration:none;font-size:12px;">joist.com ↗</a></td>
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">2</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">HERO Software</div><div style="font-size:10px;color:var(--text3);">Hannover · Cloud</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">€59</span><div style="font-size:10px;color:var(--text3);margin-top:3px;">Core / 12 Mo.</div></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;"><span style="font-size:10px;color:var(--accent);font-weight:700;">€199+</span></td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">Beste Schnittstellen, trusted.de Testsieger</td>
+            <td style="padding:11px 14px;"><a href="https://hero-software.de" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
           </tr>
-          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.4);">
-            <td style="padding:14px 16px;color:var(--text);font-weight:600;">Workiz</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(34,197,94,0.15);color:#22C55E;font-weight:700;padding:3px 10px;border-radius:4px;font-size:12px;">$25</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">$25–55/mo</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">Sehr gut</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">Keine</td>
-            <td style="padding:14px 16px;"><a href="https://www.workiz.com" target="_blank" style="color:var(--accent);text-decoration:none;font-size:12px;">workiz.com ↗</a></td>
+          <!-- plancraft -->
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.3);">
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">3</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">plancraft</div><div style="font-size:10px;color:var(--text3);">Hamburg · Cloud</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(59,130,246,0.12);color:#93C5FD;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">auf Anfrage</span><div style="font-size:10px;color:var(--text3);margin-top:3px;">1 Tag Kündigung</div></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:14px;color:var(--text2);">~</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">Beste UX, 30.000 User, 1-Tag-Kündigung</td>
+            <td style="padding:11px 14px;"><a href="https://plancraft.com/de-de" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
           </tr>
+          <!-- ToolTime -->
           <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
-            <td style="padding:14px 16px;color:var(--text);font-weight:600;">Fergus</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(34,197,94,0.15);color:#22C55E;font-weight:700;padding:3px 10px;border-radius:4px;font-size:12px;">$31</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">$31–50/mo</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">Sehr gut</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">Keine (UK-basiert)</td>
-            <td style="padding:14px 16px;"><a href="https://www.fergus.com" target="_blank" style="color:var(--accent);text-decoration:none;font-size:12px;">fergus.com ↗</a></td>
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">4</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">ToolTime</div><div style="font-size:10px;color:var(--text3);">Berlin · AWS Frankfurt</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(59,130,246,0.12);color:#93C5FD;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">~€89</span></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">&gt;150 Großhändler, DSGVO DE-Hosting</td>
+            <td style="padding:11px 14px;"><a href="https://tooltime.app" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
           </tr>
-          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.4);">
-            <td style="padding:14px 16px;color:var(--text);font-weight:600;">ServiceM8</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(59,130,246,0.15);color:#93C5FD;font-weight:700;padding:3px 10px;border-radius:4px;font-size:12px;">$35–50</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">$50–100/mo</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">Gut</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">Keine (per-job Preismodell)</td>
-            <td style="padding:14px 16px;"><a href="https://www.servicem8.com" target="_blank" style="color:var(--accent);text-decoration:none;font-size:12px;">servicem8.com ↗</a></td>
+          <!-- Hawepro -->
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.3);">
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">5</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">Hawepro</div><div style="font-size:10px;color:var(--text3);">Cloud · Newcomer</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">günstig</span><div style="font-size:10px;color:var(--text3);margin-top:3px;">Monatlich kündbar</div></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:14px;color:var(--text2);">~</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">GAEB X83/X84, EN 16931, günstigster Preis</td>
+            <td style="padding:11px 14px;"><a href="https://hawepro.de" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
           </tr>
-          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
-            <td style="padding:14px 16px;color:var(--text);font-weight:600;">Jobber</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(59,130,246,0.15);color:#93C5FD;font-weight:700;padding:3px 10px;border-radius:4px;font-size:12px;">$39</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">$119–199/mo (Connect/Grow)</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">Gut</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">2,9% + $0,30 pro Kartenzahlung</td>
-            <td style="padding:14px 16px;"><a href="https://www.getjobber.com" target="_blank" style="color:var(--accent);text-decoration:none;font-size:12px;">getjobber.com ↗</a></td>
-          </tr>
-          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.4);">
-            <td style="padding:14px 16px;color:var(--text);font-weight:600;">Tradify</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(59,130,246,0.15);color:#93C5FD;font-weight:700;padding:3px 10px;border-radius:4px;font-size:12px;">$47</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">$47/Nutzer/mo</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">Gut</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">Keine</td>
-            <td style="padding:14px 16px;"><a href="https://www.tradifyhq.com" target="_blank" style="color:var(--accent);text-decoration:none;font-size:12px;">tradifyhq.com ↗</a></td>
-          </tr>
-          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
-            <td style="padding:14px 16px;color:var(--text);font-weight:600;">HouseCall Pro</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(59,130,246,0.15);color:#93C5FD;font-weight:700;padding:3px 10px;border-radius:4px;font-size:12px;">$59–65</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">$109/mo (Essentials)</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(59,130,246,0.08);color:#93C5FD;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">Gut (mit Einschränkungen)</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">Add-ons schnell +$100</td>
-            <td style="padding:14px 16px;"><a href="https://www.housecallpro.com" target="_blank" style="color:var(--accent);text-decoration:none;font-size:12px;">housecallpro.com ↗</a></td>
-          </tr>
-          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.4);">
-            <td style="padding:14px 16px;color:var(--text);font-weight:600;">Knowify</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(59,130,246,0.15);color:#93C5FD;font-weight:700;padding:3px 10px;border-radius:4px;font-size:12px;">$99</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">$99/mo</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">Gut</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">Keine</td>
-            <td style="padding:14px 16px;"><a href="https://www.knowify.com" target="_blank" style="color:var(--accent);text-decoration:none;font-size:12px;">knowify.com ↗</a></td>
-          </tr>
-          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
-            <td style="padding:14px 16px;color:var(--text);font-weight:600;">FieldEdge</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(239,68,68,0.15);color:#F87171;font-weight:700;padding:3px 10px;border-radius:4px;font-size:12px;">$100–125</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">$225+/mo (Büro + Techniker)</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(239,68,68,0.1);color:#F87171;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">Ungeeignet</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">$500–2.000 Einrichtung</td>
-            <td style="padding:14px 16px;"><a href="https://www.fieldedge.com" target="_blank" style="color:var(--accent);text-decoration:none;font-size:12px;">fieldedge.com ↗</a></td>
-          </tr>
-          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.4);">
-            <td style="padding:14px 16px;color:var(--text);font-weight:600;">simPRO</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(239,68,68,0.15);color:#F87171;font-weight:700;padding:3px 10px;border-radius:4px;font-size:12px;">$30+</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">Individuelles Angebot</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(239,68,68,0.1);color:#F87171;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">Ungeeignet</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">Versteckt + Mobile-Gebühren</td>
-            <td style="padding:14px 16px;"><a href="https://www.simpro.com" target="_blank" style="color:var(--accent);text-decoration:none;font-size:12px;">simpro.com ↗</a></td>
-          </tr>
-          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
-            <td style="padding:14px 16px;color:var(--text);font-weight:600;">Service Fusion</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(239,68,68,0.15);color:#F87171;font-weight:700;padding:3px 10px;border-radius:4px;font-size:12px;">$245</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">$245–627/mo</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(239,68,68,0.1);color:#F87171;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">Ungeeignet</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">GPS + Schulung extra</td>
-            <td style="padding:14px 16px;"><a href="https://www.servicefusion.com" target="_blank" style="color:var(--accent);text-decoration:none;font-size:12px;">servicefusion.com ↗</a></td>
-          </tr>
+          <!-- Separator: Established ERP -->
           <tr>
-            <td style="padding:14px 16px;color:var(--text);font-weight:600;">ServiceTitan</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(239,68,68,0.2);color:#EF4444;font-weight:700;padding:3px 10px;border-radius:4px;font-size:12px;">$200–400/Nutzer</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">$3.000–5.000/mo Minimum</td>
-            <td style="padding:14px 16px;"><span style="background:rgba(239,68,68,0.15);color:#EF4444;padding:3px 10px;border-radius:4px;font-size:12px;font-weight:600;">Völlig ungeeignet</span></td>
-            <td style="padding:14px 16px;color:var(--text2);">Nur Enterprise</td>
-            <td style="padding:14px 16px;"><a href="https://www.servicetitan.com" target="_blank" style="color:var(--accent);text-decoration:none;font-size:12px;">servicetitan.com ↗</a></td>
+            <td colspan="11" style="padding:8px 14px;background:var(--surface2);font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.1em;text-transform:uppercase;">Etablierte Mid-Market ERP-Suiten (tiefer Funktionsumfang, oft On-Premise)</td>
+          </tr>
+          <!-- STREIT -->
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">6</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">STREIT V.1</div><div style="font-size:10px;color:var(--text3);">Haslach · 40 Jahre Elektro</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(59,130,246,0.12);color:#93C5FD;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">auf Anfrage</span><div style="font-size:10px;color:#22C55E;margin-top:3px;">Gründer: 1 Jahr kostenlos</div></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">Tiefste Elektro-Vertical: ELDANORM, ZVEH, OCI</td>
+            <td style="padding:11px 14px;"><a href="https://streit-software.de" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <!-- Labelwin -->
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.3);">
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">7</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">Labelwin / Label Software</div><div style="font-size:10px;color:var(--text3);">Bielefeld · 40 Jahre</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(59,130,246,0.12);color:#93C5FD;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">auf Anfrage</span></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;"><span style="font-size:10px;color:#22C55E;font-weight:700;">ChatGPT + KI-Tel.</span></td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">KI-Telefonassistent, breiteste Schnittstellen</td>
+            <td style="padding:11px 14px;"><a href="https://label-software.de" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <!-- pds -->
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">8</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">pds Software</div><div style="font-size:10px;color:var(--text3);">Rotenburg · SHK/Elektro ERP</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(239,68,68,0.12);color:#F87171;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">€80–110</span><div style="font-size:10px;color:var(--text3);margin-top:3px;">/Nutzer/Monat</div></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;"><span style="font-size:10px;color:var(--accent);font-weight:700;">Invoice-KI</span></td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">KI Invoice Reader, 7 spezialisierte Apps</td>
+            <td style="padding:11px 14px;"><a href="https://pds.de" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <!-- MOSER -->
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.3);">
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">9</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">MOSER MOS'aik</div><div style="font-size:10px;color:var(--text3);">Würselen · seit 1979</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(239,68,68,0.12);color:#F87171;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">€45+ (min 5 User)</span></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">Offline-fähig, ZVEH-Leistungskatalog Elektro</td>
+            <td style="padding:11px 14px;"><a href="https://moser-gmbh.de" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <!-- TopKontor -->
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">10</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">TopKontor / smarthandwerk</div><div style="font-size:10px;color:var(--text3);">Rheine · blue:solution</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">~€40 (Gründer)</span></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">DATEV5 im Grundmodul, ELDANORM, günstig</td>
+            <td style="padding:11px 14px;"><a href="https://blue-solution.de" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <!-- Sander & Doll -->
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.3);">
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">11</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">Sander & Doll</div><div style="font-size:10px;color:var(--text3);">Remscheid · Elektro-spez.</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(59,130,246,0.12);color:#93C5FD;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">auf Anfrage</span></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">NE-Metall-Tagespreise Kupfer, Apple-nativ</td>
+            <td style="padding:11px 14px;"><a href="https://sander-doll.de" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <!-- Sykasoft -->
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">12</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">Sykasoft</div><div style="font-size:10px;color:var(--text3);">Würzburg · OneQrew</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(59,130,246,0.12);color:#93C5FD;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">auf Anfrage</span></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:14px;color:var(--text2);">~</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">GPS-Zeitstempel, tief in Wartung & Service</td>
+            <td style="padding:11px 14px;"><a href="https://sykasoft.de" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <!-- Sage 50 Handwerk -->
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);background:rgba(17,24,39,0.3);">
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">13</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">Sage 50 Handwerk</div><div style="font-size:10px;color:var(--text3);">Desktop + Cloud-Paket</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">€33 Starter</span><div style="font-size:10px;color:var(--text3);margin-top:3px;">~€399/Jahr 1 User</div></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:14px;color:var(--text2);">~</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">Günstigster Einstieg, tiefste Buchhaltung</td>
+            <td style="padding:11px 14px;"><a href="https://sage.com/de-de" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <!-- Hottgenroth -->
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.5);">
+            <td style="padding:11px 14px;color:var(--text3);font-size:11px;">14</td>
+            <td style="padding:11px 14px;"><div style="font-weight:600;color:var(--text);font-size:13px;">Hottgenroth / ETU</div><div style="font-size:10px;color:var(--text3);">Köln · PV & Energieplanung</div></td>
+            <td style="padding:11px 14px;"><span style="background:rgba(59,130,246,0.12);color:#93C5FD;font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">€59 (ETU Standard)</span></td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:14px;color:var(--text2);">~</td>
+            <td style="padding:11px 14px;text-align:center;"><span style="font-size:10px;color:var(--accent);font-weight:700;">Hott-KI (CAD)</span></td>
+            <td style="padding:11px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:11px 14px;text-align:center;font-size:14px;color:var(--text2);">~</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text2);">PV/GEG/Wärmepumpe-Planung, E-Handwerk</td>
+            <td style="padding:11px 14px;"><a href="https://hottgenroth.de" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <!-- Voltio -->
+          <tr style="border-top:2px solid rgba(232,160,32,0.5);background:rgba(232,160,32,0.04);">
+            <td style="padding:11px 14px;color:var(--accent);font-size:11px;font-weight:700;">→</td>
+            <td style="padding:11px 14px;"><div style="font-weight:800;color:var(--accent);font-size:14px;">Voltio</div><div style="font-size:10px;color:var(--text3);">Ziel-Positionierung</div></td>
+            <td style="padding:11px 14px;"><span style="background:var(--accent-dim);color:var(--accent);font-weight:700;padding:3px 9px;border-radius:4px;font-size:11px;">€49–79</span><div style="font-size:10px;color:var(--accent);margin-top:3px;">KI inklusive</div></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;text-align:center;"><span style="font-size:10px;color:#22C55E;font-weight:700;">✅ inkl.</span></td>
+            <td style="padding:11px 14px;text-align:center;"><span style="font-size:10px;color:#22C55E;font-weight:700;">✅ nativ</span></td>
+            <td style="padding:11px 14px;text-align:center;font-size:15px;">✅</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--accent);font-weight:600;">KI + WhatsApp + Elektro-Flow + Solo-Preis</td>
+            <td style="padding:11px 14px;font-size:11px;color:var(--text3);">—</td>
           </tr>
         </tbody>
       </table>
+      <p style="font-size:11px;color:var(--text3);margin-top:8px;">✅ = vollständig · ~ = teilweise · — = nicht vorhanden · Preise: auf Anfrage = kein öffentliches Preisblatt (Quellen: trusted.de, softwareabc24, OMR Reviews, Capterra DE, shk-handwerkersoftware.de)</p>
     </div>
 
-    <!-- TOP 5 COMPETITOR DEEP DIVES -->
-    <h3 style="margin-bottom:8px;font-size:28px;">Die wichtigsten<br>Konkurrenten im Detail</h3>
-    <p style="color:var(--text2);font-size:15px;margin-bottom:48px;max-width:600px;">Die fünf relevantesten Tools für einen Solo-Elektriker — Interface-Stil, was sie können, was fehlt, und wie Voltio sich abhebt.</p>
+    <!-- FEATURE STRENGTH VISUALIZATION -->
+    <div style="margin:48px 0;">
+      <div class="section-eyebrow">Stärken-Visualisierung</div>
+      <h3 style="font-size:26px;margin-bottom:8px;">Wer gewinnt auf welcher Dimension?</h3>
+      <p style="color:var(--text2);font-size:14px;margin-bottom:28px;max-width:680px;">Jeder Konkurrent hat eine Kernstärke. Voltio kombiniert die besten Elemente — als einziger mit KI + WhatsApp + Solo-Preis gleichzeitig.</p>
 
-    <div style="display:flex;flex-direction:column;gap:24px;">
-
-      <!-- JOIST -->
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-        <div style="padding:24px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:gap:16px;">
-          <div style="display:flex;align-items:center;gap:16px;">
-            <div style="width:40px;height:40px;background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">🔨</div>
-            <div>
-              <div style="font-size:17px;font-weight:700;color:var(--text);">Joist</div>
-              <div style="font-size:12px;color:var(--text3);">joist.com · ab $8/Monat</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:8px;align-items:center;">
-            <span style="background:rgba(34,197,94,0.12);color:#22C55E;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:600;">Sehr gut für Solo</span>
-            <a href="https://www.joist.com/trades/electrical-estimating-and-invoicing-app/" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">Website ↗</a>
-            <a href="https://apps.apple.com/us/app/joist-estimate-invoice-maker/id592163563" target="_blank" style="background:var(--surface2);color:var(--text2);border:1px solid var(--border);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">App Store ↗</a>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:32px;">
+        <!-- KI -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">KI-Features</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text);width:100px;flex-shrink:0;">Voltio</span><div style="flex:1;height:8px;background:rgba(34,197,94,0.15);border-radius:4px;"><div style="width:100%;height:100%;background:#22C55E;border-radius:4px;"></div></div><span style="font-size:10px;color:#22C55E;margin-left:6px;">5/5</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">HERO Copilot</span><div style="flex:1;height:8px;background:rgba(59,130,246,0.1);border-radius:4px;"><div style="width:60%;height:100%;background:var(--accent2);border-radius:4px;"></div></div><span style="font-size:10px;color:var(--accent2);margin-left:6px;">3/5</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">Labelwin KI-Tel.</span><div style="flex:1;height:8px;background:rgba(59,130,246,0.1);border-radius:4px;"><div style="width:50%;height:100%;background:var(--accent2);border-radius:4px;"></div></div><span style="font-size:10px;color:var(--text3);margin-left:6px;">2.5/5</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">pds Invoice-KI</span><div style="flex:1;height:8px;background:rgba(59,130,246,0.1);border-radius:4px;"><div style="width:30%;height:100%;background:var(--accent2);border-radius:4px;"></div></div><span style="font-size:10px;color:var(--text3);margin-left:6px;">1.5/5</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text3);width:100px;flex-shrink:0;">Alle anderen</span><div style="flex:1;height:8px;background:rgba(31,45,69,0.5);border-radius:4px;"><div style="width:0%;height:100%;background:var(--text3);border-radius:4px;"></div></div><span style="font-size:10px;color:var(--text3);margin-left:6px;">0/5</span></div>
           </div>
         </div>
-        <div style="padding:24px 28px;display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:24px;align-items:start;">
-          <!-- UI illustration -->
-          <div>
-            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Interface-Stil</div>
-            <svg viewBox="0 0 180 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;border:1px solid var(--border);">
-              <rect width="180" height="280" fill="#F8F9FA"/>
-              <rect width="180" height="44" fill="#2563EB"/>
-              <text x="12" y="20" fill="white" font-size="9" font-family="sans-serif" font-weight="bold">Joist</text>
-              <text x="12" y="34" fill="rgba(255,255,255,0.7)" font-size="8" font-family="sans-serif">Estimates &amp; Invoices</text>
-              <rect x="10" y="54" width="160" height="32" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-              <text x="18" y="65" fill="#374151" font-size="8" font-family="sans-serif" font-weight="600">New Estimate</text>
-              <text x="18" y="77" fill="#6B7280" font-size="7" font-family="sans-serif">Johnson Kitchen Remodel</text>
-              <rect x="10" y="92" width="160" height="32" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-              <text x="18" y="103" fill="#374151" font-size="8" font-family="sans-serif" font-weight="600">Invoice #1042</text>
-              <text x="18" y="115" fill="#6B7280" font-size="7" font-family="sans-serif">$840.00 · Pending</text>
-              <rect x="10" y="130" width="160" height="32" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-              <text x="18" y="141" fill="#374151" font-size="8" font-family="sans-serif" font-weight="600">Invoice #1041</text>
-              <text x="18" y="153" fill="#16A34A" font-size="7" font-family="sans-serif">$320.00 · Paid ✓</text>
-              <rect x="10" y="172" width="78" height="44" rx="6" fill="#2563EB"/>
-              <text x="29" y="192" fill="white" font-size="8" font-family="sans-serif" font-weight="bold">+ Estimate</text>
-              <rect x="96" y="172" width="74" height="44" rx="6" fill="#16A34A"/>
-              <text x="109" y="192" fill="white" font-size="8" font-family="sans-serif" font-weight="bold">+ Invoice</text>
-              <rect x="0" y="248" width="180" height="32" fill="white" stroke="#E5E7EB" stroke-width="0.5"/>
-              <text x="20" y="268" fill="#2563EB" font-size="14">📋</text>
-              <text x="60" y="268" fill="#9CA3AF" font-size="14">👥</text>
-              <text x="100" y="268" fill="#9CA3AF" font-size="14">💳</text>
-              <text x="140" y="268" fill="#9CA3AF" font-size="14">⚙️</text>
-            </svg>
-            <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.4;">Helles, cleanes UI. Sehr einfach. Fokus auf Angebote und Rechnungen — kein Schnickschnack.</p>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Kernfunktionen</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Angebote & Rechnungen mobil</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Kundenverwaltung (CRM)</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Online-Zahlungen & Karte</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Digitale Unterschriften</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> QuickBooks-Integration</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Foto-Anhänge</li>
-            </ul>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Stärken</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Sehr einfach zu bedienen</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Günstigster Einstiegspreis</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Ideal für schnelle Rechnungen</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Gute mobile App</li>
-            </ul>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Was Voltio besser macht</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Kein KI-Agent / Automatisierung</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Kein WhatsApp</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Kein Projektmanagement</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Keine VDE/DGUV-Compliance</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Kein Terminkalender</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Nicht auf Deutsch</li>
-            </ul>
+        <!-- Schnittstellen -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent2);margin-bottom:12px;">IDS / DATEV / GAEB</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">Labelwin</span><div style="flex:1;height:8px;background:rgba(59,130,246,0.1);border-radius:4px;"><div style="width:100%;height:100%;background:var(--accent2);border-radius:4px;"></div></div><span style="font-size:10px;color:var(--accent2);margin-left:6px;">5/5</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">STREIT / pds</span><div style="flex:1;height:8px;background:rgba(59,130,246,0.1);border-radius:4px;"><div style="width:90%;height:100%;background:var(--accent2);border-radius:4px;"></div></div><span style="font-size:10px;color:var(--accent2);margin-left:6px;">4.5/5</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">HERO</span><div style="flex:1;height:8px;background:rgba(59,130,246,0.1);border-radius:4px;"><div style="width:80%;height:100%;background:var(--accent2);border-radius:4px;"></div></div><span style="font-size:10px;color:var(--text3);margin-left:6px;">4/5</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--accent);width:100px;flex-shrink:0;">Voltio (Ziel)</span><div style="flex:1;height:8px;background:rgba(232,160,32,0.1);border-radius:4px;"><div style="width:80%;height:100%;background:var(--accent);border-radius:4px;"></div></div><span style="font-size:10px;color:var(--accent);margin-left:6px;">4/5</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text3);width:100px;flex-shrink:0;">OfficeOn</span><div style="flex:1;height:8px;background:rgba(59,130,246,0.1);border-radius:4px;"><div style="width:60%;height:100%;background:var(--accent2);border-radius:4px;"></div></div><span style="font-size:10px;color:var(--text3);margin-left:6px;">3/5</span></div>
           </div>
         </div>
-      </div>
-
-      <!-- FERGUS -->
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-        <div style="padding:24px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
-          <div style="display:flex;align-items:center;gap:16px;">
-            <div style="width:40px;height:40px;background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">📊</div>
-            <div>
-              <div style="font-size:17px;font-weight:700;color:var(--text);">Fergus</div>
-              <div style="font-size:12px;color:var(--text3);">fergus.com · ab $31/Monat</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:8px;align-items:center;">
-            <span style="background:rgba(34,197,94,0.12);color:#22C55E;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:600;">Sehr gut für Solo</span>
-            <a href="https://www.fergus.com" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">Website ↗</a>
-            <a href="https://apps.apple.com/app/fergus-job-management/id990207528" target="_blank" style="background:var(--surface2);color:var(--text2);border:1px solid var(--border);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">App Store ↗</a>
+        <!-- Solo-Preis -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#22C55E;margin-bottom:12px;">Solo-Erschwinglichkeit</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">Sage 50 Starter</span><div style="flex:1;height:8px;background:rgba(34,197,94,0.1);border-radius:4px;"><div style="width:100%;height:100%;background:#22C55E;border-radius:4px;"></div></div><span style="font-size:10px;color:#22C55E;margin-left:6px;">€33</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">OfficeOn</span><div style="flex:1;height:8px;background:rgba(34,197,94,0.1);border-radius:4px;"><div style="width:85%;height:100%;background:#22C55E;border-radius:4px;"></div></div><span style="font-size:10px;color:#22C55E;margin-left:6px;">€50–65</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--accent);width:100px;flex-shrink:0;">Voltio (Ziel)</span><div style="flex:1;height:8px;background:rgba(232,160,32,0.1);border-radius:4px;"><div style="width:80%;height:100%;background:var(--accent);border-radius:4px;"></div></div><span style="font-size:10px;color:var(--accent);margin-left:6px;">€49–79</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">HERO Core</span><div style="flex:1;height:8px;background:rgba(34,197,94,0.1);border-radius:4px;"><div style="width:75%;height:100%;background:#22C55E;border-radius:4px;"></div></div><span style="font-size:10px;color:var(--text3);margin-left:6px;">€59</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">HERO Copilot</span><div style="flex:1;height:8px;background:rgba(239,68,68,0.1);border-radius:4px;"><div style="width:30%;height:100%;background:#F87171;border-radius:4px;"></div></div><span style="font-size:10px;color:#F87171;margin-left:6px;">€199</span></div>
           </div>
         </div>
-        <div style="padding:24px 28px;display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:24px;align-items:start;">
-          <div>
-            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Interface-Stil</div>
-            <svg viewBox="0 0 180 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;border:1px solid var(--border);">
-              <rect width="180" height="280" fill="#F0F4F8"/>
-              <rect width="180" height="48" fill="#1A1A2E"/>
-              <text x="12" y="22" fill="white" font-size="10" font-family="sans-serif" font-weight="bold">Fergus</text>
-              <text x="12" y="36" fill="rgba(255,255,255,0.6)" font-size="8" font-family="sans-serif">Job Management</text>
-              <text x="10" y="66" fill="#374151" font-size="9" font-family="sans-serif" font-weight="700">Active Jobs</text>
-              <rect x="10" y="72" width="160" height="36" rx="6" fill="white" stroke="#D1D5DB" stroke-width="1"/>
-              <rect x="10" y="72" width="4" height="36" rx="2" fill="#F59E0B"/>
-              <text x="20" y="85" fill="#111827" font-size="8" font-family="sans-serif" font-weight="600">Smith Bathroom Reno</text>
-              <text x="20" y="97" fill="#6B7280" font-size="7" font-family="sans-serif">Quote sent · $1,240</text>
-              <text x="138" y="85" fill="#F59E0B" font-size="7" font-family="sans-serif" font-weight="700">OPEN</text>
-              <rect x="10" y="114" width="160" height="36" rx="6" fill="white" stroke="#D1D5DB" stroke-width="1"/>
-              <rect x="10" y="114" width="4" height="36" rx="2" fill="#10B981"/>
-              <text x="20" y="127" fill="#111827" font-size="8" font-family="sans-serif" font-weight="600">Jones Switchboard</text>
-              <text x="20" y="139" fill="#6B7280" font-size="7" font-family="sans-serif">In progress · $580</text>
-              <text x="126" y="127" fill="#10B981" font-size="7" font-family="sans-serif" font-weight="700">ACTIVE</text>
-              <text x="10" y="166" fill="#374151" font-size="9" font-family="sans-serif" font-weight="700">Profitability</text>
-              <rect x="10" y="172" width="75" height="50" rx="6" fill="white" stroke="#D1D5DB" stroke-width="1"/>
-              <text x="22" y="194" fill="#111827" font-size="14" font-family="sans-serif" font-weight="800">68%</text>
-              <text x="18" y="208" fill="#6B7280" font-size="7" font-family="sans-serif">Margin this month</text>
-              <rect x="95" y="172" width="75" height="50" rx="6" fill="white" stroke="#D1D5DB" stroke-width="1"/>
-              <text x="102" y="194" fill="#111827" font-size="12" font-family="sans-serif" font-weight="800">$3.2k</text>
-              <text x="102" y="208" fill="#6B7280" font-size="7" font-family="sans-serif">Revenue (week)</text>
-              <rect x="0" y="248" width="180" height="32" fill="white" stroke="#D1D5DB" stroke-width="0.5"/>
-              <text x="16" y="268" fill="#1A1A2E" font-size="13">🏠</text>
-              <text x="56" y="268" fill="#9CA3AF" font-size="13">📋</text>
-              <text x="96" y="268" fill="#9CA3AF" font-size="13">👥</text>
-              <text x="136" y="268" fill="#9CA3AF" font-size="13">📊</text>
-            </svg>
-            <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.4;">Dunkles Nav, helles Content-Bereich. Stärkerer Fokus auf Job-Status und Profitabilität sichtbar.</p>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Kernfunktionen</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Jobmanagement & Phasen</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Angebote & Kalkulationen</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Stundenzettel & Zeiterfassung</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Rentabilitäts-Tracking</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Xero & MYOB Integration</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Bestellwesen</li>
-            </ul>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Stärken</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Bestes Job-Costing am Markt</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Starke Margen-Kontrolle</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Speziell für Handwerk</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Faire Preisgestaltung</li>
-            </ul>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Was Voltio besser macht</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Kein KI-Agent</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Kein WhatsApp</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Keine Sprachnotizen</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> UK/NZ-fokussiert, nicht DE</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Keine VDE-Checklisten</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- TRADIFY -->
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-        <div style="padding:24px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
-          <div style="display:flex;align-items:center;gap:16px;">
-            <div style="width:40px;height:40px;background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">📋</div>
-            <div>
-              <div style="font-size:17px;font-weight:700;color:var(--text);">Tradify</div>
-              <div style="font-size:12px;color:var(--text3);">tradifyhq.com · ab $47/Monat</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:8px;align-items:center;">
-            <span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:600;">Gut für Solo</span>
-            <a href="https://www.tradifyhq.com" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">Website ↗</a>
-            <a href="https://apps.apple.com/app/tradify-job-management-app/id983257200" target="_blank" style="background:var(--surface2);color:var(--text2);border:1px solid var(--border);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">App Store ↗</a>
-          </div>
-        </div>
-        <div style="padding:24px 28px;display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:24px;align-items:start;">
-          <div>
-            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Interface-Stil</div>
-            <svg viewBox="0 0 180 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;border:1px solid var(--border);">
-              <rect width="180" height="280" fill="#FFFFFF"/>
-              <rect width="180" height="48" fill="#0EA5E9"/>
-              <text x="12" y="22" fill="white" font-size="10" font-family="sans-serif" font-weight="bold">Tradify</text>
-              <text x="12" y="36" fill="rgba(255,255,255,0.8)" font-size="8" font-family="sans-serif">Dashboard</text>
-              <text x="10" y="66" fill="#374151" font-size="9" font-family="sans-serif" font-weight="700">Today</text>
-              <rect x="10" y="72" width="160" height="30" rx="5" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1"/>
-              <text x="18" y="83" fill="#0C4A6E" font-size="8" font-family="sans-serif" font-weight="600">Davis — Rewire job</text>
-              <text x="18" y="93" fill="#0EA5E9" font-size="7" font-family="sans-serif">9:00 AM · In progress</text>
-              <rect x="10" y="108" width="160" height="30" rx="5" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
-              <text x="18" y="119" fill="#14532D" font-size="8" font-family="sans-serif" font-weight="600">Brown — New circuit</text>
-              <text x="18" y="129" fill="#16A34A" font-size="7" font-family="sans-serif">2:00 PM · Scheduled</text>
-              <text x="10" y="154" fill="#374151" font-size="9" font-family="sans-serif" font-weight="700">Timesheets</text>
-              <rect x="10" y="160" width="160" height="44" rx="5" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
-              <text x="18" y="176" fill="#374151" font-size="8" font-family="sans-serif">Today: 4h 32m</text>
-              <rect x="18" y="182" width="100" height="6" rx="3" fill="#0EA5E9"/>
-              <rect x="118" y="182" width="44" height="6" rx="3" fill="#E2E8F0"/>
-              <text x="18" y="198" fill="#6B7280" font-size="7" font-family="sans-serif">GPS tracked · 3 locations</text>
-              <rect x="10" y="212" width="160" height="28" rx="5" fill="#0EA5E9"/>
-              <text x="56" y="230" fill="white" font-size="9" font-family="sans-serif" font-weight="bold">+ New Job</text>
-              <rect x="0" y="248" width="180" height="32" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="0.5"/>
-              <text x="16" y="268" fill="#0EA5E9" font-size="13">📅</text>
-              <text x="56" y="268" fill="#9CA3AF" font-size="13">📋</text>
-              <text x="96" y="268" fill="#9CA3AF" font-size="13">⏱️</text>
-              <text x="136" y="268" fill="#9CA3AF" font-size="13">💬</text>
-            </svg>
-            <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.4;">Helles, freundliches UI in Sky-Blau. Sehr aufgeräumt. Kalender und GPS-Zeiterfassung im Vordergrund.</p>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Kernfunktionen</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Job-Tracking & Scheduling</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Angebote & Rechnungen</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> GPS-Zeiterfassung</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Xero & QuickBooks Sync</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Materialeinkauf & Lager</li>
-            </ul>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Stärken</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Sehr einfach zu bedienen</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Ideal für Einzelunternehmer</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Gutes Preis-Leistungs-Verhältnis</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Solide mobile App</li>
-            </ul>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Was Voltio besser macht</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Keine KI / kein Agent</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Kein WhatsApp</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Keine Rückwärtsplanung</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Keine deutschen Compliance-Tools</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Keine Sprachnotizen</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- JOBBER -->
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-        <div style="padding:24px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
-          <div style="display:flex;align-items:center;gap:16px;">
-            <div style="width:40px;height:40px;background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">⚙️</div>
-            <div>
-              <div style="font-size:17px;font-weight:700;color:var(--text);">Jobber</div>
-              <div style="font-size:12px;color:var(--text3);">getjobber.com · ab $39/Monat</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:8px;align-items:center;">
-            <span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:600;">Gut für Solo</span>
-            <a href="https://www.getjobber.com" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">Website ↗</a>
-            <a href="https://apps.apple.com/app/jobber-field-service-software/id506610314" target="_blank" style="background:var(--surface2);color:var(--text2);border:1px solid var(--border);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">App Store ↗</a>
-          </div>
-        </div>
-        <div style="padding:24px 28px;display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:24px;align-items:start;">
-          <div>
-            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Interface-Stil</div>
-            <svg viewBox="0 0 180 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;border:1px solid var(--border);">
-              <rect width="180" height="280" fill="#F9FAFB"/>
-              <rect width="180" height="48" fill="#0F172A"/>
-              <text x="12" y="22" fill="white" font-size="10" font-family="sans-serif" font-weight="bold">Jobber</text>
-              <text x="12" y="36" fill="rgba(255,255,255,0.6)" font-size="8" font-family="sans-serif">Work requests</text>
-              <!-- Pipeline view -->
-              <text x="10" y="66" fill="#374151" font-size="8" font-family="sans-serif" font-weight="700">Pipeline</text>
-              <rect x="10" y="70" width="46" height="76" rx="5" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
-              <text x="16" y="82" fill="#1D4ED8" font-size="7" font-family="sans-serif" font-weight="700">LEADS</text>
-              <rect x="14" y="86" width="38" height="18" rx="3" fill="white" stroke="#BFDBFE" stroke-width="0.5"/>
-              <text x="18" y="99" fill="#374151" font-size="6" font-family="sans-serif">Anderson</text>
-              <rect x="14" y="108" width="38" height="18" rx="3" fill="white" stroke="#BFDBFE" stroke-width="0.5"/>
-              <text x="18" y="121" fill="#374151" font-size="6" font-family="sans-serif">Williams</text>
-              <rect x="64" y="70" width="46" height="76" rx="5" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
-              <text x="68" y="82" fill="#15803D" font-size="7" font-family="sans-serif" font-weight="700">ACTIVE</text>
-              <rect x="68" y="86" width="38" height="18" rx="3" fill="white" stroke="#BBF7D0" stroke-width="0.5"/>
-              <text x="72" y="99" fill="#374151" font-size="6" font-family="sans-serif">Davis job</text>
-              <rect x="118" y="70" width="52" height="76" rx="5" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/>
-              <text x="122" y="82" fill="#C2410C" font-size="7" font-family="sans-serif" font-weight="700">INVOICE</text>
-              <rect x="122" y="86" width="44" height="18" rx="3" fill="white" stroke="#FED7AA" stroke-width="0.5"/>
-              <text x="126" y="99" fill="#374151" font-size="6" font-family="sans-serif">$840 due</text>
-              <!-- Schedule snippet -->
-              <text x="10" y="160" fill="#374151" font-size="8" font-family="sans-serif" font-weight="700">Today's Route</text>
-              <rect x="10" y="165" width="160" height="28" rx="5" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-              <text x="18" y="176" fill="#111827" font-size="7" font-family="sans-serif">9:00 · Davis — 4.2km away</text>
-              <text x="18" y="186" fill="#6B7280" font-size="7" font-family="sans-serif">Est. drive: 12 min · Optimized ✓</text>
-              <rect x="10" y="200" width="160" height="24" rx="5" fill="#0F172A"/>
-              <text x="44" y="216" fill="white" font-size="8" font-family="sans-serif" font-weight="bold">Start route</text>
-              <rect x="0" y="248" width="180" height="32" fill="white" stroke="#E5E7EB" stroke-width="0.5"/>
-              <text x="16" y="268" fill="#0F172A" font-size="13">🏠</text>
-              <text x="56" y="268" fill="#9CA3AF" font-size="13">📍</text>
-              <text x="96" y="268" fill="#9CA3AF" font-size="13">💰</text>
-              <text x="136" y="268" fill="#9CA3AF" font-size="13">👥</text>
-            </svg>
-            <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.4;">Dunkle Navigation, heller Content. Starke Pipeline-Ansicht und Routenoptimierung als Kernfeatures.</p>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Kernfunktionen</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Terminplanung & Dispatch</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> CRM & Kundenverwaltung</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Angebote & Rechnungen</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Automatische Erinnerungen</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Routenoptimierung</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Online-Buchungsportal</li>
-            </ul>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Stärken</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Umfangreichstes Feature-Set</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Starke Kundenkommunikation</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Sehr gute mobile App</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Breite Integrationen</li>
-            </ul>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Was Voltio besser macht</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Kein KI-Agent</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Kein WhatsApp</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Teuer für Solo ($119+ für volle Features)</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Keine deutschen Compliance-Tools</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Keine Sprachnotizen</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Nicht auf Deutsch</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- SERVICEM8 -->
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
-        <div style="padding:24px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
-          <div style="display:flex;align-items:center;gap:16px;">
-            <div style="width:40px;height:40px;background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;">📱</div>
-            <div>
-              <div style="font-size:17px;font-weight:700;color:var(--text);">ServiceM8</div>
-              <div style="font-size:12px;color:var(--text3);">servicem8.com · ab $35/Monat</div>
-            </div>
-          </div>
-          <div style="display:flex;gap:8px;align-items:center;">
-            <span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:4px 12px;border-radius:4px;font-size:12px;font-weight:600;">Gut für Solo</span>
-            <a href="https://www.servicem8.com" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">Website ↗</a>
-            <a href="https://apps.apple.com/app/servicem8-field-service-app/id635518025" target="_blank" style="background:var(--surface2);color:var(--text2);border:1px solid var(--border);padding:4px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;">App Store ↗</a>
-          </div>
-        </div>
-        <div style="padding:24px 28px;display:grid;grid-template-columns:200px 1fr 1fr 1fr;gap:24px;align-items:start;">
-          <div>
-            <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Interface-Stil</div>
-            <svg viewBox="0 0 180 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;border:1px solid var(--border);">
-              <rect width="180" height="280" fill="#F5F5F5"/>
-              <rect width="180" height="48" fill="#FF6B35"/>
-              <text x="12" y="22" fill="white" font-size="10" font-family="sans-serif" font-weight="bold">ServiceM8</text>
-              <text x="12" y="36" fill="rgba(255,255,255,0.85)" font-size="8" font-family="sans-serif">Job Board</text>
-              <!-- Job cards -->
-              <text x="10" y="66" fill="#374151" font-size="8" font-family="sans-serif" font-weight="700">Dispatch Board</text>
-              <rect x="10" y="72" width="160" height="40" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-              <rect x="10" y="72" width="5" height="40" rx="2" fill="#FF6B35"/>
-              <text x="22" y="85" fill="#111827" font-size="8" font-family="sans-serif" font-weight="600">Miller — Smoke Detectors</text>
-              <text x="22" y="95" fill="#6B7280" font-size="7" font-family="sans-serif">10:00 AM · Assigned to Felix</text>
-              <text x="22" y="105" fill="#FF6B35" font-size="7" font-family="sans-serif">Tap to navigate ↗</text>
-              <rect x="10" y="118" width="160" height="40" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-              <rect x="10" y="118" width="5" height="40" rx="2" fill="#10B981"/>
-              <text x="22" y="131" fill="#111827" font-size="8" font-family="sans-serif" font-weight="600">Johnson — New sockets</text>
-              <text x="22" y="141" fill="#6B7280" font-size="7" font-family="sans-serif">2:30 PM · Quote approved ✓</text>
-              <text x="22" y="151" fill="#10B981" font-size="7" font-family="sans-serif">Certificate ready</text>
-              <!-- Compliance cert section -->
-              <rect x="10" y="168" width="160" height="52" rx="6" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
-              <text x="18" y="182" fill="#1D4ED8" font-size="8" font-family="sans-serif" font-weight="700">Safety Certificate</text>
-              <text x="18" y="194" fill="#374151" font-size="7" font-family="sans-serif">Test results logged</text>
-              <rect x="18" y="200" width="120" height="5" rx="2" fill="#BFDBFE"/>
-              <rect x="18" y="200" width="96" height="5" rx="2" fill="#1D4ED8"/>
-              <text x="18" y="214" fill="#6B7280" font-size="7" font-family="sans-serif">8/10 checks complete</text>
-              <rect x="0" y="248" width="180" height="32" fill="white" stroke="#E5E7EB" stroke-width="0.5"/>
-              <text x="16" y="268" fill="#FF6B35" font-size="13">📋</text>
-              <text x="56" y="268" fill="#9CA3AF" font-size="13">🗺️</text>
-              <text x="96" y="268" fill="#9CA3AF" font-size="13">💰</text>
-              <text x="136" y="268" fill="#9CA3AF" font-size="13">⚙️</text>
-            </svg>
-            <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.4;">Orange Brand, kartenbasiertes Dispatch-Board. Einziger Konkurrent mit integrierten Compliance-Zertifikaten.</p>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Kernfunktionen</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Job-Karten & Scheduling</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> GPS-Tracking & Dispatch</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Automatisierte Workflows</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Compliance-Formulare</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Xero & QuickBooks</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#22C55E;">✓</span> Vor-Ort-Rechnungsstellung</li>
-            </ul>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Stärken</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Starke Workflow-Automatisierung</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Beste Apple-Integration</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Compliance-Formulare vorhanden</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:var(--accent);">+</span> Per-Job Preismodell</li>
-            </ul>
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Was Voltio besser macht</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Kein KI-Agent</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Kein WhatsApp</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Nur Apple (kein Android-First)</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Keine deutschen VDE-Standards</li>
-              <li style="font-size:13px;color:var(--text2);display:flex;gap:8px;"><span style="color:#F87171;">✗</span> Keine Sprachnotizen</li>
-            </ul>
+        <!-- Elektro-Vertical -->
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#A855F7;margin-bottom:12px;">Elektro-Spezialisierung</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">STREIT V.1</span><div style="flex:1;height:8px;background:rgba(168,85,247,0.1);border-radius:4px;"><div style="width:100%;height:100%;background:#A855F7;border-radius:4px;"></div></div><span style="font-size:10px;color:#A855F7;margin-left:6px;">5/5</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">Hottgenroth</span><div style="flex:1;height:8px;background:rgba(168,85,247,0.1);border-radius:4px;"><div style="width:90%;height:100%;background:#A855F7;border-radius:4px;"></div></div><span style="font-size:10px;color:var(--text3);margin-left:6px;">4.5/5</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--accent);width:100px;flex-shrink:0;">Voltio (Ziel)</span><div style="flex:1;height:8px;background:rgba(232,160,32,0.1);border-radius:4px;"><div style="width:80%;height:100%;background:var(--accent);border-radius:4px;"></div></div><span style="font-size:10px;color:var(--accent);margin-left:6px;">4/5</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text2);width:100px;flex-shrink:0;">pds / MOSER</span><div style="flex:1;height:8px;background:rgba(168,85,247,0.1);border-radius:4px;"><div style="width:70%;height:100%;background:#A855F7;border-radius:4px;"></div></div><span style="font-size:10px;color:var(--text3);margin-left:6px;">3.5/5</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><span style="font-size:11px;color:var(--text3);width:100px;flex-shrink:0;">OfficeOn / HERO</span><div style="flex:1;height:8px;background:rgba(168,85,247,0.1);border-radius:4px;"><div style="width:40%;height:100%;background:#A855F7;border-radius:4px;"></div></div><span style="font-size:10px;color:var(--text3);margin-left:6px;">2/5</span></div>
           </div>
         </div>
       </div>
     </div>
 
-      <!-- BOSCH OFFICEON - SPECIAL DEEP DIVE -->
-      <div style="margin-top:64px;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:flex;align-items:center;gap:10px;"><span style="width:24px;height:1px;background:var(--accent);display:inline-block;"></span>Direkter Marktbegleiter · Bereits von Felix genutzt</div>
-        <h3 style="font-size:30px;margin-bottom:8px;">Bosch <em style="font-style:italic;color:var(--accent);">OfficeOn</em></h3>
-        <p style="color:var(--text2);font-size:15px;margin-bottom:32px;max-width:680px;">Felix nutzt OfficeOn aktuell — wir müssen also genau verstehen, was es kann, was fehlt, und warum Voltio trotzdem die richtige Lösung für ihn ist. Eine ehrliche, tiefe Analyse.</p>
+    <!-- DEEP DIVES: TOP GERMAN COMPETITORS -->
+    <h3 style="font-size:26px;margin-bottom:8px;">Die 5 wichtigsten deutschen<br><em style="font-style:italic;color:var(--accent);">Konkurrenten im Detail</em></h3>
+    <p style="color:var(--text2);font-size:14px;margin-bottom:32px;max-width:680px;">Fokus auf die für Felix direkt relevantesten — mit Interface-Stil, Stärken und wo Voltio klarer gewinnt.</p>
 
-        <div style="background:var(--surface);border:1px solid rgba(232,160,32,0.3);border-radius:14px;overflow:hidden;">
-          <!-- Header with Bosch branding -->
-          <div style="background:linear-gradient(135deg, #ED1C24 0%, #C8102E 100%);padding:32px 32px 28px;position:relative;overflow:hidden;">
-            <div style="position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;">
-              <div>
-                <div style="font-size:11px;font-weight:700;letter-spacing:0.2em;color:rgba(255,255,255,0.7);margin-bottom:6px;">BOSCH POWER TOOLS · CLOUD SOFTWARE</div>
-                <div style="font-size:32px;font-weight:800;color:white;letter-spacing:-0.02em;margin-bottom:4px;">OfficeOn</div>
-                <div style="font-size:13px;color:rgba(255,255,255,0.85);">Handwerkersoftware für Büro und Baustelle · seit September 2023</div>
-              </div>
-              <div style="display:flex;gap:8px;flex-direction:column;">
-                <a href="https://bosch-officeon.com/de/de/branchen/elektriker/" target="_blank" style="background:white;color:#C8102E;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;">Elektriker-Seite ↗</a>
-                <a href="https://bosch-officeon.com/de/de/funktionen/schnittstellen/ids/" target="_blank" style="background:rgba(255,255,255,0.15);color:white;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,0.3);">IDS-Funktion ↗</a>
-              </div>
-            </div>
-          </div>
+    <div style="display:flex;flex-direction:column;gap:20px;margin-bottom:64px;">
 
-          <!-- Body grid -->
-          <div style="padding:32px;display:grid;grid-template-columns:240px 1fr;gap:32px;align-items:start;">
-            <!-- UI Mock -->
-            <div>
-              <div style="font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Interface-Stil</div>
-              <svg viewBox="0 0 220 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:14px;border:1px solid var(--border);">
-                <rect width="220" height="320" fill="#F4F5F7"/>
-                <rect width="220" height="50" fill="white" stroke="#E5E7EB" stroke-width="0.5"/>
-                <rect x="14" y="14" width="22" height="22" rx="4" fill="#ED1C24"/>
-                <text x="20" y="30" fill="white" font-size="10" font-family="sans-serif" font-weight="800">B</text>
-                <text x="44" y="22" fill="#1A1A1A" font-size="11" font-family="sans-serif" font-weight="700">OfficeOn</text>
-                <text x="44" y="36" fill="#6B7280" font-size="8" font-family="sans-serif">Dashboard</text>
-                <text x="186" y="30" fill="#9CA3AF" font-size="14">⚙</text>
-                <!-- Stats row -->
-                <text x="14" y="68" fill="#374151" font-size="9" font-family="sans-serif" font-weight="700">Heute</text>
-                <rect x="14" y="74" width="60" height="40" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-                <text x="22" y="92" fill="#ED1C24" font-size="14" font-family="sans-serif" font-weight="800">3</text>
-                <text x="20" y="106" fill="#6B7280" font-size="7" font-family="sans-serif">Termine</text>
-                <rect x="80" y="74" width="60" height="40" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-                <text x="86" y="92" fill="#ED1C24" font-size="13" font-family="sans-serif" font-weight="800">€840</text>
-                <text x="84" y="106" fill="#6B7280" font-size="7" font-family="sans-serif">Offen</text>
-                <rect x="146" y="74" width="60" height="40" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-                <text x="156" y="92" fill="#16A34A" font-size="14" font-family="sans-serif" font-weight="800">5</text>
-                <text x="156" y="106" fill="#6B7280" font-size="7" font-family="sans-serif">Aufträge</text>
-                <!-- List -->
-                <text x="14" y="132" fill="#374151" font-size="9" font-family="sans-serif" font-weight="700">Termine heute</text>
-                <rect x="14" y="138" width="192" height="34" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-                <text x="22" y="151" fill="#1A1A1A" font-size="8" font-family="sans-serif" font-weight="600">Schmidt — Steckdosen</text>
-                <text x="22" y="163" fill="#6B7280" font-size="7" font-family="sans-serif">09:00 · Lindenthal</text>
-                <text x="184" y="156" fill="#ED1C24" font-size="8" font-family="sans-serif" font-weight="700">→</text>
-                <rect x="14" y="178" width="192" height="34" rx="6" fill="white" stroke="#E5E7EB" stroke-width="1"/>
-                <text x="22" y="191" fill="#1A1A1A" font-size="8" font-family="sans-serif" font-weight="600">Becker — Smart Home</text>
-                <text x="22" y="203" fill="#6B7280" font-size="7" font-family="sans-serif">13:30 · Ehrenfeld</text>
-                <text x="184" y="196" fill="#ED1C24" font-size="8" font-family="sans-serif" font-weight="700">→</text>
-                <!-- IDS button highlight -->
-                <rect x="14" y="222" width="192" height="36" rx="6" fill="#FEF3F2" stroke="#ED1C24" stroke-width="1"/>
-                <text x="22" y="237" fill="#ED1C24" font-size="9" font-family="sans-serif" font-weight="700">⚡ IDS-Schnittstelle</text>
-                <text x="22" y="249" fill="#374151" font-size="7" font-family="sans-serif">Großhändler-Shop öffnen</text>
-                <!-- Bottom nav -->
-                <rect x="0" y="278" width="220" height="42" fill="white" stroke="#E5E7EB" stroke-width="0.5"/>
-                <text x="22" y="304" fill="#ED1C24" font-size="14">🏠</text>
-                <text x="62" y="304" fill="#9CA3AF" font-size="14">📅</text>
-                <text x="102" y="304" fill="#9CA3AF" font-size="14">📋</text>
-                <text x="142" y="304" fill="#9CA3AF" font-size="14">💰</text>
-                <text x="182" y="304" fill="#9CA3AF" font-size="14">⚙️</text>
-              </svg>
-              <p style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.4;">Bosch-rote Akzente, klassisches Enterprise-Design. Funktional, eher konservativ. Stark auf das Bosch-Ökosystem ausgerichtet (SingleKey ID Login).</p>
-              <div style="margin-top:14px;padding:12px;background:var(--surface2);border-radius:8px;">
-                <div style="font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.08em;margin-bottom:6px;">PREISMODELL</div>
-                <div style="font-size:11px;color:var(--text2);line-height:1.5;">Büro-Lizenz + Mobil-Lizenz separat. Vertragslaufzeit 6/12/24 Monate, Vorauszahlung pro Periode. Trusted.de-Bewertung: 1,4 (sehr gut).</div>
-              </div>
-            </div>
-
-            <!-- Detail content -->
-            <div>
-              <!-- Was es kann -->
-              <div style="margin-bottom:28px;">
-                <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#22C55E;margin-bottom:14px;">✓ Was OfficeOn richtig gut macht</div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Cloud-basiert, Web + Mobile</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Echtzeit-Synchronisation zwischen Büro und Baustelle. Keine Installation, automatische Updates.</div>
-                  </div>
-                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">IDS-Connect & GAEB-Schnittstellen</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Direkter Zugriff auf Großhändler-Shops aus der Software. Die zentrale Stärke für Elektriker.</div>
-                  </div>
-                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Rechtskonforme Rechnungen</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">ZUGFeRD und XRechnung-Format integriert. E-Rechnungspflicht ab 2025 abgedeckt.</div>
-                  </div>
-                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">DATEV & lexoffice Integration</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Direkte Anbindung an gängige Buchhaltungssysteme — wichtig für Steuerberater. <strong style="color:var(--accent);">Voltio muss das ab V1 haben — bestätigt von Felix.</strong></div>
-                  </div>
-                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Diktierfunktion für Berichte</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Arbeitsberichte können per Sprache erfasst werden — der einzige KI-ähnliche Touch.</div>
-                  </div>
-                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 8px 8px 0;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Bosch-Vertrauen & Support</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Etablierte Marke, Datensicherheit, Chat- und E-Mail-Support inklusive.</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Was es nicht kann -->
-              <div style="margin-bottom:28px;">
-                <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#F87171;margin-bottom:14px;">✗ Wo OfficeOn an Grenzen stößt — und Voltio glänzt</div>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #F87171;border-radius:0 8px 8px 0;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Kein KI-Agent</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Reines Verwaltungstool — keine proaktiven Vorschläge, keine Automatisierung von Kundenkommunikation.</div>
-                  </div>
-                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #F87171;border-radius:0 8px 8px 0;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Keine WhatsApp-Integration</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Kunden müssen weiterhin separat per WhatsApp kontaktiert werden — kein zentrales Logbuch.</div>
-                  </div>
-                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #F87171;border-radius:0 8px 8px 0;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Keine Rückwärtsplanung</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Felix muss selbst rechnen wann Material bestellt werden muss. Voltio plant rückwärts vom Termin.</div>
-                  </div>
-                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #F87171;border-radius:0 8px 8px 0;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Keine Prepayment-Logik</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Felix trägt das Materialrisiko selbst — kein automatisches Anzahlungs-System nach Schwellenwert.</div>
-                  </div>
-                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #F87171;border-radius:0 8px 8px 0;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Keine VDE/DGUV-Workflows</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Generische Handwerker-Software, nicht elektriker-spezifisch. Compliance-Checklisten fehlen.</div>
-                  </div>
-                  <div style="padding:14px 16px;background:var(--surface2);border-left:3px solid #F87171;border-radius:0 8px 8px 0;">
-                    <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Keine Sprachnotiz → Auftrag</div>
-                    <div style="font-size:12px;color:var(--text2);line-height:1.5;">Diktierfunktion existiert nur für Arbeitsberichte. Voltio strukturiert Sprachnotizen direkt in Aufgaben.</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Strategic conclusion -->
-              <div style="padding:20px 24px;background:linear-gradient(135deg, rgba(232,160,32,0.08) 0%, rgba(232,160,32,0.03) 100%);border:1px solid rgba(232,160,32,0.25);border-radius:10px;">
-                <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Strategische Schlussfolgerung</div>
-                <p style="font-size:14px;color:var(--text);line-height:1.6;margin-bottom:10px;"><strong>OfficeOn ist ein solides Verwaltungs-Werkzeug — Voltio ist ein Co-Pilot.</strong></p>
-                <p style="font-size:13px;color:var(--text2);line-height:1.6;">Felix bekommt mit OfficeOn das Büro digital, aber muss alle Entscheidungen selbst treffen: Wann bestellen, wann anrufen, wann erinnern, wer hat was zugesagt. Voltio nimmt ihm diese Last ab durch den KI-Agenten — und integriert OfficeOns größte Stärke (IDS-Connect für Großhändler) als Pflicht-Feature von Tag eins. Das macht Voltio nicht zu einem OfficeOn-Konkurrenten im klassischen Sinn, sondern zu einer neuen Kategorie: dem ersten KI-gestützten Assistenten für deutsche Elektromeister.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- IDS-CONNECT TECHNICAL DEEP DIVE -->
-      <div style="margin-top:80px;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:flex;align-items:center;gap:10px;"><span style="width:24px;height:1px;background:var(--accent);display:inline-block;"></span>Technische Integration · Pflicht-Feature</div>
-        <h3 style="font-size:30px;margin-bottom:8px;">IDS-Connect <em style="font-style:italic;color:var(--accent);">Schnittstelle</em></h3>
-        <p style="color:var(--text2);font-size:15px;margin-bottom:32px;max-width:680px;">Die zentrale digitale Brücke zwischen Handwerkersoftware und Elektrogroßhandel in Deutschland. Ohne IDS-Connect ist Voltio im DACH-Raum nicht ernstzunehmen — mit IDS-Connect ist Voltio im Spiel.</p>
-
-        <!-- IDS Overview -->
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;margin-bottom:24px;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:32px;">
-            <div>
-              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Was ist IDS-Connect?</div>
-              <p style="font-size:14px;color:var(--text);line-height:1.7;margin-bottom:14px;">IDS steht für <strong style="color:var(--accent);">Integrierte Datenschnittstelle</strong>. Es ist der etablierte XML-basierte Branchenstandard, der Handwerkersoftware mit den Online-Shops von Elektrogroßhändlern verbindet.</p>
-              <p style="font-size:13px;color:var(--text2);line-height:1.7;">Die Spezifikation wurde gemeinsam von BVBS (Bundesverband Bausoftware), DG-Haustechnik und ZVSHK entwickelt und wird von der ITEK GmbH gepflegt. Aktuelle Version: <strong style="color:var(--text);">2.5</strong> (November 2020).</p>
-            </div>
-            <div>
-              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:10px;">Warum ist es Pflicht?</div>
-              <p style="font-size:14px;color:var(--text);line-height:1.7;margin-bottom:14px;">In Deutschland, Österreich und der Schweiz ist IDS-Connect der <strong style="color:var(--accent);">de-facto-Standard</strong>. Ohne diese Schnittstelle muss Felix Artikel manuell von Großhändler-Webseiten in Voltio abtippen.</p>
-              <p style="font-size:13px;color:var(--text2);line-height:1.7;">Praktisch alle relevanten Großhändler unterstützen IDS: Sonepar, Rexel, Uni-Elektro, Eldis, Würth, Elektro-Online (Moster), EGU, Hoffmann Group, GC-Gruppe, Pietsch und viele mehr.</p>
-            </div>
-          </div>
-
-          <!-- Functions table -->
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:14px;">Funktionsumfang IDS-Connect 2.5</div>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
-            <div style="padding:16px;background:var(--surface2);border-radius:8px;border-top:2px solid var(--accent);">
-              <div style="font-size:10px;font-weight:700;color:var(--accent);letter-spacing:0.08em;margin-bottom:6px;">AKTIONSCODE: WK</div>
-              <div style="font-size:13px;color:var(--text);font-weight:600;margin-bottom:4px;">Warenkorb empfangen</div>
-              <div style="font-size:12px;color:var(--text2);line-height:1.5;">Artikel aus dem Großhändler-Shop in Voltio übertragen — Preise, Mengen, Verfügbarkeit.</div>
-            </div>
-            <div style="padding:16px;background:var(--surface2);border-radius:8px;border-top:2px solid var(--accent2);">
-              <div style="font-size:10px;font-weight:700;color:var(--accent2);letter-spacing:0.08em;margin-bottom:6px;">AKTIONSCODE: WS</div>
-              <div style="font-size:13px;color:var(--text);font-weight:600;margin-bottom:4px;">Warenkorb senden</div>
-              <div style="font-size:12px;color:var(--text2);line-height:1.5;">Artikelliste aus Voltio direkt in den Warenkorb des Großhändlers übertragen — Bestellung möglich.</div>
-            </div>
-            <div style="padding:16px;background:var(--surface2);border-radius:8px;border-top:2px solid #22C55E;">
-              <div style="font-size:10px;font-weight:700;color:#22C55E;letter-spacing:0.08em;margin-bottom:6px;">AKTIONSCODE: AD</div>
-              <div style="font-size:13px;color:var(--text);font-weight:600;margin-bottom:4px;">Artikel-Deep-Link</div>
-              <div style="font-size:12px;color:var(--text2);line-height:1.5;">Direktabruf von Detailinfos zu einem Artikel über die Artikelnummer.</div>
-            </div>
-            <div style="padding:16px;background:var(--surface2);border-radius:8px;border-top:2px solid #A855F7;">
-              <div style="font-size:10px;font-weight:700;color:#C4B5FD;letter-spacing:0.08em;margin-bottom:6px;">AKTIONSCODES: LI, SV</div>
-              <div style="font-size:13px;color:var(--text);font-weight:600;margin-bottom:4px;">Login & Versionsabfrage</div>
-              <div style="font-size:12px;color:var(--text2);line-height:1.5;">Authentifizierung und Prüfung welche IDS-Versionen vom Shop unterstützt werden.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Technical Implementation -->
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;margin-bottom:24px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:18px;">Technische Implementierung — Kann Voltio das?</div>
-          <h4 style="font-size:22px;margin-bottom:8px;font-family:'Instrument Serif',serif;">Klare Antwort: <em style="font-style:italic;color:#22C55E;">Ja, mit moderatem Aufwand.</em></h4>
-          <p style="font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:24px;max-width:760px;">IDS-Connect ist ein offener, dokumentierter Standard. Die Implementierung erfordert keine Lizenzgebühren an ITEK, lediglich konforme Umsetzung der XML-Spezifikation und Registrierung bei den Großhändlern als IDS-fähige Software.</p>
-
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
-            <!-- Tech specs -->
-            <div>
-              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Technische Spezifikationen</div>
-              <div style="font-family:'DM Mono',monospace;font-size:12px;background:#0A0F1C;border:1px solid var(--border);border-radius:8px;padding:18px;line-height:1.7;color:var(--text2);">
-                <div><span style="color:#FCD34D;">Protokoll:</span> HTTPS (HTTP optional)</div>
-                <div><span style="color:#FCD34D;">Methode:</span> POST mit multipart/form-data</div>
-                <div><span style="color:#FCD34D;">Datenformat:</span> XML (UTF-8)</div>
-                <div><span style="color:#FCD34D;">Datenstruktur:</span> Anlehnung an GAEB XML 3.1</div>
-                <div><span style="color:#FCD34D;">Authentifizierung:</span> Kundennummer + Benutzername + Passwort</div>
-                <div><span style="color:#FCD34D;">Rückkanal:</span> HOOK-URL als Parameter</div>
-                <div><span style="color:#FCD34D;">Versionen:</span> 1.3 / 2.0 / 2.1 / 2.2 / 2.3 / 2.5</div>
-                <div><span style="color:#FCD34D;">Moderne Variante:</span> RESTful JSON via Adapter (z.B. PunchCommerce)</div>
-              </div>
-            </div>
-            <!-- Effort estimate -->
-            <div>
-              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Aufwandsschätzung Voltio</div>
-              <div style="display:flex;flex-direction:column;gap:10px;">
-                <div style="padding:12px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 6px 6px 0;">
-                  <div style="font-size:13px;font-weight:600;color:var(--text);">XML-Parser & Generator</div>
-                  <div style="font-size:11px;color:var(--text3);">~3–5 Tage Entwicklung · Standardbibliotheken verfügbar</div>
-                </div>
-                <div style="padding:12px 16px;background:var(--surface2);border-left:3px solid #22C55E;border-radius:0 6px 6px 0;">
-                  <div style="font-size:13px;font-weight:600;color:var(--text);">HTTP-POST mit Hook-Handler</div>
-                  <div style="font-size:11px;color:var(--text3);">~2 Tage · einfache Webserver-Logik</div>
-                </div>
-                <div style="padding:12px 16px;background:var(--surface2);border-left:3px solid var(--accent);border-radius:0 6px 6px 0;">
-                  <div style="font-size:13px;font-weight:600;color:var(--text);">UI-Integration in Voltio</div>
-                  <div style="font-size:11px;color:var(--text3);">~5–8 Tage · Browser-Aufruf + Warenkorb-Übergabe</div>
-                </div>
-                <div style="padding:12px 16px;background:var(--surface2);border-left:3px solid #F59E0B;border-radius:0 6px 6px 0;">
-                  <div style="font-size:13px;font-weight:600;color:var(--text);">Großhändler-Registrierung & Tests</div>
-                  <div style="font-size:11px;color:var(--text3);">~1–2 Wochen je Händler · ITEK-Verzeichnis, Setup-Calls</div>
-                </div>
-                <div style="padding:14px 16px;background:linear-gradient(135deg, rgba(34,197,94,0.08), rgba(34,197,94,0.03));border:1px solid rgba(34,197,94,0.25);border-radius:8px;margin-top:6px;">
-                  <div style="font-size:13px;font-weight:700;color:#22C55E;">Gesamt MVP: ~3–4 Wochen</div>
-                  <div style="font-size:11px;color:var(--text2);">für 3 wichtigste Großhändler (Sonepar, Rexel, Uni-Elektro)</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Workflow with Voltio -->
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;margin-bottom:24px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:14px;">So funktioniert IDS-Connect in Voltio</div>
-          <h4 style="font-size:22px;margin-bottom:24px;font-family:'Instrument Serif',serif;">Vom Auftrag zur Bestellung — <em style="font-style:italic;color:var(--accent);">in 4 Schritten.</em></h4>
-
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
-            <div style="padding:24px 20px;background:var(--surface2);border-radius:10px;position:relative;">
-              <div style="font-family:'Instrument Serif',serif;font-size:36px;color:var(--accent);line-height:1;margin-bottom:12px;">1</div>
-              <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px;">Felix erstellt Angebot in Voltio</div>
-              <p style="font-size:12px;color:var(--text2);line-height:1.5;">Voltio prüft welche Materialien benötigt werden und schlägt einen Großhändler vor — Felix wählt z.B. Sonepar.</p>
-            </div>
-            <div style="padding:24px 20px;background:var(--surface2);border-radius:10px;position:relative;">
-              <div style="font-family:'Instrument Serif',serif;font-size:36px;color:var(--accent);line-height:1;margin-bottom:12px;">2</div>
-              <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px;">IDS-Connect öffnet Shop</div>
-              <p style="font-size:12px;color:var(--text2);line-height:1.5;">Per Klick öffnet sich der Sonepar-Shop direkt in Voltio — automatisch eingeloggt mit Felix' Kundennummer.</p>
-            </div>
-            <div style="padding:24px 20px;background:var(--surface2);border-radius:10px;position:relative;">
-              <div style="font-family:'Instrument Serif',serif;font-size:36px;color:var(--accent);line-height:1;margin-bottom:12px;">3</div>
-              <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px;">Warenkorb übertragen</div>
-              <p style="font-size:12px;color:var(--text2);line-height:1.5;">Felix legt Artikel in den Sonepar-Warenkorb und überträgt ihn mit einem Klick zurück nach Voltio — inkl. Echtzeit-Preisen.</p>
-            </div>
-            <div style="padding:24px 20px;background:linear-gradient(135deg, rgba(232,160,32,0.1), rgba(232,160,32,0.02));border:1px solid rgba(232,160,32,0.25);border-radius:10px;position:relative;">
-              <div style="font-family:'Instrument Serif',serif;font-size:36px;color:var(--accent);line-height:1;margin-bottom:12px;">4</div>
-              <div style="font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px;">Voltio kalkuliert automatisch</div>
-              <p style="font-size:12px;color:var(--text2);line-height:1.5;">Aufschlag wird angewendet, Angebot fertiggestellt, Prepayment-Logik greift bei Materialwert &gt; €300.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Major retailers -->
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:14px;">IDS-fähige Großhändler · Priorität für Voltio</div>
-          <h4 style="font-size:22px;margin-bottom:8px;font-family:'Instrument Serif',serif;">Mit welchen Händlern <em style="font-style:italic;color:var(--accent);">starten wir?</em></h4>
-          <p style="font-size:14px;color:var(--text2);line-height:1.6;margin-bottom:24px;">Für den MVP integrieren wir die drei größten deutschen Elektrogroßhändler. Weitere folgen je nach Felix' Lieferantenprofil und Kundenwachstum.</p>
-
-          <!-- Tier 1 -->
-          <div style="margin-bottom:20px;">
-            <div style="font-size:11px;font-weight:700;color:#22C55E;letter-spacing:0.1em;margin-bottom:10px;">▶ MVP-PHASE 1 · DREI KERNHÄNDLER</div>
-            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
-              <div style="padding:18px;background:var(--surface2);border:1px solid rgba(34,197,94,0.25);border-radius:10px;">
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-                  <div style="font-size:15px;font-weight:700;color:var(--text);">Sonepar</div>
-                  <a href="https://www.sonepar.de" target="_blank" style="font-size:11px;color:var(--accent);text-decoration:none;">↗</a>
-                </div>
-                <div style="font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:8px;">Marktführer DACH. Über 110 Standorte in Deutschland. Vollständige IDS-Connect-Unterstützung.</div>
-                <div style="font-size:11px;color:var(--text3);">Felix' Hauptlieferant?</div>
-              </div>
-              <div style="padding:18px;background:var(--surface2);border:1px solid rgba(34,197,94,0.25);border-radius:10px;">
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-                  <div style="font-size:15px;font-weight:700;color:var(--text);">Rexel Germany</div>
-                  <a href="https://www.rexel.de" target="_blank" style="font-size:11px;color:var(--accent);text-decoration:none;">↗</a>
-                </div>
-                <div style="font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:8px;">Französische Gruppe, starker Digitalfokus. Über 80 Niederlassungen in Deutschland. IDS-Connect Standard.</div>
-                <div style="font-size:11px;color:var(--text3);">Häufig zweite Wahl nach Sonepar</div>
-              </div>
-              <div style="padding:18px;background:var(--surface2);border:1px solid rgba(34,197,94,0.25);border-radius:10px;">
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
-                  <div style="font-size:15px;font-weight:700;color:var(--text);">Uni-Elektro</div>
-                  <a href="https://www.uni-elektro.de" target="_blank" style="font-size:11px;color:var(--accent);text-decoration:none;">↗</a>
-                </div>
-                <div style="font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:8px;">Inhabergeführt, sehr beliebt bei Mittelstand. 40+ Standorte. Spezifisch von Felix erwähnt.</div>
-                <div style="font-size:11px;color:var(--text3);">Strong fit für regionale Elektriker</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tier 2 -->
+      <!-- BOSCH OFFICEON -->
+      <div style="background:var(--surface);border:1px solid rgba(204,0,0,0.3);border-radius:12px;overflow:hidden;">
+        <div style="background:linear-gradient(135deg,#CC0000,#990000);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
           <div>
-            <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.1em;margin-bottom:10px;">▶ PHASE 2 · WEITERE WICHTIGE HÄNDLER</div>
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;">
-              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
-                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Eldis</div>
-                <div style="font-size:11px;color:var(--text3);">Online-Spezialist · IDS-fähig</div>
-              </div>
-              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
-                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">EGU</div>
-                <div style="font-size:11px;color:var(--text3);">37 Standorte · Rhein-Ruhr</div>
-              </div>
-              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
-                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Würth Elektro</div>
-                <div style="font-size:11px;color:var(--text3);">Kleinmaterial-Spezialist</div>
-              </div>
-              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
-                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Moster (Elektro-Online)</div>
-                <div style="font-size:11px;color:var(--text3);">IDS + UGL Schnittstellen</div>
-              </div>
-              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
-                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Hoffmann Group</div>
-                <div style="font-size:11px;color:var(--text3);">100k+ Artikel · IDS</div>
-              </div>
-              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
-                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">GC-Gruppe</div>
-                <div style="font-size:11px;color:var(--text3);">SHK + Elektro</div>
-              </div>
-              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
-                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Pietsch</div>
-                <div style="font-size:11px;color:var(--text3);">Süddeutschland</div>
-              </div>
-              <div style="padding:14px;background:var(--surface2);border-radius:8px;">
-                <div style="font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;">Zajadacz</div>
-                <div style="font-size:11px;color:var(--text3);">Norddeutschland</div>
-              </div>
-            </div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:rgba(255,255,255,0.7);margin-bottom:4px;">FELIX' AKTUELLES TOOL</div>
+            <div style="font-size:20px;font-weight:800;color:white;">Bosch OfficeOn</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.85);">bosch-officeon.com · €50–65/Monat (Büro + Mobil getrennt)</div>
+          </div>
+          <div style="display:flex;gap:8px;">
+            <a href="https://bosch-officeon.com/de/de/branchen/elektriker/" target="_blank" style="background:white;color:#CC0000;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;">Elektriker-Seite ↗</a>
+            <a href="https://apps.apple.com/de/app/bosch-officeon/id1447978086" target="_blank" style="background:rgba(255,255,255,0.15);color:white;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:600;text-decoration:none;border:1px solid rgba(255,255,255,0.3);">App Store ↗</a>
           </div>
         </div>
-
-        <!-- Strategic conclusion IDS -->
-        <div style="margin-top:24px;padding:24px 28px;background:linear-gradient(135deg, rgba(232,160,32,0.08) 0%, rgba(232,160,32,0.03) 100%);border:1px solid rgba(232,160,32,0.25);border-radius:12px;">
-          <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Fazit IDS-Connect Integration</div>
-          <p style="font-size:15px;color:var(--text);line-height:1.6;margin-bottom:8px;"><strong>IDS-Connect ist nicht "nice-to-have", sondern eine Pflicht-Funktion ab MVP.</strong></p>
-          <p style="font-size:13px;color:var(--text2);line-height:1.6;">Ohne IDS-Connect kann Voltio mit OfficeOn, HERO, STREIT oder Hottgenroth nicht konkurrieren — egal wie gut der KI-Agent ist. Die gute Nachricht: Die Implementierung ist mit ~3–4 Wochen für drei Kernhändler überschaubar, der Standard ist offen, kostenlos und gut dokumentiert. Voltios Architektur sollte IDS-Connect von Anfang an als zentralen Materialbeschaffungs-Layer mitdenken — kombiniert mit Rückwärtsplanung und Prepayment-Logik wird daraus etwas, das kein anderer Anbieter so eng integriert hat.</p>
+        <div style="padding:24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Was es gut macht</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>Cloud-only, automatische Updates</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>IDS-Connect inkl. (GC-Gruppe, Pietsch…)</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>DATEV-Export + Lexware Office nativ</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>ZUGFeRD + XRechnung (E-Rechnungspflicht)</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>Diktierfunktion (OS-Keyboard)</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>Bosch-Marke + Gründer-Aktionen (kostenlos)</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Was Voltio besser macht</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Kein KI-Agent / proaktive Vorschläge</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Kein WhatsApp Business</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Kein geführtes Kundeninterview</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Keine Prepayment-Logik</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Keine VDE/DGUV V3 Checklisten</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Sprachnotizen nur via Diktat (kein KI-Parsing)</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Strategische Einordnung</div>
+            <p style="font-size:12px;color:var(--text2);line-height:1.6;">OfficeOn ist ein solides Bürotool — Voltio ist ein Co-Pilot. Anfangs als Ergänzung (Weg A), später als Ersatz (Weg B). Felix kennt und vertraut Bosch, was die Wechselmotivation erhöht wenn Voltio einen klaren Mehrwert zeigt.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- FEATURE MATRIX -->
-    <div style="margin-top:64px;">
-      <h3 style="margin-bottom:8px;font-size:28px;">Feature-Matrix:<br><em style="font-style:italic;color:var(--accent);">Felix vs. Wettbewerb</em></h3>
-      <p style="color:var(--text2);font-size:15px;margin-bottom:32px;max-width:600px;">Die grünen Felder zeigen, wo Voltio klare Alleinstellungsmerkmale hat — kein Konkurrent deckt alle ab.</p>
-
-      <div style="overflow-x:auto;">
-        <table style="width:100%;border-collapse:collapse;font-size:13px;min-width:700px;">
-          <thead>
-            <tr style="background:var(--surface2);">
-              <th style="padding:12px 16px;text-align:left;color:var(--text3);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;border-bottom:1px solid var(--border);">Feature</th>
-              <th style="padding:12px 16px;text-align:center;color:var(--accent);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;border-bottom:1px solid var(--border);">Voltio</th>
-              <th style="padding:12px 16px;text-align:center;color:var(--text3);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;border-bottom:1px solid var(--border);">Joist</th>
-              <th style="padding:12px 16px;text-align:center;color:var(--text3);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;border-bottom:1px solid var(--border);">Fergus</th>
-              <th style="padding:12px 16px;text-align:center;color:var(--text3);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;border-bottom:1px solid var(--border);">Tradify</th>
-              <th style="padding:12px 16px;text-align:center;color:var(--text3);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;border-bottom:1px solid var(--border);">Jobber</th>
-              <th style="padding:12px 16px;text-align:center;color:var(--text3);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;border-bottom:1px solid var(--border);">ServiceM8</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">KI-Agent (proaktive Vorschläge)</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">WhatsApp Business Integration</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Sprachnotiz → Aufgaben (KI)</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">VDE / DGUV V3 Compliance</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;font-size:14px;color:var(--text2);">~</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Rückwärtsplanung (Deadline → Aufgaben)</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Deutsch-nativ (Sprache & Markt)</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Fahrtkosten (§312a BGB konform)</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Angebote & Rechnungen</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Kunden-CRM</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Rentabilitäts-Tracking intern</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:14px;color:var(--text2);">~</td>
-              <td style="padding:12px 16px;text-align:center;font-size:14px;color:var(--text2);">~</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Terminplanung & Kalender</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">IDS-Connect Großhändler-API</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-            </tr>
-            <tr style="background:rgba(17,24,39,0.3);">
-              <td style="padding:12px 16px;color:var(--text);font-weight:500;">Lagerverwaltung</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;color:var(--text3);">—</td>
-              <td style="padding:12px 16px;text-align:center;font-size:14px;color:var(--text2);">~</td>
-              <td style="padding:12px 16px;text-align:center;font-size:16px;">✅</td>
-              <td style="padding:12px 16px;text-align:center;font-size:14px;color:var(--text2);">~</td>
-              <td style="padding:12px 16px;text-align:center;font-size:14px;color:var(--text2);">~</td>
-            </tr>
-          </tbody>
-        </table>
-        <p style="font-size:12px;color:var(--text3);margin-top:12px;">✅ = vollständig · ~ = teilweise · — = nicht vorhanden</p>
+      <!-- HERO -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+        <div style="padding:20px 24px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:38px;height:38px;background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;">⚡</div>
+            <div><div style="font-size:16px;font-weight:700;color:var(--text);">HERO Software</div><div style="font-size:11px;color:var(--text3);">hero-software.de · €59/Mo (Core) · trusted.de Testsieger</div></div>
+          </div>
+          <div style="display:flex;gap:8px;">
+            <a href="https://hero-software.de" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:5px 12px;border-radius:6px;font-size:11px;font-weight:600;text-decoration:none;">Website ↗</a>
+            <a href="https://apps.apple.com/de/app/hero-software/id1513680527" target="_blank" style="background:var(--surface2);color:var(--text2);border:1px solid var(--border);padding:5px 12px;border-radius:6px;font-size:11px;font-weight:600;text-decoration:none;">App Store ↗</a>
+          </div>
+        </div>
+        <div style="padding:24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Stärken</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>Breiteste Schnittstellen (IDS, OCI, DATEV, Lexware, GAEB…)</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>HERO Copilot: KI für Routine-Mails & Aufgaben</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>Sehr gute iOS + Android App</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>Sonepar-HERO Partnership (co-branded)</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>Trusted.de Note 1.0 für Bedienbarkeit</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Was Voltio besser macht</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Copilot kostet €199/Mo — für Solo unleistbar</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Kein WhatsApp Business</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Kein geführter Kundeninterview-Flow</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Keine Sprachnotiz → Aufgaben (KI)</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Keine VDE/DGUV V3 Workflows</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Einordnung</div>
+            <p style="font-size:12px;color:var(--text2);line-height:1.6;">HERO ist die beste Alternative zu Voltio — hat aber KI hinter einer 3,4× Preismauer versteckt. Voltio bringt KI zum Solo-Preis und ergänzt mit WhatsApp + Elektro-Flow. <strong style="color:var(--accent);">Das ist Voltios stärkstes Differenzierungsargument.</strong></p>
+          </div>
+        </div>
       </div>
 
-      <!-- FELIX USP SUMMARY -->
-      <div style="margin-top:48px;padding:40px;background:var(--surface2);border:1px solid rgba(232,160,32,0.2);border-radius:12px;">
-        <div style="font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Voltio — Alleinstellungsmerkmale</div>
-        <h3 style="font-size:26px;margin-bottom:20px;">7 Features, die <em style="font-style:italic;color:var(--accent);">kein Konkurrent</em> gleichzeitig bietet</h3>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-          <div style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:var(--surface);border-radius:8px;border:1px solid var(--border);">
-            <span style="font-size:20px;flex-shrink:0;">🤖</span>
-            <div><div style="font-weight:600;font-size:14px;margin-bottom:4px;">KI-Agent als Kern</div><div style="font-size:12px;color:var(--text2);">Proaktive Vorschläge, Nachrichtenentwürfe, Erinnerungen — ohne manuellen Aufwand</div></div>
+      <!-- STREIT -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+        <div style="padding:20px 24px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:38px;height:38px;background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;">🔩</div>
+            <div><div style="font-size:16px;font-weight:700;color:var(--text);">STREIT V.1</div><div style="font-size:11px;color:var(--text3);">streit-software.de · 40 Jahre Haslach · Elektro-Spezialist</div></div>
           </div>
-          <div style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:var(--surface);border-radius:8px;border:1px solid var(--border);">
-            <span style="font-size:20px;flex-shrink:0;">💬</span>
-            <div><div style="font-weight:600;font-size:14px;margin-bottom:4px;">WhatsApp-nativ</div><div style="font-size:12px;color:var(--text2);">Kein Konkurrent hat WhatsApp Business als primären Kommunikationskanal integriert</div></div>
+          <div style="display:flex;gap:8px;">
+            <a href="https://streit-software.de" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:5px 12px;border-radius:6px;font-size:11px;font-weight:600;text-decoration:none;">Website ↗</a>
           </div>
-          <div style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:var(--surface);border-radius:8px;border:1px solid var(--border);">
-            <span style="font-size:20px;flex-shrink:0;">🎤</span>
-            <div><div style="font-weight:600;font-size:14px;margin-bottom:4px;">Sprachnotiz → Projekt</div><div style="font-size:12px;color:var(--text2);">Vor-Ort-Eingabe per Sprache, KI strukturiert alles automatisch ins Projekt</div></div>
+        </div>
+        <div style="padding:24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Tiefste Elektro-Vertical</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>ELDANORM + ZVEH-Leistungskatalog Elektro</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>IDS + OCI + OMD 26.0 + UGL + GAEB + EPLAN</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>Komplette Finanzbuchhaltung in-house</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>Gründerpaket: 1 Jahr kostenlos</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>4 spezialisierte mobile Apps</li>
+            </ul>
           </div>
-          <div style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:var(--surface);border-radius:8px;border:1px solid var(--border);">
-            <span style="font-size:20px;flex-shrink:0;">⚖️</span>
-            <div><div style="font-weight:600;font-size:14px;margin-bottom:4px;">Deutsche Compliance eingebaut</div><div style="font-size:12px;color:var(--text2);">VDE, DGUV V3, §312a BGB — kein anderes Tool berücksichtigt deutsches Handwerksrecht</div></div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Was Voltio besser macht</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Kein KI, keine Automatisierung</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Kein WhatsApp</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Auf-Premise-Mentalität trotz Cloud-Option</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Komplexe Benutzeroberfläche</li>
+            </ul>
           </div>
-          <div style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:var(--surface);border-radius:8px;border:1px solid var(--border);">
-            <span style="font-size:20px;flex-shrink:0;">⏪</span>
-            <div><div style="font-weight:600;font-size:14px;margin-bottom:4px;">Rückwärtsplanung</div><div style="font-size:12px;color:var(--text2);">Von Termindatum rückwärts: wann muss bestellt werden? Automatisch berechnet.</div></div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Was wir lernen</div>
+            <p style="font-size:12px;color:var(--text2);line-height:1.6;">STREIT zeigt: Elektro-Leistungskataloge (ELDANORM, ZVEH) sind ein must-have für Glaubwürdigkeit im Markt. Voltio sollte diese Datenbasis integrieren — als eingebetteter Inhalt, nicht nur als Link.</p>
           </div>
-          <div style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:var(--surface);border-radius:8px;border:1px solid var(--border);">
-            <span style="font-size:20px;flex-shrink:0;">🇩🇪</span>
-            <div><div style="font-weight:600;font-size:14px;margin-bottom:4px;">Deutschland-First</div><div style="font-size:12px;color:var(--text2);">Sprache, Recht, Lieferanten, MwSt., ADAC-Fahrtkosten — alles von Grund auf deutsch</div></div>
+        </div>
+      </div>
+
+      <!-- LABELWIN -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+        <div style="padding:20px 24px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:38px;height:38px;background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;">📞</div>
+            <div><div style="font-size:16px;font-weight:700;color:var(--text);">Labelwin / Label Software</div><div style="font-size:11px;color:var(--text3);">label-software.de · Bielefeld · 40 Jahre · KI-Telefonassistent</div></div>
           </div>
-          <div style="display:flex;gap:12px;align-items:flex-start;padding:16px;background:var(--surface);border-radius:8px;border:1px solid var(--border);">
-            <span style="font-size:20px;flex-shrink:0;">📊</span>
-            <div><div style="font-weight:600;font-size:14px;margin-bottom:4px;">€/Stunde Rentabilitäts-KPI</div><div style="font-size:12px;color:var(--text2);">Welcher Auftrag bringt wirklich was? Intern sichtbar, nie für den Kunden</div></div>
+          <a href="https://label-software.de" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:5px 12px;border-radius:6px;font-size:11px;font-weight:600;text-decoration:none;">Website ↗</a>
+        </div>
+        <div style="padding:24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">KI-Pionier im Segment</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span><strong style="color:var(--text);">KI-Telefonassistent</strong>: nimmt Anrufe an, bucht Termine, erstellt Aufgaben</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>ChatGPT-Integration für Texterstellung</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>Label Chat: Teamkommunikation per Auftrag</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>Breiteste Schnittstellen aller Anbieter</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Was Voltio besser macht</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Windows-only Desktop (kein natives Cloud)</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Kein WhatsApp (Label Chat ist intern)</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>KI nur für Telefonassistenz, nicht proaktiv</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Kein guided Interview-Flow</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Was wir lernen</div>
+            <p style="font-size:12px;color:var(--text2);line-height:1.6;">Labelwin zeigt: KI-Telefonassistenz hat echten Markt-Pull im Handwerk. Voltio's WhatsApp-Agent ist die mobile, moderne Antwort darauf — direkter im Kanal wo Kunden bereits sind.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- pds -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+        <div style="padding:20px 24px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:38px;height:38px;background:var(--surface2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;">📊</div>
+            <div><div style="font-size:16px;font-weight:700;color:var(--text);">pds Software</div><div style="font-size:11px;color:var(--text3);">pds.de · Rotenburg · 50 Jahre · 45.000 tägl. User · SHK+Elektro ERP</div></div>
+          </div>
+          <a href="https://pds.de" target="_blank" style="background:var(--accent-dim);color:var(--accent);border:1px solid rgba(232,160,32,0.3);padding:5px 12px;border-radius:6px;font-size:11px;font-weight:600;text-decoration:none;">Website ↗</a>
+        </div>
+        <div style="padding:24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">KI Invoice Reader</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>KI-gestützter Invoice Reader (Eingangsrechnungen)</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>7 spezialisierte Mobile Apps</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>IDS 2.5 + Open Masterdata + UGL 5.0</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#22C55E;">✓</span>50 Jahre Marktpräsenz, 45k tägl. User</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Was Voltio besser macht</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>€80–110/Mo für Solo — zu teuer</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>KI nur Back-Office (Rechnungen), nicht kundenseitig</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Kein WhatsApp, kein geführter Flow</li>
+              <li style="font-size:12px;color:var(--text2);display:flex;gap:7px;"><span style="color:#F87171;">✗</span>Langer Onboarding, viel Komplexität</li>
+            </ul>
+          </div>
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;color:var(--text3);letter-spacing:0.1em;margin-bottom:10px;">Was wir lernen</div>
+            <p style="font-size:12px;color:var(--text2);line-height:1.6;">pds zeigt: Eingangsrechnungs-KI hat echten ROI für Handwerker. Voltio sollte das als Feature auch haben — IDS-Bestellbestätigungen werden automatisch erkannt und dem richtigen Projekt zugeordnet.</p>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- INTERNATIONAL GROUP -->
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text2);background:var(--surface2);border:1px solid var(--border);padding:6px 16px;border-radius:6px;">🌍 Internationale Field-Service-Software — Referenz (nicht direkt relevant für DE-Markt)</div>
+    </div>
+
+    <div style="overflow-x:auto;margin-bottom:48px;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;min-width:800px;">
+        <thead>
+          <tr style="background:var(--surface2);">
+            <th style="padding:10px 14px;text-align:left;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Software</th>
+            <th style="padding:10px 14px;text-align:left;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Solo-Preis (USD)</th>
+            <th style="padding:10px 14px;text-align:center;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">IDS</th>
+            <th style="padding:10px 14px;text-align:center;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">DATEV</th>
+            <th style="padding:10px 14px;text-align:center;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Solo geeignet</th>
+            <th style="padding:10px 14px;text-align:left;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Kernstärke für Voltio-Inspiration</th>
+            <th style="padding:10px 14px;text-align:left;color:var(--text3);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid var(--border);">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
+            <td style="padding:10px 14px;font-weight:600;color:var(--text);">Joist</td>
+            <td style="padding:10px 14px;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;font-weight:700;padding:2px 8px;border-radius:3px;font-size:11px;">$8–15</span></td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;padding:2px 8px;border-radius:3px;font-size:11px;">Sehr gut</span></td>
+            <td style="padding:10px 14px;font-size:11px;color:var(--text2);">Slickste mobile Angebots-UX — Design-Inspiration</td>
+            <td style="padding:10px 14px;"><a href="https://joist.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
+            <td style="padding:10px 14px;font-weight:600;color:var(--text);">Workiz</td>
+            <td style="padding:10px 14px;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;font-weight:700;padding:2px 8px;border-radius:3px;font-size:11px;">$65–300</span></td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;padding:2px 8px;border-radius:3px;font-size:11px;">Sehr gut</span></td>
+            <td style="padding:10px 14px;font-size:11px;color:var(--text2);">KI-Dispatcher, Online-Buchung — Automatisierungs-Inspiration</td>
+            <td style="padding:10px 14px;"><a href="https://workiz.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
+            <td style="padding:10px 14px;font-weight:600;color:var(--text);">Fergus</td>
+            <td style="padding:10px 14px;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;font-weight:700;padding:2px 8px;border-radius:3px;font-size:11px;">$50–150</span></td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(34,197,94,0.12);color:#22C55E;padding:2px 8px;border-radius:3px;font-size:11px;">Sehr gut</span></td>
+            <td style="padding:10px 14px;font-size:11px;color:var(--text2);">Bestes Job-Costing / Rentabilitäts-Tracking für Handwerk</td>
+            <td style="padding:10px 14px;"><a href="https://fergus.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
+            <td style="padding:10px 14px;font-weight:600;color:var(--text);">ServiceM8</td>
+            <td style="padding:10px 14px;"><span style="background:rgba(59,130,246,0.12);color:#93C5FD;font-weight:700;padding:2px 8px;border-radius:3px;font-size:11px;">$35–50</span></td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:2px 8px;border-radius:3px;font-size:11px;">Gut</span></td>
+            <td style="padding:10px 14px;font-size:11px;color:var(--text2);">Beste Apple-UX + Compliance-Formulare, Dispatch-Board</td>
+            <td style="padding:10px 14px;"><a href="https://servicem8.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
+            <td style="padding:10px 14px;font-weight:600;color:var(--text);">Jobber</td>
+            <td style="padding:10px 14px;"><span style="background:rgba(59,130,246,0.12);color:#93C5FD;font-weight:700;padding:2px 8px;border-radius:3px;font-size:11px;">$39–249</span></td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:2px 8px;border-radius:3px;font-size:11px;">Gut</span></td>
+            <td style="padding:10px 14px;font-size:11px;color:var(--text2);">Bestes CRM + Online-Buchungsportal + Routenoptimierung</td>
+            <td style="padding:10px 14px;"><a href="https://getjobber.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
+            <td style="padding:10px 14px;font-weight:600;color:var(--text);">Tradify</td>
+            <td style="padding:10px 14px;"><span style="background:rgba(59,130,246,0.12);color:#93C5FD;font-weight:700;padding:2px 8px;border-radius:3px;font-size:11px;">$47/User</span></td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:2px 8px;border-radius:3px;font-size:11px;">Gut</span></td>
+            <td style="padding:10px 14px;font-size:11px;color:var(--text2);">Einfachste Angebotserstellung + GPS-Zeiterfassung</td>
+            <td style="padding:10px 14px;"><a href="https://tradifyhq.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
+            <td style="padding:10px 14px;font-weight:600;color:var(--text);">HouseCall Pro</td>
+            <td style="padding:10px 14px;"><span style="background:rgba(59,130,246,0.12);color:#93C5FD;font-weight:700;padding:2px 8px;border-radius:3px;font-size:11px;">$59–349</span></td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(59,130,246,0.08);color:#93C5FD;padding:2px 8px;border-radius:3px;font-size:11px;">Gut (Einschr.)</span></td>
+            <td style="padding:10px 14px;font-size:11px;color:var(--text2);">Marketing-Automation + In-app Zahlungen</td>
+            <td style="padding:10px 14px;"><a href="https://housecallpro.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
+            <td style="padding:10px 14px;font-weight:600;color:var(--text);">Knowify</td>
+            <td style="padding:10px 14px;"><span style="background:rgba(59,130,246,0.12);color:#93C5FD;font-weight:700;padding:2px 8px;border-radius:3px;font-size:11px;">$96–449</span></td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(59,130,246,0.1);color:#93C5FD;padding:2px 8px;border-radius:3px;font-size:11px;">Gut</span></td>
+            <td style="padding:10px 14px;font-size:11px;color:var(--text2);">Stärkstes AIA-Meilenstein-Billing, Change Orders</td>
+            <td style="padding:10px 14px;"><a href="https://knowify.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
+            <td style="padding:10px 14px;font-weight:600;color:var(--text);">FieldEdge</td>
+            <td style="padding:10px 14px;"><span style="background:rgba(239,68,68,0.12);color:#F87171;font-weight:700;padding:2px 8px;border-radius:3px;font-size:11px;">$100–125</span></td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(239,68,68,0.1);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;">Ungeeignet</span></td>
+            <td style="padding:10px 14px;font-size:11px;color:var(--text2);">Tiefste QuickBooks-Integration</td>
+            <td style="padding:10px 14px;"><a href="https://fieldedge.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.4);background:rgba(17,24,39,0.3);">
+            <td style="padding:10px 14px;font-weight:600;color:var(--text);">simPRO</td>
+            <td style="padding:10px 14px;"><span style="background:rgba(239,68,68,0.12);color:#F87171;font-weight:700;padding:2px 8px;border-radius:3px;font-size:11px;">$30+ (Quote)</span></td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(239,68,68,0.1);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;">Ungeeignet</span></td>
+            <td style="padding:10px 14px;font-size:11px;color:var(--text2);">Stärkste Asset- und Wartungsvertrags-Verwaltung</td>
+            <td style="padding:10px 14px;"><a href="https://simpro.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(31,45,69,0.4);">
+            <td style="padding:10px 14px;font-weight:600;color:var(--text);">Service Fusion</td>
+            <td style="padding:10px 14px;"><span style="background:rgba(239,68,68,0.12);color:#F87171;font-weight:700;padding:2px 8px;border-radius:3px;font-size:11px;">$245–627</span></td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(239,68,68,0.1);color:#F87171;padding:2px 8px;border-radius:3px;font-size:11px;">Ungeeignet</span></td>
+            <td style="padding:10px 14px;font-size:11px;color:var(--text2);">Flat pricing, unbegrenzte User</td>
+            <td style="padding:10px 14px;"><a href="https://servicefusion.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+          <tr style="background:rgba(17,24,39,0.3);">
+            <td style="padding:10px 14px;font-weight:600;color:var(--text);">ServiceTitan</td>
+            <td style="padding:10px 14px;"><span style="background:rgba(239,68,68,0.2);color:#EF4444;font-weight:700;padding:2px 8px;border-radius:3px;font-size:11px;">$3.000+/Mo</span></td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;color:var(--text3);">—</td>
+            <td style="padding:10px 14px;text-align:center;"><span style="background:rgba(239,68,68,0.15);color:#EF4444;padding:2px 8px;border-radius:3px;font-size:11px;">Völlig ungeeignet</span></td>
+            <td style="padding:10px 14px;font-size:11px;color:var(--text2);">Enterprise-KI für Dispatch, Marketing, Sales Analytics — Technologie-Inspiration</td>
+            <td style="padding:10px 14px;"><a href="https://servicetitan.com" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;">↗</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:11px;color:var(--text3);margin-top:8px;">Alle internationalen Tools: kein IDS-Connect, kein DATEV/ZUGFeRD, kein ELDANORM/ZVEH — nicht lokalisiert für Deutschland. Relevant nur als Feature-Referenz.</p>
+    </div>
+
+    <!-- VOLTIO POSITIONING CONCLUSION -->
+    <div style="padding:28px 32px;background:linear-gradient(135deg,rgba(232,160,32,0.08),rgba(232,160,32,0.02));border:1px solid rgba(232,160,32,0.25);border-radius:14px;">
+      <div class="section-eyebrow">Fazit</div>
+      <h3 style="font-size:24px;margin-bottom:16px;">Voltios optimale Kombination</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <div>
+          <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:16px;">Kein einziger Konkurrent kombiniert heute alle vier Kernelemente: KI-Agent + WhatsApp Business + geführter Elektro-Interview-Flow + Solo-Preis unter €80/Monat.</p>
+          <p style="font-size:14px;color:var(--text2);line-height:1.7;">HERO hat das nächstähnliche Angebot — aber KI kostet dort €199/Mo extra. Labelwin hat den KI-Telefonassistenten, aber ist Windows-only und hat kein WhatsApp. STREIT hat die tiefste Elektro-Vertical, aber null AI und veraltete UX.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="padding:12px 16px;background:var(--surface);border-radius:8px;display:flex;gap:12px;align-items:flex-start;"><span style="font-size:18px;flex-shrink:0;">🤖</span><div><div style="font-size:12px;font-weight:700;color:var(--text);">Von HERO lernen</div><div style="font-size:11px;color:var(--text2);">Schnittstellen-Breite (IDS, DATEV, GAEB) — aber KI in den Solo-Preis einbauen</div></div></div>
+          <div style="padding:12px 16px;background:var(--surface);border-radius:8px;display:flex;gap:12px;align-items:flex-start;"><span style="font-size:18px;flex-shrink:0;">🔩</span><div><div style="font-size:12px;font-weight:700;color:var(--text);">Von STREIT lernen</div><div style="font-size:11px;color:var(--text2);">ELDANORM + ZVEH-Leistungskatalog Elektro als eingebettete Datenbasis</div></div></div>
+          <div style="padding:12px 16px;background:var(--surface);border-radius:8px;display:flex;gap:12px;align-items:flex-start;"><span style="font-size:18px;flex-shrink:0;">📞</span><div><div style="font-size:12px;font-weight:700;color:var(--text);">Von Labelwin lernen</div><div style="font-size:11px;color:var(--text2);">KI-Kommunikation hat Markt-Pull — Voltio macht es per WhatsApp statt Telefon</div></div></div>
+          <div style="padding:12px 16px;background:var(--surface);border-radius:8px;display:flex;gap:12px;align-items:flex-start;"><span style="font-size:18px;flex-shrink:0;">🎨</span><div><div style="font-size:12px;font-weight:700;color:var(--text);">Von plancraft lernen</div><div style="font-size:11px;color:var(--text2);">UX-Qualität + 1-Tages-Kündigung als Vertrauenssignal für Solo-Betriebe</div></div></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 <div class="divider"></div>
 
